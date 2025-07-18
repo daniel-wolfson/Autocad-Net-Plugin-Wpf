@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Lsds2Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Lsds2ModelStoreContainer">
+          <EntitySet Name="LO_Bays" EntityType="Lsds2Model.Store.LO_Bays" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LO_BlockAttributes" EntityType="Lsds2Model.Store.LO_BlockAttributes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LO_Blocks" EntityType="Lsds2Model.Store.LO_Blocks" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LO_Frames" EntityType="Lsds2Model.Store.LO_Frames" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LO_ItemAttributes" EntityType="Lsds2Model.Store.LO_ItemAttributes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LO_Items" EntityType="Lsds2Model.Store.LO_Items" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LO_Layouts" EntityType="Lsds2Model.Store.LO_Layouts" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="LSDS_Config" EntityType="Lsds2Model.Store.LSDS_Config" store:Type="Tables" store:Schema="dbo" store:Name="LSDS_Config" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [LSDS_Config].[ConfigSetName] AS [ConfigSetName], 
+      [LSDS_Config].[ParameterName] AS [ParameterName], 
+      [LSDS_Config].[Int1] AS [Int1], 
+      [LSDS_Config].[Int2] AS [Int2], 
+      [LSDS_Config].[Int3] AS [Int3], 
+      [LSDS_Config].[Int4] AS [Int4], 
+      [LSDS_Config].[Float1] AS [Float1], 
+      [LSDS_Config].[Float2] AS [Float2], 
+      [LSDS_Config].[Float3] AS [Float3], 
+      [LSDS_Config].[Float4] AS [Float4], 
+      [LSDS_Config].[Date1] AS [Date1], 
+      [LSDS_Config].[Date2] AS [Date2], 
+      [LSDS_Config].[Date3] AS [Date3], 
+      [LSDS_Config].[Date4] AS [Date4], 
+      [LSDS_Config].[Str1] AS [Str1], 
+      [LSDS_Config].[Str2] AS [Str2], 
+      [LSDS_Config].[Str3] AS [Str3], 
+      [LSDS_Config].[Str4] AS [Str4], 
+      [LSDS_Config].[LongStr] AS [LongStr]
+      FROM [dbo].[LSDS_Config] AS [LSDS_Config]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_LO_Bays_LO_Layouts" Association="Lsds2Model.Store.FK_LO_Bays_LO_Layouts">
+            <End Role="LO_Layouts" EntitySet="LO_Layouts" />
+            <End Role="LO_Bays" EntitySet="LO_Bays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_BlockAttributes_LO_Blocks" Association="Lsds2Model.Store.FK_LO_BlockAttributes_LO_Blocks">
+            <End Role="LO_Blocks" EntitySet="LO_Blocks" />
+            <End Role="LO_BlockAttributes" EntitySet="LO_BlockAttributes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_Blocks_LO_Layouts" Association="Lsds2Model.Store.FK_LO_Blocks_LO_Layouts">
+            <End Role="LO_Layouts" EntitySet="LO_Layouts" />
+            <End Role="LO_Blocks" EntitySet="LO_Blocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_Frames_LO_Blocks" Association="Lsds2Model.Store.FK_LO_Frames_LO_Blocks">
+            <End Role="LO_Blocks" EntitySet="LO_Blocks" />
+            <End Role="LO_Frames" EntitySet="LO_Frames" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_ItemAttributes_LO_Layouts" Association="Lsds2Model.Store.FK_LO_ItemAttributes_LO_Layouts">
+            <End Role="LO_Layouts" EntitySet="LO_Layouts" />
+            <End Role="LO_ItemAttributes" EntitySet="LO_ItemAttributes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LO_Bays">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BayName" />
+            <PropertyRef Name="BaySide" />
+            <PropertyRef Name="BayPart" />
+          </Key>
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BayName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BaySide" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BayPart" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Xmin" Type="float" Nullable="false" />
+          <Property Name="Ymin" Type="float" Nullable="false" />
+          <Property Name="Xmax" Type="float" Nullable="false" />
+          <Property Name="Ymax" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LO_BlockAttributes">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+            <PropertyRef Name="BlockAttributeIndex" />
+          </Key>
+          <Property Name="BlockID" Type="decimal" Precision="15" StoreGeneratedPattern="Computed" />
+          <Property Name="BlockAttributeID" Type="numeric" Precision="22" StoreGeneratedPattern="Computed" />
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockAttributeIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockAttributeName" Type="varchar" MaxLength="100" />
+          <Property Name="BlockAttributeValue" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="LO_Blocks">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+          </Key>
+          <Property Name="BlockID" Type="decimal" Precision="15" StoreGeneratedPattern="Computed" />
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockName" Type="varchar" MaxLength="500" />
+          <Property Name="BlockXrefName" Type="varchar" MaxLength="500" />
+          <Property Name="BlockHandle" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="LO_Frames">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+            <PropertyRef Name="FrameIndex" />
+          </Key>
+          <Property Name="BlockID" Type="decimal" Precision="15" StoreGeneratedPattern="Computed" />
+          <Property Name="FrameID" Type="numeric" Precision="22" StoreGeneratedPattern="Computed" />
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="FrameIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="FrameTypeID" Type="smallint" Nullable="false" />
+          <Property Name="Xmin" Type="float" Nullable="false" />
+          <Property Name="Ymin" Type="float" Nullable="false" />
+          <Property Name="Xmax" Type="float" Nullable="false" />
+          <Property Name="Ymax" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LO_ItemAttributes">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="ItemIndex" />
+            <PropertyRef Name="ItemAttributeIndex" />
+          </Key>
+          <Property Name="ItemID" Type="decimal" Precision="15" StoreGeneratedPattern="Computed" />
+          <Property Name="ItemAttributeID" Type="numeric" Precision="22" StoreGeneratedPattern="Computed" />
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="ItemIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="ItemAttributeIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="ItemAttributeName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ItemAttributeValue" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="LO_Items">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="ItemIndex" />
+            <PropertyRef Name="ItemAttributeIndex" />
+          </Key>
+          <Property Name="ItemID" Type="decimal" Precision="15" StoreGeneratedPattern="Computed" />
+          <Property Name="ItemName" Type="varchar" MaxLength="100" />
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="ItemIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="ItemAttributeIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="ItemAttributeName" Type="varchar" MaxLength="100" />
+          <Property Name="ItemAttributeID" Type="numeric" Precision="22" StoreGeneratedPattern="Computed" />
+          <Property Name="BlockID" Type="decimal" Precision="15" StoreGeneratedPattern="Computed" />
+          <Property Name="BlockIndex" Type="decimal" Nullable="false" Precision="6" />
+          <Property Name="BlockName" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="XrefName" Type="varchar" MaxLength="500" />
+          <Property Name="LayerName" Type="varchar" MaxLength="500" />
+          <Property Name="Xpos" Type="float" />
+          <Property Name="Ypos" Type="float" />
+          <Property Name="Zpos" Type="float" />
+          <Property Name="Xscale" Type="float" />
+          <Property Name="Yscale" Type="float" />
+          <Property Name="Zscale" Type="float" />
+          <Property Name="Rotation" Type="float" />
+          <Property Name="ItemHandle" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="LO_Layouts">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+          </Key>
+          <Property Name="LayoutID" Type="decimal" Nullable="false" Precision="6" StoreGeneratedPattern="Identity" />
+          <Property Name="LayoutName" Type="varchar" MaxLength="500" />
+          <Property Name="LayoutType" Type="varchar" MaxLength="25" />
+          <Property Name="LayoutContents" Type="varchar" MaxLength="500" />
+          <Property Name="AccessType" Type="varchar" MaxLength="25" />
+          <Property Name="LayoutVersion" Type="varchar" MaxLength="25" />
+          <Property Name="Comment" Type="varchar" MaxLength="500" />
+          <Property Name="SiteName" Type="varchar" MaxLength="25" />
+          <Property Name="BuildingLevels" Type="varchar" MaxLength="1000" />
+          <Property Name="ProcessName1" Type="varchar" MaxLength="25" />
+          <Property Name="WSPW1" Type="varchar" MaxLength="25" />
+          <Property Name="ProcessName2" Type="varchar" MaxLength="25" />
+          <Property Name="WSPW2" Type="varchar" MaxLength="25" />
+          <Property Name="ProcessName3" Type="varchar" MaxLength="25" />
+          <Property Name="WSPW3" Type="varchar" MaxLength="25" />
+          <Property Name="ProcessName4" Type="varchar" MaxLength="25" />
+          <Property Name="WSPW4" Type="varchar" MaxLength="25" />
+          <Property Name="CADFileName" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DateModified" Type="datetime" />
+          <Property Name="LayoutState" Type="smallint" />
+          <Property Name="FSA" Type="bit" />
+          <Property Name="ConfigSetName" Type="varchar" MaxLength="50" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'LSDS2.dbo.LSDS_Config' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="LSDS_Config">
+          <Key>
+            <PropertyRef Name="ConfigSetName" />
+            <PropertyRef Name="ParameterName" />
+          </Key>
+          <Property Name="ConfigSetName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParameterName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Int1" Type="int" />
+          <Property Name="Int2" Type="int" />
+          <Property Name="Int3" Type="int" />
+          <Property Name="Int4" Type="int" />
+          <Property Name="Float1" Type="float" />
+          <Property Name="Float2" Type="float" />
+          <Property Name="Float3" Type="float" />
+          <Property Name="Float4" Type="float" />
+          <Property Name="Date1" Type="datetime" />
+          <Property Name="Date2" Type="datetime" />
+          <Property Name="Date3" Type="datetime" />
+          <Property Name="Date4" Type="datetime" />
+          <Property Name="Str1" Type="varchar" MaxLength="500" />
+          <Property Name="Str2" Type="varchar" MaxLength="500" />
+          <Property Name="Str3" Type="varchar" MaxLength="500" />
+          <Property Name="Str4" Type="varchar" MaxLength="500" />
+          <Property Name="LongStr" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <Association Name="FK_LO_Bays_LO_Layouts">
+          <End Role="LO_Layouts" Type="Lsds2Model.Store.LO_Layouts" Multiplicity="1" />
+          <End Role="LO_Bays" Type="Lsds2Model.Store.LO_Bays" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Layouts">
+              <PropertyRef Name="LayoutID" />
+            </Principal>
+            <Dependent Role="LO_Bays">
+              <PropertyRef Name="LayoutID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_BlockAttributes_LO_Blocks">
+          <End Role="LO_Blocks" Type="Lsds2Model.Store.LO_Blocks" Multiplicity="1" />
+          <End Role="LO_BlockAttributes" Type="Lsds2Model.Store.LO_BlockAttributes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Blocks">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Principal>
+            <Dependent Role="LO_BlockAttributes">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_Blocks_LO_Layouts">
+          <End Role="LO_Layouts" Type="Lsds2Model.Store.LO_Layouts" Multiplicity="1" />
+          <End Role="LO_Blocks" Type="Lsds2Model.Store.LO_Blocks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Layouts">
+              <PropertyRef Name="LayoutID" />
+            </Principal>
+            <Dependent Role="LO_Blocks">
+              <PropertyRef Name="LayoutID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_Frames_LO_Blocks">
+          <End Role="LO_Blocks" Type="Lsds2Model.Store.LO_Blocks" Multiplicity="1" />
+          <End Role="LO_Frames" Type="Lsds2Model.Store.LO_Frames" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Blocks">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Principal>
+            <Dependent Role="LO_Frames">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_ItemAttributes_LO_Layouts">
+          <End Role="LO_Layouts" Type="Lsds2Model.Store.LO_Layouts" Multiplicity="1" />
+          <End Role="LO_ItemAttributes" Type="Lsds2Model.Store.LO_ItemAttributes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Layouts">
+              <PropertyRef Name="LayoutID" />
+            </Principal>
+            <Dependent Role="LO_ItemAttributes">
+              <PropertyRef Name="LayoutID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetCadUIConfig" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ConfigSetName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetConfig" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ConfigSetName" Type="varchar" Mode="In" />
+          <Parameter Name="ParameterName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="LayoutManager" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Command" Type="varchar" Mode="In" />
+          <Parameter Name="LayoutID" Type="int" Mode="In" />
+          <Parameter Name="Username" Type="varchar" Mode="In" />
+          <Parameter Name="EffectiveDate" Type="datetime" Mode="In" />
+        </Function>
+        <!--Errors Found During Generation:
+      warning 6030: The relationship 'FK_LO_Items_LO_Blocks' uses the set of foreign keys '{LayoutID, BlockIndex}' that are partially contained in the set of primary keys '{LayoutID, ItemIndex, ItemAttributeIndex}' of the table 'LO_Items'.  The set of foreign keys must be fully contained in the set of primary keys, or fully not contained in the set of primary keys to be mapped to a model.
+      
+      <Association Name="FK_LO_Items_LO_Blocks">
+        <End Role="LO_Blocks" Type="Lsds2Model.Store.LO_Blocks" Multiplicity="1" />
+        <End Role="LO_Items" Type="Lsds2Model.Store.LO_Items" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="LO_Blocks">
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+          </Principal>
+          <Dependent Role="LO_Items">
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Lsds2Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="Lsds2Context" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="LO_Bays" EntityType="Lsds2Model.LO_Bay" />
+          <EntitySet Name="LO_BlockAttributes" EntityType="Lsds2Model.LO_BlockAttribute" />
+          <EntitySet Name="LO_Blocks" EntityType="Lsds2Model.LO_Block" />
+          <EntitySet Name="LO_Frames" EntityType="Lsds2Model.LO_Frame" />
+          <EntitySet Name="LO_ItemAttributes" EntityType="Lsds2Model.LO_ItemAttribute" />
+          <EntitySet Name="LO_Items" EntityType="Lsds2Model.LO_Item" />
+          <EntitySet Name="LO_Layouts" EntityType="Lsds2Model.LO_Layout" />
+          <EntitySet Name="LSDS_Config" EntityType="Lsds2Model.LSDS_Config" />
+          <AssociationSet Name="FK_LO_Bays_LO_Layouts" Association="Lsds2Model.FK_LO_Bays_LO_Layouts">
+            <End Role="LO_Layouts" EntitySet="LO_Layouts" />
+            <End Role="LO_Bays" EntitySet="LO_Bays" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_BlockAttributes_LO_Blocks" Association="Lsds2Model.FK_LO_BlockAttributes_LO_Blocks">
+            <End Role="LO_Blocks" EntitySet="LO_Blocks" />
+            <End Role="LO_BlockAttributes" EntitySet="LO_BlockAttributes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_Blocks_LO_Layouts" Association="Lsds2Model.FK_LO_Blocks_LO_Layouts">
+            <End Role="LO_Layouts" EntitySet="LO_Layouts" />
+            <End Role="LO_Blocks" EntitySet="LO_Blocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_Frames_LO_Blocks" Association="Lsds2Model.FK_LO_Frames_LO_Blocks">
+            <End Role="LO_Blocks" EntitySet="LO_Blocks" />
+            <End Role="LO_Frames" EntitySet="LO_Frames" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LO_ItemAttributes_LO_Layouts" Association="Lsds2Model.FK_LO_ItemAttributes_LO_Layouts">
+            <End Role="LO_Layouts" EntitySet="LO_Layouts" />
+            <End Role="LO_ItemAttributes" EntitySet="LO_ItemAttributes" />
+          </AssociationSet>
+          <FunctionImport Name="GetCadUIConfig" ReturnType="Collection(Lsds2Model.GetCadUIConfig_Result)">
+          <Parameter Name="ConfigSetName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetConfig" ReturnType="Collection(Lsds2Model.GetConfig_Result)">
+            <Parameter Name="ConfigSetName" Mode="In" Type="String" />
+            <Parameter Name="ParameterName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="LayoutManager" ReturnType="Collection(Lsds2Model.LayoutManager_Result)">
+            <Parameter Name="Command" Mode="In" Type="String" />
+            <Parameter Name="LayoutID" Mode="In" Type="Int32" />
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="EffectiveDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="LO_Bay">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BayName" />
+            <PropertyRef Name="BaySide" />
+            <PropertyRef Name="BayPart" />
+          </Key>
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BayName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BaySide" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BayPart" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Xmin" Type="Double" Nullable="false" />
+          <Property Name="Ymin" Type="Double" Nullable="false" />
+          <Property Name="Xmax" Type="Double" Nullable="false" />
+          <Property Name="Ymax" Type="Double" Nullable="false" />
+          <NavigationProperty Name="LO_Layouts" Relationship="Lsds2Model.FK_LO_Bays_LO_Layouts" FromRole="LO_Bays" ToRole="LO_Layouts" />
+        </EntityType>
+        <EntityType Name="LO_BlockAttribute">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+            <PropertyRef Name="BlockAttributeIndex" />
+          </Key>
+          <Property Name="BlockID" Type="Decimal" Precision="15" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="BlockAttributeID" Type="Decimal" Precision="22" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockAttributeIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockAttributeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="BlockAttributeValue" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="LO_Blocks" Relationship="Lsds2Model.FK_LO_BlockAttributes_LO_Blocks" FromRole="LO_BlockAttributes" ToRole="LO_Blocks" />
+        </EntityType>
+        <EntityType Name="LO_Block">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+          </Key>
+          <Property Name="BlockID" Type="Decimal" Precision="15" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="BlockXrefName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="BlockHandle" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="LO_BlockAttributes" Relationship="Lsds2Model.FK_LO_BlockAttributes_LO_Blocks" FromRole="LO_Blocks" ToRole="LO_BlockAttributes" />
+          <NavigationProperty Name="LO_Layouts" Relationship="Lsds2Model.FK_LO_Blocks_LO_Layouts" FromRole="LO_Blocks" ToRole="LO_Layouts" />
+          <NavigationProperty Name="LO_Frames" Relationship="Lsds2Model.FK_LO_Frames_LO_Blocks" FromRole="LO_Blocks" ToRole="LO_Frames" />
+        </EntityType>
+        <EntityType Name="LO_Frame">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="BlockIndex" />
+            <PropertyRef Name="FrameIndex" />
+          </Key>
+          <Property Name="BlockID" Type="Decimal" Precision="15" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FrameID" Type="Decimal" Precision="22" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="FrameIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="FrameTypeID" Type="Int16" Nullable="false" />
+          <Property Name="Xmin" Type="Double" Nullable="false" />
+          <Property Name="Ymin" Type="Double" Nullable="false" />
+          <Property Name="Xmax" Type="Double" Nullable="false" />
+          <Property Name="Ymax" Type="Double" Nullable="false" />
+          <NavigationProperty Name="LO_Blocks" Relationship="Lsds2Model.FK_LO_Frames_LO_Blocks" FromRole="LO_Frames" ToRole="LO_Blocks" />
+        </EntityType>
+        <EntityType Name="LO_ItemAttribute">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="ItemIndex" />
+            <PropertyRef Name="ItemAttributeIndex" />
+          </Key>
+          <Property Name="ItemID" Type="Decimal" Precision="15" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ItemAttributeID" Type="Decimal" Precision="22" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ItemIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ItemAttributeIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ItemAttributeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ItemAttributeValue" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="LO_Layouts" Relationship="Lsds2Model.FK_LO_ItemAttributes_LO_Layouts" FromRole="LO_ItemAttributes" ToRole="LO_Layouts" />
+        </EntityType>
+        <EntityType Name="LO_Item">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+            <PropertyRef Name="ItemIndex" />
+            <PropertyRef Name="ItemAttributeIndex" />
+          </Key>
+          <Property Name="ItemID" Type="Decimal" Precision="15" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ItemName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ItemIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ItemAttributeIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ItemAttributeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ItemAttributeID" Type="Decimal" Precision="22" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="BlockID" Type="Decimal" Precision="15" Scale="0" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="BlockIndex" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="BlockName" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="XrefName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LayerName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Xpos" Type="Double" />
+          <Property Name="Ypos" Type="Double" />
+          <Property Name="Zpos" Type="Double" />
+          <Property Name="Xscale" Type="Double" />
+          <Property Name="Yscale" Type="Double" />
+          <Property Name="Zscale" Type="Double" />
+          <Property Name="Rotation" Type="Double" />
+          <Property Name="ItemHandle" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LO_Layout">
+          <Key>
+            <PropertyRef Name="LayoutID" />
+          </Key>
+          <Property Name="LayoutID" Type="Decimal" Nullable="false" Precision="6" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayoutName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LayoutType" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="LayoutContents" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="AccessType" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="LayoutVersion" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="SiteName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="BuildingLevels" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="ProcessName1" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="WSPW1" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ProcessName2" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="WSPW2" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ProcessName3" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="WSPW3" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ProcessName4" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="WSPW4" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="CADFileName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateCreated" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateModified" Type="DateTime" Precision="3" />
+          <Property Name="LayoutState" Type="Int16" />
+          <Property Name="FSA" Type="Boolean" />
+          <NavigationProperty Name="LO_Bays" Relationship="Lsds2Model.FK_LO_Bays_LO_Layouts" FromRole="LO_Layouts" ToRole="LO_Bays" />
+          <NavigationProperty Name="LO_Blocks" Relationship="Lsds2Model.FK_LO_Blocks_LO_Layouts" FromRole="LO_Layouts" ToRole="LO_Blocks" />
+          <NavigationProperty Name="LO_ItemAttributes" Relationship="Lsds2Model.FK_LO_ItemAttributes_LO_Layouts" FromRole="LO_Layouts" ToRole="LO_ItemAttributes" />
+          <Property Type="String" Name="ConfigSetName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Visible" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LSDS_Config">
+          <Key>
+            <PropertyRef Name="ConfigSetName" />
+            <PropertyRef Name="ParameterName" />
+          </Key>
+          <Property Name="ConfigSetName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ParameterName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Int1" Type="Int32" />
+          <Property Name="Int2" Type="Int32" />
+          <Property Name="Int3" Type="Int32" />
+          <Property Name="Int4" Type="Int32" />
+          <Property Name="Float1" Type="Double" />
+          <Property Name="Float2" Type="Double" />
+          <Property Name="Float3" Type="Double" />
+          <Property Name="Float4" Type="Double" />
+          <Property Name="Date1" Type="DateTime" Precision="3" />
+          <Property Name="Date2" Type="DateTime" Precision="3" />
+          <Property Name="Date3" Type="DateTime" Precision="3" />
+          <Property Name="Date4" Type="DateTime" Precision="3" />
+          <Property Name="Str1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Str2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Str3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Str4" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LongStr" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_LO_Bays_LO_Layouts">
+          <End Role="LO_Layouts" Type="Lsds2Model.LO_Layout" Multiplicity="1" />
+          <End Role="LO_Bays" Type="Lsds2Model.LO_Bay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Layouts">
+              <PropertyRef Name="LayoutID" />
+            </Principal>
+            <Dependent Role="LO_Bays">
+              <PropertyRef Name="LayoutID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_BlockAttributes_LO_Blocks">
+          <End Role="LO_Blocks" Type="Lsds2Model.LO_Block" Multiplicity="1" />
+          <End Role="LO_BlockAttributes" Type="Lsds2Model.LO_BlockAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Blocks">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Principal>
+            <Dependent Role="LO_BlockAttributes">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_Blocks_LO_Layouts">
+          <End Role="LO_Layouts" Type="Lsds2Model.LO_Layout" Multiplicity="1" />
+          <End Role="LO_Blocks" Type="Lsds2Model.LO_Block" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Layouts">
+              <PropertyRef Name="LayoutID" />
+            </Principal>
+            <Dependent Role="LO_Blocks">
+              <PropertyRef Name="LayoutID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_Frames_LO_Blocks">
+          <End Role="LO_Blocks" Type="Lsds2Model.LO_Block" Multiplicity="1" />
+          <End Role="LO_Frames" Type="Lsds2Model.LO_Frame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Blocks">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Principal>
+            <Dependent Role="LO_Frames">
+              <PropertyRef Name="LayoutID" />
+              <PropertyRef Name="BlockIndex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LO_ItemAttributes_LO_Layouts">
+          <End Role="LO_Layouts" Type="Lsds2Model.LO_Layout" Multiplicity="1" />
+          <End Role="LO_ItemAttributes" Type="Lsds2Model.LO_ItemAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LO_Layouts">
+              <PropertyRef Name="LayoutID" />
+            </Principal>
+            <Dependent Role="LO_ItemAttributes">
+              <PropertyRef Name="LayoutID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetCadUIConfig_Result">
+          <Property Type="Int64" Name="RecordID" Nullable="true" />
+          <Property Type="String" Name="ParamName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Int1" Nullable="true" />
+          <Property Type="String" Name="Str1" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Str2" Nullable="true" MaxLength="1000" />
+        </ComplexType>
+        <ComplexType Name="GetConfig_Result">
+          <Property Type="Int64" Name="RecordID" Nullable="true" />
+          <Property Type="String" Name="CONFIG_SET_NAME" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="LayoutManager_Result">
+          <Property Type="String" Name="LAYOUT_COMMAND" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="LAYOUT_ID" Nullable="true" />
+          <Property Type="Int32" Name="RETURN_CODE" Nullable="true" />
+          <Property Type="String" Name="RETURN_MESSAGE" Nullable="true" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Lsds2ModelStoreContainer" CdmEntityContainer="Lsds2Context">
+          <EntitySetMapping Name="LO_Bays">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_Bay">
+              <MappingFragment StoreEntitySet="LO_Bays">
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="BayName" ColumnName="BayName" />
+                <ScalarProperty Name="BaySide" ColumnName="BaySide" />
+                <ScalarProperty Name="BayPart" ColumnName="BayPart" />
+                <ScalarProperty Name="Xmin" ColumnName="Xmin" />
+                <ScalarProperty Name="Ymin" ColumnName="Ymin" />
+                <ScalarProperty Name="Xmax" ColumnName="Xmax" />
+                <ScalarProperty Name="Ymax" ColumnName="Ymax" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LO_BlockAttributes">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_BlockAttribute">
+              <MappingFragment StoreEntitySet="LO_BlockAttributes">
+                <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+                <ScalarProperty Name="BlockAttributeID" ColumnName="BlockAttributeID" />
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="BlockIndex" ColumnName="BlockIndex" />
+                <ScalarProperty Name="BlockAttributeIndex" ColumnName="BlockAttributeIndex" />
+                <ScalarProperty Name="BlockAttributeName" ColumnName="BlockAttributeName" />
+                <ScalarProperty Name="BlockAttributeValue" ColumnName="BlockAttributeValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LO_Blocks">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_Block">
+              <MappingFragment StoreEntitySet="LO_Blocks">
+                <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="BlockIndex" ColumnName="BlockIndex" />
+                <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+                <ScalarProperty Name="BlockXrefName" ColumnName="BlockXrefName" />
+                <ScalarProperty Name="BlockHandle" ColumnName="BlockHandle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LO_Frames">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_Frame">
+              <MappingFragment StoreEntitySet="LO_Frames">
+                <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+                <ScalarProperty Name="FrameID" ColumnName="FrameID" />
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="BlockIndex" ColumnName="BlockIndex" />
+                <ScalarProperty Name="FrameIndex" ColumnName="FrameIndex" />
+                <ScalarProperty Name="FrameTypeID" ColumnName="FrameTypeID" />
+                <ScalarProperty Name="Xmin" ColumnName="Xmin" />
+                <ScalarProperty Name="Ymin" ColumnName="Ymin" />
+                <ScalarProperty Name="Xmax" ColumnName="Xmax" />
+                <ScalarProperty Name="Ymax" ColumnName="Ymax" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LO_ItemAttributes">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_ItemAttribute">
+              <MappingFragment StoreEntitySet="LO_ItemAttributes">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemAttributeID" ColumnName="ItemAttributeID" />
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="ItemIndex" ColumnName="ItemIndex" />
+                <ScalarProperty Name="ItemAttributeIndex" ColumnName="ItemAttributeIndex" />
+                <ScalarProperty Name="ItemAttributeName" ColumnName="ItemAttributeName" />
+                <ScalarProperty Name="ItemAttributeValue" ColumnName="ItemAttributeValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LO_Items">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_Item">
+              <MappingFragment StoreEntitySet="LO_Items">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="ItemIndex" ColumnName="ItemIndex" />
+                <ScalarProperty Name="ItemAttributeIndex" ColumnName="ItemAttributeIndex" />
+                <ScalarProperty Name="ItemAttributeName" ColumnName="ItemAttributeName" />
+                <ScalarProperty Name="ItemAttributeID" ColumnName="ItemAttributeID" />
+                <ScalarProperty Name="BlockID" ColumnName="BlockID" />
+                <ScalarProperty Name="BlockIndex" ColumnName="BlockIndex" />
+                <ScalarProperty Name="BlockName" ColumnName="BlockName" />
+                <ScalarProperty Name="XrefName" ColumnName="XrefName" />
+                <ScalarProperty Name="LayerName" ColumnName="LayerName" />
+                <ScalarProperty Name="Xpos" ColumnName="Xpos" />
+                <ScalarProperty Name="Ypos" ColumnName="Ypos" />
+                <ScalarProperty Name="Zpos" ColumnName="Zpos" />
+                <ScalarProperty Name="Xscale" ColumnName="Xscale" />
+                <ScalarProperty Name="Yscale" ColumnName="Yscale" />
+                <ScalarProperty Name="Zscale" ColumnName="Zscale" />
+                <ScalarProperty Name="Rotation" ColumnName="Rotation" />
+                <ScalarProperty Name="ItemHandle" ColumnName="ItemHandle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LO_Layouts">
+            <EntityTypeMapping TypeName="Lsds2Model.LO_Layout">
+              <MappingFragment StoreEntitySet="LO_Layouts">
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="ConfigSetName" ColumnName="ConfigSetName" />
+                <ScalarProperty Name="LayoutID" ColumnName="LayoutID" />
+                <ScalarProperty Name="LayoutName" ColumnName="LayoutName" />
+                <ScalarProperty Name="LayoutType" ColumnName="LayoutType" />
+                <ScalarProperty Name="LayoutContents" ColumnName="LayoutContents" />
+                <ScalarProperty Name="AccessType" ColumnName="AccessType" />
+                <ScalarProperty Name="LayoutVersion" ColumnName="LayoutVersion" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+                <ScalarProperty Name="BuildingLevels" ColumnName="BuildingLevels" />
+                <ScalarProperty Name="ProcessName1" ColumnName="ProcessName1" />
+                <ScalarProperty Name="WSPW1" ColumnName="WSPW1" />
+                <ScalarProperty Name="ProcessName2" ColumnName="ProcessName2" />
+                <ScalarProperty Name="WSPW2" ColumnName="WSPW2" />
+                <ScalarProperty Name="ProcessName3" ColumnName="ProcessName3" />
+                <ScalarProperty Name="WSPW3" ColumnName="WSPW3" />
+                <ScalarProperty Name="ProcessName4" ColumnName="ProcessName4" />
+                <ScalarProperty Name="WSPW4" ColumnName="WSPW4" />
+                <ScalarProperty Name="CADFileName" ColumnName="CADFileName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="LayoutState" ColumnName="LayoutState" />
+                <ScalarProperty Name="FSA" ColumnName="FSA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LSDS_Config">
+            <EntityTypeMapping TypeName="Lsds2Model.LSDS_Config">
+              <MappingFragment StoreEntitySet="LSDS_Config">
+                <ScalarProperty Name="ConfigSetName" ColumnName="ConfigSetName" />
+                <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+                <ScalarProperty Name="Int1" ColumnName="Int1" />
+                <ScalarProperty Name="Int2" ColumnName="Int2" />
+                <ScalarProperty Name="Int3" ColumnName="Int3" />
+                <ScalarProperty Name="Int4" ColumnName="Int4" />
+                <ScalarProperty Name="Float1" ColumnName="Float1" />
+                <ScalarProperty Name="Float2" ColumnName="Float2" />
+                <ScalarProperty Name="Float3" ColumnName="Float3" />
+                <ScalarProperty Name="Float4" ColumnName="Float4" />
+                <ScalarProperty Name="Date1" ColumnName="Date1" />
+                <ScalarProperty Name="Date2" ColumnName="Date2" />
+                <ScalarProperty Name="Date3" ColumnName="Date3" />
+                <ScalarProperty Name="Date4" ColumnName="Date4" />
+                <ScalarProperty Name="Str1" ColumnName="Str1" />
+                <ScalarProperty Name="Str2" ColumnName="Str2" />
+                <ScalarProperty Name="Str3" ColumnName="Str3" />
+                <ScalarProperty Name="Str4" ColumnName="Str4" />
+                <ScalarProperty Name="LongStr" ColumnName="LongStr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetCadUIConfig" FunctionName="Lsds2Model.Store.GetCadUIConfig">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Lsds2Model.GetCadUIConfig_Result">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+                <ScalarProperty Name="Int1" ColumnName="Int1" />
+                <ScalarProperty Name="Str1" ColumnName="Str1" />
+                <ScalarProperty Name="Str2" ColumnName="Str2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetConfig" FunctionName="Lsds2Model.Store.GetConfig">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Lsds2Model.GetConfig_Result">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="CONFIG_SET_NAME" ColumnName="CONFIG_SET_NAME" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LayoutManager" FunctionName="Lsds2Model.Store.LayoutManager">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Lsds2Model.LayoutManager_Result">
+                <ScalarProperty Name="LAYOUT_COMMAND" ColumnName="LAYOUT_COMMAND" />
+                <ScalarProperty Name="LAYOUT_ID" ColumnName="LAYOUT_ID" />
+                <ScalarProperty Name="RETURN_CODE" ColumnName="RETURN_CODE" />
+                <ScalarProperty Name="RETURN_MESSAGE" ColumnName="RETURN_MESSAGE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

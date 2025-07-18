@@ -1,0 +1,731 @@
+﻿<UserControl x:Name="UcProjectExplorer"
+    x:Class="Intellidesk.AcadNet.Views.ProjectExplorerView" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="Auto" Background="#FFF0F0F0"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:core="clr-namespace:Intellidesk.AcadNet.Core"
+    xmlns:helper="clr-namespace:Intellidesk.AcadNet.Helpers"
+    xmlns:infrahelper="clr-namespace:ID.Infrastructure.Helpers;assembly=ID.Infrastructure"
+    DataContext = "{Binding RelativeSource={RelativeSource Self}, Path=ProjectExplorerDataContext}"
+    xmlns:components="clr-namespace:Intellidesk.AcadNet.Components"
+    xmlns:interfaces="clr-namespace:Intellidesk.AcadNet.Common.Interfaces;assembly=ID.AcadNet.Common"
+    Width="390">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Converters.xaml"/>
+                <!--<ResourceDictionary Source="pack://application:,,,/ID.Infrastructure;component/Assets/Converters.xaml" />-->
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\UIRecourses.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Icons.xaml"/>
+                <!--<ResourceDictionary Source="pack://application:,,,/ID.AcadNet.Resources;component/Icons.xaml" />-->
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Styles.xaml"/>
+                <ResourceDictionary Source="/ID.Resources;component/Assets\Styles.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Trees.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\SearchBarStyles.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\FilePropertyGridStyle.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\DataGridCustomizations.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\StringResources.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Fonts.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--<CollectionViewSource x:Key="Src" Source="{Binding lsds:ProjectExplorerViewModel.Layouts}">
+                <CollectionViewSource.GroupDescriptions>
+                    <PropertyGroupDescription PropertyName="RoundName"/>
+                </CollectionViewSource.GroupDescriptions>
+            </CollectionViewSource>-->
+
+            <!--<ObjectDataProvider x:Key="Data" ObjectType="{x:Type viewModels:ProjectExplorerViewModel }" MethodName="GetCheckedPaths"></ObjectDataProvider>-->
+            <!--<lsds:CommandReference x:Key="ExitCommandReference" Command="{Binding LayoutChangedCommand}" />-->
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <!--<custom:MyButtonSimple x:Name="mybtnsimple" Tap="LayoutEvent" Content="Open Layout" Command="{Binding OpenLayoutCommand}" CommandParameter="{Binding CurrentLayout}" />-->
+            <Grid x:Name="GrdToolbar" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="32" />
+                </Grid.ColumnDefinitions>
+
+                <!--Top1 Panel buttons-->
+                <StackPanel x:Name="ButtonsPanelLeft" Grid.Column="0" Grid.ColumnSpan="3"  Orientation="Horizontal" HorizontalAlignment="Left" Height="30" Margin="0">
+                    <!--<viewModels:ImageButton x:Name="OpenLayoutButton" ToolTip="Open layout" Visibility="Collapsed"
+                                ActiveImage="{DynamicResource OpenA}" 
+                                NormalImage="{DynamicResource Open}"
+    			                Command="{Binding OpenLayoutCommand}"
+                                CommandParameter="{Binding CurrentLayout}"
+    			                Style="{DynamicResource StateButtonStyle}">
+                    </viewModels:ImageButton>-->
+
+                    <!--<Button x:Name="NewLayoutButton" ToolTip="New project"
+    			                Command="{Binding CreateLayoutCommand}" 
+                                CommandParameter="{Binding CurrentLayout}" 
+    			                Style="{DynamicResource AcadButtonStyle}" 
+                                Tag="{DynamicResource PanelIcon}" IsEnabled="False" />-->
+
+                    <Image  Source="{DynamicResource PanelIcon}" Width="16" Height="16" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" 
+                        Margin="8,0,8,0" Opacity="0.5" Cursor="No"  />
+
+                    <Separator Grid.Column="0" Style="{DynamicResource AcadToolBarSeparatorStyle}" Width="20" HorizontalAlignment="Right" />
+
+                    <Button x:Name="SaveLayoutButton" ToolTip="Save changes to DB"
+                          Style="{DynamicResource AcadButtonStyle}"
+    			          Command="{Binding SaveCommand}" 
+                          CommandParameter="{Binding ElementName=TreeExplorer }" 
+                          IsEnabled="{Binding Path=ShowAllFolders }"
+                          Tag="{DynamicResource Save}" />
+
+                    <components:CustomFontIconCheckBox x:Name="PropertyCheckBox" ToolTip="Info" Visibility="Collapsed"
+                          IsChecked="{Binding ProjectExplorerPropertySectionDisplay}"
+                          Style="{DynamicResource CheckBoxFontStyle}" Padding="12"
+                          CheckIconBrush="{StaticResource IconSelectedColor}" UnCheckIconBrush="{StaticResource IconNormalColor}"
+                          CheckIcon="{StaticResource fa-info}" UnCheckIcon="{StaticResource fa-info}" 
+                          Checked="PropertyCheckBox_Checked">
+                    </components:CustomFontIconCheckBox>
+
+                    <CheckBox x:Name="LayoutFilterCheckBox" ToolTip="Show all folders"
+                                  IsChecked="{Binding ShowAllFolders}" 
+                                  Command="{Binding ShowAllFoldersCommand}" 
+                                  CommandParameter="{Binding ElementName=TreeExplorer}" 
+                                  Style="{DynamicResource AcadCheckBoxStyle}">
+                    </CheckBox>
+
+                    <Button x:Name="ExternalEditorButton"  Margin="0,3,0,0"
+                            ToolTip="open current folder with window's explorer"
+                            Style="{DynamicResource AcadButtonNotifyStyle}"
+                            Command="{Binding EditCommand}" 
+                            CommandParameter="{Binding FileExplorerViewModel.SelectedFolder }" 
+                            Tag="{StaticResource #fa-folder-o }"
+                            Content="{StaticResource #fa-pencil }"/>
+
+                    <Button x:Name="WorkItemsOpenAllButton" Margin="0,3,0,0"
+                                ToolTip="open all work items" 
+                                Style="{DynamicResource AcadButtonNotifyStyle}"
+                                Command="{Binding WorkItemsOpenAllCommand}" 
+                                CommandParameter="{Binding FileExplorerViewModel.SelectedFolder }" 
+                                Tag="{StaticResource #fa-folder-o }" 
+                                Content="{StaticResource #fa-play }" />
+
+                    <Button x:Name="WorkItemsButton" Margin="0,3,0,0"
+                                ToolTip="open folder of work items" 
+                                Style="{DynamicResource AcadButtonNotifyStyle}"
+                                Command="{Binding WorkItemsDisplayCommand}" 
+                                CommandParameter="{x:Null}" 
+                                Tag="{StaticResource #fa-folder-o }" 
+                                Content="{StaticResource #fa-star }">
+                    </Button>
+
+                    <!--Tag="{DynamicResource OpenAll}"
+                        <viewModels:ImageButton x:Name="SaveLayoutButton" 
+                                ToolTip="Save changes to DB"
+                                ActiveImage="{DynamicResource LayoutSaveA}" 
+                                NormalImage="{DynamicResource LayoutSave}"
+    			                Command="{Binding Path=SaveCommand}" 
+                                CommandParameter="{Binding ElementName=TreeExplorer}" 
+    			                Style ="{StaticResource StateButtonStyle}"
+                                Cursor="Hand">
+                            </viewModels:ImageButton>-->
+
+                    <!--ActiveImage="{DynamicResource LsdsSave_a}" NormalImage="{DynamicResource LsdsSave}"-->
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="2">
+                    <!--<Button x:Name="RefreshButton" ToolTip="Refresh folder"
+                            Style="{DynamicResource AcadButtonStyle}"
+    			            Command="{Binding RefreshCommand}" 
+                            CommandParameter="{Binding ElementName=TreeExplorer }" 
+                            IsEnabled="True"
+                            Tag="{DynamicResource Refresh}" />-->
+                    <Button x:Name="RefreshButton" ToolTip="Refresh folder"
+                            Command="{Binding RefreshCommand}" 
+                            CommandParameter="{Binding ElementName=TreeExplorer }" 
+                            IsEnabled="True" Padding="2" Margin="2" Width="20" 
+                            BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand">
+                        <TextBlock x:Name="RefreshTextAnimated" Text="{StaticResource #fa-refresh }" 
+                            FontFamily="{StaticResource FontAwesome}" 
+                            FontSize="14" Width="12" Foreground="#FF5B5B5B" 
+                            HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="1" Color="White" RenderingBias="Quality" BlurRadius="1"/>
+                            </TextBlock.Effect>
+                                <!--<TextBlock.RenderTransform>
+                                    <RotateTransform Angle="0"/>
+                                </TextBlock.RenderTransform>-->
+                        </TextBlock>
+                    </Button>
+                    <Button x:Name="CloseButton" Command="{Binding CloseCommand}" 
+                            ToolTip="Close" IsEnabled="True" Padding="2" Margin="2" Width="20"
+                            BorderBrush="{x:Null}" Background="{x:Null}" Cursor="Hand">
+                        <TextBlock Text="X" 
+                             FontFamily="{StaticResource FontAwesome}" 
+                             FontSize="14"  Foreground="#FF5B5B5B" 
+                             HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="1.3"/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="1" Color="White" RenderingBias="Quality" BlurRadius="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Button>
+                </StackPanel>
+
+                <!--ButtonsPanelRight-->
+                <StackPanel Grid.Column="3" x:Name="ButtonsPanelRight" Orientation="Horizontal" 
+                            Margin="0" HorizontalAlignment="Right" >
+                    <!--
+                            <ComboBox MinWidth="50" Width="Auto" Margin="2,5,2,5"
+                              ItemsSource="{Binding LayoutFilters}"
+                              SelectedValue="{Binding CurrentLayoutFilter}"
+                              DisplayMemberPath="filter"
+                              SelectedValuePath="LayoutID"/>
+                            <CheckBox x:Name="LayoutFilterCheckBox" ToolTip="Filter layout"
+                                IsChecked="{Binding CurrentLayoutFilter.Active}"
+                		        Command="{Binding LayoutFilterCommand}" CommandParameter="{Binding CurrentLayoutFilter}" 
+                                Style="{DynamicResource AcadCheckBoxStyle}" />
+                            <Separator Style="{DynamicResource AcadToolBarSeparatorStyle}" />
+                            <CheckBox x:Name="LayoutFilterCheckBox" ToolTip="Filter layout"
+                                IsChecked="{Binding CurrentLayoutFilter.Active}"
+                		        Command="{Binding LayoutFilterCommand}" CommandParameter="{Binding CurrentLayoutFilter}" 
+                                Style="{DynamicResource AcadCheckBoxStyle}" />
+                            <Separator Style="{DynamicResource AcadToolBarSeparatorStyle}" />
+                            local:ImageStates.NormalImage="/ID.AcadNet;component/Resources/MetroBlack/refresh.png" />
+                            <Button x:Name="DeleteLayoutButton" ToolTip="Delete layout" Background="Transparent"
+                            Command="{Binding DeleteLayoutCommand}" CommandParameter="{Binding CurrentLayout}" 
+                		    Style="{DynamicResource AcadButtonStyle}" Tag="{DynamicResource LayoutDelete}" />
+                    -->
+
+
+                    <!--
+                            <Button x:Name="DeleteLayoutButton" ToolTip="Delete layout" Background="Transparent"
+                            Command="{Binding DeleteLayoutCommand}" CommandParameter="{Binding CurrentLayout}" 
+                		    Style="{DynamicResource AcadButtonStyle}" Tag="{DynamicResource LayoutDelete}" />
+                            <Button x:Name="UnDeleteLayoutButton" ToolTip="UnDelete layout" 
+                		            Command="{Binding UndeleteLayoutCommand}" CommandParameter="{Binding CurrentLayout}" 
+                		            Style="{DynamicResource AcadButtonStyle}" Tag="{DynamicResource LsdsUnDelete}" />
+                                <Button x:Name="ClearData" ToolTip="Clean Data" Background="Transparent"
+                                    Command="{Binding ClearDataCommand}" CommandParameter="{Binding CurrentLayout}" 
+                		            Style="{DynamicResource AcadButtonStyle}" Tag="{DynamicResource MapClearData}" />
+                                <Button x:Name="PurgeLayoutButton" ToolTip="Purge layout"
+                		            Command="{Binding PurgeLayoutCommand}" CommandParameter="{Binding CurrentLayout}" 
+                		            Style="{DynamicResource AcadButtonStyle}" Tag="{DynamicResource LsdsPurge}"
+                		            HorizontalAlignment="Right"/>
+                    -->
+
+                    <!--<xctk:DropDownButton Style="{DynamicResource DropDownButtonStyleCustom}" 
+                                         ToolTip="Options">
+                        <xctk:DropDownButton.DropDownContent>
+                            <StackPanel>
+                                <MenuItem Header="Delete" IsEnabled="False"
+                                                  Command="{Binding DeleteLayoutCommand}" 
+                                                  CommandParameter="{Binding CurrentLayout}"  
+                                                  ToolTip="Delete from solution">
+                                    <MenuItem.Icon>
+                                        <Image Source="{DynamicResource LayoutDelete}" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <Separator/>
+                                <MenuItem Header="UnDelete" IsEnabled="False"
+                                        Command="{Binding UndeleteLayoutCommand}" 
+                                        CommandParameter="{Binding CurrentLayout}" 
+                                        ToolTip="Rebuild from db">
+                                    <MenuItem.Icon>
+                                        <Image Source="{DynamicResource LayoutUnDelete}" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <Separator/>
+                                <MenuItem Header="Purge" IsEnabled="False"
+                                        Command="{Binding PurgeLayoutCommand}" 
+                                        CommandParameter="{Binding CurrentLayout}" 
+                                        ToolTip="Clear from db to forever" >
+                                    <MenuItem.Icon>
+                                        <Image Source="{DynamicResource LayoutPurge}" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <Separator/>
+                                <MenuItem Header="Show properties by groups/by a-z" IsCheckable="True" IsChecked="True" />
+                                <CheckBox x:Name="LayoutFilterCheckBox1" ToolTip=""
+                                            IsChecked="{Binding Path=CurrentLayoutFilter.Active}"
+                		                    Command="{Binding FilterLayoutCommand}" 
+                                            CommandParameter="{Binding CurrentLayoutFilter}" 
+                                            Style="{DynamicResource AcadCheckBoxStyle}" />
+                                <Separator Style="{DynamicResource AcadToolBarSeparatorStyle}" />-->
+
+                    <!--<MenuItem Header="Filter layout" IsCheckable="{Binding CurrentLayoutFilter.Active}" 
+                                                  Command="{Binding LayoutFilterCommand}" 
+                                                  CommandParameter="{Binding CurrentLayoutFilter}" ToolTip="Filter layout" >
+                                    <MenuItem.Icon>
+                                        <Image Source="{DynamicResource LayoutFilter}" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </StackPanel>
+
+                        </xctk:DropDownButton.DropDownContent>
+                        <Image Source="{DynamicResource LayoutConfig}" Width="16" Height="16" Cursor="Hand" />
+                    </xctk:DropDownButton>-->
+
+                    <!--DropDownButton.DropDownContent
+                        <Menu Name="AdminOperations" >
+                            <MenuItem Command="{Binding UndeleteLayoutCommand}" CommandParameter="{Binding CurrentLayout}" >
+                                            <MenuItem.Header>
+                                                <StackPanel>
+                                                    <Label Content="UnDelete"></Label>
+                                                    <Image Width="16" Height="16" Source="/ID.AcadNet;component/Resources/lsdsUnDelete.png" />
+                                                    <ContentPresenter Content="Reports" />
+                                                </StackPanel>
+                                            </MenuItem.Header>
+
+                                        </MenuItem>
+                            <MenuItem Header="Purge" Command="{Binding PurgeLayoutCommand}" CommandParameter="{Binding CurrentLayout}"/>
+                            </Menu>-->
+
+                    <Separator Style="{DynamicResource AcadToolBarSeparatorStyle}" Width="20" />
+
+                    <Expander ExpandDirection="Left" ToolTip="Collapse"
+                              BorderBrush="Transparent" Margin="3,3,3,0"
+                		      IsExpanded="{Binding Path=SwitchSizeMode}"
+                		      HorizontalAlignment="Right" VerticalAlignment="Center" 
+                              Background="Transparent" Cursor="Hand" />
+                </StackPanel>
+
+                <!--"{StaticResource PanelSizeMode}"-->
+                <!--<ComboBox SelectedIndex="1" BorderThickness="1" BorderBrush="Transparent" Background="Transparent">
+                            <ComboBoxItem Content="50%"/>
+                            <ComboBoxItem Content="100%"/>x:FieldModifier="public"
+                            <ComboBoxItem Content="150%"/>SelectedValue="{Binding CurrentLayout}"SelectedItem="{Binding CurrentLayout}"
+                        </ComboBox>-->
+            </Grid>
+            <Grid DataContext="{Binding Path=ProjectExplorerDataContext.SearchViewModel, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" Margin="10,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="SearchText" Grid.Column="0" VerticalAlignment="Center" Height="22" Grid.ColumnSpan="2" 
+                         TextChanged="SearchText_TextChanged" Style="{StaticResource SearchTextBoxStyle}"
+                         infrahelper:EnterKeyHelpers.EnterKeyCommand="{Binding SearchCommand}">
+                    <TextBox.Text>
+                        <Binding NotifyOnValidationError="True" ValidatesOnDataErrors="True" 
+                                 UpdateSourceTrigger="PropertyChanged" Path="SearchKeyword" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <helper:FileNameValidationRule  />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <Validation.ErrorTemplate>
+                        <ControlTemplate>
+                        </ControlTemplate>
+                    </Validation.ErrorTemplate>
+                </TextBox>
+
+                <Button x:Name="CancelButton" Grid.Column="1" Opacity="0.8" HorizontalAlignment="Right" Width="20"
+                        Style="{DynamicResource AcadButtonStyle}" ToolTip="Search layout"
+    			        Command="{Binding SearchClearCommand}" 
+                        CommandParameter="{Binding ElementName=TreeExplorer}" 
+                        IsEnabled="True"
+                        Tag="{DynamicResource Cancel}" />
+
+                <!--<TextBlock x:Name="tbFontAwesome" Text="&#xf004;" FontFamily="{StaticResource FontAwesome}" 
+                           Grid.Column="1" Width="20" Foreground="Red" Opacity="0.8" HorizontalAlignment="Right" Margin="0,0,40,0"
+                           FontSize="32" VerticalAlignment="Center"></TextBlock>-->
+
+                <!--<TextBlock Grid.Column="1" Foreground="Red" Opacity="0.8" Margin="0,0,30,0"
+                           Style="{StaticResource fa-flag}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                           Visibility="{Binding IsFlagMessageInfo, Converter={StaticResource booleanToVisibilityConverter}}" 
+                           ToolTip="{Binding MessageInfo}">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="3" Opacity="0.5"/>
+                    </TextBlock.Effect>
+                </TextBlock>-->
+
+                <TextBlock x:Name="NotifyButton" Grid.Column="1" Style="{StaticResource fa-exclamation}" 
+                        VerticalAlignment="Center" HorizontalAlignment="Right" 
+                        Width="12" Foreground="Red" Opacity="0.8" Margin="0,0,60,0" FontSize="16" 
+                        Visibility="{Binding IsSearchEnabled, Converter={StaticResource ReverseVisibilityConverter}}" 
+                        ToolTip="{Binding Path=(Validation.Errors)[0].ErrorContent}">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="2" Opacity="0.3" BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+
+                <!--<Button Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,40,0" Width="20"
+                        Style="{DynamicResource AcadButtonNotifyStyle}" Tag="{StaticResource fa-flag}"
+                        Visibility="{Binding IsMessageInfoVisible, Converter={StaticResource booleanToVisibilityConverter}}" 
+                        ToolTip="{Binding Path=MessageInfo}"/>-->
+
+                <!--<Button x:Name="FLag" Grid.Column="1" Opacity="0.8" HorizontalAlignment="Right" Margin="0,0,40,0" Width="20"
+                        Style="{DynamicResource AcadButtonStyle}"
+    			        Command="{Binding SearchCommand}" 
+                        CommandParameter="{Binding ElementName=TreeExplorer }" 
+                        IsEnabled="{Binding Path=IsSearchEnabled }"
+                        Visibility="{Binding IsMessageInfoVisible, Converter={StaticResource booleanToVisibilityConverter}}" 
+                        ToolTip="{Binding Path=MessageInfo}"Command="{Binding Path=SearchCommand}"
+                        Tag="{DynamicResource Flag}" />-->
+
+                <Button x:Name="SearchButton" Grid.Column="1" Opacity="0.8" 
+                        HorizontalAlignment="Right" Margin="0,0,20,0" Width="20"
+                        ToolTip="Search layout" Background="{x:Null}" BorderBrush="{x:Null}"
+                        Command="{Binding Path=SearchCommand}" 
+    			        CommandParameter="{Binding ElementName=TreeExplorer }">
+                    <TextBlock Text="{StaticResource #fa-search }" Width="16px" 
+                               TextAlignment="Center" VerticalAlignment="Center"
+                               FontFamily="{StaticResource FontAwesome}" 
+                               FontSize="12" Foreground="#FF5B5B5B">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="1" Color="White" RenderingBias="Quality" BlurRadius="1"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                </Button>
+
+                <helper:ImageAnim Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Source="{StaticResource IMG_GifIndicator}" Width="20px" Height="14" Margin="0,4"
+                        Visibility="{Binding IsSearching, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                        Panel.ZIndex="1" />
+
+                <TextBlock Grid.Column="0" x:Name="TbPrompt" 
+                        VerticalAlignment="Center" HorizontalAlignment="Right"
+                        Text="{Binding MessageInfo, Mode=TwoWay}" Foreground="#FFE60000"
+                        Visibility="Collapsed" 
+                        Width="100" Margin="0,3,10,3" Height="16" />
+
+                <CheckBox Grid.Column="1" ToolTip="Include subfolders" 
+                        VerticalAlignment="Center" HorizontalAlignment="Right"
+                        IsChecked="{Binding Path=IsSearchIncludedSubDir}" Margin="0,0,43,0" RenderTransformOrigin="0.5,0.5">
+                    <CheckBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </CheckBox.RenderTransform>
+                </CheckBox>
+                <!--Visibility="{Binding IsMessageInfoVisible, Converter={StaticResource BooleanToVisibilityConverter}}"-->
+            </Grid>
+            <TextBlock Text="Work folders:" FontSize="11" FontWeight="Bold" Foreground="#FF5B5B5B" Margin="10,0" />
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" DataContext="{Binding FileExplorerViewModel}">
+            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                <Label Content="Info:" Padding="0,0,2,2" FontSize="11" FontWeight="Bold" Foreground="#FF5B5B5B"/>
+                <TextBlock Text="{Binding CurrentFile.FullPath}" FontSize="11" FontWeight="Bold" Foreground="#FF5B5B5B" />
+            </StackPanel>
+            <!--PropertyGrid-->
+
+            <Border  BorderThickness="1" BorderBrush="DarkGray" HorizontalAlignment="Stretch" CornerRadius="1" MinHeight="60" Margin="5,0,5,5">
+                <ScrollViewer VerticalAlignment="Stretch" Margin="0" BorderBrush="#FFC7C7C7">
+                    <!--PropertyGrid
+                        SelectedObject="{Binding ElementName=UcProjectExplorer, Path=ViewModel.FileExplorerViewModel.LayoutInfoViewModel. }" 
+                        DataContext="{Binding Path=FileExplorerViewModel.LayoutInfoViewModel.Data }"
+                        -->
+                    <xctk:PropertyGrid x:Name="PropertyGrid1" x:FieldModifier="public" Padding="0,-53,0,0" MinHeight="60"
+                          VerticalAlignment="Stretch" ScrollViewer.CanContentScroll="True" ShowSearchBox="False"
+                          SelectedObject="{Binding Path= CurrentFile.DataInfo }"
+                          NameColumnWidth="{Binding ElementName=GrdMain, Path=ColumnDefinitions[0].Width }"
+                          AutoGenerateProperties="True" Background="#FFF0F0F0" BorderBrush="{x:Null}">
+
+                        <xctk:PropertyGrid.EditorDefinitions>
+                            <xctk:EditorDefinition>
+                                <xctk:EditorDefinition.PropertiesDefinitions>
+                                    <xctk:PropertyDefinition Name="CoordSystem" />
+                                </xctk:EditorDefinition.PropertiesDefinitions>
+                                <xctk:EditorDefinition.EditorTemplate>
+                                    <DataTemplate>
+                                        <TextBox FontWeight="Bold" Text="{Binding Value }"/>
+                                    </DataTemplate>
+                                </xctk:EditorDefinition.EditorTemplate>
+                            </xctk:EditorDefinition>
+
+                            <xctk:EditorDefinition>
+                                <xctk:EditorDefinition.PropertiesDefinitions>
+                                    <xctk:PropertyDefinition Name="CADFileName" />
+                                </xctk:EditorDefinition.PropertiesDefinitions>
+                            </xctk:EditorDefinition>
+
+                            <xctk:EditorDefinition TargetType="{x:Type sys:Boolean}">
+                                <xctk:EditorDefinition.PropertiesDefinitions>
+                                    <xctk:PropertyDefinition Name="Visible" />
+                                </xctk:EditorDefinition.PropertiesDefinitions>
+                                <xctk:EditorDefinition.EditorTemplate>
+                                    <DataTemplate>
+                                        <TextBlock FontWeight="Bold" 
+                                                   Text="{Binding Value, Converter={StaticResource BoolToValueConverter}}" />
+                                    </DataTemplate>
+                                </xctk:EditorDefinition.EditorTemplate>
+                            </xctk:EditorDefinition>
+
+                        </xctk:PropertyGrid.EditorDefinitions>
+                    </xctk:PropertyGrid>
+
+                </ScrollViewer>
+            </Border>
+        </StackPanel>
+
+        <Grid x:Name="GrdMain">
+            <Grid.RowDefinitions>
+                <!--<RowDefinition Height="30" x:Name="RowToolBar"/>
+                    <RowDefinition Height="47" x:Name="RowSearchBar"/>-->
+                <RowDefinition Height="70" x:Name="RowTreeFolders" MinHeight="70" MaxHeight="454" />
+                <RowDefinition Height="6" x:Name="RowSplitterTreeFolders" />
+                <RowDefinition Height="16" x:Name="RowFolderHistory" MaxHeight="20"/>
+                <RowDefinition Height="*" x:Name="RowListFiles" MinHeight="70"/>
+                <!--<RowDefinition Height="{Binding ElementName=CurrentFolderHistory, Path=Height}"
+                x:Name="RowFolderHistory" MinHeight="20"/>
+            <RowDefinition Height="{Binding ElementName=UcProjectExplorer, Path=ViewModel.ProjectExplorerFilesSectionHeight}"
+                x:Name="RowListFiles" MinHeight="220" />-->
+                <RowDefinition Height="0" />
+            </Grid.RowDefinitions>
+
+            <!--treeExplorer-->
+            <!--Visibility="{Binding ElementName=UcProjectExplorer, Path=DataContext.ShowAllFolders, Converter={StaticResource BooleanToVisibilityConverter}}"-->
+            <Border Grid.Row="0" BorderThickness="1" CornerRadius="4" Cursor="Hand" VerticalAlignment="Stretch">
+                <components:CustomTreeView x:Name="TreeExplorer" 
+                    Margin="5,0,5,0" Background="#FFF0F0F0" VerticalAlignment="Stretch"
+                    DataContext="{Binding Path=FileExplorerViewModel}"
+                    ItemsSource="{Binding Path=Items}"
+                    ItemContainerStyle="{StaticResource TreeViewItemContainerStyle}"
+                    ItemTemplate="{StaticResource FolderHierarchicalDataTemplate}"
+                    TreeViewItem.Selected="TreeExplorer_OnSelected"
+                    TreeViewItem.Expanded="TreeExplorer_Expanded" IsTabStop="True"
+                    Loaded="TreeExplorer_Loaded" 
+                    MouseRightButtonUp="TreeExplorerPreviewMouseRightButtonDown"
+                    SelectedItemChangedCommand="{Binding Path=SelectedFolderCommand}"
+                    VirtualizingStackPanel.IsVirtualizing="True" 
+                    VirtualizingStackPanel.VirtualizationMode="Recycling">
+                </components:CustomTreeView>
+            </Border>
+
+            <!--GridSplitter-->
+            <GridSplitter x:Name="TreeViewGridSplitter" Grid.Row="1" Cursor="SizeNS"  Width="50" Height="6" 
+                      DragCompleted="TreeView_OnDragCompleted"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <GridSplitter.Template>
+                    <ControlTemplate TargetType="{x:Type GridSplitter}">
+                        <Grid Margin="0,0,0,0">
+                            <Label Content=". . . . . ." Margin="0,-14" HorizontalAlignment="Center"  />
+                        </Grid>
+                    </ControlTemplate>
+                </GridSplitter.Template>
+            </GridSplitter>
+
+            <!--Folder history-->
+            <core:CustomTextBlockFolderLinks Grid.Row="2" 
+                    DataContext="{Binding FileExplorerViewModel}" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5 0 5 0"
+                    Height="Auto" Width="Auto" TextWrapping="Wrap" Foreground="#FF6A6A6A" FontSize="11"
+                    LinkStyle="{DynamicResource LinkStyle}" LinkStyleSelected="{DynamicResource LinkStyleSelected}" 
+                    LinkedFolder="{Binding RelativeSource={RelativeSource Self}, NotifyOnTargetUpdated=True, Path=Tag}"
+                    Text="{Binding RelativeSource={RelativeSource Self}, TargetNullValue='', NotifyOnTargetUpdated=True, Path=Tag.FullPath}"
+                    Tag="{Binding CurrentFolder}"/>
+
+            <!--Details dataGrid-->
+            <Border Grid.Row="3" BorderThickness="1" CornerRadius="4" Margin="5,0,5,0" Cursor="Hand">
+                <components:CustomListView x:Name="LvContent" Margin="-1,1,1,-1" 
+                 DataContext="{Binding FileExplorerViewModel}"  
+                 SelectionMode="Extended" TextBlock.Foreground="Black"
+                 Background="#FFF0F0F0"
+                 BorderBrush="{StaticResource DefaultListBorder}"
+                 ItemsSource="{Binding Path=FolderDetailsCollectionView }"
+                 Style="{x:Null}" ContextMenuService.IsEnabled="True"
+                 SelectionCommand="{Binding Path=SelectionFileCommand}"
+                 DoubleClickCommand="{Binding Path=OpenFileCommand}"
+                 MouseRightButtonUp="FileItemListViewPreviewMouseRightButtonDown">
+
+                    <!--ContextMenuService.IsEnabled="false"-->
+
+                    <!--<components:CustomListView.Resources>
+                        <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource {x:Type ScrollBar}}">
+                            <Setter Property="ContextMenu" Value="{x:Null}"/>
+                        </Style>
+                        <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource {x:Type MenuItem}}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </Style>
+                    </components:CustomListView.Resources>-->
+
+                    <components:CustomListView.View>
+                        <GridView x:Name="ContentView">
+
+                            <!--explorer:ColumnPropertyHelper.MinWidth="30" 
+                                explorer:ColumnPropertyHelper.MaxWidth="50"-->
+                            <GridViewColumn Width="0" ContextMenuService.IsEnabled="True" >
+
+                                <GridViewColumnHeader Background="{StaticResource DefaultHeaderAreaBrush}">
+                                    <CheckBox x:Name="ChkAll" Background="Transparent"
+                                        DataContext="{Binding ElementName=UcProjectExplorer}"
+                                        IsEnabled="{Binding ElementName=LvContent, Path=IsCheckEnabled }"
+                                        IsChecked="{Binding ElementName=LvContent, Path=IsChecked, Mode=TwoWay}"
+                                        VerticalAlignment="Center"  HorizontalAlignment="Left">
+                                    </CheckBox>
+                                </GridViewColumnHeader>
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate DataType="{x:Type interfaces:IFolder}">
+                                        <!--CheckBox Click="ItemCheckBox_Click"-->
+                                        <CheckBox Margin="2,0,0,0" x:Name="chk"
+                                            IsEnabled="{Binding Path=IsEnabled}"
+                                            IsChecked="{Binding Path=IsChecked, Mode=TwoWay}"
+                                            VerticalAlignment="Center">
+                                            <CheckBox.Resources>
+                                                <Style TargetType="CheckBox" BasedOn="{StaticResource Ux_checkBoxStyle}">
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsEnabled"  Value="False">
+                                                            <Setter Property="Opacity" Value=".5" />
+                                                            <Setter Property="Background" Value="#808080" />
+                                                            <Setter Property="Foreground" Value="#808080" />
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </CheckBox.Resources>
+                                        </CheckBox>
+
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!--explorer:ColumnPropertyHelper.MinWidth="100" 
+                                explorer:ColumnPropertyHelper.MaxWidth="400"
+                                explorer:ColumnPropertyHelper.SortPropertyName="Name"-->
+
+                            <GridViewColumn Width="222" x:Name="ColName"
+                                HeaderTemplate="{StaticResource AscSortHeaderTemplate}">
+
+                                <GridViewColumnHeader Background="{StaticResource DefaultHeaderAreaBrush}"
+                                    Content="{DynamicResource FolderName}"
+                                    Command="{Binding Path=SortFilesCommand}" 
+                                    CommandParameter="{Binding ElementName=ColName}"
+                                    CommandTarget="{Binding ElementName=LvContent}">
+                                </GridViewColumnHeader>
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate DataType="{x:Type interfaces:IFile}">
+                                        <StackPanel Orientation="Horizontal" Margin="0,2" >
+                                            <Image Source="{Binding Icon}"  Margin="1,0,5,0" VerticalAlignment="Center"/>
+                                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"
+                                           Width="{Binding Path=Width, ElementName=ColName, Converter={StaticResource GridViewWidthConverter}}"
+                                           ToolTip="{Binding Title}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!--explorer:ColumnPropertyHelper.MinWidth="80" 
+                                explorer:ColumnPropertyHelper.MaxWidth="250"
+                                explorer:ColumnPropertyHelper.SortPropertyName="LastModifyTime"-->
+                            <GridViewColumn x:Name="ColMTime" Width="150">
+                                <GridViewColumnHeader Background="{StaticResource DefaultHeaderAreaBrush}"
+                                    Content="{DynamicResource FolderTime}"
+                                    Command="{Binding Path=SortFilesCommand}" 
+                                    CommandParameter="{Binding ElementName=ColMTime}">
+                                </GridViewColumnHeader>
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate DataType="{x:Type interfaces:IFile}">
+                                        <TextBlock Text="{Binding LastModifyTimeString}" 
+                                               VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!--explorer:ColumnPropertyHelper.MinWidth="50" 
+                                explorer:ColumnPropertyHelper.MaxWidth="150"
+                                explorer:ColumnPropertyHelper.SortPropertyName="Size"-->
+                            <GridViewColumn x:Name="ColSize" Width="80">
+
+                                <GridViewColumnHeader Background="{StaticResource DefaultHeaderAreaBrush}"
+                                    Content="{DynamicResource FolderSize}"
+                                    Command="{Binding Path=SortFilesCommand}" 
+                                    CommandParameter="{Binding ElementName=ColSize}">
+                                </GridViewColumnHeader>
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate DataType="{x:Type interfaces:IFile}">
+                                        <TextBlock Text="{Binding SizeString}" 
+                                               VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!--explorer:ColumnPropertyHelper.MinWidth="80" 
+                             explorer:ColumnPropertyHelper.MaxWidth="200"
+                             explorer:ColumnPropertyHelper.SortPropertyName="TypeName"-->
+                            <GridViewColumn x:Name="ColTypeName" Width="120">
+                                <GridViewColumnHeader Background="{StaticResource DefaultHeaderAreaBrush}"
+                                Content="{DynamicResource FolderType}"
+                                Command="{Binding Path=SortFilesCommand}" 
+                                CommandParameter="{Binding ElementName=ColTypeName}">
+                                </GridViewColumnHeader>
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate DataType="{x:Type interfaces:IFile}">
+                                        <TextBlock Text="{Binding TypeName}" VerticalAlignment="Center"  
+                                               TextTrimming="CharacterEllipsis"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!--Width="{Binding FolderPathWidth, ElementName=UcProjectExplorer}"-->
+                            <!--explorer:ColumnPropertyHelper.MinWidth="0" 
+                            explorer:ColumnPropertyHelper.MaxWidth="300"
+                            explorer:ColumnPropertyHelper.SortPropertyName="FolderPath"-->
+                            <GridViewColumn x:Name="ColFolderPath">
+                            
+
+                                <GridViewColumnHeader Background="{StaticResource DefaultHeaderAreaBrush}"
+                                Content="{DynamicResource FolderPath}"
+                                Command="{Binding Path=SortFilesCommand}" 
+                                CommandParameter="{Binding ElementName=ColFolderPath}">
+                                </GridViewColumnHeader>
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate DataType="{x:Type interfaces:IFile}">
+                                        <TextBlock Text="{Binding FolderPath}" VerticalAlignment="Center"  
+                                        TextTrimming="CharacterEllipsis" ToolTip="{Binding FolderPath}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </components:CustomListView.View>
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="ToolTip">
+                                <Setter.Value>
+                                    <UniformGrid Columns="1">
+                                        <TextBlock Text="{Binding Path=Value }"/>
+                                    </UniformGrid>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <!--<EventSetter Event="ContextMenu.ContextMenuOpening" Handler="Row_ContextMenuOpening"></EventSetter>-->
+
+                </components:CustomListView>
+            </Border>
+
+            <!--GridSplitter-->
+            <GridSplitter x:Name="ListViewGridSplitter" Cursor="SizeNS" Grid.Row="4" Width="50" Height="6"
+                      DragCompleted="TreeView_OnDragCompleted" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <GridSplitter.Template>
+                    <ControlTemplate TargetType="{x:Type GridSplitter}">
+                        <Grid Margin="0,0,0,0">
+                            <Label Content=". . . . . ." Margin="0,-14" HorizontalAlignment="Center"  />
+                        </Grid>
+                    </ControlTemplate>
+                </GridSplitter.Template>
+            </GridSplitter>
+        </Grid>
+    </DockPanel>
+
+</UserControl>

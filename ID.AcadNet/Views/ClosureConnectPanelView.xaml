@@ -1,0 +1,553 @@
+﻿<UserControl x:Class="Intellidesk.AcadNet.Views.ClosureConnectPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:infrahelpers="clr-namespace:ID.Infrastructure.Helpers;assembly=ID.Infrastructure"
+             xmlns:viewModels="clr-namespace:Intellidesk.AcadNet.ViewModels"
+             xmlns:helpers="clr-namespace:Intellidesk.AcadNet.Helpers"
+             xmlns:wrapPanelWithFill="clr-namespace:Intellidesk.AcadNet.Components"
+             DataContext = "{Binding RelativeSource={RelativeSource Self}, Path=PanelDataContext}"
+             Width="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Converters.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\UIRecourses.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Icons.xaml"/>
+                <!--<ResourceDictionary Source="pack://application:,,,/ID.AcadNet.Resources;component/Icons.xaml" />-->
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Styles.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\DataGridCustomizations.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\TextBoxAutoComplete.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Fonts.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--viewModels:FilesystemSuggestionProvider x:Key="Fsp" />
+            <viewModels:FileIconConverter x:Key="FileIconConverter"/>
+            <viewModels:TypeToDisplayNameConverter x:Key="TypeToDisplayNameConverter"/>-->
+
+            <DataTemplate x:Key="FsTemplate">
+                <Border Padding="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="2"
+                           Width="32"
+                           Height="32"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Source="{Binding Converter={StaticResource FileIconConverter}}"/>
+                        <TextBlock Text="{Binding Path=Name}"
+                               FontWeight="Bold" 
+                               Grid.Column="1" 
+                               Grid.Row="0"
+                               FontFamily="Segoe UI"
+                               VerticalAlignment="Bottom"/>
+                        <TextBlock Text="{Binding Path=LastWriteTime, StringFormat='Last Modified: {0}'}"
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               VerticalAlignment="Top"/>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+
+            <DataTemplate x:Key="dirTemplate">
+                <Border Padding="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Width="32"
+                           Height="32"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Source="{Binding Converter={StaticResource FileIconConverter}}"/>
+                        <TextBlock Text="{Binding Path=Name}"
+                               FontWeight="SemiBold" 
+                               Grid.Column="1" 
+                               Grid.Row="0"
+                               FontFamily="Segoe UI"
+                               FontSize="14"
+                               VerticalAlignment="Center"/>
+
+                    </Grid>
+                </Border>
+            </DataTemplate>
+
+            <Style x:Key="ShadowTextBoxStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect ShadowDepth="2" Color="White" RenderingBias="Quality" BlurRadius="1"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="TextAlignment" Value="Left"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="GrdMain" Background="#FFF0F0F0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" MinHeight="100" />
+            <RowDefinition Height="34" />
+            <RowDefinition Height="18" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+            <Border BorderThickness="1"
+                HorizontalAlignment="Stretch" CornerRadius="4" >
+                <Grid x:Name="GrdToolbar" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="32" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="110" />
+                        <ColumnDefinition Width="32" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image  Source="{DynamicResource PanelIcon}" Width="16" Height="16" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" 
+                        Margin="8,0,8,0" Opacity="0.5" Cursor="No"  />
+
+                    <Separator Grid.Column="0" Style="{DynamicResource AcadToolBarSeparatorStyle}" Width="20" HorizontalAlignment="Right" />
+
+                    <TextBlock Text="{Binding Header}" FontSize="16" FontWeight="Bold" Margin="3" Grid.Column="1">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="1" Color="White" RenderingBias="Quality" BlurRadius="1"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+
+                    <!--<ComboBox x:Name="Elements" Grid.Column="1" 
+                         ItemsSource="{Binding ElementDefinitions}" 
+                         SelectedItem="{Binding CurrentElementType}"
+                         Margin="4,4,0,4" ToolTip="Layers" Cursor="Hand">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="2">
+                                    <TextBlock Text="{Binding Name, Converter={StaticResource TypeToDisplayNameConverter}}" Width="100"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>-->
+
+                    <!--<TextBlock Grid.Column="1" x:Name="StateTitle" Margin="5,5,0,3" TextWrapping="Wrap" FontWeight="Bold" 
+                               Text="{Binding Header}" FontSize="16">
+                        <TextBlock.Effect>
+                            <DropShadowEffect ShadowDepth="3" Color="White" RenderingBias="Quality" BlurRadius="1"/>
+                        </TextBlock.Effect>
+                    </TextBlock>-->
+
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="2">
+                        <Button x:Name="AddButton" Command="{Binding AddCommand}"
+                            CommandParameter="{Binding BodyElementDataContext.CurrentElement}" 
+                            ToolTip="Add element" Content="" Cursor="Hand"
+                            Style="{DynamicResource AcadButtonFontStyle}" 
+                            Tag="{StaticResource #fa-plus }">
+                        </Button>
+                        <Button x:Name="UndoButton" Command="{Binding UndoCommand}"
+                            ToolTip="Undo changes" Content="" Cursor="Hand"
+                            Style="{DynamicResource AcadButtonFontStyle}" 
+                            Tag="{StaticResource #fa-undo }">
+                        </Button>
+                        <Button x:Name="RefreshButton" Command="{Binding RefreshCommand}" 
+                            ToolTip="Refresh" IsEnabled="True" Cursor="Hand"
+                            Style="{DynamicResource AcadButtonFontStyle}" Content=""
+                            Tag="{StaticResource #fa-refresh }">
+                        </Button>
+                        <Button x:Name="CloseButton" Command="{Binding CloseCommand}" 
+                            ToolTip="Close" IsEnabled="True" Cursor="Hand"
+                            Style="{DynamicResource AcadButtonFontStyle}" Content=""
+                            Tag="{StaticResource #fa-times }">
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel x:Name="ButtonsPanelRight" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" >
+                        <Separator Style="{DynamicResource AcadToolBarSeparatorStyle}" Width="20" />
+                        <!--IsExpanded="{StaticResource PanelSizeMode}"-->
+                        <Expander ExpandDirection="Left" ToolTip="Collapse"
+                             BorderBrush="Transparent" Margin="3,3,3,0"
+                             IsExpanded="{Binding Path=SwitchSizeMode}"
+                		     HorizontalAlignment="Right" VerticalAlignment="Center" 
+                             Background="Transparent" Cursor="Hand" />
+                    </StackPanel>
+
+                    <!--<ComboBox SelectedIndex="1" BorderThickness="1" BorderBrush="Transparent" Background="Transparent">
+                            <ComboBoxItem Content="50%"/>
+                            <ComboBoxItem Content="100%"/>x:FieldModifier="public"
+                            <ComboBoxItem Content="150%"/>SelectedValue="{Binding CurrentLayout}"SelectedItem="{Binding CurrentLayout}"
+                        </ComboBox>-->
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Top">
+            <ProgressBar x:Name="ProgressBar" 
+            	Value="{Binding ProgressBarValue, Mode=OneWay}"
+            	Minimum="{Binding ProgressBarMinimum, Mode=OneWay}"
+            	Maximum="{Binding ProgressBarMaximum, Mode=OneWay}"
+            	IsIndeterminate="false"
+            	Height="3"/>
+
+            <Grid Height="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="16" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="16" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="16" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- TITLE:-->
+                <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"
+                           Style="{StaticResource ShadowTextBoxStyle}">
+                    Title:
+                </TextBlock>
+                <TextBlock Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" Margin="28,0,0,0"
+                           Style="{StaticResource ShadowTextBoxStyle}">
+                    FontSize:
+                </TextBlock>
+
+                <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition  Width="2*"/>
+                        <ColumnDefinition  Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Name="TitleText" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,5,0"
+                                 VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch"
+                                 infrahelpers:EnterKeyHelpers.TextInputCommand="{Binding RunCommand}"
+                                 infrahelpers:EnterKeyHelpers.EnterKeyCommand="{Binding RunCommand}"
+                                 infrahelpers:EnterKeyHelpers.EnterKeyCommandParam="{Binding BodyElementDataContext.CurrentElement.Title}">
+                        <TextBox.Text>
+                            <Binding NotifyOnValidationError="True" ValidatesOnDataErrors="True" 
+                                         Path="BodyElementDataContext.CurrentElement.Title"
+                                         UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                            </Binding>
+                        </TextBox.Text>
+                        <Validation.ErrorTemplate>
+                            <ControlTemplate>
+                            </ControlTemplate>
+                        </Validation.ErrorTemplate>
+                    </TextBox>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,0,5,0" Grid.Column="1">
+
+                        <Button Name="SearchHistoryBtn" Opacity="0.8" HorizontalAlignment="Left" Grid.Column="1"
+                                Width="20"
+                                Style="{DynamicResource AcadButtonStyle}" ToolTip="history" 
+                                Command="{Binding Path=SearchViewModel.SearchCommand}" 
+                                CommandParameter="{Binding ElementName=TitleText }" 
+                        
+                                Tag="{DynamicResource SearchViewFind}" />
+
+                        <TextBlock Name="NotifyButton" Style="{StaticResource fa-exclamation}" 
+                               VerticalAlignment="Center" Grid.Column="1"
+                               Width="12" Foreground="Red" Opacity="0.8" HorizontalAlignment="Left" 
+                               Margin="5,3,0,3" FontSize="16" 
+                               Visibility="{Binding SearchViewModel.IsMessageInfoVisible, Converter={StaticResource ReverseVisibilityConverter}}" 
+                               ToolTip="{Binding Path=(Validation.Errors)[0].ErrorContent}" Height="16">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="2" Opacity="0.3" BlurRadius="2"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+
+                        <Button Name="CancelButton" Grid.Column="1" Opacity="0.8" HorizontalAlignment="Left"
+                            Width="20" ToolTip="Search" IsEnabled="True"
+                            Style="{DynamicResource AcadButtonStyle}" 
+                            Command="{Binding SearchViewModel.SearchClearCommand}" 
+                            CommandParameter="{Binding ElementName=TreeExplorer}" 
+                            Tag="{DynamicResource Cancel}" />
+
+                    </StackPanel>
+                    <TextBox Name="FontSize" Grid.Column="3" Width="45" Margin="5,0,0,0"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center" Height="22" HorizontalAlignment="Left">
+
+                        <TextBox.Text>
+                            <Binding NotifyOnValidationError="True" ValidatesOnDataErrors="True" 
+                                         Path="CurrentElementFontSize"
+                                         UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+
+                    <TextBlock Name="TbPrompt" VerticalAlignment="Center"
+                                   Text="{Binding SearchViewModel.MessageInfo, Mode=TwoWay}" Foreground="#FFE60000"
+                                   Visibility="Collapsed" 
+                                   HorizontalAlignment="Right" Width="100" Margin="0,3,10,3" Height="16" />
+                </Grid>
+                <!--Visibility="{Binding IsMessageInfoVisible, Converter={StaticResource BooleanToVisibilityConverter}}"-->
+
+                <!--MARKER-->
+                <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource ShadowTextBoxStyle}">
+                    <Run Text="Marker:"/>
+                </TextBlock>
+                <Image Source="{DynamicResource SearchViewLayers}" Grid.Row="3" Grid.Column="1"
+                       ToolTip="Layers"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       Width="16" Height="12" Margin="5,4" />
+
+                <!--MarkerElementDataContext-->
+                <ComboBox Name="ConnectorTypesCmb"  Grid.Row="4" Grid.Column="0" Margin="0,0,5,0"
+                          VerticalAlignment="Bottom" Cursor="Hand" ToolTip="Types"
+                          SelectionChanged="ConnectorTypesCmb_SelectionChanged"
+                          DataContext="{Binding MarkerElementDataContext}"
+                          ItemsSource="{Binding ElementItems}"
+                          SelectedItem="{Binding CurrentElement, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <TextBlock Text="{Binding ElementName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <!--MarkerElementDataContext.LayerDataContext-->
+                <ComboBox Name="LayerCmb" Grid.Row="4" Grid.Column="1" Margin="5,0,5,0" ToolTip="Layers" Cursor="Hand" 
+                          IsEditable="False" IsHitTestVisible="False" Focusable="False"
+                          DataContext="{Binding MarkerElementDataContext}"
+                          ItemsSource="{Binding LayerDataContext.Layers}" 
+                          SelectedItem="{Binding LayerDataContext.CurrentLayer, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <!--
+                                    <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsOn}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" 
+                                               Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsOff}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" 
+                                               Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsFrozen}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsLocked}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsUnLocked}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    
+                                    <Image  Tag="{Binding LayerName}"  Visibility="{Binding IsOn}" Source="{StaticResource LayerOnImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsOff}" Source="{StaticResource LayerOffImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsFrozen}" Source="{StaticResource LayerFreezeImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsThawed}" Source="{StaticResource LayerThawImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsLocked}" Source="{StaticResource LayerLockImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsUnLocked}" Source="{StaticResource LayerUnlockImage}"/>
+                                    <Label Background="{Binding LayerColorBrush}" Width="15" Height="15" BorderBrush="Black" BorderThickness="1"/>
+                                    <TextBlock Text=" " Width="3"/>
+                                    </StackPanel>
+                                    -->
+                                <TextBlock Text="{Binding LayerName}" Width="100"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <!--MarkerElementDataContext.ColorDataContext-->
+                <ComboBox Name="ColorCmb" Grid.Row="4" Grid.Column="2" Margin="5,0,0,0"
+                          VerticalAlignment="Bottom" IsEditable="False" IsHitTestVisible="False" 
+                          Focusable="False" Cursor="Hand" ToolTip="Colors"
+                          DataContext="{Binding MarkerElementDataContext}" 
+                          ItemsSource="{Binding ColorDataContext.Colors}" 
+                          SelectedItem="{Binding ColorDataContext.CurrentColor, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label  Visibility="{Binding IsVisible}" Background="{Binding ColorBrush}" 
+                                        Width="15" Height="15" BorderBrush="Black" BorderThickness="1"/>
+                                <TextBlock Visibility="{Binding IsVisible}" Text=" " Width="3"/>
+                                <TextBlock Text="{Binding Name}" Width="100"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <!--BODY-->
+                <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource ShadowTextBoxStyle}">
+                    Body:
+                </TextBlock>
+                <Image Source="{DynamicResource SearchViewLayers}" Grid.Row="5" Grid.Column="1"
+                       ToolTip="Layers"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" 
+                       Width="16" Height="12" Margin="5,4" />
+
+                <!--BodyElementDataContext-->
+                <ComboBox x:Name="ConnectorBodyCmb" Grid.Row="6" Grid.Column="0"  Margin="0,0,5,0"
+                    VerticalAlignment="Bottom" Cursor="Hand" ToolTip="Types"
+                    DataContext="{Binding BodyElementDataContext}"
+                    ItemsSource="{Binding ElementItems}"
+                    SelectedItem="{Binding CurrentElement, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <TextBlock Text="{Binding ElementName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <!--BodyElementDataContext.LayerDataContext-->
+                <ComboBox Name="LayerBodyCmb" Grid.Row="6" Grid.Column="1" Margin="5,0,5,0" ToolTip="Layers" Cursor="Hand" 
+                          IsEditable="False" IsHitTestVisible="False" Focusable="False"
+                          DataContext="{Binding BodyElementDataContext}" IsReadOnly="{Binding IsReadOnly}"
+                          ItemsSource="{Binding LayerDataContext.Layers}" 
+                          SelectedItem="{Binding LayerDataContext.CurrentLayer, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <!--
+                                    <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsOn}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" 
+                                               Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsOff}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" 
+                                               Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsFrozen}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsLocked}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    <TextBlock Text="{StaticResource #fa-pencil }" Visibility="{Binding IsUnLocked}"
+                                               FontFamily="{StaticResource FontAwesome}" FontSize="9" Width="12" Effect="{TemplateBinding Effect}">
+                                    </TextBlock>
+                                    
+                                    <Image  Tag="{Binding LayerName}"  Visibility="{Binding IsOn}" Source="{StaticResource LayerOnImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsOff}" Source="{StaticResource LayerOffImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsFrozen}" Source="{StaticResource LayerFreezeImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsThawed}" Source="{StaticResource LayerThawImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsLocked}" Source="{StaticResource LayerLockImage}"/>
+                                    <Image Tag="{Binding LayerName}" Visibility="{Binding IsUnLocked}" Source="{StaticResource LayerUnlockImage}"/>
+                                    <Label Background="{Binding LayerColorBrush}" Width="15" Height="15" BorderBrush="Black" BorderThickness="1"/>
+                                    <TextBlock Text=" " Width="3"/>
+                                    </StackPanel>
+                                    -->
+                                <TextBlock Text="{Binding LayerName}" Width="100"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <!--BodyElementDataContext.ColorDataContext-->
+                <ComboBox x:Name="ColorBodyCmb" Grid.Row="6" Grid.Column="2" Margin="5,0,0,0"
+                    VerticalAlignment="Bottom" IsEditable="False" IsHitTestVisible="False"
+                    Focusable="False" Cursor="Hand" ToolTip="Colors"
+                    DataContext="{Binding BodyElementDataContext}" 
+                    ItemsSource="{Binding ColorDataContext.Colors}" 
+                    SelectedItem="{Binding ColorDataContext.CurrentColor, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label  Visibility="{Binding IsVisible}" Background="{Binding ColorBrush}" 
+                                    Width="15" Height="15" BorderBrush="Black" BorderThickness="1"/>
+                                <TextBlock Visibility="{Binding IsVisible}" Text=" " Width="3"/>
+                                <TextBlock Text="{Binding Name}" Width="100"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+            </Grid>
+
+            <Border Width="auto" Margin="0,12,0,6" Height="1" Background="#8888"></Border>
+
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="5,0">
+                    <Button Name="AddTitleButton" ToolTip="Search" Width="60"
+                        Style="{DynamicResource AcadButtonFontStyle}" 
+                        Command="{Binding AddTitleCommand}" 
+                        CommandParameter="{Binding ElementName=TitleText}" 
+                        IsEnabled="{Binding ElementDataContext.IsAddTitleEnabled, Mode=OneWay}"
+                        Tag="{StaticResource #fa-pencil-square-o }">
+                        +Title
+                    </Button>
+                    <Button Name="AddMarkerButton" ToolTip="Search" Width="80"
+                        Style="{DynamicResource AcadButtonFontStyle}" 
+                        Command="{Binding AddMarkerCommand}" 
+                        CommandTarget="{Binding MarkerElementDataContext.ElementItems}"
+                        CommandParameter="{Binding Path=MarkerElementDataContext.CurrentElement}" 
+                        Tag="{StaticResource #fa-pencil-square-o }">
+                        +Marker
+                    </Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Stretch">
+                    <Button x:Name="RunButton" Command="{Binding RunCommand}" 
+                        CommandParameter="{Binding BodyElementDataContext.CurrentElement}" 
+                        Width="80px" Cursor="Hand" HorizontalAlignment="Right"
+                        Style="{DynamicResource AcadButtonFontStyle}" 
+                        IsEnabled="{Binding ElementName=TitleText, Path=Text.Length, Mode=OneWay}"
+                        Tag="{StaticResource #fa-pencil }" Content="{Binding Path=RunButtonText}">
+                    </Button>
+                </StackPanel>
+            </WrapPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <!--<TextBlock Text="{Binding ElementName=ProgressBar, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,-16,10,10" />-->
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,5,0,3" FontWeight="Bold">Details:</TextBlock>
+
+                <TextBlock  x:Name="ProgressBarStateText" Margin="5,0,5,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{Binding ProgressStateValue, StringFormat='{}{0} details'}">
+                
+                <!--<TextBlock.Text>
+                    <MultiBinding StringFormat="{}{0} items">
+                        <Binding Path="ProgressStateValue"/>
+                        --><!--<Binding ElementName="ProgressBar" Path="Maximum"/>--><!--
+                    </MultiBinding>
+                </TextBlock.Text>-->
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <ListBox x:Name="ExistTextList" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" SelectionMode="Single" 
+                 Margin="10,0" Height="auto" MinHeight="100" 
+                 ItemsSource="{Binding ElementItems}" 
+                 DisplayMemberPath="DisplayName" 
+                 SelectedIndex="0"
+                 SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" Cursor="Hand">
+        </ListBox>
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" 
+                    Margin="10,5" HorizontalAlignment="Right">
+
+            <Button AutomationProperties.AutomationId="SelectButton"
+                    Command="{Binding SelectSetCommand}"
+                    ToolTip="Select objects on drawing" Height="22">Select details</Button>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" 
+                   Margin="10,2" TextWrapping="Wrap" FontSize="9" 
+                   Text="Press mouse left click on list item to occur zoom of item position." HorizontalAlignment="Center">
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionsToDo" xml:space="preserve">
+    <value>פעולות לביצוע</value>
+  </data>
+  <data name="AllUnit" xml:space="preserve">
+    <value>מודל כלל יחידה</value>
+  </data>
+  <data name="Corp" xml:space="preserve">
+    <value>חיל</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="Canceling" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>בחר</value>
+  </data>
+  <data name="ChooseOptions" xml:space="preserve">
+    <value>בחר אחת מהאפשרויות</value>
+  </data>
+  <data name="CommanderIndices" xml:space="preserve">
+    <value>מדדי מפקד</value>
+  </data>
+  <data name="CreateNewEvent" xml:space="preserve">
+    <value>צור אירוע חדש</value>
+  </data>
+  <data name="Rank" xml:space="preserve">
+    <value>דרגה</value>
+  </data>
+  <data name="RankDate" xml:space="preserve">
+    <value>תאריך דרגה</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>מחק</value>
+  </data>
+  <data name="DoYouWantToDuplicateThisEvent" xml:space="preserve">
+    <value>הינך רוצה לשכפך אירוע זה ?</value>
+  </data>
+  <data name="DoYouWantToExitWithoutSaving" xml:space="preserve">
+    <value>האם ברצונך לצאת מהדף ללא שמירה</value>
+  </data>
+  <data name="DoYouWantToMoveThisEventToArchive" xml:space="preserve">
+    <value>האם ברצונך להעביר אירוע זה למאגר ?</value>
+  </data>
+  <data name="duplicate" xml:space="preserve">
+    <value>שכפל</value>
+  </data>
+  <data name="duplicating" xml:space="preserve">
+    <value>שכפול</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>ערוך</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>תאריך סיום</value>
+  </data>
+  <data name="EndRankDate" xml:space="preserve">
+    <value>תאריך דרגה סיום</value>
+  </data>
+  <data name="EndPostingDate" xml:space="preserve">
+    <value>תאריך הצבה סיום</value>
+  </data>
+  <data name="EvaluationMap" xml:space="preserve">
+    <value>מפת הערכה</value>
+  </data>
+  <data name="EvaluationMapText" xml:space="preserve">
+    <value>מפות שמסכמות לנו הערכות</value>
+  </data>
+  <data name="EvaluationModel" xml:space="preserve">
+    <value>מודל הערכה</value>
+  </data>
+  <data name="EvaluationModelText" xml:space="preserve">
+    <value>מודל זה מאפשר לנו לראות</value>
+  </data>
+  <data name="EvaluationRelations" xml:space="preserve">
+    <value>קשרי הערכה</value>
+  </data>
+  <data name="EventDefinitions" xml:space="preserve">
+    <value>הגדרות אירוע</value>
+  </data>
+  <data name="EventGenerator" xml:space="preserve">
+    <value>מחולל אירועים</value>
+  </data>
+  <data name="EventId" xml:space="preserve">
+    <value>מס' אירוע</value>
+  </data>
+  <data name="EventName" xml:space="preserve">
+    <value>שם אירוע</value>
+  </data>
+  <data name="EventsList" xml:space="preserve">
+    <value>רשימת אירועים</value>
+  </data>
+  <data name="FillPercentage" xml:space="preserve">
+    <value>אחוז מילוי</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>הגדרות כלליות</value>
+  </data>
+  <data name="GoOn" xml:space="preserve">
+    <value>עבור</value>
+  </data>
+  <data name="LocatingEvaluators" xml:space="preserve">
+    <value>איתור מעריכים / מוערכים</value>
+  </data>
+  <data name="LocatingEvaluatorsText" xml:space="preserve">
+    <value>איתור של מועמדים לבקרה ובחירה מושכלת</value>
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>העבר</value>
+  </data>
+  <data name="MoveToArchive" xml:space="preserve">
+    <value>העבר למאגר</value>
+  </data>
+  <data name="MustChooseOneOptionFromList" xml:space="preserve">
+    <value>חובה לבחור אופציה אח מתוך הרשימה</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>הערות</value>
+  </data>
+  <data name="ResponsibleFactor" xml:space="preserve">
+    <value>גורם אחראי</value>
+  </data>
+  <data name="Saving" xml:space="preserve">
+    <value>שמירה</value>
+  </data>
+  <data name="ScreenSavedSuccessfully" xml:space="preserve">
+    <value>המסך נשמר בהצלחה</value>
+  </data>
+  <data name="seachEvent" xml:space="preserve">
+    <value>חפש אירוע</value>
+  </data>
+  <data name="Season" xml:space="preserve">
+    <value>עונה</value>
+  </data>
+  <data name="SelectUnitInfo" xml:space="preserve">
+    <value>לטובת בחירת היחידה נא סמן את היחידות  ולחץ על החץ</value>
+  </data>
+  <data name="ServiceType" xml:space="preserve">
+    <value>סוג שירות</value>
+  </data>
+  <data name="SetConnections" xml:space="preserve">
+    <value>קביעת קשרים</value>
+  </data>
+  <data name="SettingPotential" xml:space="preserve">
+    <value>הגדרת פוטנציאל</value>
+  </data>
+  <data name="StarModel" xml:space="preserve">
+    <value>מודל כוכב</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>תאריך התחלה</value>
+  </data>
+  <data name="StartRankDate" xml:space="preserve">
+    <value>תאריך דרגה התחלה</value>
+  </data>
+  <data name="StartPostingDate" xml:space="preserve">
+    <value>תאריך הצבה התחלה</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>סטטוס</value>
+  </data>
+  <data name="SubUnitModel" xml:space="preserve">
+    <value>מודל תת יחידה</value>
+  </data>
+  <data name="Tool" xml:space="preserve">
+    <value>כלי</value>
+  </data>
+  <data name="ToolConstitution" xml:space="preserve">
+    <value>חוקת כלי</value>
+  </data>
+  <data name="ToolPotential" xml:space="preserve">
+    <value>מאפייני פוטנציאל</value>
+  </data>
+  <data name="ToolProperty" xml:space="preserve">
+    <value>מאפייני כלי</value>
+  </data>
+  <data name="UnitEvaluated" xml:space="preserve">
+    <value>יחידה מוערכת</value>
+  </data>
+  <data name="UnitEvaluates" xml:space="preserve">
+    <value>יחידה מעריכה</value>
+  </data>
+  <data name="YouAreGoingToDeleteTheEvent" xml:space="preserve">
+    <value>הינך עומד למחוק את האירוע, כל הנתונים הקיימים יאבדו</value>
+  </data>
+  <data name="AddRow" xml:space="preserve">
+    <value>הוסף שורה</value>
+  </data>
+  <data name="Ranks" xml:space="preserve">
+    <value>דרגות</value>
+  </data>
+  <data name="Evaluators" xml:space="preserve">
+    <value>מעריכים</value>
+  </data>
+  <data name="Evaluatedes" xml:space="preserve">
+    <value>מוערכים</value>
+  </data>
+  <data name="Mum" xml:space="preserve">
+    <value>מס'</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>יחידות</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>הוסף</value>
+  </data>
+  <data name="Array" xml:space="preserve">
+    <value>מערך</value>
+  </data>
+  <data name="Family" xml:space="preserve">
+    <value>משפחה</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>שם פרטי</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>יבא</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>שם משפחה</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>שם</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>כינוי</value>
+  </data>
+  <data name="P.N." xml:space="preserve">
+    <value>מ.א.</value>
+  </data>
+  <data name="PersonalNumber" xml:space="preserve">
+    <value>מס' אישי</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>תפקיד</value>
+  </data>
+  <data name="PotentialParticipants" xml:space="preserve">
+    <value>פוטנציאל משתתפים</value>
+  </data>
+  <data name="Questionnaire" xml:space="preserve">
+    <value>שאלון</value>
+  </data>
+  <data name="AddNewParticipant" xml:space="preserve">
+    <value>הוספת משתתף חדש</value>
+  </data>
+  <data name="Choices" xml:space="preserve">
+    <value>בחירות</value>
+  </data>
+  <data name="CommanderIndexes" xml:space="preserve">
+    <value>מדדי המפקד</value>
+  </data>
+  <data name="CommanderIndexText" xml:space="preserve">
+    <value>מודל זה מאפשר לנו לראות</value>
+  </data>
+  <data name="DisplayQuestionnaire" xml:space="preserve">
+    <value>הצג שאלון</value>
+  </data>
+  <data name="DisplayQuestionnaireText" xml:space="preserve">
+    <value>מפות שמסכמות לנו הערכות</value>
+  </data>
+  <data name="AddCommanderIndexText" xml:space="preserve">
+    <value>הוספת מדדי מפקד לסוציומטרי יחידתי</value>
+  </data>
+  <data name="CommanderIndex1" xml:space="preserve">
+    <value>מדד מפקד 1</value>
+  </data>
+  <data name="CommanderIndex2" xml:space="preserve">
+    <value>מדד מפקד 2</value>
+  </data>
+  <data name="Form" xml:space="preserve">
+    <value>טופס</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>מדד</value>
+  </data>
+  <data name="InstructionsToFillForm" xml:space="preserve">
+    <value>הנחיות למילוי הטופס - נלקח מהטופס המקורי של אותו כלי הכולל את הסקלות של אותו טופס</value>
+  </data>
+  <data name="Participants" xml:space="preserve">
+    <value>משתתפים</value>
+  </data>
+  <data name="PersonalQuestionnaireForm" xml:space="preserve">
+    <value>טופס שאלון אישי</value>
+  </data>
+  <data name="CommanderIndex" xml:space="preserve">
+    <value>מדד המפקד</value>
+  </data>
+  <data name="DefiningPotential" xml:space="preserve">
+    <value>הגדרת פוטנציאל</value>
+  </data>
+  <data name="SubUnit" xml:space="preserve">
+    <value>תת יחידה</value>
+  </data>
+  <data name="AddParticipant" xml:space="preserve">
+    <value>הוסף משתתף</value>
+  </data>
+  <data name="AssigningGroup" xml:space="preserve">
+    <value>שבץ לקבוצה</value>
+  </data>
+  <data name="AssigningSubUnit" xml:space="preserve">
+    <value>שבץ לתת יחידה</value>
+  </data>
+  <data name="Evaluate" xml:space="preserve">
+    <value>מעריך</value>
+  </data>
+  <data name="Evaluated" xml:space="preserve">
+    <value>מוערך</value>
+  </data>
+  <data name="MeetsCriterion" xml:space="preserve">
+    <value>עומד בקריטריון</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value> מיוחדים</value>
+  </data>
+  <data name="Num" xml:space="preserve">
+    <value>מס'</value>
+  </data>
+  <data name="DateDistribute" xml:space="preserve">
+    <value>תאריך הפצה</value>
+  </data>
+  <data name="DistributeQuestionnaires" xml:space="preserve">
+    <value>הפץ שאלונים</value>
+  </data>
+  <data name="ExportListToExcel" xml:space="preserve">
+    <value>ייצא רשימה לאקסל</value>
+  </data>
+  <data name="RemoveReason" xml:space="preserve">
+    <value>סיבת ההסרה</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>שמור</value>
+  </data>
+  <data name="DeleteParticipant" xml:space="preserve">
+    <value>מחק משתתף</value>
+  </data>
+  <data name="TMSClientName" xml:space="preserve">
+    <value>EG</value>
+  </data>
+  <data name="MustFillOnePotential" xml:space="preserve">
+    <value>יש למלא שדה אחד לפחות במאפייני פוטנציאל</value>
+  </data>
+  <data name="MoveToExecution" xml:space="preserve">
+    <value>העבר לביצוע</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>שמירה נכשלה</value>
+  </data>
+  <data name="YouAreGoingMoveToExecution" xml:space="preserve">
+    <value>האם ברצונך להעביר את האירוע לביצוע ?</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>פתיח</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>הערה</value>
+  </data>
+  <data name="ActiveEvents" xml:space="preserve">
+    <value>אירועים פעילים</value>
+  </data>
+  <data name="Closure" xml:space="preserve">
+    <value>סגירה</value>
+  </data>
+  <data name="Execution" xml:space="preserve">
+    <value>ביצוע</value>
+  </data>
+  <data name="MoveToRepository" xml:space="preserve">
+    <value>הועבר למאגר</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>הכנה</value>
+  </data>
+  <data name="AddGroupTable" xml:space="preserve">
+    <value>לחץ כאן בשביל להוסיף טבלת קבוצות</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>יחידה</value>
+  </data>
+  <data name="NameExist" xml:space="preserve">
+    <value>שם קיים במערכת</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>השהה</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>מושהה</value>
+  </data>
+  <data name="ToFinish" xml:space="preserve">
+    <value>סיים</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>הפעל</value>
+  </data>
+  <data name="DuplicateItem" xml:space="preserve">
+    <value>רשומה כפולה</value>
+  </data>
+  <data name="Activation" xml:space="preserve">
+    <value>הפעלה</value>
+  </data>
+  <data name="DoYouWantToActivationEvent" xml:space="preserve">
+    <value>האם ברצונך להפעיל את האירוע?</value>
+  </data>
+  <data name="DoYouWantToFinishEvent" xml:space="preserve">
+    <value>האם ברצונך לסיים את האירוע?</value>
+  </data>
+  <data name="DoYouWantToStopEvent" xml:space="preserve">
+    <value>האם ברצונך לעצור את האירוע?</value>
+  </data>
+  <data name="FinishEvent" xml:space="preserve">
+    <value>סיים אירוע</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>עצירה</value>
+  </data>
+  <data name="To Stop" xml:space="preserve">
+    <value>עצור</value>
+  </data>
+  <data name="PersonalNumberNotExist" xml:space="preserve">
+    <value>מ.א. לא קיים</value>
+  </data>
+  <data name="CandidateExistsInPotential" xml:space="preserve">
+    <value>המועמד כבר קיים בפוטנציאל</value>
+  </data>
+  <data name="RefreshPotential" xml:space="preserve">
+    <value>רענן פוטנציאל</value>
+  </data>
+  <data name="EventNotFullySaved" xml:space="preserve">
+    <value>האירוע נשמר בצורה לא נכונה</value>
+  </data>
+  <data name="ImproperlyConstructedEventForm" xml:space="preserve">
+    <value>טופס לאירוע בנוי בצורה לא נכונה</value>
+  </data>
+  <data name="MissingMetaDataUnitsOrRanks" xml:space="preserve">
+    <value>חסר מטא נתונים של יחידות או דרגות</value>
+  </data>
+  <data name="MissingWhoIsEvaluatingWho" xml:space="preserve">
+    <value>בהגדרת האירוע חסר מי מעריך את מי</value>
+  </data>
+  <data name="MissingConnectQuestionToTreeSubject" xml:space="preserve">
+    <value>חסר חיבור שאלות בטופס לעץ נושאים</value>
+  </data>
+</root>

@@ -1,0 +1,13 @@
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:helper="clr-namespace:FileExplorer.Helper">
+
+    <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
+    <helper:ReverseVisibilityConverter x:Key="reverseVisibilityConverter"/>
+    <helper:GridColumnWidthConverter x:Key="gridViewWidthConverter" />
+    <helper:AndVisibilityConverter x:Key="andVisibilityConverter" />
+    <helper:ReverseBoolConverter x:Key="reverseBoolConverter" />
+    <helper:AndConverter x:Key="andConverter"/>
+    
+</ResourceDictionary>

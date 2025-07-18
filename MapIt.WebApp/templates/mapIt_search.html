@@ -1,0 +1,13 @@
+﻿<span class="input-group-btn" ng-controller="searchController">
+    <a href="#" id="markerTypeDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <button class="btn btn-default mapit-content-control-dropdown" type="button">
+            <span>{{selectedItem.name}}</span>
+            <span class="caret"></span>
+        </button>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="markerTypeDropdownMenu">
+        <li ng-repeat="markerFilter in markerFilters"><a ng-click="dropboxitemselected(markerFilter)">{{markerFilter.name}}</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#" ng-click="dropboxitemselected('Adress')">Adress</a></li>
+    </ul>
+</span>

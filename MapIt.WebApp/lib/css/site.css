@@ -1,0 +1,496 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, "Noto Sans Hebrew", "Noto Naskh Arabic UI", Arial, sans-serif;
+}
+
+#mapit {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    -ms-touch-action: none;
+    touch-action: none;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    background-color: #fff;
+    border-bottom: 1px solid #e7eaec;
+    padding: 8px;
+    font-size: 20px;
+}
+
+    header > div {
+        flex: 1;
+    }
+
+    header .title {
+        text-align: center;
+    }
+
+main {
+    flex: 1;
+    padding: 15px 20px 15px 15px;
+    margin-bottom: 0px;
+    overflow-y: auto;
+    display: flex;
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    padding: 8px;
+    border-top: 1px solid #e7eaec;
+    align-items: center;
+    color: #337ab7;
+}
+
+.borderedboxlight {
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+}
+
+.waitloading {
+    font-size: 26px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.todolistcontent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+    .todolistcontent form {
+        display: flex;
+        flex: 1;
+    }
+
+
+input .mylocation-button {
+    align-items: flex-start;
+    text-align: center;
+}
+
+.mylocation-button {
+    background-color: rgba(255,255,255,1);
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    display: block;
+    width: 29px;
+    height: 29px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.16s ease-out;
+    background-image: url("http://maps.gstatic.com/tactile/mylocation/mylocation-sprite-cookieless-v2-1x.png"), none;
+    background-repeat: no-repeat;
+    background-position: -30px 6px;
+    background-size: 180px 18px;
+}
+
+.mapit-marker-bar {
+    margin: 0;
+    padding: 0;
+    /*line-height: 0.5;*/
+    border-bottom: 1px solid #F5F5F5;
+    width: 100% !important;
+    height: 18px;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+    .mapit-marker-bar .txticon {
+        /*margin-top: -2px;*/
+    }
+
+.mapit-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-left: 5px;
+    border: none !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.mapit-icon.checked {
+    color: red;
+    font-weight: bold;
+}
+
+.mapit-icon.mapit-marker-logo {
+    background-size: 12px 12px;
+    background-image: url('/images/client-logo.png');
+    border: 1px solid #1b9a00 !important;
+    height: 12px !important;
+    width: 12px !important;
+    margin-left: -10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.mapit-icon.spinner {
+    background-size: 16px 16px;
+    /*background-image: url('/images/loader-snake-16.gif');*/
+    float: right;
+    -moz-transform: scale(1.2,1.2); /* Firefox */
+    -ms-transform: scale(1.2,1.2); /* IE */
+    -webkit-transform: scale(1.2,1.2); /* Safari, Chrome, iOS */
+    -o-transform: scale(1.2,1.2); /* Opera */
+    transform: scale(1.2,1.2);
+}
+
+.mapit-icon-spinner {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 1.3em;
+    line-height: 0.8;
+    content: "\f110";
+}
+
+.mapit-icon.mapit-pegman-icon {
+    margin-top: -8px !important;
+    background-size: 18px 80px;
+    background-position: 0px -2px;
+    background-image: url(http://maps.gstatic.com/tactile/pegman_v3/default/runway-1x.png);
+}
+
+.mapit-icon.mapit-option-icon {
+    background-size: 18px 18px;
+    background-image: url('/images/config.png');
+}
+
+.mapit-icon.mapit-icon-splitter {
+    border-right: 1px solid #e7eaec !important;
+}
+
+.progress {
+    height: 3px;
+}
+
+#progressMarkers {
+    position: absolute;
+    z-index: 9999999999999;
+    line-height: 3px;
+    color: rgb(249, 38, 0) !important;
+    width: 100%;
+    height: 3px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    background: none !important;
+    border: none;
+    box-sizing: border-box;
+    transition: width 5s ease;
+}
+#progressLines {
+    position: absolute;
+    z-index: 9999999999999;
+    line-height: 3px;
+    color: rgb(77, 248, 211)  !important;
+    width: 100%;
+    height: 3px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    background: none !important;
+    border: none;
+    box-sizing: border-box;
+    transition: width 5s ease;
+    margin-top: 2px;
+}
+
+    progress::-webkit-progress-bar {
+        background: none !important;
+    }
+
+    progress::-webkit-progress-value {
+        background-color: red !important;
+        height: 3px;
+    }
+
+.split-pane-divider {
+    background: #f1f1f1;
+}
+
+.split-pane-component {
+    background: #fff;
+}
+
+.leaflet-bottom.leaflet-right {
+    opacity: 0.8;
+}
+
+.leaflet-interactive {
+    cursor: pointer;
+}
+
+/*checkbox controls*/
+/* Base for label styling */
+.mapit-marker-bar [type="checkbox"]:not(:checked),
+.mapit-marker-bar [type="checkbox"]:checked {
+    display: none;
+}
+
+    .mapit-marker-bar [type="checkbox"]:not(:checked) + label,
+    .mapit-marker-bar [type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 1.95em;
+        cursor: pointer;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        font-size: 1.3em;
+        line-height: 0.8;
+    }
+
+        /* checkbox aspect */
+        .mapit-marker-bar [type="checkbox"]:not(:checked) + label:before,
+        .mapit-marker-bar [type="checkbox"]:checked + label:before {
+            position: absolute;
+            top: .1em;
+            left: .3em;
+            width: 1.25em;
+            height: 1.25em;
+            background: #fff;
+            /*border: 2px solid #ccc;
+              border-radius: 4px;
+              box-shadow: inset 0 1px 3px rgba(0,0,0,.1);*/
+        }
+
+.mapit-marker-bar .mapit-flag-icon[type="checkbox"]:checked + label:after {
+    color: #ff0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.49);
+}
+
+.mapit-marker-bar .mapit-star-icon[type="checkbox"]:checked + label:after {
+    color: gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.49);
+}
+
+.mapit-marker-bar .mapit-flag-icon[type="checkbox"] + label:after,
+.mapit-marker-bar .mapit-flag-icon[type="checkbox"] + label:before {
+    content: "\f024";
+}
+
+.mapit-marker-bar .mapit-star-icon[type="checkbox"] + label:after,
+.mapit-marker-bar .mapit-star-icon[type="checkbox"] + label:before {
+    content: "\f005";
+}
+
+.mapit-marker-bar [type="checkbox"] + label:after {
+    position: absolute;
+    top: .1em;
+    left: .3em;
+    transition: all .2s;
+    color: black;
+}
+
+/* checked mark aspect */
+.mapit-marker-bar [type="checkbox"]:not(:checked) + label:after,
+.mapit-marker-bar [type="checkbox"]:not(:checked) + label:before {
+    color: #d1d1d1;
+}
+
+/* checked mark aspect changes */
+.mapit-marker-bar [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.mapit-marker-bar [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* disabled checkbox */
+.mapit-marker-bar [type="checkbox"]:disabled:not(:checked) + label:before,
+.mapit-marker-bar [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+.mapit-marker-bar [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+.mapit-marker-bar [type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+/* accessibility */
+.mapit-marker-bar [type="checkbox"]:checked:focus + label:before,
+.mapit-marker-bar [type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px dotted blue;
+}
+
+/* hover style just for information */
+.mapit-marker-bar label:hover:before {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.49);
+}
+
+/*button*/
+.btn-menu {
+    float: left;
+    width: 44px;
+    height: 44px;
+    border-radius: 0;
+    border: none;
+    /*background-color: darkturquoise;*/
+    /*border: 1px darkcyan solid*/
+}
+
+
+.user-unknown {
+    color: darkgrey;
+}
+
+.badge {
+    color: #646464;
+}
+
+
+.nav-bar {
+    position: fixed;
+    top: 1px;
+    z-index: 1000;
+    height: 44px !important;
+    padding-top: 10px;
+}
+
+
+    .nav-bar.left {
+        left: 0px;
+    }
+
+    .nav-bar.right {
+        float: right;
+        right: 0px;
+    }
+
+/***************** controls ******************************/
+
+.mapit-control-container {
+    position: fixed;
+    margin-top: 10px;
+    z-index: 1000;
+    height: 30px !important;
+    max-height: 30px !important;
+}
+
+span .glyphicon {
+    color: #7a7a7a !important;
+}
+
+    span .glyphicon :hover {
+        color: black !important;
+    }
+
+.mapit-control-container.leaflet-bar a, .mapit-control-container.leaflet-bar > a:hover {
+    padding-top: 3px !important;
+}
+
+.mapit-control-container > input, .mapit-control-container > input:hover {
+    padding: 0px !important;
+    height: 30px !important;
+}
+
+.user-known {
+    color: rgb(141, 196, 141);
+}
+
+.mapit-content-control-searchinput {
+    padding: 2px;
+    height: 26px;
+    border: none;
+    box-shadow: none;
+}
+
+.mapit-content-control-searchrun {
+    height: 22px;
+    padding: 3px 4px 0 4px;
+    border: none;
+    margin-right: 1px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.mapit-content-control {
+    height: 28px !important;
+    padding: 1px 5px !important;
+    border: 2px rgba(87, 100, 100, 0.51) solid;
+    border-radius: 6px;
+}
+
+.mapit-content-control-dropdown {
+    border: none;
+    height: 22px;
+    padding: 0px 2px 8px 2px;
+    margin-left: 1px;
+}
+
+.mapit-control-search {
+    background-color: white;
+    z-index: 1000;
+    left: 100px;
+    height: 30px !important;
+    padding: 0 !important;
+    border: 2px rgba(87, 100, 100, 0.51) solid;
+    border-radius: 6px;
+}
+
+.mapit-content-control-options {
+    background-color: white;
+    z-index: 1000;
+    right: 10%;
+    height: 28px !important;
+    padding: 0 !important;
+    border: 2px rgba(87, 100, 100, 0.51) solid;
+    border-radius: 6px;
+}
+
+
+/*.leaflet-control-zoom {
+    bottom: 32px
+}*/
+
+/*.leaflet-control-layers {
+    margin-top: 90px !important;
+}*/
+
+.leaflet-control-location {
+    /*position: fixed;
+        top: 150px; 
+    left: 12px;
+    z-index: 800*/
+    width: 32px !important;
+}
+
+.leaflet-control-layers-list .leaflet-control-layers-base label {
+    cursor: pointer;
+}
+
+.leaflet-control-layers-toggle,
+.leaflet-control-geocoder-icon {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.split-pane-divider-inner {
+    cursor: col-resize;
+}

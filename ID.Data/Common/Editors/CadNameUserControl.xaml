@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Intellidesk.AcadNet.Data.Common.Editors.CadFileNameEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="Uc">
+    <StackPanel>
+        <TextBox Text="{Binding Value, ElementName=Uc}" Background="YellowGreen"  />
+        <Button Click="Button_Click">Clear</Button>
+    </StackPanel>
+</UserControl>
+
+

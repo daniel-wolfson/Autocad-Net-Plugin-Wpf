@@ -1,0 +1,28 @@
+﻿<ResourceDictionary 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <!-- Up arrow -->
+    <DataTemplate x:Key="AscSortHeaderTemplate">
+        <DockPanel  Background="Transparent">
+            <TextBlock Text="{Binding }"  />
+            <Path x:Name="arrow" StrokeThickness="1" Fill="#FF4C4A4A"  Data="M 5,10 L 15,10 L 10,5 L 5,10" />
+        </DockPanel>
+    </DataTemplate>
+
+    <!-- Down arrow -->
+    <DataTemplate x:Key="DescSortHeaderTemplate">
+        <DockPanel Background="Transparent">
+            <TextBlock Text="{Binding}" />
+            <Path x:Name="arrow" StrokeThickness="1" Fill="#FF4C4A4A" Data="M 5,5 L 10,10 L 15,5 L 5,5" />
+        </DockPanel>
+    </DataTemplate>
+
+    <!-- Normal -->
+    <DataTemplate x:Key="NormalSortHeaderTemplate">
+        <DockPanel>
+            <TextBlock Text="{Binding }" />
+        </DockPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

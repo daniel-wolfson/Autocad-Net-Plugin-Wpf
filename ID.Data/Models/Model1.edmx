@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="mapinfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="ColorTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="10" />
+          <Property Name="Color" Type="nvarchar" MaxLength="25" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HouseNum">
+          <Key>
+            <PropertyRef Name="HouseNumberId" />
+          </Key>
+          <Property Name="HouseNumberId" Type="int" Nullable="false" />
+          <Property Name="City" Type="int" />
+          <Property Name="Street" Type="int" />
+          <Property Name="HouseNumberName" Type="nvarchar(max)" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="Layers">
+          <Key>
+            <PropertyRef Name="LayerId" />
+          </Key>
+          <Property Name="LayerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LayerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DisplayNameHeb" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaseLayer" Type="bit" />
+          <Property Name="Opacity" Type="float" />
+          <Property Name="Place" Type="int" />
+          <Property Name="Sort" Type="int" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="AsMade" />
+          </Key>
+          <Property Name="AsMade" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Lat" Type="real" Nullable="false" />
+          <Property Name="Lon" Type="real" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateCreated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Street">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="City" Type="int" />
+          <Property Name="StreetName" Type="nvarchar" MaxLength="200" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="zCityMapa">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="zCityMapi">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="zHouseNumberMapa">
+          <Key>
+            <PropertyRef Name="HouseNumberId" />
+          </Key>
+          <Property Name="HouseNumberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="City" Type="int" />
+          <Property Name="Street" Type="int" Nullable="false" />
+          <Property Name="HouseNumberName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="zHouseNumberMapi">
+          <Key>
+            <PropertyRef Name="HouseNumberId" />
+          </Key>
+          <Property Name="HouseNumberId" Type="int" Nullable="false" />
+          <Property Name="City" Type="int" />
+          <Property Name="Street" Type="int" Nullable="false" />
+          <Property Name="HouseNumberName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="zLayersByModules">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LayerId" Type="int" />
+          <Property Name="ModuleId" Type="int" />
+        </EntityType>
+        <EntityType Name="zModule">
+          <Key>
+            <PropertyRef Name="ModuleID" />
+          </Key>
+          <Property Name="ModuleID" Type="int" Nullable="false" />
+          <Property Name="ModuleName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="zStreetMapa">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="City" Type="int" Nullable="false" />
+          <Property Name="StreetName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <EntityType Name="zStreetMapi">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="int" Nullable="false" />
+          <Property Name="City" Type="int" Nullable="false" />
+          <Property Name="StreetName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="X" Type="float" />
+          <Property Name="Y" Type="float" />
+        </EntityType>
+        <Association Name="FK_zHouseNumberMapa_zCityMapa">
+          <End Role="zCityMapa" Type="Self.zCityMapa" Multiplicity="0..1" />
+          <End Role="zHouseNumberMapa" Type="Self.zHouseNumberMapa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapa">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapa">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zHouseNumberMapa_zStreetMapa1">
+          <End Role="zStreetMapa" Type="Self.zStreetMapa" Multiplicity="1" />
+          <End Role="zHouseNumberMapa" Type="Self.zHouseNumberMapa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zStreetMapa">
+              <PropertyRef Name="StreetId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapa">
+              <PropertyRef Name="Street" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zHouseNumberMapi_zCityMapi">
+          <End Role="zCityMapi" Type="Self.zCityMapi" Multiplicity="0..1" />
+          <End Role="zHouseNumberMapi" Type="Self.zHouseNumberMapi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapi">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapi">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zHouseNumberMapi_zStreetMapi">
+          <End Role="zStreetMapi" Type="Self.zStreetMapi" Multiplicity="1" />
+          <End Role="zHouseNumberMapi" Type="Self.zHouseNumberMapi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zStreetMapi">
+              <PropertyRef Name="StreetId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapi">
+              <PropertyRef Name="Street" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zModule_zModule">
+          <End Role="zModule" Type="Self.zModule" Multiplicity="1" />
+          <End Role="zModule1" Type="Self.zModule" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="zModule">
+              <PropertyRef Name="ModuleID" />
+            </Principal>
+            <Dependent Role="zModule1">
+              <PropertyRef Name="ModuleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zStreetMapa_zCityMapa1">
+          <End Role="zCityMapa" Type="Self.zCityMapa" Multiplicity="1" />
+          <End Role="zStreetMapa" Type="Self.zStreetMapa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapa">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zStreetMapa">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zStreetMapi_zCityMapi">
+          <End Role="zCityMapi" Type="Self.zCityMapi" Multiplicity="1" />
+          <End Role="zStreetMapi" Type="Self.zStreetMapi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapi">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zStreetMapi">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mapinfoModelStoreContainer">
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ColorTypes" EntityType="Self.ColorTypes" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="HouseNum" EntityType="Self.HouseNum" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Layers" EntityType="Self.Layers" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Street" EntityType="Self.Street" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zCityMapa" EntityType="Self.zCityMapa" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zCityMapi" EntityType="Self.zCityMapi" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zHouseNumberMapa" EntityType="Self.zHouseNumberMapa" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zHouseNumberMapi" EntityType="Self.zHouseNumberMapi" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zLayersByModules" EntityType="Self.zLayersByModules" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zModule" EntityType="Self.zModule" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zStreetMapa" EntityType="Self.zStreetMapa" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="zStreetMapi" EntityType="Self.zStreetMapi" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="FK_zHouseNumberMapa_zCityMapa" Association="Self.FK_zHouseNumberMapa_zCityMapa">
+            <End Role="zCityMapa" EntitySet="zCityMapa" />
+            <End Role="zHouseNumberMapa" EntitySet="zHouseNumberMapa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zHouseNumberMapa_zStreetMapa1" Association="Self.FK_zHouseNumberMapa_zStreetMapa1">
+            <End Role="zStreetMapa" EntitySet="zStreetMapa" />
+            <End Role="zHouseNumberMapa" EntitySet="zHouseNumberMapa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zHouseNumberMapi_zCityMapi" Association="Self.FK_zHouseNumberMapi_zCityMapi">
+            <End Role="zCityMapi" EntitySet="zCityMapi" />
+            <End Role="zHouseNumberMapi" EntitySet="zHouseNumberMapi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zHouseNumberMapi_zStreetMapi" Association="Self.FK_zHouseNumberMapi_zStreetMapi">
+            <End Role="zStreetMapi" EntitySet="zStreetMapi" />
+            <End Role="zHouseNumberMapi" EntitySet="zHouseNumberMapi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zModule_zModule" Association="Self.FK_zModule_zModule">
+            <End Role="zModule" EntitySet="zModule" />
+            <End Role="zModule1" EntitySet="zModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zStreetMapa_zCityMapa1" Association="Self.FK_zStreetMapa_zCityMapa1">
+            <End Role="zCityMapa" EntitySet="zCityMapa" />
+            <End Role="zStreetMapa" EntitySet="zStreetMapa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zStreetMapi_zCityMapi" Association="Self.FK_zStreetMapi_zCityMapi">
+            <End Role="zCityMapi" EntitySet="zCityMapi" />
+            <End Role="zStreetMapi" EntitySet="zStreetMapi" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mapinfoModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+        </EntityType>
+        <EntityType Name="ColorType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HouseNum">
+          <Key>
+            <PropertyRef Name="HouseNumberId" />
+          </Key>
+          <Property Name="HouseNumberId" Type="Int32" Nullable="false" />
+          <Property Name="City" Type="Int32" />
+          <Property Name="Street" Type="Int32" />
+          <Property Name="HouseNumberName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+        </EntityType>
+        <EntityType Name="Layer">
+          <Key>
+            <PropertyRef Name="LayerId" />
+          </Key>
+          <Property Name="LayerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayNameHeb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaseLayer" Type="Boolean" />
+          <Property Name="Opacity" Type="Double" />
+          <Property Name="Place" Type="Int32" />
+          <Property Name="Sort" Type="Int32" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="AsMade" />
+          </Key>
+          <Property Name="AsMade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lat" Type="Single" Nullable="false" />
+          <Property Name="Lon" Type="Single" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Street">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="City" Type="Int32" />
+          <Property Name="StreetName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="zCityMapa">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <NavigationProperty Name="zHouseNumberMapas" Relationship="Self.FK_zHouseNumberMapa_zCityMapa" FromRole="zCityMapa" ToRole="zHouseNumberMapa" />
+          <NavigationProperty Name="zStreetMapas" Relationship="Self.FK_zStreetMapa_zCityMapa1" FromRole="zCityMapa" ToRole="zStreetMapa" />
+        </EntityType>
+        <EntityType Name="zCityMapi">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <NavigationProperty Name="zHouseNumberMapis" Relationship="Self.FK_zHouseNumberMapi_zCityMapi" FromRole="zCityMapi" ToRole="zHouseNumberMapi" />
+          <NavigationProperty Name="zStreetMapis" Relationship="Self.FK_zStreetMapi_zCityMapi" FromRole="zCityMapi" ToRole="zStreetMapi" />
+        </EntityType>
+        <EntityType Name="zHouseNumberMapa">
+          <Key>
+            <PropertyRef Name="HouseNumberId" />
+          </Key>
+          <Property Name="HouseNumberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="City" Type="Int32" />
+          <Property Name="Street" Type="Int32" Nullable="false" />
+          <Property Name="HouseNumberName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <NavigationProperty Name="zCityMapa" Relationship="Self.FK_zHouseNumberMapa_zCityMapa" FromRole="zHouseNumberMapa" ToRole="zCityMapa" />
+          <NavigationProperty Name="zStreetMapa" Relationship="Self.FK_zHouseNumberMapa_zStreetMapa1" FromRole="zHouseNumberMapa" ToRole="zStreetMapa" />
+        </EntityType>
+        <EntityType Name="zHouseNumberMapi">
+          <Key>
+            <PropertyRef Name="HouseNumberId" />
+          </Key>
+          <Property Name="HouseNumberId" Type="Int32" Nullable="false" />
+          <Property Name="City" Type="Int32" />
+          <Property Name="Street" Type="Int32" Nullable="false" />
+          <Property Name="HouseNumberName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <NavigationProperty Name="zCityMapi" Relationship="Self.FK_zHouseNumberMapi_zCityMapi" FromRole="zHouseNumberMapi" ToRole="zCityMapi" />
+          <NavigationProperty Name="zStreetMapi" Relationship="Self.FK_zHouseNumberMapi_zStreetMapi" FromRole="zHouseNumberMapi" ToRole="zStreetMapi" />
+        </EntityType>
+        <EntityType Name="zLayersByModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="LayerId" Type="Int32" />
+          <Property Name="ModuleId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="zModule">
+          <Key>
+            <PropertyRef Name="ModuleID" />
+          </Key>
+          <Property Name="ModuleID" Type="Int32" Nullable="false" />
+          <Property Name="ModuleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="zModule1" Relationship="Self.FK_zModule_zModule" FromRole="zModule" ToRole="zModule1" />
+          <NavigationProperty Name="zModule2" Relationship="Self.FK_zModule_zModule" FromRole="zModule1" ToRole="zModule" />
+        </EntityType>
+        <EntityType Name="zStreetMapa">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="City" Type="Int32" Nullable="false" />
+          <Property Name="StreetName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <NavigationProperty Name="zCityMapa" Relationship="Self.FK_zStreetMapa_zCityMapa1" FromRole="zStreetMapa" ToRole="zCityMapa" />
+          <NavigationProperty Name="zHouseNumberMapas" Relationship="Self.FK_zHouseNumberMapa_zStreetMapa1" FromRole="zStreetMapa" ToRole="zHouseNumberMapa" />
+        </EntityType>
+        <EntityType Name="zStreetMapi">
+          <Key>
+            <PropertyRef Name="StreetId" />
+          </Key>
+          <Property Name="StreetId" Type="Int32" Nullable="false" />
+          <Property Name="City" Type="Int32" Nullable="false" />
+          <Property Name="StreetName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <NavigationProperty Name="zCityMapi" Relationship="Self.FK_zStreetMapi_zCityMapi" FromRole="zStreetMapi" ToRole="zCityMapi" />
+          <NavigationProperty Name="zHouseNumberMapis" Relationship="Self.FK_zHouseNumberMapi_zStreetMapi" FromRole="zStreetMapi" ToRole="zHouseNumberMapi" />
+        </EntityType>
+        <Association Name="FK_zHouseNumberMapa_zCityMapa">
+          <End Role="zCityMapa" Type="Self.zCityMapa" Multiplicity="0..1" />
+          <End Role="zHouseNumberMapa" Type="Self.zHouseNumberMapa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapa">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapa">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zStreetMapa_zCityMapa1">
+          <End Role="zCityMapa" Type="Self.zCityMapa" Multiplicity="1" />
+          <End Role="zStreetMapa" Type="Self.zStreetMapa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapa">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zStreetMapa">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zHouseNumberMapi_zCityMapi">
+          <End Role="zCityMapi" Type="Self.zCityMapi" Multiplicity="0..1" />
+          <End Role="zHouseNumberMapi" Type="Self.zHouseNumberMapi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapi">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapi">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zStreetMapi_zCityMapi">
+          <End Role="zCityMapi" Type="Self.zCityMapi" Multiplicity="1" />
+          <End Role="zStreetMapi" Type="Self.zStreetMapi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zCityMapi">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="zStreetMapi">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zHouseNumberMapa_zStreetMapa1">
+          <End Role="zStreetMapa" Type="Self.zStreetMapa" Multiplicity="1" />
+          <End Role="zHouseNumberMapa" Type="Self.zHouseNumberMapa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zStreetMapa">
+              <PropertyRef Name="StreetId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapa">
+              <PropertyRef Name="Street" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zHouseNumberMapi_zStreetMapi">
+          <End Role="zStreetMapi" Type="Self.zStreetMapi" Multiplicity="1" />
+          <End Role="zHouseNumberMapi" Type="Self.zHouseNumberMapi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zStreetMapi">
+              <PropertyRef Name="StreetId" />
+            </Principal>
+            <Dependent Role="zHouseNumberMapi">
+              <PropertyRef Name="Street" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zModule_zModule">
+          <End Role="zModule" Type="Self.zModule" Multiplicity="1" />
+          <End Role="zModule1" Type="Self.zModule" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="zModule">
+              <PropertyRef Name="ModuleID" />
+            </Principal>
+            <Dependent Role="zModule1">
+              <PropertyRef Name="ModuleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mapinfoEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="ColorTypes" EntityType="Self.ColorType" />
+          <EntitySet Name="HouseNums" EntityType="Self.HouseNum" />
+          <EntitySet Name="Layers" EntityType="Self.Layer" />
+          <EntitySet Name="States" EntityType="Self.State" />
+          <EntitySet Name="Streets" EntityType="Self.Street" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="zCityMapas" EntityType="Self.zCityMapa" />
+          <EntitySet Name="zCityMapis" EntityType="Self.zCityMapi" />
+          <EntitySet Name="zHouseNumberMapas" EntityType="Self.zHouseNumberMapa" />
+          <EntitySet Name="zHouseNumberMapis" EntityType="Self.zHouseNumberMapi" />
+          <EntitySet Name="zLayersByModules" EntityType="Self.zLayersByModule" />
+          <EntitySet Name="zModules" EntityType="Self.zModule" />
+          <EntitySet Name="zStreetMapas" EntityType="Self.zStreetMapa" />
+          <EntitySet Name="zStreetMapis" EntityType="Self.zStreetMapi" />
+          <AssociationSet Name="FK_zHouseNumberMapa_zCityMapa" Association="Self.FK_zHouseNumberMapa_zCityMapa">
+            <End Role="zCityMapa" EntitySet="zCityMapas" />
+            <End Role="zHouseNumberMapa" EntitySet="zHouseNumberMapas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zStreetMapa_zCityMapa1" Association="Self.FK_zStreetMapa_zCityMapa1">
+            <End Role="zCityMapa" EntitySet="zCityMapas" />
+            <End Role="zStreetMapa" EntitySet="zStreetMapas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zHouseNumberMapi_zCityMapi" Association="Self.FK_zHouseNumberMapi_zCityMapi">
+            <End Role="zCityMapi" EntitySet="zCityMapis" />
+            <End Role="zHouseNumberMapi" EntitySet="zHouseNumberMapis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zStreetMapi_zCityMapi" Association="Self.FK_zStreetMapi_zCityMapi">
+            <End Role="zCityMapi" EntitySet="zCityMapis" />
+            <End Role="zStreetMapi" EntitySet="zStreetMapis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zHouseNumberMapa_zStreetMapa1" Association="Self.FK_zHouseNumberMapa_zStreetMapa1">
+            <End Role="zStreetMapa" EntitySet="zStreetMapas" />
+            <End Role="zHouseNumberMapa" EntitySet="zHouseNumberMapas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zHouseNumberMapi_zStreetMapi" Association="Self.FK_zHouseNumberMapi_zStreetMapi">
+            <End Role="zStreetMapi" EntitySet="zStreetMapis" />
+            <End Role="zHouseNumberMapi" EntitySet="zHouseNumberMapis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zModule_zModule" Association="Self.FK_zModule_zModule">
+            <End Role="zModule" EntitySet="zModules" />
+            <End Role="zModule1" EntitySet="zModules" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mapinfoModelStoreContainer" CdmEntityContainer="mapinfoEntities">
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="mapinfoModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ColorTypes">
+            <EntityTypeMapping TypeName="mapinfoModel.ColorType">
+              <MappingFragment StoreEntitySet="ColorTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HouseNums">
+            <EntityTypeMapping TypeName="mapinfoModel.HouseNum">
+              <MappingFragment StoreEntitySet="HouseNum">
+                <ScalarProperty Name="HouseNumberId" ColumnName="HouseNumberId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="HouseNumberName" ColumnName="HouseNumberName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Layers">
+            <EntityTypeMapping TypeName="mapinfoModel.Layer">
+              <MappingFragment StoreEntitySet="Layers">
+                <ScalarProperty Name="LayerId" ColumnName="LayerId" />
+                <ScalarProperty Name="LayerName" ColumnName="LayerName" />
+                <ScalarProperty Name="DisplayNameHeb" ColumnName="DisplayNameHeb" />
+                <ScalarProperty Name="BaseLayer" ColumnName="BaseLayer" />
+                <ScalarProperty Name="Opacity" ColumnName="Opacity" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="mapinfoModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="AsMade" ColumnName="AsMade" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Lon" ColumnName="Lon" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Streets">
+            <EntityTypeMapping TypeName="mapinfoModel.Street">
+              <MappingFragment StoreEntitySet="Street">
+                <ScalarProperty Name="StreetId" ColumnName="StreetId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="mapinfoModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zCityMapas">
+            <EntityTypeMapping TypeName="mapinfoModel.zCityMapa">
+              <MappingFragment StoreEntitySet="zCityMapa">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zCityMapis">
+            <EntityTypeMapping TypeName="mapinfoModel.zCityMapi">
+              <MappingFragment StoreEntitySet="zCityMapi">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zHouseNumberMapas">
+            <EntityTypeMapping TypeName="mapinfoModel.zHouseNumberMapa">
+              <MappingFragment StoreEntitySet="zHouseNumberMapa">
+                <ScalarProperty Name="HouseNumberId" ColumnName="HouseNumberId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="HouseNumberName" ColumnName="HouseNumberName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zHouseNumberMapis">
+            <EntityTypeMapping TypeName="mapinfoModel.zHouseNumberMapi">
+              <MappingFragment StoreEntitySet="zHouseNumberMapi">
+                <ScalarProperty Name="HouseNumberId" ColumnName="HouseNumberId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="HouseNumberName" ColumnName="HouseNumberName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zLayersByModules">
+            <EntityTypeMapping TypeName="mapinfoModel.zLayersByModule">
+              <MappingFragment StoreEntitySet="zLayersByModules">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LayerId" ColumnName="LayerId" />
+                <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zModules">
+            <EntityTypeMapping TypeName="mapinfoModel.zModule">
+              <MappingFragment StoreEntitySet="zModule">
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zStreetMapas">
+            <EntityTypeMapping TypeName="mapinfoModel.zStreetMapa">
+              <MappingFragment StoreEntitySet="zStreetMapa">
+                <ScalarProperty Name="StreetId" ColumnName="StreetId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zStreetMapis">
+            <EntityTypeMapping TypeName="mapinfoModel.zStreetMapi">
+              <MappingFragment StoreEntitySet="zStreetMapi">
+                <ScalarProperty Name="StreetId" ColumnName="StreetId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

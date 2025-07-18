@@ -1,0 +1,241 @@
+﻿<UserControl xmlns:awe="http://schemas.awesomium.com/winfx"  x:Class="Intellidesk.AcadNet.Views.LayoutView" x:Name="LayoutIt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:viewModels="clr-namespace:Intellidesk.AcadNet.ViewModels"
+    xmlns:views="clr-namespace:Intellidesk.AcadNet.Views"
+    Height="Auto" Background="WhiteSmoke"
+    MinWidth="300" MaxWidth="900"
+    DataContext = "{Binding RelativeSource={RelativeSource Self}, Path=ViewModel}"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    xmlns:components="clr-namespace:Intellidesk.AcadNet.Components">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\UIRecourses.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Icons.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\Styles.xaml"/>
+                <ResourceDictionary Source="/ID.AcadNet;component/Assets\DataGridCustomizations.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <!--<CollectionViewSource x:Key="Src" Source="{Binding lsds:MainViewModel.Layouts}">
+                <CollectionViewSource.GroupDescriptions>
+                    <PropertyGroupDescription PropertyName="RoundName"/>
+                </CollectionViewSource.GroupDescriptions>
+            </CollectionViewSource>-->
+            <!--<ObjectDataProvider ObjectType="lsds:MainViewModel" x:Key="Data"/>-->
+
+            <Style TargetType="{x:Type components:CustomImageButton}">
+                <Setter Property="Height" Value="22"/>
+                <Setter Property="Width" Value="88"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+            <!--<sys:Boolean x:Key="PanelSizeMode">False</sys:Boolean>-->
+
+            <!--<Style TargetType="{x:Type custom:ProjectExplorerView}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ElementName=MapIt, Path=SwitchSizeMode}" Value="True">
+                        <Setter Property="Width" Value="20"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding ElementName=MapIt, Path=SwitchSizeMode}" Value="False">
+                        <Setter Property="Width" Value="200"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>-->
+            <DataTemplate x:Key="SimpleLayout" >
+                <StackPanel>
+                    <TextBlock Name="State" FontWeight="Bold" TextAlignment="Center" Text="{Binding LayoutName}" />
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="ColumnLayout" >
+                <TextBlock FontSize="20"  Width="200.098" Height="30.255" Text="I have a girlfriend" />
+            </DataTemplate>
+
+            <Style x:Key="spStyle" TargetType="StackPanel">
+                <Setter Property="StackPanel.Background" Value="Red" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsLayoutReadOnly}" Value="true">
+                        <Setter Property="StackPanel.Background" Value="Green" />
+                        <Setter Property="StackPanel.Opacity" Value=".5" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border BorderThickness="1" BorderBrush="WhiteSmoke" HorizontalAlignment="Stretch" CornerRadius="4" Margin="5,3,5,5">
+        <DockPanel>
+            <Grid x:Name="GrdToolbar" DockPanel.Dock="Top" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32" />
+                    <ColumnDefinition Width="*" MinWidth="120" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <Image  Source="{DynamicResource PanelIcon}" Width="16" Height="16" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" 
+                        Margin="8,0,8,0" Opacity="0.5" Cursor="No"  />
+
+                <Separator Grid.Column="0" Style="{DynamicResource AcadToolBarSeparatorStyle}" Width="20" HorizontalAlignment="Right" />
+
+                <StackPanel Grid.Column="1" Height="30">
+                    <StackPanel  HorizontalAlignment="Left" Orientation="Horizontal">
+                        <components:CustomImageButton x:Name="MapOpenLayoutButton" ToolTip="Open layout"
+                                ActiveImage="{DynamicResource OpenA}" NormalImage="{DynamicResource Open}"
+    			                Command="{Binding OpenLayoutCommand}" CommandParameter="{Binding CurrentLayout}"
+    			                Style="{DynamicResource StateButtonStyle}" Cursor="Hand" >
+                        </components:CustomImageButton>
+
+                        <Button x:Name="NewLayoutButton" ToolTip="New project"
+    			                Command="{Binding CreateLayerCommand}" CommandParameter="{Binding CurrentLayout}" 
+    			                Style="{DynamicResource AcadButtonStyle}" Tag="{DynamicResource New}" />
+
+                        <components:CustomImageButton x:Name="SaveLayoutButton" ToolTip="Save changes layout to DB"
+                            ActiveImage="{DynamicResource SaveA}" NormalImage="{DynamicResource Save}"
+    			            Command="{Binding SaveLayoutCommand}" CommandParameter="{Binding CurrentLayout}"
+    			            Style ="{StaticResource StateButtonStyle}" Tag="{Binding LayoutState}"  Cursor="Hand">
+                        </components:CustomImageButton>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Separator Style="{DynamicResource AcadToolBarSeparatorStyle}" Width="20" />
+
+                    <Expander ExpandDirection="Left" ToolTip="Collapse"
+                              BorderBrush="Transparent" Margin="3,3,3,0"
+                		      IsExpanded="{Binding Path=SwitchSizeMode}"
+                		      HorizontalAlignment="Right" VerticalAlignment="Center" 
+                              Background="Transparent" Cursor="Hand" />
+                </StackPanel>
+            </Grid>
+            <StackPanel DockPanel.Dock="Bottom" x:Name="MapButtonsPanelRight" Orientation="Horizontal" HorizontalAlignment="Right" >
+                <!--<ComboBox MinWidth="50" Width="Auto" Margin="2,5,2,5"
+                              ItemsSource="{Binding LayoutFilters}"
+                              SelectedValue="{Binding CurrentLayoutFilter}"
+                              DisplayMemberPath="filter"
+                              SelectedValuePath="LayoutID"/>-->
+
+
+            </StackPanel>
+
+            <Grid x:Name="MapGrdMain">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="300pX" />
+                    <RowDefinition Height="6" />
+                    <RowDefinition Height="*" />
+                    <!--<RowDefinition Height="1*" x:Name="RowDefSplitterMap"/>-->
+                </Grid.RowDefinitions>
+
+                
+
+                <Grid Name="Grid1">
+                    <!--<WebBrowser Grid.Row="0" Name="WebBrowser">
+                    </WebBrowser>-->
+                    <awe:WebControl Name="webBrowser"/>  
+                </Grid>
+
+                <!--<WindowsFormsHost x:Name="WndHost">
+                    <wf:WebBrowser  
+                            WebBrowserShortcutsEnabled="False" Url="https://www.google.co.il/maps?source=tldsi&amp;hl=her" >
+                    </wf:WebBrowser>
+                </WindowsFormsHost>-->
+
+                <!--
+                    C:\Projects\IntelliDesk\ID.AcadNet\Views\MapIt.html
+                    <awe:WebControl Visibility="Collapsed"
+                        Name="WebControl1" 
+                        WebSession="{Binding Source={StaticResource WebSession}}" 
+                        Source="C:\Projects\IntelliDesk\ID.AcadNet\Views\MapIt.html"             
+                        IsTransparent="True" 
+                        WindowClose="webControl_WindowClose" 
+                        NativeViewInitialized="webControl_NativeViewInitialized" 
+                        ConsoleMessage="webControl_ConsoleMessage"
+                        DocumentReady="webControl_DocumentReady" 
+                        JavascriptRequest="webControl_JavascriptRequest" />
+                            
+                        NativeView="{Binding NativeView, ElementName=MapIt}"
+                        Source="{Binding Source, ElementName=MapIt}"
+                    -->
+
+                <GridSplitter Cursor="SizeNS" Grid.Row="1" Width="50" Height="6" DragCompleted="Thumb_OnDragCompleted"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <GridSplitter.Template>
+                        <ControlTemplate TargetType="{x:Type GridSplitter}">
+                            <Grid Margin="0,0,0,0">
+                                <Label Content=". . . . . ." Margin="0,-14" HorizontalAlignment="Center"  />
+                            </Grid>
+                        </ControlTemplate>
+                    </GridSplitter.Template>
+                </GridSplitter>
+
+            </Grid>
+
+            <!--<ComboBox SelectedIndex="1" BorderThickness="1" BorderBrush="Transparent" Background="Transparent">
+                            <ComboBoxItem Content="50%"/>
+                            <ComboBoxItem Content="100%"/>x:FieldModifier="public"
+                            <ComboBoxItem Content="150%"/>SelectedValue="{Binding CurrentLayout}"SelectedItem="{Binding CurrentLayout}"
+                        </ComboBox>-->
+
+            <!--<awe:WebDialogsLayer>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            
+                            <awe:WebControl 
+                                Grid.Row="1"
+                                x:Name="WebControl"
+                                WebSession="{Binding Source={StaticResource WebSession}}"
+                                Source="http://www.google.com" />
+                    
+                            <StatusBar
+                                Grid.Row="2" 
+                                Height="25" 
+                                BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" >
+
+                                <StatusBarItem>
+                                    <TextBlock 
+                                        VerticalAlignment="Center" 
+                                        Padding="3" 
+                                        TextWrapping="NoWrap" 
+                                        TextTrimming="CharacterEllipsis" 
+                                        Text="{Binding TargetURL, ElementName=WebControl, Converter={StaticResource UrlConverter}}"/>
+                                </StatusBarItem>
+
+                                <StatusBarItem HorizontalAlignment="Right">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock 
+                                            VerticalAlignment="Center"
+                                            Margin="7,0" 
+                                            Text="Zoom:"/>
+                                        <Slider 
+                                            DataContext="{Binding ElementName=WebControl}" Value="{Binding Zoom}"
+                                            Margin="3,0" Minimum="10" Maximum="400" Width="120"
+                                            VerticalAlignment="Center" AutoToolTipPlacement="TopLeft" 
+                                            IsSnapToTickEnabled="True" IsMoveToPointEnabled="True" 
+                                            SmallChange="1" LargeChange="10" TickFrequency="10" Focusable="False" 
+                                            ToolTip="{Binding Zoom}">
+                                            <Slider.ContextMenu>
+                                                <ContextMenu 
+                                                     DataContext="{Binding PlacementTarget.DataContext,
+                                                     RelativeSource={RelativeSource Self}}">
+                                                    <MenuItem 
+                                                      Command="{x:Static awe:WebControlCommands.ResetZoom}"
+                                                      CommandTarget="{Binding}" />
+                                                </ContextMenu>
+                                            </Slider.ContextMenu>
+                                        </Slider>
+                                    </StackPanel>
+                                </StatusBarItem>
+                            </StatusBar>
+                        </Grid>
+                    </awe:WebDialogsLayer>-->
+        </DockPanel>
+    </Border>
+
+</UserControl>

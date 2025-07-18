@@ -1,0 +1,75 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Intellidesk.AcadNet.Common.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AutocadMapviewerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc?singleWsdl</Value>
+    </Setting>
+    <Setting Name="PaletteSetId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">06B75904-219F-4CA5-AC02-E3970A645F19</Value>
+    </Setting>
+    <Setting Name="IncludeFolders" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;C:\Projects&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ProjectExplorerFoldersSectionHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="ProjectExplorerFilesSectionHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">380</Value>
+    </Setting>
+    <Setting Name="MapinfoUrlFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc/SetViewrXY/{0}/{1}</Value>
+    </Setting>
+    <Setting Name="ResourceImages" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Intellidesk.AcadNet.Resources.Properties.Resources</Value>
+    </Setting>
+    <Setting Name="MapInfoApiViewerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc?singleWsdl</Value>
+    </Setting>
+    <Setting Name="ToolPanelTop" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SearchText</Value>
+    </Setting>
+    <Setting Name="ToolPanelWidth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="IntelliDeskHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:43210/</Value>
+    </Setting>
+    <Setting Name="IntelliDeskApiUrlSample" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://intellidesk/api/Draw/Point/?x=120&amp;y=210</Value>
+    </Setting>
+    <Setting Name="ZoomDisplayFactor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DbHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQL2008DB</Value>
+    </Setting>
+    <Setting Name="MapInfoApiHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">vmmapinfo</Value>
+    </Setting>
+    <Setting Name="MapInfoApiPointUrlFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://vmmapinfo/MapService/api/SetOnMap?x={0}&amp;y={1}&amp;user={2}</Value>
+    </Setting>
+    <Setting Name="ResourceClass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Intellidesk.AcadNet.Services.Properties.Resources</Value>
+    </Setting>
+    <Setting Name="WorkLayerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gis</Value>
+    </Setting>
+    <Setting Name="MapinfoApiFindUrlFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://vmmapinfo/mapservice/api/setonmap/getgov?govname={0}&amp;user={1}</Value>
+    </Setting>
+    <Setting Name="MapItHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="ProjectName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Intellidesk</Value>
+    </Setting>
+    <Setting Name="TempLayerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Temp</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

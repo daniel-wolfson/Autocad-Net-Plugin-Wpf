@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet.draw vector editing handlers</title>
+    <script src="mapit/lib/leaflet/leaflet-src.js"></script>
+    <link href="mapit/lib/leaflet/leaflet.css" rel="stylesheet" />
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+
+    <!--providers-->
+    <!--plugins-->
+    <!--<script src="https://cdnjs.com/libraries/leaflet-plugins"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+    <script href="//api.titles.mox.com/mapbox.js/v2.1.9/mapbox.js"></script>
+
+    <script src="http://www.autocadws.com/jsapi/v1/Autodesk.AutoCAD.js"></script>-->
+    <!-- libs -->
+    <!--<script src="lib/leafleat.ajax.js"></script>
+    <script src="lib/leaflet/spin-min.js"></script>
+    <script src="lib/leaflet/leaflet-spin.js"></script>
+    <script src="lib/leaflet/leaflet-ajax.js"></script>
+    <script src="lib/leaflet/leaflet-color-markers.js"></script>
+    <script src="lib/leaflet/leaflet-google.js"></script>
+    <script src="lib/leaflet.popup.angular.js"></script>
+    <script src="lib/leaflet.geometryutil.js"></script>-->
+    <!-- App -->
+    <!--<link href="App/controls/Control.BingGeocoder.css" rel="stylesheet" />
+    <link href="App/controls/Control.Geocoder.css" rel="stylesheet" />
+    <link href="App/controls/Control.loading.css" rel="stylesheet" />
+    <script src="App/controls/Control.Geocoder.js"></script>
+    <script src="App/controls/Control.loading.js"></script>
+    <script src="App/services/js-itm.js"></script>
+    <script src="App/models/geojson.js"></script>
+    <script src="lib/signalr/jquery.signalR-2.1.2.min.js"></script>-->
+    <!-- Split-pane -->
+    <!--<link href="css/split-pane.css.css" rel="stylesheet" />-->
+    <!--<script src="lib/split-pane.js"></script>-->
+    <!-- angular -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+
+    <!-- draw -->
+    <script src="mapit/lib/Leaflet.draw.js"></script>
+    <script src="mapit/lib/Leaflet.Draw.Event.js"></script>
+    <link href="mapit/lib/draw/leaflet.draw.css" rel="stylesheet" />
+    <!-- Toolbar -->
+    <script src="mapit/lib/draw/Toolbar.js"></script>
+    <script src="mapit/lib/draw/Tooltip.js"></script>
+    <!-- util -->
+    <script src="mapit/lib/draw/ext/GeometryUtil.js"></script>
+    <script src="mapit/lib/draw/ext/LatLngUtil.js"></script>
+    <script src="mapit/lib/draw/ext/LineUtil.Intersect.js"></script>
+    <script src="mapit/lib/draw/ext/Polygon.Intersect.js"></script>
+    <script src="mapit/lib/draw/ext/Polyline.Intersect.js"></script>
+    <script src="mapit/lib/draw/ext/TouchEvents.js"></script>
+
+    <script src="mapit/lib/draw/DrawToolbar.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.Feature.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.Polyline.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.Marker.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.Circle.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.CircleMarker.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.Polygon.js"></script>
+    <script src="mapit/lib/draw/draw/handler/Draw.Rectangle.js"></script>
+
+    <script src="mapit/lib/draw/EditToolbar.js"></script>
+    <script src="mapit/lib/draw/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="mapit/lib/draw/edit/handler/EditToolbar.Delete.js"></script>
+    <script src="mapit/lib/draw/Control.Draw.js"></script>
+    <!-- edit -->
+    <script src="mapit/lib/draw/edit/handler/Edit.Poly.js"></script>
+    <script src="mapit/lib/draw/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="mapit/lib/draw/edit/handler/Edit.Rectangle.js"></script>
+    <script src="mapit/lib/draw/edit/handler/Edit.Marker.js"></script>
+    <script src="mapit/lib/draw/edit/handler/Edit.CircleMarker.js"></script>
+    <script src="mapit/lib/draw/edit/handler/Edit.Circle.js"></script>
+
+</head>
+<body>
+    <div id="map" style="width: 800px; height: 600px; border: 1px solid #ccc"></div>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        // FeatureGroup is to store editable layers
+        var drawnItems = new L.FeatureGroup();
+        map.addLayer(drawnItems);
+        var drawControl = new L.Control.Draw({
+            edit: {
+                featureGroup: drawnItems
+            }
+        });
+        map.addControl(drawControl);
+
+    </script>
+</body>
+</html>

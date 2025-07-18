@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="Intellidesk.Data.Common.Editors.MultiSelectComboBoxEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="22" d:DesignWidth="300" Width="{Binding}"
+             x:Name="Uc">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/ID.AcadNet.Data;component/Common/Styles\Icons.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ID.AcadNet.Data;component/Common/Styles\Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+           <Style x:Key="textBoxInError1" TargetType="TextBox">
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="true">
+                        <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="EditorGrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="24" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="FieldData" Grid.Column="0" Background="#FFF7F7F7" Margin="2,1,2,1" Style="{StaticResource textBoxInError1}" IsReadOnly="True">
+            <TextBox.Text>
+                <!-- Setting the ValidatesOnDataErrors to true enables to the Binding to check for errors raised by the IDataErrorInfo implementation.
+                    Alternatively, you can add DataErrorValidationRule to <Binding.ValidationRules/>-->
+                <Binding ElementName="Uc" Path="Value" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <!-- Checks for exceptions during the setting of the source property.Source="{StaticResource data}" ItemsSource="{Binding Source={StaticResource LayoutContentsItemsSource}}"/>
+                            Alternatively, set ValidatesOnExceptions to True on the Binding.-->
+                        <ExceptionValidationRule/>
+                        <!--<editors:CadFileFoundValidationRule ErrorMessage="File not found!" />-->
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <ComboBox Grid.Column="1" Margin="1" Cursor="Hand"
+            x:Name="MultiSelectCombo"  
+            SnapsToDevicePixels="True"
+            OverridesDefaultStyle="True"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ScrollViewer.CanContentScroll="True"
+            IsSynchronizedWithCurrentItem="True">
+
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Title}"
+                          IsChecked="{Binding Path=IsSelected, Mode=TwoWay}"
+                          Tag="{RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}"
+                           Click="CheckBox_Click" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+            
+            <ComboBox.Template>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid >
+                        <!--Content="{Binding Path=Text,Mode=TwoWay,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}"-->
+                        <ToggleButton 
+                            Name="ToggleButton" 
+                            Grid.Column="2" IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            Focusable="false"                        
+                            ClickMode="Press" HorizontalContentAlignment="Left">
+                                <Image Source="pack://application:,,,/ID.AcadNet.Data;component/Resources/lsdsedit_16.png" Height="16"></Image>
+                        </ToggleButton>
+                        <Popup 
+                            Name="Popup"
+                            Placement="Bottom"                        
+                            AllowsTransparency="True" 
+                            Focusable="False"  IsOpen="{TemplateBinding IsDropDownOpen}"
+                            PopupAnimation="Slide">
+                            <Grid 
+                                  Name="DropDown"
+                                  SnapsToDevicePixels="True"  
+                                  MinWidth="75" 
+                                  MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                  <!--MinWidth="{TemplateBinding ActualWidth}"-->
+                                <Border CornerRadius="4"
+                                    x:Name="DropDownBorder"
+                                    BorderThickness="1"
+                                    Background="{StaticResource WindowBackgroundBrush}"
+                                    BorderBrush="Black"/>
+                                <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True" DataContext="{Binding}">
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="False">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="4"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </ComboBox.Template>
+        </ComboBox>
+
+    </Grid>
+    
+</UserControl>

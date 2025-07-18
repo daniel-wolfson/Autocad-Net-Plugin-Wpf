@@ -1,0 +1,94 @@
+﻿<div class="leaflet-control-container" style="width: 100% !important;">
+
+    <div class="mapit-control-container" style="left: 15px; width: 10% !important;">
+        <span style="left: 15px;">
+            <img id="logo" src="http://vmmapinfo/MapIt/images/logo32.png" />
+            <a style="color: white; font-weight: bold; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)" href="#">MapIT</a>
+        </span>
+    </div>
+
+    <!--search-->
+    <div class="mapit-control-container" style="left: 1%; width: 50% !important;">
+
+        <span class="input-group mapit-control-search" style="width: 80% !important;">
+            <span class="input-group-btn">
+                <a href="#" id="markerTypeDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <button class="btn btn-default mapit-content-control-dropdown" type="button">
+                        <span>{{selectedItem.name}}</span>
+                        <span class="caret"></span>
+                    </button>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="markerTypeDropdownMenu">
+                    <li ng-repeat="markerFilter in markerFilters"><a ng-click="dropboxitemselected(markerFilter)">{{markerFilter.name}}</a></li>
+                    <!--<li role="separator" class="divider"></li>
+                    <li><a href="#" ng-click="dropboxitemselected('Adress')">Address</a></li>-->
+                </ul>
+            </span>
+            <!--<page></page>-->
+            <input type="text" class="form-control mapit-content-control-searchrun" ng-model="inputText" placeholder="Search markers...">
+            <span class="input-group-btn">
+                <button class="btn mapit-content-control-searchrun" style="margin-left: 4px;" type="button" ng-click="search(inputText)">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </span>
+    </div>
+
+    <div class="mapit-control-container" style="right: 0%; width: 30%;">
+
+        <!--lines count-->
+        <button id="linesCount" type="button" class="btn btn-default mapit-content-control" title="kavim count">
+            <a href="#" style="color: darkgrey">
+                <!--<span style="color: rgb(85, 207, 207) !important; margin-right: 2px; font-weight: bold"> / </span>-->
+                <!--<svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="-2 -3 10 19" width="10">
+                    <path fill-rule="evenodd" fill="blue" d="M4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72z
+                          m-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2z
+                          M2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z">
+                    </path>
+                </svg>-->
+                <svg width="15" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="green">
+                        <circle cx="10" cy="5" r="2" stroke="black" stroke-width="1" fill="transparent" />
+                        <line x1="10" y1="5" x2="5" y2="14" stroke-width="3" />
+                        <circle cx="4" cy="16" r="2" stroke="black" stroke-width="1" fill="transparent" />
+                    </g>
+                </svg>
+                <span class="badge" style="margin-top: -8px">0</span>
+            </a>
+        </button>
+
+        <!--markers count-->
+        <button id="markersCount" type="button" class="btn btn-default mapit-content-control" title="govim count">
+            <a href="#" style="color: darkgrey">
+                <!--<span class="glyphicon glyphicon-circle-arrow-right" style="color: rgb(247, 115, 78) !important; margin-right: 2px"></span>-->
+                <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10" />
+                    <circle cx="10" cy="10" r="6" stroke="black" stroke-width="2" fill="transparent" />
+                    <circle cx="10" cy="10" r="5" fill="#fd7a5a"/>
+                </svg>
+                <span class="badge" style="margin-top: -2px">{{$root.markersCount}}</span>
+            </a>
+        </button>
+
+        <!--layouts-->
+        <div class="btn btn-default dropdown mapit-content-control">
+            <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="glyphicon glyphicon-option-vertical" style="padding-top: 3px"></span>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li data-match-route="/vertical"><a href="/MapIt/vertical">vertical</a></li>
+                <li data-match-route="/horizontal"><a href="/MapIt/horizontal">horizontal</a></li>
+                <li class="divider"></li>
+                <li><a href="/MapIt/test">map only</a></li>
+            </ul>
+        </div>
+
+        <!--user-->
+        <button type="button" class="btn btn-default mapit-content-control" title="user">
+            <a href="#"><span class="glyphicon glyphicon-user user-known"></span>{{userName}}</a>
+        </button>
+
+    </div>
+
+</div>

@@ -1,0 +1,2374 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mscorlib="clr-namespace:System;assembly=mscorlib">
+
+    <FontFamily x:Key="FontAwesome">pack://application:,,,/ID.AcadNet;component/Fonts/fontawesome-webfont.ttf#FontAwesome</FontFamily>
+
+    <Style x:Key="FontAwesomeStyle" TargetType="TextBlock">
+        <!--<Setter Property="TextElement.FontFamily" Value="pack://application:,,,/fonts/#FontAwesome" />-->
+        <!--<Setter Property="TextElement.FontFamily" Value="pack://application:,,,/fonts/fontawesome-webfont.ttf#FontAwesome" />-->
+        <Setter Property="FontFamily" Value="pack://application:,,,/ID.AcadNet;component/Fonts/fontawesome-webfont.ttf#FontAwesome" />
+    </Style>
+
+    <Style x:Key="fa-brush" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1fc;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-brush">&#xf1fc;</mscorlib:String>
+
+    <Style x:Key="fa-adjust" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf042;" />
+    </Style>
+
+
+    <Style x:Key="fa-adn" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf170;" />
+    </Style>
+
+
+    <Style x:Key="fa-align-center" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf037;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-align-center">&#xf037;</mscorlib:String>
+
+
+    <Style x:Key="fa-align-justify" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf039;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-align-justify">&#xf039;</mscorlib:String>
+
+
+    <Style x:Key="fa-align-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf036;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-align-left">&#xf036;</mscorlib:String>
+
+    <Style x:Key="fa-align-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf038;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-align-right">&#xf038;</mscorlib:String>
+
+    <Style x:Key="fa-ambulance" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f9;" />
+    </Style>
+
+
+    <Style x:Key="fa-anchor" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf13d;" />
+    </Style>
+
+
+    <Style x:Key="fa-android" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf17b;" />
+    </Style>
+
+
+    <Style x:Key="fa-angle-double-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf103;" />
+    </Style>
+
+
+    <Style x:Key="fa-angle-double-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf100;" />
+    </Style>
+
+
+    <Style x:Key="fa-angle-double-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf101;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-angle-double-right">&#xf101;</mscorlib:String>
+
+    <Style x:Key="fa-angle-double-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf102;" />
+    </Style>
+
+    <Style x:Key="fa-angle-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf107;" />
+    </Style>
+
+    <Style x:Key="fa-angle-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf104;" />
+    </Style>
+
+    <Style x:Key="fa-angle-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf105;" />
+    </Style>
+
+    <Style x:Key="fa-angle-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf106;" />
+    </Style>
+
+    <Style x:Key="fa-apple" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf179;" />
+    </Style>
+
+    <Style x:Key="fa-archive" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf187;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ab;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a8;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-o-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf01a;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-o-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf190;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-o-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf18e;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-o-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf01b;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a9;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-circle-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0aa;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf063;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf060;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf061;" />
+    </Style>
+
+    <Style x:Key="fa-arrow-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf062;" />
+    </Style>
+
+    <Style x:Key="fa-arrows" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf047;" />
+    </Style>
+
+    <Style x:Key="fa-arrows-alt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0b2;" />
+    </Style>
+
+    <Style x:Key="fa-arrows-h" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf07e;" />
+    </Style>
+
+    <Style x:Key="fa-arrows-v" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf07d;" />
+    </Style>
+
+    <Style x:Key="fa-asterisk" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf069;" />
+    </Style>
+
+    <Style x:Key="fa-automobile" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b9;" />
+    </Style>
+
+    <Style x:Key="fa-backward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf04a;" />
+    </Style>
+
+    <Style x:Key="fa-ban" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf05e;" />
+    </Style>
+
+    <Style x:Key="fa-bank" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19c;" />
+    </Style>
+
+    <Style x:Key="fa-bar-chart-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf080;" />
+    </Style>
+
+    <Style x:Key="fa-barcode" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf02a;" />
+    </Style>
+
+    <Style x:Key="fa-bars" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c9;" />
+    </Style>
+
+
+    <Style x:Key="fa-beer" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0fc;" />
+    </Style>
+
+
+    <Style x:Key="fa-behance" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b4;" />
+    </Style>
+
+
+    <Style x:Key="fa-behance-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b5;" />
+    </Style>
+
+
+    <Style x:Key="fa-bell" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f3;" />
+    </Style>
+
+
+    <Style x:Key="fa-bell-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a2;" />
+    </Style>
+
+
+    <Style x:Key="fa-bitbucket" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf171;" />
+    </Style>
+
+
+    <Style x:Key="fa-bitbucket-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf172;" />
+    </Style>
+
+
+    <Style x:Key="fa-bitcoin" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf15a;" />
+    </Style>
+
+
+    <Style x:Key="fa-bold" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf032;" />
+    </Style>
+
+
+    <Style x:Key="fa-bolt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e7;" />
+    </Style>
+
+
+    <Style x:Key="fa-bomb" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1e2;" />
+    </Style>
+
+
+    <Style x:Key="fa-book" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf02d;" />
+    </Style>
+
+
+    <Style x:Key="fa-bookmark" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf02e;" />
+    </Style>
+
+
+    <Style x:Key="fa-bookmark-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf097;" />
+    </Style>
+
+
+    <Style x:Key="fa-briefcase" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0b1;" />
+    </Style>
+
+
+    <Style x:Key="fa-btc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf15a;" />
+    </Style>
+
+
+    <Style x:Key="fa-bug" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf188;" />
+    </Style>
+
+
+    <Style x:Key="fa-building" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ad;" />
+    </Style>
+
+
+    <Style x:Key="fa-building-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f7;" />
+    </Style>
+
+
+    <Style x:Key="fa-bullhorn" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a1;" />
+    </Style>
+
+
+    <Style x:Key="fa-bullseye" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf140;" />
+    </Style>
+
+
+    <Style x:Key="fa-cab" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ba;" />
+    </Style>
+
+
+    <Style x:Key="fa-calendar" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf073;" />
+    </Style>
+
+
+    <Style x:Key="fa-calendar-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf133;" />
+    </Style>
+
+
+    <Style x:Key="fa-camera" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf030;" />
+    </Style>
+
+
+    <Style x:Key="fa-camera-retro" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf083;" />
+    </Style>
+
+
+    <Style x:Key="fa-car" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b9;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d7;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d9;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0da;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-square-o-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf150;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-square-o-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf191;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-square-o-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf152;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-square-o-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf151;" />
+    </Style>
+
+
+    <Style x:Key="fa-caret-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d8;" />
+    </Style>
+
+
+    <Style x:Key="fa-certificate" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a3;" />
+    </Style>
+
+
+    <Style x:Key="fa-chain" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c1;" />
+    </Style>
+
+
+    <Style x:Key="fa-chain-broken" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf127;" />
+    </Style>
+
+
+    <Style x:Key="fa-check" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf00c;" />
+    </Style>
+
+
+    <Style x:Key="fa-check-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf058;" />
+    </Style>
+
+
+    <Style x:Key="fa-check-circle-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf05d;" />
+    </Style>
+
+
+    <Style x:Key="fa-check-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf14a;" />
+    </Style>
+
+
+    <Style x:Key="fa-check-square-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf046;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-circle-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf13a;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-circle-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf137;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-circle-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf138;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-circle-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf139;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf078;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf053;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf054;" />
+    </Style>
+
+
+    <Style x:Key="fa-chevron-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf077;" />
+    </Style>
+
+
+    <Style x:Key="fa-child" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ae;" />
+    </Style>
+
+
+    <Style x:Key="fa-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf111;" />
+    </Style>
+
+
+    <Style x:Key="fa-circle-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf10c;" />
+    </Style>
+
+
+    <Style x:Key="fa-circle-o-notch" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ce;" />
+    </Style>
+
+
+    <Style x:Key="fa-circle-thin" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1db;" />
+    </Style>
+
+
+    <Style x:Key="fa-clipboard" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ea;" />
+    </Style>
+
+
+    <Style x:Key="fa-clock-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf017;" />
+    </Style>
+
+
+    <Style x:Key="fa-cloud" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c2;" />
+    </Style>
+
+
+    <Style x:Key="fa-cloud-download" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ed;" />
+    </Style>
+
+
+    <Style x:Key="fa-cloud-upload" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ee;" />
+    </Style>
+
+
+    <Style x:Key="fa-cny" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf157;" />
+    </Style>
+
+
+    <Style x:Key="fa-code" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf121;" />
+    </Style>
+
+
+    <Style x:Key="fa-code-fork" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf126;" />
+    </Style>
+
+
+    <Style x:Key="fa-codepen" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1cb;" />
+    </Style>
+
+
+    <Style x:Key="fa-coffee" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f4;" />
+    </Style>
+
+
+    <Style x:Key="fa-cog" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf013;" />
+    </Style>
+
+
+    <Style x:Key="fa-cogs" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf085;" />
+    </Style>
+
+
+    <Style x:Key="fa-columns" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0db;" />
+    </Style>
+
+
+    <Style x:Key="fa-comment" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf075;" />
+    </Style>
+
+
+    <Style x:Key="fa-comment-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e5;" />
+    </Style>
+
+
+    <Style x:Key="fa-comments" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf086;" />
+    </Style>
+
+
+    <Style x:Key="fa-comments-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e6;" />
+    </Style>
+
+
+    <Style x:Key="fa-compass" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf14e;" />
+    </Style>
+
+
+    <Style x:Key="fa-compress" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf066;" />
+    </Style>
+
+
+    <Style x:Key="fa-copy" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c5;" />
+    </Style>
+
+
+    <Style x:Key="fa-credit-card" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf09d;" />
+    </Style>
+
+
+    <Style x:Key="fa-crop" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf125;" />
+    </Style>
+
+
+    <Style x:Key="fa-crosshairs" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf05b;" />
+    </Style>
+
+
+    <Style x:Key="fa-css3" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf13c;" />
+    </Style>
+
+
+    <Style x:Key="fa-cube" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b2;" />
+    </Style>
+
+
+    <Style x:Key="fa-cubes" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b3;" />
+    </Style>
+
+
+    <Style x:Key="fa-cut" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c4;" />
+    </Style>
+
+
+    <Style x:Key="fa-cutlery" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f5;" />
+    </Style>
+
+
+    <Style x:Key="fa-dashboard" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e4;" />
+    </Style>
+
+
+    <Style x:Key="fa-database" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c0;" />
+    </Style>
+
+
+    <Style x:Key="fa-dedent" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03b;" />
+    </Style>
+
+
+    <Style x:Key="fa-delicious" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a5;" />
+    </Style>
+
+
+    <Style x:Key="fa-desktop" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf108;" />
+    </Style>
+
+
+    <Style x:Key="fa-deviantart" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1bd;" />
+    </Style>
+
+
+    <Style x:Key="fa-digg" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a6;" />
+    </Style>
+
+
+    <Style x:Key="fa-dollar" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf155;" />
+    </Style>
+
+
+    <Style x:Key="fa-dot-circle-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf192;" />
+    </Style>
+
+
+    <Style x:Key="fa-download" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf019;" />
+    </Style>
+
+
+    <Style x:Key="fa-dribbble" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf17d;" />
+    </Style>
+
+
+    <Style x:Key="fa-dropbox" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf16b;" />
+    </Style>
+
+
+    <Style x:Key="fa-drupal" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a9;" />
+    </Style>
+
+
+    <Style x:Key="fa-edit" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf044;" />
+    </Style>
+
+
+    <Style x:Key="fa-eject" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf052;" />
+    </Style>
+
+
+    <Style x:Key="fa-ellipsis-h" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf141;" />
+    </Style>
+
+
+    <Style x:Key="fa-ellipsis-v" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf142;" />
+    </Style>
+
+
+    <Style x:Key="fa-empire" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d1;" />
+    </Style>
+
+
+    <Style x:Key="fa-envelope" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e0;" />
+    </Style>
+
+
+    <Style x:Key="fa-envelope-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf003;" />
+    </Style>
+
+
+    <Style x:Key="fa-envelope-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf199;" />
+    </Style>
+
+
+    <Style x:Key="fa-eraser" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf12d;" />
+    </Style>
+
+
+    <Style x:Key="fa-eur" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf153;" />
+    </Style>
+
+
+    <Style x:Key="fa-euro" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf153;" />
+    </Style>
+
+
+    <Style x:Key="fa-exchange" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ec;" />
+    </Style>
+
+
+    <Style x:Key="fa-exclamation" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf12a;" />
+    </Style>
+
+
+    <Style x:Key="fa-exclamation-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf06a;" />
+    </Style>
+
+
+    <Style x:Key="fa-exclamation-triangle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf071;" />
+    </Style>
+
+
+    <Style x:Key="fa-expand" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf065;" />
+    </Style>
+
+
+    <Style x:Key="fa-external-link" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf08e;" />
+    </Style>
+
+
+    <Style x:Key="fa-external-link-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf14c;" />
+    </Style>
+
+
+    <Style x:Key="fa-eye" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf06e;" />
+    </Style>
+
+
+    <Style x:Key="fa-eye-slash" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf070;" />
+    </Style>
+
+
+    <Style x:Key="fa-facebook" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf09a;" />
+    </Style>
+
+
+    <Style x:Key="fa-facebook-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf082;" />
+    </Style>
+
+
+    <Style x:Key="fa-fast-backward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf049;" />
+    </Style>
+
+
+    <Style x:Key="fa-fast-forward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf050;" />
+    </Style>
+
+
+    <Style x:Key="fa-fax" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ac;" />
+    </Style>
+
+
+    <Style x:Key="fa-female" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf182;" />
+    </Style>
+
+
+    <Style x:Key="fa-fighter-jet" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0fb;" />
+    </Style>
+
+
+    <Style x:Key="fa-file" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf15b;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-file">&#xf15b;</mscorlib:String>
+
+    <Style x:Key="fa-file-archive-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c6;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-file-archive-o">&#xf1c6;</mscorlib:String>
+
+    <Style x:Key="fa-file-audio-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c7;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-code-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c9;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-excel-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c3;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-image-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c5;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-movie-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c8;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf016;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-pdf-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c1;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-photo-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c5;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-picture-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c5;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-powerpoint-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c4;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-sound-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c7;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-text" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf15c;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-text-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f6;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-video-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c8;" />
+    </Style>
+
+
+    <Style x:Key="fa-file-word-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c2;" />
+    </Style>
+
+    <Style x:Key="fa-file-zip-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1c6;" />
+    </Style>
+
+    <Style x:Key="fa-files-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c5;" />
+    </Style>
+
+
+    <Style x:Key="fa-film" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf008;" />
+    </Style>
+
+    <Style x:Key="fa-filter" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0b0;" />
+    </Style>
+
+    <Style x:Key="fa-fire" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf06d;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-fire">&#xf06d;</mscorlib:String>
+
+    <Style x:Key="fa-fire-extinguisher" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf134;" />
+    </Style>
+
+
+    <Style x:Key="fa-flag" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf024;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-flag">&#xf024;</mscorlib:String>
+
+    <Style x:Key="fa-flag-checkered" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf11e;" />
+    </Style>
+
+
+    <Style x:Key="fa-flag-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf11d;" />
+    </Style>
+
+
+    <Style x:Key="fa-flash" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e7;" />
+    </Style>
+
+
+    <Style x:Key="fa-flask" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c3;" />
+    </Style>
+
+
+    <Style x:Key="fa-flickr" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf16e;" />
+    </Style>
+
+
+    <Style x:Key="fa-floppy-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c7;" />
+    </Style>
+
+
+    <Style x:Key="fa-folder" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf07b;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-folder">&#xf07b;</mscorlib:String>
+
+    <Style x:Key="fa-folder-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf114;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-folder-o">&#xf114;</mscorlib:String>
+
+    <Style x:Key="fa-folder-open" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf07c;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-folder-open">&#xf07c;</mscorlib:String>
+
+    <Style x:Key="fa-folder-open-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf115;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-folder-open-o">&#xf115;</mscorlib:String>
+
+    <Style x:Key="fa-font" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf031;" />
+    </Style>
+
+    <Style x:Key="fa-forward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf04e;" />
+    </Style>
+
+    <Style x:Key="fa-foursquare" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf180;" />
+    </Style>
+
+    <Style x:Key="fa-frown-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf119;" />
+    </Style>
+
+    <Style x:Key="fa-gamepad" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf11b;" />
+    </Style>
+
+    <Style x:Key="fa-gavel" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e3;" />
+    </Style>
+
+    <Style x:Key="fa-gbp" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf154;" />
+   </Style>
+
+    <Style x:Key="fa-ge" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d1;" />
+    </Style>
+
+    <Style x:Key="fa-gear" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf013;" />
+    </Style>
+
+
+    <Style x:Key="fa-gears" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf085;" />
+    </Style>
+
+
+    <Style x:Key="fa-gift" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf06b;" />
+    </Style>
+
+
+    <Style x:Key="fa-git" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d3;" />
+    </Style>
+
+
+    <Style x:Key="fa-git-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d2;" />
+    </Style>
+
+    <Style x:Key="fa-github" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf09b;" />
+    </Style>
+
+    <Style x:Key="fa-github-alt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf113;" />
+    </Style>
+
+    <Style x:Key="fa-github-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf092;" />
+    </Style>
+
+    <Style x:Key="fa-gittip" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf184;" />
+    </Style>
+
+    <Style x:Key="fa-glass" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf000;" />
+    </Style>
+
+    <Style x:Key="fa-globe" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ac;" />
+    </Style>
+
+    <Style x:Key="fa-google" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a0;" />
+    </Style>
+
+    <Style x:Key="fa-google-plus" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d5;" />
+    </Style>
+
+    <Style x:Key="fa-google-plus-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d4;" />
+    </Style>
+
+    <Style x:Key="fa-graduation-cap" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19d;" />
+    </Style>
+
+    <Style x:Key="fa-group" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c0;" />
+    </Style>
+
+    <Style x:Key="fa-h-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0fd;" />
+    </Style>
+
+    <Style x:Key="fa-hacker-news" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d4;" />
+    </Style>
+
+    <Style x:Key="fa-hand-o-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a7;" />
+    </Style>
+
+    <Style x:Key="fa-hand-o-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a5;" />
+    </Style>
+
+    <Style x:Key="fa-hand-o-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a4;" />
+    </Style>
+
+    <Style x:Key="fa-hand-o-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a6;" />
+    </Style>
+
+    <Style x:Key="fa-hdd-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0a0;" />
+    </Style>
+
+    <Style x:Key="fa-header" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1dc;" />
+    </Style>
+
+    <Style x:Key="fa-headphones" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf025;" />
+    </Style>
+
+    <Style x:Key="fa-heart" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf004;" />
+    </Style>
+
+    <Style x:Key="fa-heart-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf08a;" />
+    </Style>
+
+    <Style x:Key="fa-history" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1da;" />
+    </Style>
+
+    <Style x:Key="fa-home" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf015;" />
+    </Style>
+
+    <Style x:Key="fa-hospital-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f8;" />
+    </Style>
+
+    <Style x:Key="fa-html5" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf13b;" />
+    </Style>
+
+    <Style x:Key="fa-image" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03e;" />
+    </Style>
+
+    <Style x:Key="fa-inbox" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf01c;" />
+    </Style>
+
+    <Style x:Key="fa-indent" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03c;" />
+    </Style>
+
+    <Style x:Key="fa-info" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf129;" />
+    </Style>
+
+    <Style x:Key="fa-info-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf05a;" />
+    </Style>
+
+    <Style x:Key="fa-inr" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf156;" />
+    </Style>
+
+    <Style x:Key="fa-instagram" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf16d;" />
+    </Style>
+
+    <Style x:Key="fa-institution" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19c;" />
+    </Style>
+
+    <Style x:Key="fa-italic" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf033;" />
+    </Style>
+
+    <Style x:Key="fa-joomla" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1aa;" />
+    </Style>
+
+    <Style x:Key="fa-jpy" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf157;" />
+    </Style>
+
+    <Style x:Key="fa-jsfiddle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1cc;" />
+    </Style>
+
+    <Style x:Key="fa-key" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf084;" />
+    </Style>
+
+    <Style x:Key="fa-keyboard-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf11c;" />
+    </Style>
+
+    <Style x:Key="fa-krw" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf159;" />
+    </Style>
+
+    <Style x:Key="fa-language" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ab;" />
+    </Style>
+
+    <Style x:Key="fa-laptop" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf109;" />
+    </Style>
+
+    <Style x:Key="fa-leaf" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf06c;" />
+    </Style>
+
+    <Style x:Key="fa-legal" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e3;" />
+    </Style>
+
+    <Style x:Key="fa-lemon-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf094;" />
+    </Style>
+
+    <Style x:Key="fa-level-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf149;" />
+    </Style>
+
+    <Style x:Key="fa-level-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf148;" />
+    </Style>
+
+    <Style x:Key="fa-life-bouy" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1cd;" />
+    </Style>
+
+    <Style x:Key="fa-life-ring" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1cd;" />
+    </Style>
+
+    <Style x:Key="fa-life-saver" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1cd;" />
+    </Style>
+
+    <Style x:Key="fa-lightbulb-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0eb;" />
+    </Style>
+
+    <Style x:Key="fa-link" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c1;" />
+    </Style>
+
+    <Style x:Key="fa-linkedin" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e1;" />
+    </Style>
+
+    <Style x:Key="fa-linkedin-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf08c;" />
+    </Style>
+
+    <Style x:Key="fa-linux" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf17c;" />
+    </Style>
+
+    <Style x:Key="fa-list" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03a;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-list">&#xf03a;</mscorlib:String>
+
+    <Style x:Key="fa-list-alt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf022;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-list-alt">&#xf022;</mscorlib:String>
+
+    <Style x:Key="fa-list-ol" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0cb;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-list-ol">&#xf0cb;</mscorlib:String>
+
+    <Style x:Key="fa-list-ul" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ca;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-list-ul">&#xf0ca;</mscorlib:String>
+
+    <Style x:Key="fa-location-arrow" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf124;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-location-arrow">&#xf124;</mscorlib:String>
+
+    <Style x:Key="fa-lock" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf023;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-lock">&#xf023;</mscorlib:String>
+
+    <Style x:Key="fa-long-arrow-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf175;" />
+    </Style>
+
+    <Style x:Key="fa-long-arrow-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf177;" />
+    </Style>
+
+    <Style x:Key="fa-long-arrow-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf178;" />
+    </Style>
+
+    <Style x:Key="fa-long-arrow-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf176;" />
+    </Style>
+
+    <Style x:Key="fa-magic" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d0;" />
+    </Style>
+
+    <Style x:Key="fa-magnet" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf076;" />
+    </Style>
+
+    <Style x:Key="fa-mail-forward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf064;" />
+    </Style>
+
+    <Style x:Key="fa-mail-reply" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf112;" />
+    </Style>
+
+    <Style x:Key="fa-mail-reply-all" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf122;" />
+    </Style>
+
+
+    <Style x:Key="fa-male" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf183;" />
+    </Style>
+
+
+    <Style x:Key="fa-map-marker" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf041;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-map-marker">&#xf041;</mscorlib:String>
+
+    <Style x:Key="fa-map" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf279;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-map">&#xf279;</mscorlib:String>
+
+    <Style x:Key="fa-map-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf278;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-map-o">&#xf278;</mscorlib:String>
+    
+
+    <Style x:Key="fa-maxcdn" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf136;" />
+    </Style>
+
+
+    <Style x:Key="fa-medkit" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0fa;" />
+    </Style>
+
+
+    <Style x:Key="fa-meh-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf11a;" />
+    </Style>
+
+
+    <Style x:Key="fa-microphone" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf130;" />
+    </Style>
+
+
+    <Style x:Key="fa-microphone-slash" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf131;" />
+    </Style>
+
+
+    <Style x:Key="fa-minus" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf068;" />
+    </Style>
+
+
+    <Style x:Key="fa-minus-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf056;" />
+    </Style>
+
+
+    <Style x:Key="fa-minus-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf146;" />
+    </Style>
+
+
+    <Style x:Key="fa-minus-square-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf147;" />
+    </Style>
+
+
+    <Style x:Key="fa-mobile" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf10b;" />
+    </Style>
+
+
+    <Style x:Key="fa-mobile-phone" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf10b;" />
+    </Style>
+
+
+    <Style x:Key="fa-money" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d6;" />
+    </Style>
+
+
+    <Style x:Key="fa-moon-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf186;" />
+    </Style>
+
+
+    <Style x:Key="fa-mortar-board" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19d;" />
+    </Style>
+
+
+    <Style x:Key="fa-music" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf001;" />
+    </Style>
+
+
+    <Style x:Key="fa-navicon" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c9;" />
+    </Style>
+
+
+    <Style x:Key="fa-openid" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19b;" />
+    </Style>
+
+
+    <Style x:Key="fa-outdent" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03b;" />
+    </Style>
+
+
+    <Style x:Key="fa-pagelines" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf18c;" />
+    </Style>
+
+
+    <Style x:Key="fa-paper-plane" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d8;" />
+    </Style>
+
+
+    <Style x:Key="fa-paper-plane-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d9;" />
+    </Style>
+
+
+    <Style x:Key="fa-paperclip" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c6;" />
+    </Style>
+
+
+    <Style x:Key="fa-paragraph" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1dd;" />
+    </Style>
+
+
+    <Style x:Key="fa-paste" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ea;" />
+    </Style>
+
+
+    <Style x:Key="fa-pause" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf04c;" />
+    </Style>
+
+
+    <Style x:Key="fa-paw" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b0;" />
+    </Style>
+
+
+    <Style x:Key="fa-pencil" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf040;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-pencil">&#xf040;</mscorlib:String>
+
+    <Style x:Key="fa-pencil-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf14b;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-pencil-square">&#xf14b;</mscorlib:String>
+
+    <Style x:Key="fa-pencil-square-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf044;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-pencil-square-o">&#xf044;</mscorlib:String>
+
+    <Style x:Key="fa-phone" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf095;" />
+    </Style>
+
+
+    <Style x:Key="fa-phone-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf098;" />
+    </Style>
+
+
+    <Style x:Key="fa-photo" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03e;" />
+    </Style>
+
+
+    <Style x:Key="fa-picture-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03e;" />
+    </Style>
+
+
+    <Style x:Key="fa-pied-piper" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a7;" />
+    </Style>
+
+
+    <Style x:Key="fa-pied-piper-alt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a8;" />
+    </Style>
+
+
+    <Style x:Key="fa-pied-piper-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a7;" />
+    </Style>
+
+
+    <Style x:Key="fa-pinterest" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d2;" />
+    </Style>
+
+
+    <Style x:Key="fa-pinterest-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0d3;" />
+    </Style>
+
+
+    <Style x:Key="fa-plane" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf072;" />
+    </Style>
+
+
+    <Style x:Key="fa-play" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf04b;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-play">&#xf04b;</mscorlib:String>
+
+    <Style x:Key="fa-play-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf144;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-play-circle">&#xf144;</mscorlib:String>
+
+    <Style x:Key="fa-play-circle-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf01d;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-play-circle-o">&#xf01d;</mscorlib:String>
+
+    <Style x:Key="fa-plus" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf067;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-plus">&#xf067;</mscorlib:String>
+
+    <Style x:Key="fa-plus-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf055;" />
+    </Style>
+
+
+    <Style x:Key="fa-plus-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0fe;" />
+    </Style>
+
+
+    <Style x:Key="fa-plus-square-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf196;" />
+    </Style>
+
+
+    <Style x:Key="fa-power-off" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf011;" />
+    </Style>
+
+
+    <Style x:Key="fa-print" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf02f;" />
+    </Style>
+
+
+    <Style x:Key="fa-puzzle-piece" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf12e;" />
+    </Style>
+
+
+    <Style x:Key="fa-qq" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d6;" />
+    </Style>
+
+
+    <Style x:Key="fa-qrcode" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf029;" />
+    </Style>
+
+
+    <Style x:Key="fa-question" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf128;" />
+    </Style>
+
+
+    <Style x:Key="fa-question-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf059;" />
+    </Style>
+
+
+    <Style x:Key="fa-quote-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf10d;" />
+    </Style>
+
+    <Style x:Key="fa-quote-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf10e;" />
+    </Style>
+
+    <Style x:Key="fa-ra" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d0;" />
+    </Style>
+
+    <Style x:Key="fa-random" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf074;" />
+    </Style>
+
+    <Style x:Key="fa-rebel" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d0;" />
+    </Style>
+
+    <Style x:Key="fa-recycle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b8;" />
+    </Style>
+
+
+    <Style x:Key="fa-reddit" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a1;" />
+    </Style>
+
+    <Style x:Key="fa-reddit-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a2;" />
+    </Style>
+
+    <Style x:Key="fa-refresh" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf021;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-refresh">&#xf021;</mscorlib:String>
+
+    <Style x:Key="fa-renren" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf18b;" />
+    </Style>
+
+    <Style x:Key="fa-reorder" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c9;" />
+    </Style>
+
+    <Style x:Key="fa-repeat" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf01e;" />
+    </Style>
+
+    <Style x:Key="fa-reply" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf112;" />
+    </Style>
+
+
+    <Style x:Key="fa-reply-all" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf122;" />
+    </Style>
+
+
+    <Style x:Key="fa-retweet" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf079;" />
+    </Style>
+
+
+    <Style x:Key="fa-rmb" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf157;" />
+    </Style>
+
+
+    <Style x:Key="fa-road" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf018;" />
+    </Style>
+
+
+    <Style x:Key="fa-rocket" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf135;" />
+    </Style>
+
+
+    <Style x:Key="fa-rotate-left" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e2;" />
+    </Style>
+
+
+    <Style x:Key="fa-rotate-right" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf01e;" />
+    </Style>
+
+
+    <Style x:Key="fa-rouble" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf158;" />
+    </Style>
+
+
+    <Style x:Key="fa-rss" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf09e;" />
+    </Style>
+
+
+    <Style x:Key="fa-rss-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf143;" />
+    </Style>
+
+
+    <Style x:Key="fa-rub" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf158;" />
+    </Style>
+
+
+    <Style x:Key="fa-ruble" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf158;" />
+    </Style>
+
+
+    <Style x:Key="fa-rupee" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf156;" />
+    </Style>
+
+
+    <Style x:Key="fa-save" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c7;" />
+    </Style>
+
+
+    <Style x:Key="fa-scissors" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c4;" />
+    </Style>
+
+
+    <Style x:Key="fa-search" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf002;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-search">&#xf002;</mscorlib:String>
+
+    <Style x:Key="fa-search-minus" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf010;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-search-minus">&#xf010;</mscorlib:String>
+
+    <Style x:Key="fa-search-plus" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf00e;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-search-plus">&#xf00e;</mscorlib:String>
+
+    <Style x:Key="fa-send" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d8;" />
+    </Style>
+
+
+    <Style x:Key="fa-send-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d9;" />
+    </Style>
+
+
+    <Style x:Key="fa-share" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf064;" />
+    </Style>
+
+
+    <Style x:Key="fa-share-alt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1e0;" />
+    </Style>
+
+
+    <Style x:Key="fa-share-alt-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1e1;" />
+    </Style>
+
+
+    <Style x:Key="fa-share-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf14d;" />
+    </Style>
+
+
+    <Style x:Key="fa-share-square-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf045;" />
+    </Style>
+
+
+    <Style x:Key="fa-shield" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf132;" />
+    </Style>
+
+
+    <Style x:Key="fa-shopping-cart" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf07a;" />
+    </Style>
+
+
+    <Style x:Key="fa-sign-in" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf090;" />
+    </Style>
+
+
+    <Style x:Key="fa-sign-out" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf08b;" />
+    </Style>
+
+
+    <Style x:Key="fa-signal" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf012;" />
+    </Style>
+
+
+    <Style x:Key="fa-sitemap" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e8;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-sitemap">&#xf0e8;</mscorlib:String>
+
+
+    <Style x:Key="fa-skype" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf17e;" />
+    </Style>
+
+
+    <Style x:Key="fa-slack" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf198;" />
+    </Style>
+
+
+    <Style x:Key="fa-sliders" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1de;" />
+    </Style>
+
+
+    <Style x:Key="fa-smile-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf118;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0dc;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-alpha-asc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf15d;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-alpha-desc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf15e;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-amount-asc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf160;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-amount-desc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf161;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-asc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0de;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-desc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0dd;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0dd;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-numeric-asc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf162;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-numeric-desc" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf163;" />
+    </Style>
+
+
+    <Style x:Key="fa-sort-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0de;" />
+    </Style>
+
+
+    <Style x:Key="fa-soundcloud" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1be;" />
+    </Style>
+
+
+    <Style x:Key="fa-space-shuttle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf197;" />
+    </Style>
+
+
+    <Style x:Key="fa-spinner" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf110;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-spinner">&#xf110;</mscorlib:String>
+
+    <Style x:Key="fa-spoon" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b1;" />
+    </Style>
+
+
+    <Style x:Key="fa-spotify" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1bc;" />
+    </Style>
+
+
+    <Style x:Key="fa-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c8;" />
+    </Style>
+
+
+    <Style x:Key="fa-square-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf096;" />
+    </Style>
+
+    <Style x:Key="fa-stack" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c8;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-stack">&#xf0c8;</mscorlib:String>
+
+    <Style x:Key="fa-stack-exchange" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf18d;" />
+    </Style>
+
+
+    <Style x:Key="fa-stack-overflow" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf16c;" />
+    </Style>
+
+
+    <Style x:Key="fa-star" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf005;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-star">&#xf005;</mscorlib:String>
+
+    <Style x:Key="fa-star-half" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf089;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-star-half">&#xf089;</mscorlib:String>
+
+    <Style x:Key="fa-star-half-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf123;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-star-half-o">&#xf123;</mscorlib:String>
+
+    <Style x:Key="fa-star-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf006;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-star-o">&#xf006;</mscorlib:String>
+
+    <Style x:Key="fa-steam" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b6;" />
+    </Style>
+
+
+    <Style x:Key="fa-steam-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1b7;" />
+    </Style>
+
+
+    <Style x:Key="fa-step-backward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf048;" />
+    </Style>
+
+
+    <Style x:Key="fa-step-forward" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf051;" />
+    </Style>
+
+
+    <Style x:Key="fa-stethoscope" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f1;" />
+    </Style>
+
+
+    <Style x:Key="fa-stop" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf04d;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-stop">&#xf04d;</mscorlib:String>
+
+
+    <Style x:Key="fa-strikethrough" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0cc;" />
+    </Style>
+
+
+    <Style x:Key="fa-stumbleupon" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a4;" />
+    </Style>
+
+
+    <Style x:Key="fa-stumbleupon-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1a3;" />
+    </Style>
+
+
+    <Style x:Key="fa-subscript" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf12c;" />
+    </Style>
+
+
+    <Style x:Key="fa-suitcase" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f2;" />
+    </Style>
+
+
+    <Style x:Key="fa-sun-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf185;" />
+    </Style>
+
+
+    <Style x:Key="fa-superscript" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf12b;" />
+    </Style>
+
+
+    <Style x:Key="fa-support" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1cd;" />
+    </Style>
+
+
+    <Style x:Key="fa-table" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ce;" />
+    </Style>
+
+
+    <Style x:Key="fa-tablet" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf10a;" />
+    </Style>
+
+
+    <Style x:Key="fa-tachometer" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e4;" />
+    </Style>
+
+
+    <Style x:Key="fa-tag" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf02b;" />
+    </Style>
+
+
+    <Style x:Key="fa-tags" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf02c;" />
+    </Style>
+
+
+    <Style x:Key="fa-tasks" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ae;" />
+    </Style>
+
+
+    <Style x:Key="fa-taxi" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ba;" />
+    </Style>
+
+
+    <Style x:Key="fa-tencent-weibo" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d5;" />
+    </Style>
+
+
+    <Style x:Key="fa-terminal" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf120;" />
+    </Style>
+
+
+    <Style x:Key="fa-text-height" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf034;" />
+    </Style>
+
+
+    <Style x:Key="fa-text-width" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf035;" />
+    </Style>
+
+
+    <Style x:Key="fa-th" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf00a;" />
+    </Style>
+
+
+    <Style x:Key="fa-th-large" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf009;" />
+    </Style>
+
+
+    <Style x:Key="fa-th-list" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf00b;" />
+    </Style>
+
+
+    <Style x:Key="fa-thumb-tack" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf08d;" />
+    </Style>
+
+
+    <Style x:Key="fa-thumbs-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf165;" />
+    </Style>
+
+
+    <Style x:Key="fa-thumbs-o-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf088;" />
+    </Style>
+
+
+    <Style x:Key="fa-thumbs-o-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf087;" />
+    </Style>
+
+
+    <Style x:Key="fa-thumbs-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf164;" />
+    </Style>
+
+
+    <Style x:Key="fa-ticket" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf145;" />
+    </Style>
+
+
+    <Style x:Key="fa-times" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf00d;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-times">&#xf00d;</mscorlib:String>
+
+    <Style x:Key="fa-times-circle" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf057;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-times-circle">&#xf057;</mscorlib:String>
+
+    <Style x:Key="fa-times-circle-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf05c;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-times-circle-o">&#xf05c;</mscorlib:String>
+
+    <Style x:Key="fa-trash-o" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf014;" />
+    </Style>
+
+    <Style x:Key="fa-tree" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1bb;" />
+    </Style>
+
+    <Style x:Key="fa-tumblr" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf173;" />
+    </Style>
+
+
+    <Style x:Key="fa-tumblr-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf174;" />
+    </Style>
+
+    <Style x:Key="fa-twitter" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf099;" />
+    </Style>
+
+    <Style x:Key="fa-twitter-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf081;" />
+    </Style>
+
+    <Style x:Key="fa-umbrella" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e9;" />
+    </Style>
+
+    <Style x:Key="fa-underline" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0cd;" />
+    </Style>
+
+    <Style x:Key="fa-undo" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0e2;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-undo">&#xf0e2;</mscorlib:String>
+
+    <Style x:Key="fa-university" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19c;" />
+    </Style>
+
+
+    <Style x:Key="fa-unlink" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf127;" />
+    </Style>
+
+
+    <Style x:Key="fa-unlock" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf09c;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-unlock">&#xf09c;</mscorlib:String>
+
+    <Style x:Key="fa-unlock-alt" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf13e;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-unlock-alt">&#xf13e;</mscorlib:String>
+
+
+    <Style x:Key="fa-unsorted" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0dc;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-unsorted">&#xf0dc;</mscorlib:String>
+
+    <Style x:Key="fa-upload" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf093;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-upload">&#xf093;</mscorlib:String>
+
+    <Style x:Key="fa-usd" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf155;" />
+    </Style>
+
+
+    <Style x:Key="fa-user" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf007;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-user">&#xf007;</mscorlib:String>
+
+    <Style x:Key="fa-user-md" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0f0;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-user-md">&#xf0f0;</mscorlib:String>
+
+    <Style x:Key="fa-users" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0c0;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-users">&#xf0c0;</mscorlib:String>
+
+    <Style x:Key="fa-video-camera" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf03d;" />
+    </Style>
+
+
+    <Style x:Key="fa-vimeo-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf194;" />
+    </Style>
+
+
+    <Style x:Key="fa-vine" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1ca;" />
+    </Style>
+
+
+    <Style x:Key="fa-vk" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf189;" />
+    </Style>
+
+
+    <Style x:Key="fa-volume-down" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf027;" />
+    </Style>
+
+
+    <Style x:Key="fa-volume-off" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf026;" />
+    </Style>
+
+
+    <Style x:Key="fa-volume-up" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf028;" />
+    </Style>
+
+
+    <Style x:Key="fa-warning" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf071;" />
+    </Style>
+
+
+    <Style x:Key="fa-wechat" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d7;" />
+    </Style>
+
+
+    <Style x:Key="fa-weibo" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf18a;" />
+    </Style>
+
+
+    <Style x:Key="fa-weixin" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf1d7;" />
+    </Style>
+
+
+    <Style x:Key="fa-wheelchair" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf193;" />
+    </Style>
+
+
+    <Style x:Key="fa-windows" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf17a;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-windows">&#xf17a;</mscorlib:String>
+    
+    <Style x:Key="fa-window-maximize" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf2d0;" />
+    </Style>
+    <mscorlib:String x:Key="#fa-window-maximize">&#xf2d0;</mscorlib:String>
+
+    <Style x:Key="fa-won" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf2d0;" />
+    </Style>
+
+
+    <Style x:Key="fa-wordpress" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19a;" />
+    </Style>
+
+
+    <Style x:Key="fa-wrench" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf0ad;" />
+    </Style>
+
+
+    <Style x:Key="fa-xing" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf168;" />
+    </Style>
+
+
+    <Style x:Key="fa-xing-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf169;" />
+    </Style>
+
+
+    <Style x:Key="fa-yahoo" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf19e;" />
+    </Style>
+
+
+    <Style x:Key="fa-yen" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf157;" />
+    </Style>
+
+
+    <Style x:Key="fa-youtube" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf167;" />
+    </Style>
+
+
+    <Style x:Key="fa-youtube-play" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf16a;" />
+    </Style>
+
+
+    <Style x:Key="fa-youtube-square" BasedOn="{StaticResource FontAwesomeStyle}" TargetType="TextBlock">
+        <Setter Property="Text" Value="&#xf166;" />
+    </Style>
+
+
+</ResourceDictionary>

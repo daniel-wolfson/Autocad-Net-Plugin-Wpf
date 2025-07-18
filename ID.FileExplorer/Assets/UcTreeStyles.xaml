@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="TreeViewItem">
+        <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}" />
+        <Setter Property="IsExpanded" Value="{Binding IsExpanded,Mode=TwoWay}" />
+    </Style>
+
+    <!--<BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>-->
+
+</ResourceDictionary>

@@ -1,0 +1,1099 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ID.AcadNet.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Intellidesk.AcadNet.Services.BaseService">
+            <summary> BaseService </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.BaseService.Db">
+            <summary> current Db </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.BaseService.Doc">
+            <summary> current Doc </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.Cancel(System.String,System.String)">
+            <summary> Cancel </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.Error(System.String,System.String)">
+            <summary> ErrorCommand </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.Ok(System.String,System.String)">
+            <summary> OkCommand </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.SendToNotification(Intellidesk.Infrastructure.Core.NotifyArgs)">
+            <summary> DisplayNotification </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.SendToNotification(System.String)">
+            <summary> DisplayNotification </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.OnDocumentActivated(System.Object,Autodesk.AutoCAD.ApplicationServices.DocumentCollectionEventArgs)">
+            <summary> OnDocumentActivated </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.OnDocumentToBeDestroyed(System.Object,Autodesk.AutoCAD.ApplicationServices.DocumentCollectionEventArgs)">
+            <summary> OnDocumentToBeDestroyed </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Commands.RunOnUIThreadAsync(System.Action)">
+            <summary> RunOnUIThreadAsync </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Common.ServiceManagement">
+            <summary> Service manager </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Common.ServiceManagement.Doc">
+            <summary>  active document </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Common.ServiceManagement.Db">
+            <summary>  active database </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Common.ServiceManagement.Ed">
+            <summary> active editor </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.DrawComplex">
+            <summary> DrawComplex </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.DrawComplex.Db">
+            <summary> Db </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.DrawComplex.Circle(System.Double,System.Double,System.Double,System.Int16)">
+            <summary> Circle </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Core.ActionArguments">
+            <summary> Tools read arguments </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.DxfName">
+            <summary> Current text type of autocad entity </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.FilterVisible">
+            <summary> Is entity visible? </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.FilterTypesOn">
+            <summary> Results the parser depend of Element Types Filters </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.FilterAttributesOn">
+            <summary> results the parser depend of Element BlockAttributes Filters </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.IsParentFilterTypes">
+            <summary> Is parent type? </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.IsNested">
+            <summary> Is nested entities? </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.LayerPatternOn">
+            <summary> LayerPatterns </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.SelectedObjects">
+            <summary> Selected objects from curent autocad model space </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.Position">
+            <summary> Current position </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.ProgressMeterBar">
+            <summary> Current Progress meter bar </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.ProgressIndex">
+            <summary> Current progress index </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Core.ActionArguments.Rules">
+            <summary> Rules from configuration </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Core.ObjectIdDistinctComparer">
+            <summary> Test </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Core.SysVarOverride">
+            <summary> SysVarOverride </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Core.SysVarOverride.#ctor(System.String,System.Object)">
+            <summary> ctor </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Core.ProgressMeterBar">
+            <summary> ProgressMeterBar </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Core.RibbonCommandHandler">
+            <summary> RibbonCommandHandler sample </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.DrawExtensions">
+            <summary> DrawExtensions </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.DrawExtensions.XInit(Autodesk.AutoCAD.DatabaseServices.Polyline,Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Polyline extension method </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.DrawExtensions.XInit(Autodesk.AutoCAD.DatabaseServices.Solid3d,System.Collections.Generic.IEnumerable{Autodesk.AutoCAD.DatabaseServices.Entity},Autodesk.AutoCAD.DatabaseServices.BooleanOperationType)">
+            <summary> Polyline extension method </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Edit.OnSelectionAdded(System.Object,Autodesk.AutoCAD.EditorInput.SelectionAddedEventArgs)">
+            <summary> SelectionAdded event of Editor </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Edit.OnPointMonitor(System.Object,Autodesk.AutoCAD.EditorInput.PointMonitorEventArgs)">
+            <summary> OnPointMonitor </summary>
+            <see cref="!:http://through-the-interface.typepad.com/through_the_interface/2009/07/providing-information-on-autocad-objects-in-a-tooltip-using-net.html"/>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Enums.eDBObjectStatus.NotErased">
+            <summary>
+            ֲבטנאע עמכךמ עאךטו ObjectId, חםאקוםט סגמיסעגא 
+            IsErased ךמעמנץ נאגםמ false
+            </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Enums.eDBObjectStatus.Erased">
+            <summary>
+            ֲבטנאע עמכךמ עאךטו ObjectId, חםאקוםט סגמיסעגא 
+            IsErased ךמעמנץ נאגםמ true
+            </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Enums.eDBObjectStatus.Any">
+            <summary>
+            ֲבטנאע גסו ObjectId, םו חאגטסטלמ מע חםאקוםט
+            סגמיסעגא IsErased
+            </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Enums.eSpaceEnum.Model">
+            <summary> The Model space. </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Enums.eSpaceEnum.Layout">
+            <summary> The Layout space.  </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Enums.eSpaceEnum.Viewport">
+            <summary> The Model space through the Layout's viewport. </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.TransactionScope.Abort">
+            <summary> Transaction abort </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.BlockOptions">
+            <summary> Options of create blocks </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.CoreExtensions">
+            <summary> Core </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.DlgColor">
+            <summary> Common Color Dialog </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.LineType(System.String)">
+            <summary> LineType </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.LineType(System.Int32)">
+            <summary> LineType </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.XDisplay(System.Diagnostics.Stopwatch)">
+            <summary> XDisplay </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.GetAcadVersion">
+            <summary> GetAcadVersion </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.XConvertType``2(``0)">
+            <summary> XConvertType </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.XTransFlush(Autodesk.AutoCAD.DatabaseServices.Transaction)">
+            <summary> To make that changes appear on the screen </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CoreExtensionsTemp.CreateComplexLinetype">
+            <summary> CreateComplexLinetype </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions">
+            <summary> DBObjectExtensions </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions.XGetDisplayItem(Autodesk.AutoCAD.DatabaseServices.DBObject,Intellidesk.Data.Models.Entities.IElementDefinition)">
+            <summary> XGetListItem </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions.XErase(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> Remove entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions.XSaveChanges(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XSaveChanges </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions.XUpgradeObject(Autodesk.AutoCAD.DatabaseServices.DBObject,Intellidesk.Data.Models.Entities.IElementDefinition,Intellidesk.Data.Repositories.Infrastructure.ObjectState)">
+            <summary> reflection upgrade Object by element </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions.EyeToWorld(Autodesk.AutoCAD.DatabaseServices.ViewportTableRecord)">
+            <summary>
+            Returns the transformation matrix from the ViewportTableRecord DCS to WCS.
+            </summary>
+            <param name="view">The ViewportTableRecord instance this method applies to.</param>
+            <returns>The DCS to WCS transformation matrix.</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DBObjectExtensions.WorldToEye(Autodesk.AutoCAD.DatabaseServices.ViewportTableRecord)">
+            <summary>
+            Returns the transformation matrix from the ViewportTableRecord WCS to DCS.
+            </summary>
+            <param name="view">The ViewportTableRecord instance this method applies to.</param>
+            <returns>The WCS to DCS transformation matrix.</returns>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.EditorInputExtensions">
+            <summary>
+            Editor of document input extensions
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.GeoExtensions.UcsToWcs(Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary>
+            Get a transformed copy of a point from UCS to WCS
+            </summary>
+            <param name="pt">Point to transform</param>
+            <returns>Transformed copy of point</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.GeoExtensions.UcsToWcs(Autodesk.AutoCAD.Geometry.Vector3d)">
+            <summary>
+            Get a transformed copy of a vector from UCS to WCS
+            </summary>
+            <param name="vec">Vector to transform</param>
+            <returns>Transformed copy of vector</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.GeoExtensions.WcsToUcs(Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary>
+            Get a transformed copy of a point from WCS to UCS
+            </summary>
+            <param name="pt">Point to transform</param>
+            <returns>Transformed copy of point</returns>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.LayoutManagerExtensions">
+            <summary> Autodesk.AutoCAD.DatabaseServices.LayoutManager Extentions </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.LayoutManagerExtensions.GetCurrentSpaceEnum(Autodesk.AutoCAD.DatabaseServices.LayoutManager)">
+            <summary>
+            This is Extension Method for the <c>Autodesk.AutoCAD.DatabaseServices.LayoutManager</c> 
+            class. It gets the current space in the current Database.
+            </summary>
+            <param name="mng">Target <c>Autodesk.AutoCAD.DatabaseServices.LayoutManager</c> 
+            instance.</param>
+            <returns>Returns the SpaceEnum value.</returns>        
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.LayoutManagerExtensions.GetCurrentSpaceName(Autodesk.AutoCAD.DatabaseServices.LayoutManager)">
+            <summary>
+            This is Extension Method for the <c>Autodesk.AutoCAD.DatabaseServices.LayoutManager</c> 
+            class. It gets the name of the current space in the current Database.
+            </summary>
+            <param name="mng">Target <c>Autodesk.AutoCAD.DatabaseServices.LayoutManager</c> 
+            instance.</param>
+            <returns>Returns the name of current space.</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.LayoutManagerExtensions.GetModelTabLocalizedName(Autodesk.AutoCAD.DatabaseServices.LayoutManager)">
+            <summary>
+            This is Extension Method for the <c>Autodesk.AutoCAD.DatabaseServices.LayoutManager</c> 
+            class. It gets the localized name of the Model tab.
+            </summary>
+            <param name="mng">Target <c>Autodesk.AutoCAD.DatabaseServices.LayoutManager</c> 
+            instance.</param>
+            <returns>Returns the name of current space.</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.TransactionExtensions.IfNonTopTransactionComminAndClose(Autodesk.AutoCAD.DatabaseServices.Transaction)">
+            <summary> If top transaction then commit And dispose </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions">
+            <summary> XRecord extensions </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXrecord(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XGetXrecord by ExtensionDictionary </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXRecordObject(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XGetExtDataRecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXrecordObject``1(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> GetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXrecordObject(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> GetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXrecordValue(Autodesk.AutoCAD.DatabaseServices.DBObject,Intellidesk.AcadNet.Common.Enums.DxfCodeExt)">
+            <summary> GetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXrecordObjects(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> GetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XGetXrecordNOD(System.String,System.String)">
+            <summary> Gets an xrecord data in a named dictionary </summary>
+            <returns>The xrecord data or null if the dictionary or the xrecord do not exist</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XAddXrecord(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.ObjectId,System.String,Autodesk.AutoCAD.DatabaseServices.TypedValue[])">
+            <summary> SetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XAddXrecord(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.TypedValue[])">
+            <summary> XAddXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.SetXrecordNOD(System.String,System.String,Autodesk.AutoCAD.DatabaseServices.ResultBuffer)">
+            <summary> Add or edit a Xrecord data in a named dictionary (the dictionary and xrecord are created if not already exist) </summary>
+            <param name="dictName">The dictionary name</param>
+            <param name="key">the xrecord key</param>
+            <param name="resbuf">the xrecord data</param>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XSetXrecord(Autodesk.AutoCAD.DatabaseServices.DBObject,Intellidesk.Data.Models.Entities.ElementDefinition)">
+            <summary> SetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XSetXrecord(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.ObjectId,Intellidesk.Data.Models.Entities.ElementDefinition)">
+            <summary> SetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XRecordExtensions.XSetXrecord(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.ObjectId,System.String,Intellidesk.Data.Models.Entities.ElementDefinition)">
+            <summary> SetXrecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.ObjectIdExtensions.CreateUCSAlignedToEntity(Autodesk.AutoCAD.DatabaseServices.ObjectId,Autodesk.AutoCAD.EditorInput.Editor)">
+            <summary>  Creates a temporary UCS which is aligned to the specified entity. </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.XDataExtensions">
+            <summary> XData - Get, Set, Update XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.AddRegAppTableRecord(Autodesk.AutoCAD.ApplicationServices.Document,System.String)">
+            <summary> AddRegAppTableRecord </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.AddExtensionDictionary(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.OpenMode)">
+            <summary> AddExtensionDictionary </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddXData(Autodesk.AutoCAD.DatabaseServices.ObjectId,Autodesk.AutoCAD.DatabaseServices.TypedValue[])">
+            <summary> add typedValues to XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddXData(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.TypedValue[])">
+            <summary> add typedValues to XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddXData(Autodesk.AutoCAD.DatabaseServices.DBObject,Autodesk.AutoCAD.DatabaseServices.TypedValue)">
+            <summary> add typedValue to XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddXData(Autodesk.AutoCAD.DatabaseServices.DBObject,Intellidesk.AcadNet.Services.XDataRecord)">
+            <summary> add XDataRecord to XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddXData(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.BlockReference)">
+            <summary> get Typed Values for ids and  add typedValue to XData</summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddXData(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.ObjectId)">
+            <summary> get Typed Values for ids and  add typedValue to XData</summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XAddDataToNod(Autodesk.AutoCAD.DatabaseServices.Database,System.String,Autodesk.AutoCAD.DatabaseServices.TypedValue[])">
+            <summary> XAddDataToNod: Add xRecord for Named Object Dictionary to Model Space </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXDataDictionary(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XGetXData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXData(Autodesk.AutoCAD.DatabaseServices.DBObject,System.String)">
+            <summary> XGetXData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXData(Autodesk.AutoCAD.DatabaseServices.ObjectId)">
+            <summary> XAddXData for ObjectId </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXDataObjectType(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XGetXDataObjectType </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXDataObject``1(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XGetXDataObjectType </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXDataObject(Autodesk.AutoCAD.DatabaseServices.DBObject,System.Type)">
+            <summary> Get xdata object using JsonConvert.DeserializeObject by type </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetDictionaryEntryTypedValue(Autodesk.AutoCAD.DatabaseServices.ObjectId,System.Int32)">
+            <summary> XGetDictionaryEntryTypedValue </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.GetStoredRotation(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> Retrieve the existing rotation angle from XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetTypedValues(Intellidesk.AcadNet.Services.XDataRecord)">
+            <summary> XGetTypedValues </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXData(Autodesk.AutoCAD.ApplicationServices.Document,System.Int32)">
+            <summary> GetObjXData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XGetXData(Autodesk.AutoCAD.ApplicationServices.Document,Intellidesk.AcadNet.Common.Enums.GetSelectOptions,System.Int32,Intellidesk.AcadNet.Common.Enums.GetResultOptions,System.String)">
+            <summary> GetObjXData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XHasXDataElement(Autodesk.AutoCAD.DatabaseServices.DBObject)">
+            <summary> XDataHasElement </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.UpdateXData(Autodesk.AutoCAD.ApplicationServices.Document,Autodesk.AutoCAD.DatabaseServices.ObjectId,System.TypeCode,System.Int32)">
+            <summary> UpdateXData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XSetDataByObjectId(Autodesk.AutoCAD.ApplicationServices.Document,Autodesk.AutoCAD.DatabaseServices.ObjectId,System.String[])">
+            <summary> GetObjXData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.SetStoredRotation(Autodesk.AutoCAD.DatabaseServices.DBObject,System.Double)">
+            <summary> Store our rotation angle as XData </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.XUpdateDictionaryEntryTypedValue(Autodesk.AutoCAD.DatabaseServices.ObjectId,System.Int32,System.Double)">
+            <summary> XUpdateDictionaryEntryTypedValue </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.XDataExtensions.RemoveExtDict">
+            <summary> RemExtDict </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.TransactionScope(Autodesk.AutoCAD.DatabaseServices.TransactionManager,Autodesk.AutoCAD.DatabaseServices.OpenMode)">
+            <summary>
+            
+            </summary>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.XGetObjectId(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.Handle)">
+            <summary> Gets the ObjectId that corresponds to the handle. </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.XGetAll(Autodesk.AutoCAD.DatabaseServices.Database,Intellidesk.AcadNet.Services.Enums.eDBObjectStatus)">
+            <summary> Get objects derived from DBObject </summary>
+            <param name="db">current db</param>
+            <param name="status">DBObjectStatus (Any/Erased/NotErased)</param>
+            <returns>ObjectId[]</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.XGetData``1(Autodesk.AutoCAD.DatabaseServices.Database,System.Func{Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.ObjectId,System.Boolean},System.Func{Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.ObjectId,``0})">
+            <summary> Get data from db </summary>
+            <typeparam name="T">type of objects, that array returning</typeparam>
+            <param name="db">current db</param>
+            <param name="requirement">Condition of choce objects</param>
+            <param name="result">result object</param>
+            <returns>return array objects of T</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.XGetByTypes(Autodesk.AutoCAD.DatabaseServices.Database,System.Func{Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.ObjectId,System.Boolean})">
+            <summary> GetByTypes </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.XGetGroupByTypes(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.ObjectId[])">
+            <summary> GroupByTypes </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.TryGetValidObjectId(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.Handle,Autodesk.AutoCAD.DatabaseServices.ObjectId@)">
+            <summary> TryGetValidObjectId </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.Import_(Autodesk.AutoCAD.DatabaseServices.Database,System.String)">
+            <summary> ImportBlock </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.ImportBlock(Autodesk.AutoCAD.DatabaseServices.Database,System.String)">
+            <summary> ImportBlock </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.InsertBlock(Autodesk.AutoCAD.DatabaseServices.Database,System.String,Autodesk.AutoCAD.Geometry.Point3d,Intellidesk.AcadNet.Services.Extentions.BlockOptions)">
+            <summary> Insert Block start</summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.Insert_(Autodesk.AutoCAD.DatabaseServices.Database,System.String,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> InsertBlock  </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.AddBlockReference(Autodesk.AutoCAD.DatabaseServices.Database,System.String,Autodesk.AutoCAD.Geometry.Point3d,Intellidesk.AcadNet.Services.Extentions.BlockOptions)">
+            <summary> New AddBlockReference </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.AddBlockReference_(Autodesk.AutoCAD.DatabaseServices.Database,System.String,Autodesk.AutoCAD.Geometry.Point3d,Intellidesk.AcadNet.Services.Extentions.BlockOptions)">
+            <summary> Add BlockReference </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.AddBlockReference_(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.ObjectId,Autodesk.AutoCAD.Geometry.Point3d,System.String,System.Double)">
+            <summary> InsertDrawingAsBlock  </summary>
+            <summary> Add BlockReference </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.Action(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.ObjectId[],System.Action{Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.ObjectId})">
+            <summary> Action </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.ExtrudePline(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary> ExtrudePline </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.CreateGroup(Autodesk.AutoCAD.DatabaseServices.Database,Intellidesk.Data.Models.Entities.ElementDefinition,Autodesk.AutoCAD.DatabaseServices.ObjectId[])">
+            <summary> CreateGroup </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.CreateGroup(Autodesk.AutoCAD.DatabaseServices.Database,System.String,System.String,Autodesk.AutoCAD.DatabaseServices.ObjectId[])">
+            <summary> CreateGroup </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.IsPaperSpace(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary>
+            Is Paper Space active in the given database?
+            </summary>
+            <param name="db">Specific database to use</param>
+            <returns></returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetUcsMatrix(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary>
+            Figure out the current UCS matrix for the given database.  If
+            PaperSpace is active, it will return the UCS for PaperSpace.
+            Otherwise, it will return the UCS for the current viewport in 
+            ModelSpace.
+            </summary>
+            <param name="db">Specific database to use</param>
+            <returns>UCS Matrix for the specified database</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetUcsZAxis(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary> Get the UCS Z Axis for the given database </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetUcsXAxis(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary> GetUcsXAxis </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetUcsYAxis(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary> GetUcsYAxis </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetUcsPlane(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary> Get the Plane that is defined by the current UCS </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetUcsToWcsOriginMatrix(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary>
+            Get the Matrix that is the Xform between UCS and WCS Origin.  This is useful
+            for operations like creating a block definition.  For those cases you want the
+            origin of the block to be in a reasonable spot.
+            </summary>
+            <param name="wcsBasePt">Base point to use as the origin</param>
+            <param name="db">Specific database to use</param>
+            <returns>Xform between UCS and WCS Origin</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.GetEcsXAxis(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.Geometry.Vector3d)">
+            <summary>
+            Get the X-Axis relative to an entities ECS (In other words, what it considers the
+            X-Axis.  This is crucial for Entities like Dimensions and DBPoints.  The X-Axis is
+            determined by the Arbitrary Axis algorithm.
+            </summary>
+            <param name="ecsZAxis">The normal vector of the entity</param>
+            <returns>The X-Axis for this ECS</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.TransformToWcs(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> Transform an Entity from UCS to WCS </summary>
+            <param name="ent">Entity to transform</param>
+            <param name="db">Database the entity belongs to (or will belong to)</param>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.TransformToWcs(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.DBObjectCollection)">
+            <summary>
+            Transform a collection of Entities from UCS to WCS
+            </summary>
+            <param name="ents">Entities to transform</param>
+            <param name="db">Database the entities belong to (or will belong to)</param>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.CloneAndXformObjects(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.DatabaseServices.ObjectIdCollection,Autodesk.AutoCAD.DatabaseServices.ObjectId,Autodesk.AutoCAD.Geometry.Matrix3d)">
+            <summary>
+            Clone and transform a collection of entities.  NOTE: this function
+            is not operational yet because it can't iterate over the idMap to
+            accomplish the Xform.
+            </summary>
+            <param name="db">database to perform the operation on</param>
+            <param name="entsToClone">set of objects to clone</param>
+            <param name="ownerBlockId">owner of the new objects</param>
+            <param name="xformMat">transformation to apply</param>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.DbExtensions.StringToHandle(Autodesk.AutoCAD.DatabaseServices.Database,System.String)">
+            <summary> Converts a string value to a Handle object. </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XParseToChainsPoints(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity})">
+            <summary> Find chained elements in list of entity and returning groups of Point3dCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XAddPointsRelevants(Autodesk.AutoCAD.Geometry.Point3dCollection,System.Collections.Generic.List{Autodesk.AutoCAD.Geometry.Point3dCollection},Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Add points candidates of chains by distance between two pairs points of objects </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoints(Autodesk.AutoCAD.DatabaseServices.Extents3d)">
+            <summary> Get Point3dCollection from extents points </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPointsExtents(Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Get points as extents from Point3dCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoint3DMin(Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Get Point3D Min from Point3dCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoint3DMin(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity})">
+            <summary> Get Point3D Min from List of Entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoint3DMin(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId})">
+            <summary> Get Point3D Min from List of Entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoint3DMax(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity})">
+            <summary> Get Point3D Max from List of Entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoint3DMax(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId})">
+            <summary> Get Point3D Max from List of Entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoint3DMax(Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Get Point3D Max from Point3dCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XLimits(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity})">
+            <summary> Return limits(MinPoint,MaxPoint) for List of Entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetExtents3D(Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Return limits(MinPoint,MaxPoint) for Point3dCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XIntersectWith(Autodesk.AutoCAD.DatabaseServices.Entity,Autodesk.AutoCAD.DatabaseServices.Curve)">
+            <summary> Get Intersect for Entity With Curve object </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPoints(Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> Get Coords </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetBasePoint(Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> XGetBasePoint </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.Point3DToArray(Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Point3DToArray </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XPoint2DtoPoint3D(Autodesk.AutoCAD.Geometry.Point2d)">
+            <summary> XPoint2DtoPoint3D </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPointsOrthogonal(Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> XPoint2DtoPoint3D </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XGetPointsVertices(Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> XGetPointsVertices </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.PointsExtensions.XExist(Autodesk.AutoCAD.Geometry.Point3dCollection,Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> true is if testObject exist in targetObject </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions">
+            <summary> Collections Extensions </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XCast``1(System.Collections.Generic.IEnumerable{Autodesk.AutoCAD.DatabaseServices.ObjectId})" -->
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.ParseToIds(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity})">
+            <summary> Parse to ObjectIdCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XWriteMessageToCadConsole(System.String)">
+            <summary> Write message To CADConsole </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XToLispString(Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Convert to Lisp format String  </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XGetObjects(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Intellidesk.AcadNet.Services.RuleCollection)">
+            <summary> Get objects of users by Rules, and by Filter of TypeEntity or by Filter of AttributeName </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XGetObjects(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},System.Type[],System.String[],System.Boolean)">
+            <summary> Get the Objects </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XGetObjects(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Intellidesk.AcadNet.Services.Core.ActionArguments)">
+            <summary> XGetObjects </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XGetObjectsDynamic(System.Collections.Generic.List{System.Object},System.Type[],System.String[],System.Boolean)">
+            <summary> Dynamic Get the Objects </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XGetObjectsDynamic(System.Collections.Generic.List{System.Object},Intellidesk.AcadNet.Services.Core.ActionArguments)">
+            <summary> XGetObjects </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XEraseObjects(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId})">
+            <summary> Erasing Objects 
+            <returns>, returning count erased objects </returns>
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XDropByNesting(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Polyline},System.ComponentModel.ListSortDirection)">
+            <summary> Drop nested polylines </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XForEachEraseNested(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity})">
+            <summary> Erase nested elements for each polyline of List of Polyline </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XForEachEraseNested(System.Collections.Generic.List{Autodesk.AutoCAD.Geometry.Point3dCollection})">
+            <summary> Erase nested elements for each polyline of List Point3dCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XGetNestedFor(System.Collections.Generic.List{Autodesk.AutoCAD.Geometry.Point3dCollection},Autodesk.AutoCAD.Geometry.Point3dCollection)">
+            <summary> Get all nested objets into Countour from collection (tObjSet) </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XToGroup(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity},Autodesk.AutoCAD.DatabaseServices.Transaction,System.String)">
+            <summary> Add to Group </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XToGroup(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.Transaction,System.String)">
+            <summary> Add List of ObjectId into group </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XAddGroup(Autodesk.AutoCAD.DatabaseServices.Group,Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.DatabaseServices.ObjectIdCollection)">
+            <summary> Add objectIdCollection into group </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XAddGroupDynamic(Autodesk.AutoCAD.DatabaseServices.Group,Autodesk.AutoCAD.DatabaseServices.ObjectIdCollection)">
+            <summary> Add objectIdCollection into group </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XMove(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Transformation: Displacement </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XMoveDynamic(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Transformation: Displacement </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XScale(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.Transaction,System.Double,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Transformation: Scaling </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XScaleDynamic(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},System.Double,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Dynamic transformation: Scaling </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XRotate(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.Transaction,System.Double,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Transformation: Rotation </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XRotateDynamic(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},System.Double,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Dynamic transformation: Rotation </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XUpdate(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.Transaction,Autodesk.AutoCAD.Geometry.Matrix3d)">
+            <summary> Write transformations of entity to Db </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XUpdateDynamic(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.Geometry.Matrix3d)">
+            <summary> Dynamic Write transformations of entity to Db </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XTransformCommands(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},Autodesk.AutoCAD.DatabaseServices.BlockReference,Intellidesk.AcadNet.Common.Enums.UpdateOptions)">
+            <summary> Transformations through commands </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XSortByArea(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.ObjectId},System.ComponentModel.ListSortDirection)">
+            <summary> Sort By Area </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XSortByArea(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity},System.ComponentModel.ListSortDirection)">
+            <summary> Sort By Area </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XSortByArea(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Polyline},System.ComponentModel.ListSortDirection)">
+            <summary> Sort By Area </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XSortByArea(System.Collections.Generic.List{Autodesk.AutoCAD.Geometry.Point3dCollection},System.ComponentModel.ListSortDirection)">
+            <summary> Sort By Area </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XSortByX(Autodesk.AutoCAD.Geometry.Point3dCollection,System.ComponentModel.ListSortDirection)">
+            <summary> Sort By X </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.CollectionsExtensions.XSortByX(System.Collections.Generic.List{Autodesk.AutoCAD.Geometry.Point3dCollection},System.ComponentModel.ListSortDirection)">
+            <summary> Sort By X </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Extentions.EntityExtensions">
+            <summary> Entities extensions class </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XIsMacthFor(Autodesk.AutoCAD.DatabaseServices.Entity,System.Type[])">
+            <summary> XIsMacthFor </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XSaveChangesCommit(Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> Add New entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XHihglight(Autodesk.AutoCAD.DatabaseServices.Entity,System.Boolean)">
+            <summary> Hihglight entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XGetHandle(Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> Get Handle entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XSetColor(Autodesk.AutoCAD.DatabaseServices.Entity,System.Int16)">
+            <summary> Set Color </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XExist(Autodesk.AutoCAD.DatabaseServices.Entity,Autodesk.AutoCAD.DatabaseServices.Entity)">
+            <summary> true is if testObject exist in targetObject </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Extentions.EntityExtensions.XGetPointsExtents(Autodesk.AutoCAD.DatabaseServices.Polyline)">
+            <summary> Get points extents </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.DbGeographyEx.SRID">
+            <summary> The most common SRID/coordinateSystemId in GPS and mapping software is 4326. </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.DbGeographyEx.CreatePoint(System.Double,System.Double)">
+            <summary> Create DbGeography object with given latitude and longitude in decimal degrees. </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.DbGeographyEx.CreateGeographyType(System.Collections.Generic.List{System.Data.Spatial.DbGeography},Microsoft.SqlServer.Types.OpenGisGeographyType)">
+            <summary>
+            Create geography type of type LineString or Polygon with given list of points
+            (=coordinates with latitude and longitude).
+            </summary>
+            <param name="points">List of points (DbGeography objects).</param>
+            <param name="geographyType">LineString or Polygon.</param>
+            <returns>DbGeography object.</returns>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Jig.ElementEntityJig">
+            <summary>
+            Create a Class named MyCircleJig that Inherits from EntityJig. 
+            The EntityJig class allows you to "jig" one entity at a time. 
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Add(System.String,Autodesk.AutoCAD.Colors.Color)">
+            <summary> Add layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Add(System.String,System.Int16)">
+            <summary> Add layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Add(System.String)">
+            <summary> Add layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.AddRange(System.String[],System.Int16[])">
+            <summary> Add layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.AddRange(System.String[],Autodesk.AutoCAD.Colors.Color[])">
+            <summary> Add layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Clean(System.String)">
+            <summary> Removing all draw entities from layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.CleanAll(System.String[])">
+            <summary> Clean all layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Contains(System.String)">
+            <summary> ContainsLayer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Remove(System.String)">
+            <summary> Removing all draw entities from layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.GetAll">
+            <summary> Get all layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Current">
+            <summary> Get current layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LineTypeService.Freeze(System.String,System.Boolean)">
+            <summary> Set freeze to current layer </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.LinkedObjectManager">
+            <summary>
+            Utility class to manage and save links
+            between objects
+            </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.LinkingCommands">
+            <summary>
+            This class defines our commands and event callbacks.
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Execute(System.Object[])">
+            <summary> SendToExecute method call it is new mechanism from version 2015 </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom">
+            <summary> Zoom Ext </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom(Autodesk.AutoCAD.Geometry.Point3d[])">
+            <summary> Zoom by Point3d[] </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom(System.Double,System.Double,System.Double,System.Double)">
+            <summary> Zoom by window </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom(System.Collections.Generic.List{Autodesk.AutoCAD.DatabaseServices.Entity},System.Double)">
+            <summary> Zoom List of entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom(Autodesk.AutoCAD.DatabaseServices.Entity,System.Double)">
+            <summary> Zoom entity </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom(Autodesk.AutoCAD.DatabaseServices.ObjectId,System.Double)">
+            <summary> Zoom objectId </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Zoom(Autodesk.AutoCAD.DatabaseServices.ObjectIdCollection,System.Double)">
+            <summary> Zoom ObjectIdCollection </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.ZoomLimits">
+            <summary> Zoom by db limits </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.ZoomWindow(Autodesk.AutoCAD.Geometry.Point3d,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Zoom by window </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.ZoomView(Autodesk.AutoCAD.Geometry.Point3d,Autodesk.AutoCAD.Geometry.Point3d,Autodesk.AutoCAD.Geometry.Point3d,System.Double)">
+            <summary> Zoom by wiew </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.ZoomExtents(Autodesk.AutoCAD.DatabaseServices.Database)">
+            <summary> Zoom by db extents </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.ViewIsometric(System.Int32)">
+            <summary> ViewIsometric </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.Viewport(Autodesk.AutoCAD.Geometry.Vector3d)">
+            <summary> Viewport </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.CommandLine.UpdateScreen">
+            <summary> UpdateScreen </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Services.Configs._chainDistance">
+            <summary> Distance between members of chains (mm) </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Documents.DocumentAction(System.String,Intellidesk.AcadNet.Common.Enums.DocumentOptions)">
+            <summary> Operations with Documents </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Documents.DocumentFind(System.String)">
+            <summary> Find and Return Document </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Documents.DocumenOpenDataDialog(System.String,System.String,System.String)">
+            <summary> Dialog Open file </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Documents.PromptOpenFileDialog(System.String)">
+            <summary> Prompt Open FileDialog </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Documents.DocumenSaveDataDialog(System.String)">
+            <summary> Dialog Save file </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Draw">
+            <summary> DrawService (version 3.0) </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Cabinet(System.Double,System.Double,IntelliDesk.AcadNet.Model.AcadCabinet,System.Int16)">
+            <summary> Donut </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Donut(System.Double,System.Double,System.Double,System.Int16)">
+            <summary> Donut </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Donut(System.Double,System.Double,System.Double,System.Double,System.Int16,System.Nullable{System.Double})">
+            <summary> Donut </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Line(System.Double,System.Double,System.Double,System.Double,System.Int32,System.Int16,System.Double,System.Nullable{Autodesk.AutoCAD.Geometry.Point2d})">
+            <summary> Line </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Polyline(Autodesk.AutoCAD.DatabaseServices.Extents3d,System.String,System.Int32,System.Double,System.Byte,System.Nullable{Autodesk.AutoCAD.Geometry.Point3d},System.Double,System.Double,System.Nullable{Autodesk.AutoCAD.Geometry.Vector3d})">
+            <summary> Polyline </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Polyline(Autodesk.AutoCAD.Geometry.Point3d,Autodesk.AutoCAD.Geometry.Point3d,System.String,System.Int32,System.Double,System.Byte,System.Nullable{Autodesk.AutoCAD.Geometry.Point3d},System.Double,System.Double,System.Nullable{Autodesk.AutoCAD.Geometry.Vector3d})">
+            <summary> Polyline </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Polyline(Autodesk.AutoCAD.Geometry.Point3dCollection,System.String,System.Int32,System.Double,System.Byte,System.Nullable{Autodesk.AutoCAD.Geometry.Point3d},System.Double,System.Double,System.Nullable{Autodesk.AutoCAD.Geometry.Vector3d})">
+            <summary> Polyline </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Polyline(Autodesk.AutoCAD.DatabaseServices.Transaction,System.Double[],System.Double[],System.Int16,System.Double,System.Byte,System.Double,System.Double,System.Double)">
+            <summary> Pline </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Solid(System.Double[],System.Double[],System.Int16)">
+            <summary> Solid </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Point(System.Double,System.Double,System.Int16,System.Int32,System.Int32,System.Double)">
+            <summary> Point </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.Text(Intellidesk.AcadNet.Services.DbTextArgs)">
+            <summary> Text </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.RecHat(System.Double[],System.Double[],System.Int16)">
+            <summary> RecHat </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.AttachRasterImage1(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> AttachRasterImage </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.AttachRasterImage(Autodesk.AutoCAD.DatabaseServices.Database,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> AttachRasterImage </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.SetLayer(System.String)">
+            <summary> Set curent layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.MakeCable(IntelliDesk.AcadNet.Model.AcadCable)">
+            <summary> Cable </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.MakeClosure(IntelliDesk.AcadNet.Model.AcadClosure)">
+            <summary> Cable </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.MakeCabinet(IntelliDesk.AcadNet.Model.AcadCabinet)">
+            <summary> Cabinet </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Draw.MakeTitle(Intellidesk.Data.Models.Entities.ElementDefinition,Autodesk.AutoCAD.Geometry.Point3d)">
+            <summary> Title text </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Files.IsValidFilename(System.String)">
+            <summary> Validate folder name </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Files.IsValidPathname(System.String)">
+            <summary> Validate folder name </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Geoms.DegreeToRadian(System.Int32)">
+            <summary> Degree to Radian </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Geoms.RadianToDegree(System.Double)">
+            <summary> Radian to Degree </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.Geoms.Quadrilateral">
+            <summary>
+            Represents a quadrilateral (polygon with four points, eg. a rect or a square). Note that the points are supposed
+            to be in counter-clockwise order (usually starting with the upper left corner).
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Geoms.Quadrilateral.Rotate(System.Double,Autodesk.AutoCAD.Geometry.Point2d)">
+            <summary>
+            Rotates the quadrilateral clockwise around the specified point.
+            </summary>
+            <param name="degrees">angle in degrees (clockwise)</param>
+            <param name="center">center point around which the quadrilateral is rotated</param>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.IRule.Name">
+            <summary> Rule name </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.IRule.ColorIndex">
+            <summary> Rule color index </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.IRule.Comment">
+            <summary> Rule comment </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.IRule.ParameterList">
+            <summary> Parameter list 1 </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.IRule.IncludeNested">
+            <summary> Include reading of nested object </summary>
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Logging.WebVariablesRenderer.Culture">
+            Gets or sets the culture used for rendering.
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Logging.WebVariablesRenderer.Format">
+            Gets or sets the date format. Can be any argument accepted by DateTime.ToString(format).
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Intellidesk.AcadNet.Services.Logging.WebVariablesRenderer.Append(System.Text.StringBuilder,NLog.LogEventInfo)" -->
+        <member name="P:Intellidesk.AcadNet.Services.Logging.UtcDateRenderer.Culture">
+            Gets or sets the culture used for rendering.
+        </member>
+        <member name="P:Intellidesk.AcadNet.Services.Logging.UtcDateRenderer.Format">
+            Gets or sets the date format. Can be any argument accepted by DateTime.ToString(format).
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Intellidesk.AcadNet.Services.Logging.UtcDateRenderer.Append(System.Text.StringBuilder,NLog.LogEventInfo)" -->
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Add(System.String,Autodesk.AutoCAD.Colors.Color)">
+            <summary> Add layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Add(System.String,System.Int16)">
+            <summary> Add layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Add(System.String)">
+            <summary> Add layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.AddRange(System.String[],System.Int16[])">
+            <summary> Add layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.AddRange(System.String[],Autodesk.AutoCAD.Colors.Color[])">
+            <summary> Add layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Clean(System.String)">
+            <summary> Removing all draw entities from layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.CleanAll(System.String[])">
+            <summary> Clean all layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Contains(System.String)">
+            <summary> ContainsLayer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.GetWorkLayerName(System.String)">
+            <summary> GisLayerName </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Remove(System.String)">
+            <summary> Removing all draw entities from layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Init(System.Collections.Generic.List{Intellidesk.AcadNet.Services.IRule})">
+            <summary> Verification existence of rule's layers, and creating layers if it is necessary </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.GetAll">
+            <summary> Get all layers </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Current">
+            <summary> Get current layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.LayerService.Freeze(System.String,System.Boolean)">
+            <summary> Set freeze to current layer </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Operations.ReadObjects(Intellidesk.AcadNet.Services.Core.ActionArguments)">
+            <summary>
+            Reading objects and rising events(fior example such as "event ToolsParseBlock") 
+             <para>and calling custom function (may be named such as OnToolsParseBlock (look to below by code) </para>
+            <example>example: ParseObjects(CurrentObjectIds, new[] { typeof(BlockReference) }</example>
+            <param name="readArgs"></param>
+            <returns></returns>
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.RegisterService.GetAutoCADKey">
+            <summary> GetAutoCADKey </summary>
+            <returns>version of autocad plugin</returns>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Selects.GetSelectionPrompt(Autodesk.AutoCAD.EditorInput.Editor,System.Int32,System.String,System.Boolean)">
+            <summary> Select objects with N attempt</summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Services.Selects.GetSelectImplied(Autodesk.AutoCAD.EditorInput.Editor)">
+            <summary> Get implied objects </summary>
+        </member>
+        <member name="T:Intellidesk.AcadNet.Services.ServiceManager">
+            <summary> Service manager </summary>
+        </member>
+        <member name="F:Intellidesk.AcadNet.Core.SuperToolTipDisplay.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Core.SuperToolTipDisplay.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Intellidesk.AcadNet.Core.SuperToolTipDisplay.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BlocksExtensions.XGetObjects(Autodesk.AutoCAD.DatabaseServices.BlockReference,Autodesk.AutoCAD.DatabaseServices.Transaction,System.Type[],System.Boolean,System.String[])">
+            <summary> Get Objects from Model Space </summary>
+        </member>
+        <member name="M:BlocksExtensions.XGetObjects(Autodesk.AutoCAD.DatabaseServices.BlockReference,Intellidesk.AcadNet.Services.Core.ActionArguments)">
+            <summary> Get Objects from Model Space  </summary>
+        </member>
+        <member name="M:BlocksExtensions.XGetObjectsDynamic(Autodesk.AutoCAD.DatabaseServices.BlockReference,System.Type[],System.Boolean,System.String[])">
+            <summary> XGetObjects </summary>
+        </member>
+        <member name="M:BlocksExtensions.XGetTrueName(Autodesk.AutoCAD.DatabaseServices.BlockReference,Autodesk.AutoCAD.DatabaseServices.Transaction)">
+            <summary> XGetObjects </summary>
+        </member>
+        <member name="M:BlocksExtensions.XrefAttachAndInsert(Intellidesk.AcadNet.Common.Core.CommandContext,System.String,Autodesk.AutoCAD.Geometry.Point3d,System.String)">
+            <summary>
+            Attaches the specified Xref to the current space in the current drawing.
+            </summary>
+            <param name="context">current command context</param>
+            <param name="path">Path to the drawing file to attach as an Xref.</param>
+            <param name="position">Position of Xref in WCS coordinates.</param>
+            <param name="name">Optional name for the Xref.</param>
+            <returns>Whether the attach operation succeeded.</returns>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
+        </member>
+    </members>
+</doc>

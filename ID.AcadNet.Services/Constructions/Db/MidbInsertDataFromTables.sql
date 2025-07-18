@@ -1,0 +1,50 @@
+--INSERT INTO CntDb..cons  
+--SELECT * FROM MiDb2010SQL..cons
+--Go
+INSERT INTO CntDb..consModel  
+SELECT * FROM MiDb2010SQL..consModel
+Go
+INSERT INTO CntDb..contur  
+SELECT * FROM MiDb2010SQL..contur
+Go
+INSERT INTO CntDb..ConturPrp  
+SELECT * FROM MiDb2010SQL..ConturPrp
+Go
+INSERT INTO CntDb..designCon  
+SELECT * FROM MiDb2010SQL..designCon
+Go
+INSERT INTO CntDb..Divisions  
+SELECT * FROM MiDb2010SQL..Divisions
+Go
+INSERT INTO CntDb..Draft  
+SELECT * FROM MiDb2010SQL..Draft
+Go
+INSERT INTO CntDb..DrawArch  
+SELECT * FROM MiDb2010SQL..DrawArch
+Go
+INSERT INTO CntDb..DrawPrj  
+SELECT * FROM MiDb2010SQL..DrawPrj
+Go
+INSERT INTO CntDb..DrawTemplate  
+SELECT * FROM MiDb2010SQL..DrawTemplate
+Go
+INSERT INTO CntDb..FlrDate  
+SELECT * FROM MiDb2010SQL..FlrDate
+Go
+INSERT INTO CntDb..Foundation  
+SELECT * FROM MiDb2010SQL..Foundation
+Go
+INSERT INTO CntDb..Foundation  
+SELECT * FROM MiDb2010SQL..Foundation
+Go
+INSERT INTO CntDb..Levels  
+SELECT * FROM MiDb2010SQL..Levels
+Go
+INSERT INTO CntDb..[Load] 
+SELECT * FROM MiDb2010SQL..[Load]
+Go
+INSERT INTO CntDb..Rein  
+SELECT * FROM MiDb2010SQL..Rein
+Go
+INSERT INTO CntDb..Tikra  
+SELECT * FROM MiDb2010SQL..Tikra

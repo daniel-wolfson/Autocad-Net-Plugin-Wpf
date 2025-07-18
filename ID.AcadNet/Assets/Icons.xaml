@@ -1,0 +1,46 @@
+﻿<ResourceDictionary 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- 
+        xmlns:r="clr-namespace:Intellidesk.AcadNet.Resources;assembly=ID.AcadNet.Resources"
+    -->
+    <SolidColorBrush x:Key="IconColor" Color="Black" />
+
+    <Path x:Shared="False" x:Key="IconUnlock" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 36.002,0.000488281C 52.3457,0.000488281 66,13.6509 66,30.0005L 66,36.0005L 72.002,36.0005L 72.002,96L 0,96L 0,36.0005L 57.334,36.0005L 57.334,30.645C 57.334,19.7466 46.8965,9.31201 36.002,9.31201C 29.9551,9.31201 24.0566,12.5298 19.9951,17.2524L 12.1367,12.0005C 17.6543,4.74951 26.3604,0.000488281 36.002,0.000488281 Z M 44,82.001L 38.5273,65.5859C 41.7061,64.5288 44,61.5352 44,58.001C 44,53.582 40.4199,50.001 36,50.001C 31.5811,50.001 28,53.582 28,58.001C 28,61.5352 30.293,64.5288 33.4717,65.5859L 28,82.001L 44,82.001 Z "/>
+    <Path x:Shared="False" x:Key="IconLock" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 36.002,0.000488281C 52.3457,0.000488281 66,13.6509 66,30.0005L 66,36.0005L 72.002,36.0005L 72.002,96L 0,96L 0,36.0005L 6,36.0005L 6,30.0005C 6,13.6509 19.6543,0.000488281 36.002,0.000488281 Z M 14.666,30.646L 14.666,36.0005L 57.333,36.0005L 57.333,30.646C 57.333,19.7476 46.8955,9.31299 36.001,9.31299C 25.1035,9.31299 14.666,19.7476 14.666,30.646 Z M 44,82.001L 38.5273,65.5859C 41.7061,64.5288 44,61.5352 44,58.001C 44,53.582 40.4199,50.001 36,50.001C 31.5811,50.001 28,53.582 28,58.001C 28,61.5352 30.293,64.5288 33.4717,65.5859L 28,82.001L 44,82.001 Z "/>
+    <Path x:Shared="False" x:Key="IconMaginfyGlass" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 26.751,45.4141C 37.0566,45.4141 45.4189,37.0537 45.418,26.7471C 45.418,16.4414 37.0566,8.08008 26.751,8.08008C 16.4453,8.08008 8.08398,16.4414 8.08398,26.7471C 8.08301,37.0537 16.4453,45.4141 26.751,45.4141 Z M 49.4063,40.9199L 77.085,68.5977L 68.5996,77.084L 40.9219,49.4053C 36.8086,51.9834 31.9609,53.498 26.749,53.498C 11.9766,53.498 0,41.5215 0,26.75C 0,11.9766 11.9756,0 26.749,0C 41.5234,0 53.501,11.9766 53.5,26.748C 53.5,31.96 51.9844,36.8076 49.4063,40.9199 Z M 15.2686,18.8125C 18.4004,14.042 22.7471,11.3623 24.9785,12.8262C 27.21,14.291 26.4805,19.3457 23.3496,24.1182C 20.2178,28.8887 15.8701,31.5674 13.6387,30.1045C 11.4102,28.6426 12.1377,23.5801 15.2686,18.8125 Z "/>
+    <Path x:Shared="False" x:Key="IconImage" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 87.2734,78.5449L 87.2734,8.72754L 8.72852,8.72754L 8.72852,78.5449L 87.2734,78.5449 Z M 0,96L 0,0L 96,0L 96,96L 0,96 Z M 78,48L 78,72L 18,72L 18,60L 30,42L 48,60L 66,30L 78,48 Z "/>
+    <Path x:Shared="False" x:Key="IconTriangle" Stretch="Uniform" Data="M50.25,133.5 L49.75,158.25 76,147.25 z" Fill="{DynamicResource IconColor}" Stroke="Black" />
+
+    <BitmapImage x:Key="DwgPurge" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/dwg_purge.png" />
+    <BitmapImage x:Key="Open" UriSource ="pack://application:,,,/ID.AcadNet;component/Resources/open_d.png" />
+    <BitmapImage x:Key="OpenA" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/open.png"/>
+    <BitmapImage x:Key="OpenAll" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/open_all.png"/>
+    <BitmapImage x:Key="Copy" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/open.png" />
+    <BitmapImage x:Key="Cancel" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/MetroBlack/close.png" />
+    <BitmapImage x:Key="Delete" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/del.png" />
+    <BitmapImage x:Key="UnDelete" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/unDelete.png" />
+    <BitmapImage x:Key="Purge" UriSource="pack://application:,,,ID.AcadNe;component/Resources/purge.png" />
+    <BitmapImage x:Key="New" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/open_new.png" />
+    <BitmapImage x:Key="LayoutNone" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/none.png" />
+    <BitmapImage x:Key="Filter" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/filter.png" />
+    <BitmapImage x:Key="FilterA" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/filter.png" />
+    <BitmapImage x:Key="Save" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/save.png" />
+    <BitmapImage x:Key="SaveA" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/save_a.png" />
+    <BitmapImage x:Key="ApplyFsaA" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/dwg_run.png" />
+    <BitmapImage x:Key="UploadFsaA" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/dwg_upload.png" />
+    <BitmapImage x:Key="Refresh" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/refresh.png" />
+    <BitmapImage x:Key="Reset" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/MetroBlack/reset.png" />
+    <BitmapImage x:Key="Set" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/MetroBlack/property.png" />
+    <BitmapImage x:Key="TreeClean" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/treeClean.png" />
+    <BitmapImage x:Key="LayoutConfig" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/config.png" />
+    <BitmapImage x:Key="PanelIcon" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/place.png" />
+    <BitmapImage x:Key="SearchViewLayers" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/layers.png" />
+    <BitmapImage x:Key="SearchViewFind" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/MetroBlack/search.png" />
+    <BitmapImage x:Key="SearchViewStop" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/MetroBlack/stop.png" />
+    <BitmapImage x:Key="ShowAll" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/treeShowAll.png" />
+    <BitmapImage x:Key="ShowMarkers" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/treeShowMarkers.png" />
+    <BitmapImage x:Key="MapClearData" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/del.png" />
+    <BitmapImage x:Key="RibbonRefresh" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/dwg_refresh.png" />
+    <BitmapImage x:Key="Flag" UriSource="pack://application:,,,/ID.AcadNet;component/Resources/flag.png" />
+</ResourceDictionary>

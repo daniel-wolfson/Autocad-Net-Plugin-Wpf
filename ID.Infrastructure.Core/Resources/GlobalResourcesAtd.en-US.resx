@@ -1,0 +1,4665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Aatzim" xml:space="preserve">
+    <value>Aatzim</value>
+  </data>
+  <data name="AboutSystem" xml:space="preserve">
+    <value>The "Palmer" system for computerized psychometric diagnosis</value>
+  </data>
+  <data name="AbroadTen" xml:space="preserve">
+    <value>10 בחו"ל</value>
+  </data>
+  <data name="Academic" xml:space="preserve">
+    <value>Academic</value>
+  </data>
+  <data name="AcademicApprovals" xml:space="preserve">
+    <value>Academic Approvals</value>
+  </data>
+  <data name="Accepted" xml:space="preserve">
+    <value>Accepted</value>
+  </data>
+  <data name="AcceptedByCompany" xml:space="preserve">
+    <value>Accepted by the company</value>
+  </data>
+  <data name="AcceptedInCompany" xml:space="preserve">
+    <value>AcceptedIn Company</value>
+  </data>
+  <data name="AccordingToTheOpinion" xml:space="preserve">
+    <value>על פי ראות</value>
+  </data>
+  <data name="ActionDesc" xml:space="preserve">
+    <value>פירוט פעולה</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>פעולות</value>
+  </data>
+  <data name="ActionsCandidateCardSystemReport" xml:space="preserve">
+    <value>Actions(candidate card, system report)</value>
+  </data>
+  <data name="ActionType" xml:space="preserve">
+    <value>סוג פעולה</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>פעיל</value>
+  </data>
+  <data name="AdaptiveKeys" xml:space="preserve">
+    <value>מפתחות</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>הוסף</value>
+  </data>
+  <data name="AddCandidateToSortingDay" xml:space="preserve">
+    <value>Add candidate to sorting day</value>
+  </data>
+  <data name="AddChapter" xml:space="preserve">
+    <value>הוסף פרק</value>
+  </data>
+  <data name="AddCommentPrompt" xml:space="preserve">
+    <value>הוסף הערה:</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>Add Condition</value>
+  </data>
+  <data name="Adding" xml:space="preserve">
+    <value>הוספה</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>הוסף פריט</value>
+  </data>
+  <data name="AdditionalInfo" xml:space="preserve">
+    <value>נתון רקע</value>
+  </data>
+  <data name="AdditionalInformation" xml:space="preserve">
+    <value>Additional Information</value>
+  </data>
+  <data name="AdditionalName" xml:space="preserve">
+    <value>AdditionalName</value>
+  </data>
+  <data name="AdditionalProperty" xml:space="preserve">
+    <value>Additional Property</value>
+  </data>
+  <data name="Additions" xml:space="preserve">
+    <value>תוספות</value>
+  </data>
+  <data name="AddProperty" xml:space="preserve">
+    <value>הוסף מאפיין </value>
+  </data>
+  <data name="Addresses" xml:space="preserve">
+    <value>Addresses</value>
+  </data>
+  <data name="AddressStreet" xml:space="preserve">
+    <value>Address Street</value>
+  </data>
+  <data name="AddressType" xml:space="preserve">
+    <value>Address Type</value>
+  </data>
+  <data name="AddSource" xml:space="preserve">
+    <value>הוספת מקור</value>
+  </data>
+  <data name="AddTable" xml:space="preserve">
+    <value>הוסף טבלה</value>
+  </data>
+  <data name="AdheringToPressures" xml:space="preserve">
+    <value>Adhering to pressures</value>
+  </data>
+  <data name="AdminController" xml:space="preserve">
+    <value>ניהול</value>
+  </data>
+  <data name="AdministrativeFunctions" xml:space="preserve">
+    <value>Administrative Functions</value>
+  </data>
+  <data name="AffiliationToMyOffice" xml:space="preserve">
+    <value>שיוך לשכתי</value>
+  </data>
+  <data name="AgeOfArrival" xml:space="preserve">
+    <value>גיל הגעה</value>
+  </data>
+  <data name="AlertMessage" xml:space="preserve">
+    <value>Alert Message</value>
+  </data>
+  <data name="AllowedReplay" xml:space="preserve">
+    <value>אפשר הפעלה חוזרת</value>
+  </data>
+  <data name="AllRule" xml:space="preserve">
+    <value>All Rule</value>
+  </data>
+  <data name="AllTestsList" xml:space="preserve">
+    <value>All tests list</value>
+  </data>
+  <data name="Amharic" xml:space="preserve">
+    <value>Amharic</value>
+  </data>
+  <data name="AnalyzeItemsReportDefinition" xml:space="preserve">
+    <value>Analyze Items Report Definition</value>
+  </data>
+  <data name="ANewTestWasCreatedSuccessfully" xml:space="preserve">
+    <value>בדיקה חדשה נוצרה בהצלחה</value>
+  </data>
+  <data name="ANewTestWasNotCreated" xml:space="preserve">
+    <value>A New Test Was Not Created</value>
+  </data>
+  <data name="AnExistingIDInTheSystem" xml:space="preserve">
+    <value>An Existing ID InThe System</value>
+  </data>
+  <data name="AnOnlyDruzeChild" xml:space="preserve">
+    <value>An Only Druze Child</value>
+  </data>
+  <data name="AnoterOnePhoneNumber" xml:space="preserve">
+    <value>טלפון נוסף1</value>
+  </data>
+  <data name="AnoterTwoPhoneNumber" xml:space="preserve">
+    <value>טלפון נוסף2</value>
+  </data>
+  <data name="AnotherAddressOne" xml:space="preserve">
+    <value>Another Address One</value>
+  </data>
+  <data name="AnotherAddressOneApartment" xml:space="preserve">
+    <value>כתובת נוספת1 -דירה</value>
+  </data>
+  <data name="AnotherAddressOneHome" xml:space="preserve">
+    <value>כתובת נוספת1 -בית</value>
+  </data>
+  <data name="AnotherAddressOneSettlement" xml:space="preserve">
+    <value>כתובת נוספת1 -ישוב</value>
+  </data>
+  <data name="AnotherAddressOneStreet" xml:space="preserve">
+    <value>כתובת נוספת1 -רחוב</value>
+  </data>
+  <data name="AnotherAddressTwo" xml:space="preserve">
+    <value>Another Address Two</value>
+  </data>
+  <data name="AnotherAddressTwoApartment" xml:space="preserve">
+    <value>כתובת נוספת2 -דירה</value>
+  </data>
+  <data name="AnotherAddressTwoHome" xml:space="preserve">
+    <value>כתובת נוספת2-בית</value>
+  </data>
+  <data name="AnotherAddressTwoSettlement" xml:space="preserve">
+    <value>כתובת נוספת2 -ישוב</value>
+  </data>
+  <data name="AnotherAddressTwoStreet" xml:space="preserve">
+    <value>כתובת נוספת2-רחוב</value>
+  </data>
+  <data name="AnotherFieldEF_1" xml:space="preserve">
+    <value>שדה EF נוסף 1</value>
+  </data>
+  <data name="AnotherFieldEF_2" xml:space="preserve">
+    <value>שדה EF נוסף 2</value>
+  </data>
+  <data name="AnotherFieldEF_3" xml:space="preserve">
+    <value>שדה EF נוסף 3</value>
+  </data>
+  <data name="AnotherVersion" xml:space="preserve">
+    <value>נוסח אחר</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>תשובה</value>
+  </data>
+  <data name="AnswerBtn" xml:space="preserve">
+    <value>כפתור תשובה</value>
+  </data>
+  <data name="AnswerNumber" xml:space="preserve">
+    <value>Answer Number</value>
+  </data>
+  <data name="Answers" xml:space="preserve">
+    <value>Answers</value>
+  </data>
+  <data name="AnswerToQuestion" xml:space="preserve">
+    <value>תשובה לשאלה</value>
+  </data>
+  <data name="Apartment" xml:space="preserve">
+    <value>Apartment</value>
+  </data>
+  <data name="AppErrorHomeClick" xml:space="preserve">
+    <value>Go back to home page</value>
+  </data>
+  <data name="AppErrorMessage" xml:space="preserve">
+    <value>System error. Please try selecting link from options or try later.</value>
+  </data>
+  <data name="ApplicantNotesWereNotSaved" xml:space="preserve">
+    <value>Applicant Notes Were Not Saved</value>
+  </data>
+  <data name="AppointmentDate" xml:space="preserve">
+    <value>test date</value>
+  </data>
+  <data name="AppointmentOfficer" xml:space="preserve">
+    <value>Appointment Officer</value>
+  </data>
+  <data name="AppropriateTestsBeforeValidation" xml:space="preserve">
+    <value>מתאים מבחנים לפני אימות</value>
+  </data>
+  <data name="ApprovalRequired" xml:space="preserve">
+    <value>ApprovalRequired</value>
+  </data>
+  <data name="Approvals" xml:space="preserve">
+    <value>Approvals</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="AQuestionAboutAbroadByAge" xml:space="preserve">
+    <value>A Question About Abroad By Age</value>
+  </data>
+  <data name="AQuestionAboutLanguageByAge" xml:space="preserve">
+    <value>A Question About Language By Age</value>
+  </data>
+  <data name="Arabic" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="Array" xml:space="preserve">
+    <value>Array</value>
+  </data>
+  <data name="ArrayDontFinish" xml:space="preserve">
+    <value>Array Dont Finish</value>
+  </data>
+  <data name="ArrayDuration" xml:space="preserve">
+    <value>זמן המערך:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ArrayDurationComment" xml:space="preserve">
+    <value>(כולל מסכי הוראות, פתיחה וסיום)</value>
+  </data>
+  <data name="ArrayGrade" xml:space="preserve">
+    <value>ציון מערך אבחון</value>
+  </data>
+  <data name="ArrayName" xml:space="preserve">
+    <value>שם המערך:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ArrayScheduling" xml:space="preserve">
+    <value> שיבוץ מערכים</value>
+  </data>
+  <data name="ArraysReport" xml:space="preserve">
+    <value>Arrays Report</value>
+  </data>
+  <data name="ArrivalDatePsychotec" xml:space="preserve">
+    <value>תאריך הגעה פסיכוטכני</value>
+  </data>
+  <data name="AskAkdmizatia" xml:space="preserve">
+    <value>נשאל אקדמיזציה</value>
+  </data>
+  <data name="ATihoni" xml:space="preserve">
+    <value>ATihoni</value>
+  </data>
+  <data name="Audit" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="AuthenticationStatusEnquiries" xml:space="preserve">
+    <value>Authentication Status Enquiries</value>
+  </data>
+  <data name="AuthenticationTypeRequired" xml:space="preserve">
+    <value>Authentication Type Required</value>
+  </data>
+  <data name="AutomaticSwitchingInAns" xml:space="preserve">
+    <value>מעבר אוטומטי</value>
+  </data>
+  <data name="AutoNext" xml:space="preserve">
+    <value>התקדם אוטומטית</value>
+  </data>
+  <data name="AutoStart" xml:space="preserve">
+    <value>התחל אוטומטית</value>
+  </data>
+  <data name="A_Class" xml:space="preserve">
+    <value>א</value>
+  </data>
+  <data name="A_r" xml:space="preserve">
+    <value>A.r</value>
+  </data>
+  <data name="B" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>צבע רקע</value>
+  </data>
+  <data name="BatteryDetails" xml:space="preserve">
+    <value>פרטי מערך איבחון</value>
+  </data>
+  <data name="BehavioralQuestionnaire" xml:space="preserve">
+    <value>Behavioral Questionnaire</value>
+  </data>
+  <data name="Benish" xml:space="preserve">
+    <value>Benish</value>
+  </data>
+  <data name="biggerthan" xml:space="preserve">
+    <value>גדול מ</value>
+  </data>
+  <data name="BiographicalStatus" xml:space="preserve">
+    <value>ססטוס ביוגרפי</value>
+  </data>
+  <data name="BirthCountry" xml:space="preserve">
+    <value>ארץ לידה</value>
+  </data>
+  <data name="Birthdate" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
+  <data name="Border" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="BreakMessageToTested" xml:space="preserve">
+    <value>הודעה שתוצג לנבדק עם היציאה להפסקה</value>
+  </data>
+  <data name="BringDown" xml:space="preserve">
+    <value>הורד</value>
+  </data>
+  <data name="BringUp" xml:space="preserve">
+    <value>העלה</value>
+  </data>
+  <data name="Brothers" xml:space="preserve">
+    <value>Brothers</value>
+  </data>
+  <data name="BrothersDateDeathVeryLate" xml:space="preserve">
+    <value>תאריך פטירה אח/ות מאוחר ביותר</value>
+  </data>
+  <data name="BrothersDeatAeva" xml:space="preserve">
+    <value>הרוג איבה אח/ות</value>
+  </data>
+  <data name="BrothersDeatLaether" xml:space="preserve">
+    <value>נפטר יותר מאח אחד</value>
+  </data>
+  <data name="BrothersSecurityDead" xml:space="preserve">
+    <value>הרוג ש.בטחוני אח/ות</value>
+  </data>
+  <data name="ButtonName" xml:space="preserve">
+    <value>Name of button</value>
+  </data>
+  <data name="ButtonNavigation" xml:space="preserve">
+    <value>כפתורי ניווט</value>
+  </data>
+  <data name="B_Class" xml:space="preserve">
+    <value>ב</value>
+  </data>
+  <data name="C" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="CalcNorm" xml:space="preserve">
+    <value>חשב נורמה</value>
+  </data>
+  <data name="CalculatedGrade" xml:space="preserve">
+    <value>Calculated Grade</value>
+  </data>
+  <data name="CalculatesScoresPleaseWait" xml:space="preserve">
+    <value>Calculates Scores Please Wait</value>
+  </data>
+  <data name="CalculationArrayEgoz" xml:space="preserve">
+    <value>חשב מערך משוקלל "אגוז"</value>
+  </data>
+  <data name="CalculationArrayGrade" xml:space="preserve">
+    <value>חישוב ציון מערך אבחון</value>
+  </data>
+  <data name="CalculationCategory" xml:space="preserve">
+    <value>Calculation category</value>
+  </data>
+  <data name="CalculationConstitution" xml:space="preserve">
+    <value>Calculation Constitution</value>
+  </data>
+  <data name="CalculationField" xml:space="preserve">
+    <value>Calculation field</value>
+  </data>
+  <data name="CalculationIndex" xml:space="preserve">
+    <value>Calculation Index</value>
+  </data>
+  <data name="CalculatorController" xml:space="preserve">
+    <value>CalculatorController</value>
+  </data>
+  <data name="CalculatorName" xml:space="preserve">
+    <value>Calculator Name</value>
+  </data>
+  <data name="CallToAnotherConstitution" xml:space="preserve">
+    <value>Call To Another Constitution</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="CancelProcess" xml:space="preserve">
+    <value>in cancel process</value>
+  </data>
+  <data name="CandidateAlredyInviteToThisSite" xml:space="preserve">
+    <value>Candidate Alredy Invite To This Site</value>
+  </data>
+  <data name="CandidateCard" xml:space="preserve">
+    <value>Candidate card</value>
+  </data>
+  <data name="CandidateCardSavedSuccessfully" xml:space="preserve">
+    <value>Candidate card saved successfully</value>
+  </data>
+  <data name="CandidateComments" xml:space="preserve">
+    <value>Candidate Comments</value>
+  </data>
+  <data name="CandidateIdValue" xml:space="preserve">
+    <value>Id Value</value>
+  </data>
+  <data name="CandidateInviteToAnotherSiteInThisDate" xml:space="preserve">
+    <value>Candidate Invite To Another SiteIn This Date</value>
+  </data>
+  <data name="CandidateIsNotAssociated" xml:space="preserve">
+    <value>CandidateIs Not Associated</value>
+  </data>
+  <data name="CandidateNotExisist" xml:space="preserve">
+    <value>Candidate Not Exisist</value>
+  </data>
+  <data name="CandidateRangeId" xml:space="preserve">
+    <value>Candidate Range Id</value>
+  </data>
+  <data name="Candidates" xml:space="preserve">
+    <value>Candidates</value>
+  </data>
+  <data name="CandidatesList" xml:space="preserve">
+    <value>רשימת מועמדים</value>
+  </data>
+  <data name="CandidatesNumber" xml:space="preserve">
+    <value>Candidates Number</value>
+  </data>
+  <data name="CandidateStatusId" xml:space="preserve">
+    <value>Candidate StatusI d</value>
+  </data>
+  <data name="CandTypeId" xml:space="preserve">
+    <value>סוג זיהוי</value>
+  </data>
+  <data name="CannotCalcExamArrayTime" xml:space="preserve">
+    <value>לא ניתן לחשב את משך המערך</value>
+  </data>
+  <data name="CannotDeleteArrayInUse" xml:space="preserve">
+    <value>אין אפשרות למחוק מערך בשימוש</value>
+  </data>
+  <data name="CannotToggleInActive" xml:space="preserve">
+    <value>יש במערך רכיבים שאינם פעילים</value>
+  </data>
+  <data name="CanotSaveSortingDayIsStart" xml:space="preserve">
+    <value>Canot Save Sorting Day Is Start</value>
+  </data>
+  <data name="CantEditTest" xml:space="preserve">
+    <value>לא ניתן לערוך מבחן שאינו משוייך לארגון שלך</value>
+  </data>
+  <data name="CantSaveSameIp" xml:space="preserve">
+    <value>Can't Save the Same Ip</value>
+  </data>
+  <data name="CantTurnOnTest" xml:space="preserve">
+    <value>לא ניתן להפעיל מבחן שאינו משוייך לארגון שלך</value>
+  </data>
+  <data name="ChangeToNotActive" xml:space="preserve">
+    <value>שנה סטטוס ללא פעיל</value>
+  </data>
+  <data name="Chapter" xml:space="preserve">
+    <value>פרק</value>
+    <comment>Chapter</comment>
+  </data>
+  <data name="ChapterList" xml:space="preserve">
+    <value>רשימת פרקים</value>
+  </data>
+  <data name="ChapterName" xml:space="preserve">
+    <value>שם הפרק</value>
+    <comment>ChapterName</comment>
+  </data>
+  <data name="ChapterNumber" xml:space="preserve">
+    <value>מספר פרק</value>
+    <comment>ChapterNumber</comment>
+  </data>
+  <data name="ChapterOne" xml:space="preserve">
+    <value>chapter one</value>
+  </data>
+  <data name="ChaptersEditing" xml:space="preserve">
+    <value>עריכת פרקים</value>
+  </data>
+  <data name="CharacterizationOfInstitution" xml:space="preserve">
+    <value>Characterization Of Institution</value>
+  </data>
+  <data name="CharacterLimit" xml:space="preserve">
+    <value>Character Limit</value>
+  </data>
+  <data name="CheckBox" xml:space="preserve">
+    <value>תיבת סימון</value>
+  </data>
+  <data name="chkFilterActiveOnlyText" xml:space="preserve">
+    <value>הצג מערכים פעילים בלבד</value>
+  </data>
+  <data name="ChoiceAction" xml:space="preserve">
+    <value>Choice Action</value>
+  </data>
+  <data name="ChoiceAdditionalInfo" xml:space="preserve">
+    <value>בחר נתון רקע</value>
+    <comment>Choice Additional Info</comment>
+  </data>
+  <data name="ChoiceAnswer" xml:space="preserve">
+    <value>Choice answer</value>
+  </data>
+  <data name="ChoiceConstitution" xml:space="preserve">
+    <value>Choice Constitution</value>
+  </data>
+  <data name="ChoiceDisibaleAnswers" xml:space="preserve">
+    <value>Choice disibale answers</value>
+  </data>
+  <data name="ChoiceEntity" xml:space="preserve">
+    <value>בחר ישות</value>
+    <comment>Choice Entity</comment>
+  </data>
+  <data name="ChoiceIndex" xml:space="preserve">
+    <value>Choice index</value>
+  </data>
+  <data name="ChoiceProperties" xml:space="preserve">
+    <value>מאפייני בחירה</value>
+  </data>
+  <data name="ChoiceSourcTable" xml:space="preserve">
+    <value>בחר טבלת מקור</value>
+    <comment>Choice Sourc Table</comment>
+  </data>
+  <data name="ChoiceVisibaleAnswers" xml:space="preserve">
+    <value>Choose visibale answers</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>בחר</value>
+  </data>
+  <data name="ChooseChapter" xml:space="preserve">
+    <value>בחר פרק</value>
+    <comment>Choose Chapter</comment>
+  </data>
+  <data name="ChooseConstitution" xml:space="preserve">
+    <value>Choose constitution</value>
+  </data>
+  <data name="ChooseExam" xml:space="preserve">
+    <value>בחר מבחן</value>
+    <comment>Choose Exam</comment>
+  </data>
+  <data name="ChooseExamArray" xml:space="preserve">
+    <value>בחר מערך אבחון</value>
+  </data>
+  <data name="ChooseForm" xml:space="preserve">
+    <value>Choose Form</value>
+  </data>
+  <data name="ChooseGender" xml:space="preserve">
+    <value>בחר מין</value>
+  </data>
+  <data name="ChooseGrade" xml:space="preserve">
+    <value>בחר ציון</value>
+  </data>
+  <data name="ChooseItem" xml:space="preserve">
+    <value>בחר פריט</value>
+    <comment>Choose Item</comment>
+  </data>
+  <data name="ChooseLanguage" xml:space="preserve">
+    <value>בחר שפה</value>
+  </data>
+  <data name="ChooseMaleOrFemale" xml:space="preserve">
+    <value>Choose Male Or Female</value>
+  </data>
+  <data name="ChooseNumber" xml:space="preserve">
+    <value>בחר מספר</value>
+  </data>
+  <data name="ChooseObject" xml:space="preserve">
+    <value>בחר אוביקט</value>
+    <comment>Choose Object</comment>
+  </data>
+  <data name="ChooseScale" xml:space="preserve">
+    <value>Choose scale</value>
+  </data>
+  <data name="ChooseSite" xml:space="preserve">
+    <value>בחר אתר</value>
+  </data>
+  <data name="ChooseTargetArray" xml:space="preserve">
+    <value>בחר מערך יעד</value>
+  </data>
+  <data name="ChooseTemplate" xml:space="preserve">
+    <value>בחר תבנית</value>
+  </data>
+  <data name="ChooseTypeId" xml:space="preserve">
+    <value>Choose Type Id</value>
+  </data>
+  <data name="Citizen_1" xml:space="preserve">
+    <value>Citizen_1</value>
+  </data>
+  <data name="Citizen_2" xml:space="preserve">
+    <value>Citizen_2</value>
+  </data>
+  <data name="Citizen_3" xml:space="preserve">
+    <value>Citizen_3</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>עיר</value>
+  </data>
+  <data name="ClaimContradictionDateOfDeathParentQuestionnaire" xml:space="preserve">
+    <value>טוען סתירה תאריך פטירה הורה - שאלון</value>
+  </data>
+  <data name="ClaimsForReplacement" xml:space="preserve">
+    <value>טוען להחלפה</value>
+  </data>
+  <data name="ClaimsMedicalProblem" xml:space="preserve">
+    <value>Claims medical problem</value>
+  </data>
+  <data name="ClaimsPlacementCommittee" xml:space="preserve">
+    <value>Claims placement committee</value>
+  </data>
+  <data name="ClaimsSingleChildConflict" xml:space="preserve">
+    <value>טוען סתירה בן יחיד</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="classic" xml:space="preserve">
+    <value>קלאסי</value>
+  </data>
+  <data name="ClassImmigrants" xml:space="preserve">
+    <value>בירור כיתת עולים</value>
+  </data>
+  <data name="ClassPerformingDiagnosis" xml:space="preserve">
+    <value>כיתת ביצוע האבחון</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>נקה הכל</value>
+  </data>
+  <data name="ClearBackground" xml:space="preserve">
+    <value>Clear background</value>
+  </data>
+  <data name="ClearDisplayed" xml:space="preserve">
+    <value>נקה מערכים מוצגים</value>
+  </data>
+  <data name="ClearRecord" xml:space="preserve">
+    <value>מחק רשומה</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>סגור</value>
+  </data>
+  <data name="CognitiveCalculators" xml:space="preserve">
+    <value>Cognitive Calculators</value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="Combo" xml:space="preserve">
+    <value>תיבה משולבת</value>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="CommantFram" xml:space="preserve">
+    <value>Commant Fram</value>
+  </data>
+  <data name="CommentsForComputerizedTests" xml:space="preserve">
+    <value>Comments For Computerized Tests</value>
+  </data>
+  <data name="CommentsQuestionnaire" xml:space="preserve">
+    <value>הערות שאלון</value>
+  </data>
+  <data name="CommentsToLearningDisabilities" xml:space="preserve">
+    <value>Comments To Learning Disabilities</value>
+  </data>
+  <data name="CommonReport" xml:space="preserve">
+    <value>Common Report</value>
+  </data>
+  <data name="ComplementaryInterviewer" xml:space="preserve">
+    <value>השלמות למראיינ/ת</value>
+  </data>
+  <data name="CompletionScoreForInterview" xml:space="preserve">
+    <value>ניקוד השלמות לראיון</value>
+  </data>
+  <data name="Computerized" xml:space="preserve">
+    <value>Computerized</value>
+  </data>
+  <data name="ComputerizedStation" xml:space="preserve">
+    <value>תחנת ממוחשבים</value>
+  </data>
+  <data name="ComputerStationStatus" xml:space="preserve">
+    <value>Data Verification Required</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>תנאי</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>תנאים</value>
+  </data>
+  <data name="Confidence" xml:space="preserve">
+    <value>Confidence</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="ConfirmDeleteRoutingConstitutionAlert" xml:space="preserve">
+    <value>קיימים במבחן חוקות ו/או מנתבים שיפגעו ממחיקת הפריט \מ האם אתה מעוניין למחוק?</value>
+  </data>
+  <data name="ConfirmDisconnectUserFromOrganization" xml:space="preserve">
+    <value>האם אתה מעוניין לנתק משתמש מהארגין הזה?</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>מקושר</value>
+  </data>
+  <data name="connectedTest" xml:space="preserve">
+    <value>מבחן מקושר</value>
+  </data>
+  <data name="ConscientiousnessDiligence" xml:space="preserve">
+    <value>מצפוניות - שקדנות</value>
+  </data>
+  <data name="Constitution" xml:space="preserve">
+    <value>Constitution</value>
+  </data>
+  <data name="ConstitutionAlert" xml:space="preserve">
+    <value>There are constitutions that will be affected by the deletion</value>
+  </data>
+  <data name="ConstitutionName" xml:space="preserve">
+    <value>Constitution name</value>
+  </data>
+  <data name="ConstitutionProperties" xml:space="preserve">
+    <value>Constitution Properties</value>
+  </data>
+  <data name="Constitutions" xml:space="preserve">
+    <value>Constitutions</value>
+  </data>
+  <data name="ConstitutionsIndices" xml:space="preserve">
+    <value>Linked indices to constitutions</value>
+  </data>
+  <data name="ContactData" xml:space="preserve">
+    <value>נתוני התקשרות</value>
+  </data>
+  <data name="ContinueSetting" xml:space="preserve">
+    <value>המשך להגדרות</value>
+  </data>
+  <data name="Contradiction" xml:space="preserve">
+    <value>Contradiction</value>
+  </data>
+  <data name="ContradictionMostRecentDateOfDeath" xml:space="preserve">
+    <value>סתירת תאריך פטירה המאוחר ביותר</value>
+  </data>
+  <data name="ContradictionOfFirstName_LastName" xml:space="preserve">
+    <value>סתירת שם פרטי/משפחה</value>
+  </data>
+  <data name="ContradictionOfGender" xml:space="preserve">
+    <value>סתירת מין</value>
+  </data>
+  <data name="ContradictionOfMaritalStatus" xml:space="preserve">
+    <value>סתירת מצב משפחתי</value>
+  </data>
+  <data name="ContradictionOfReligion" xml:space="preserve">
+    <value>סתירת דת</value>
+  </data>
+  <data name="ContradictionOfSeveralChildren" xml:space="preserve">
+    <value>סתירת מספר ילדים</value>
+  </data>
+  <data name="ContradictoryDateOfBirth" xml:space="preserve">
+    <value>סתירת תאריך לידה</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>Tests (Control candidates)</value>
+  </data>
+  <data name="ConvertTable" xml:space="preserve">
+    <value>Convert Table</value>
+  </data>
+  <data name="copied" xml:space="preserve">
+    <value>copied</value>
+  </data>
+  <data name="CopyFemaleToMale" xml:space="preserve">
+    <value>Copy female to male</value>
+  </data>
+  <data name="CopyGeneralNorm" xml:space="preserve">
+    <value>העתק נורמה כללית</value>
+  </data>
+  <data name="CopyMaleToFemale" xml:space="preserve">
+    <value>Copy male to female</value>
+  </data>
+  <data name="CopyMenatev" xml:space="preserve">
+    <value>שכפל מנתב</value>
+  </data>
+  <data name="CopyMenatevErrorNotification" xml:space="preserve">
+    <value>שכפול מנתב נכשל</value>
+  </data>
+  <data name="CopyMenatevSuccessNotification" xml:space="preserve">
+    <value>שכפול מנתב עבר בהצלחה!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="CopyName" xml:space="preserve">
+    <value> העתק של {0}</value>
+  </data>
+  <data name="CopyNorm" xml:space="preserve">
+    <value>העתק נורמה</value>
+  </data>
+  <data name="CopyNormConfirmation" xml:space="preserve">
+    <value>האם להעתיק את נורמה?</value>
+  </data>
+  <data name="CopyNormsPrompt" xml:space="preserve">
+    <value>בחר נורמה להעתקה או הקש 'ביטול':</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>All rights reserved</value>
+  </data>
+  <data name="CorrectAnswer" xml:space="preserve">
+    <value>תשובה נכונה</value>
+  </data>
+  <data name="CosherBaranit" xml:space="preserve">
+    <value>Cosher Baranit</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>מדינה</value>
+  </data>
+  <data name="CountryOfBirth" xml:space="preserve">
+    <value>Country Of Birth</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>צור</value>
+  </data>
+  <data name="CreateAction" xml:space="preserve">
+    <value>יצירת פעולה</value>
+    <comment>Create Action</comment>
+  </data>
+  <data name="CreateArrayAndTemplate" xml:space="preserve">
+    <value>Create diagnostic array and Template</value>
+  </data>
+  <data name="CreateConstitution" xml:space="preserve">
+    <value>Create constitution</value>
+  </data>
+  <data name="CreateEntity" xml:space="preserve">
+    <value>יצירת יישות</value>
+    <comment>Create Entity</comment>
+  </data>
+  <data name="CreateIndex" xml:space="preserve">
+    <value>צור אינדקס</value>
+  </data>
+  <data name="CreateLink" xml:space="preserve">
+    <value>Create link</value>
+  </data>
+  <data name="CreateNewCheck" xml:space="preserve">
+    <value>יצירת בדיקה חדשה</value>
+  </data>
+  <data name="CreateNewInformationTable" xml:space="preserve">
+    <value>יצירת טבלת מידע חדשה</value>
+  </data>
+  <data name="CreateNewTestDescription" xml:space="preserve">
+    <value>במסך זה ניתן ליצור {0} חדש ע"י הזנת הפרטים הבאים.</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="CreateNewTestScreen" xml:space="preserve">
+    <value>יצירת {0} חדש</value>
+  </data>
+  <data name="CreateTestDay" xml:space="preserve">
+    <value>Create test days</value>
+  </data>
+  <data name="CreateTestDayController" xml:space="preserve">
+    <value>בנית יום</value>
+  </data>
+  <data name="CurrentOrganiztion" xml:space="preserve">
+    <value>ארגון נוכחי:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>לקוח</value>
+  </data>
+  <data name="C_Class" xml:space="preserve">
+    <value>ג</value>
+  </data>
+  <data name="DadAddress" xml:space="preserve">
+    <value>Dad Address</value>
+  </data>
+  <data name="DadAddressApartment" xml:space="preserve">
+    <value>כתובת דירה-אב</value>
+  </data>
+  <data name="DadAddressHome" xml:space="preserve">
+    <value>כתובת בית-אב</value>
+  </data>
+  <data name="DadAddressSettlement" xml:space="preserve">
+    <value>כתובת ישוב-אב</value>
+  </data>
+  <data name="DadAddressStreet" xml:space="preserve">
+    <value>כתובת רחוב-אב</value>
+  </data>
+  <data name="DadPhoneNumber" xml:space="preserve">
+    <value>נייד אב</value>
+  </data>
+  <data name="DailyActivityReport" xml:space="preserve">
+    <value>Daily Activity Report</value>
+  </data>
+  <data name="Dapar" xml:space="preserve">
+    <value>Dapar</value>
+  </data>
+  <data name="DaparExempt" xml:space="preserve">
+    <value>Dapar Exempt</value>
+  </data>
+  <data name="DataTables" xml:space="preserve">
+    <value>טבלאות מידע</value>
+  </data>
+  <data name="DataVerificationRequired" xml:space="preserve">
+    <value>סטטוס תחנת אימות נתונים</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateAndTime" xml:space="preserve">
+    <value>Date and time</value>
+  </data>
+  <data name="DateChange" xml:space="preserve">
+    <value>Date Change</value>
+  </data>
+  <data name="DateChangeIndictionBenish" xml:space="preserve">
+    <value>Date Change Indiction Benish</value>
+  </data>
+  <data name="DateChangeIndictionCosherBaranit" xml:space="preserve">
+    <value>Date Change Indiction Cosher Baranit</value>
+  </data>
+  <data name="DateChangeIndictionDaughterHeil" xml:space="preserve">
+    <value>Date Change Indiction Daughter Heil</value>
+  </data>
+  <data name="DateChangeIndictionRecruitmentAlthoughGluia" xml:space="preserve">
+    <value>Date Change Indiction Recruitment Although Gluia</value>
+  </data>
+  <data name="DateChangeRecruitmentThresholdIndication" xml:space="preserve">
+    <value>Date Change Recruitment ThresholdIndication</value>
+  </data>
+  <data name="DateChangeRequestRetuenExams" xml:space="preserve">
+    <value>Date Change Request Retuen Exams</value>
+  </data>
+  <data name="DateChangeRequestReturnInterview" xml:space="preserve">
+    <value>Date Change Request Return Interview</value>
+  </data>
+  <data name="DateChangeRequestShashal" xml:space="preserve">
+    <value>Date Change Request Shashal</value>
+  </data>
+  <data name="DateChangeTest" xml:space="preserve">
+    <value>תאריך שינוי מבחן</value>
+  </data>
+  <data name="DateComePsicotcni" xml:space="preserve">
+    <value>Date Come Psicotcni</value>
+  </data>
+  <data name="DateComing" xml:space="preserve">
+    <value>Date Coming</value>
+  </data>
+  <data name="DateComputers" xml:space="preserve">
+    <value>Date Computers</value>
+  </data>
+  <data name="DateCreateScreen_LL" xml:space="preserve">
+    <value>תאריך יצירת מסך ל.ל</value>
+  </data>
+  <data name="DateCreateTest" xml:space="preserve">
+    <value>תאריך יצירת מבחן</value>
+  </data>
+  <data name="DateEdit" xml:space="preserve">
+    <value>תאריך עריכה</value>
+  </data>
+  <data name="DateInput" xml:space="preserve">
+    <value>הזן תאריך</value>
+  </data>
+  <data name="DateInterview" xml:space="preserve">
+    <value>Date Interview</value>
+  </data>
+  <data name="DateLastChange_LL" xml:space="preserve">
+    <value>תאריך שינוי אחרון</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>תאריך לידה</value>
+  </data>
+  <data name="DateOfBirthMustBeEntered" xml:space="preserve">
+    <value>Date Of Birth Must Be entered</value>
+  </data>
+  <data name="DateOfImmigration" xml:space="preserve">
+    <value>Date Of Immigration</value>
+  </data>
+  <data name="DateOfPreliminaryQuestionnaire" xml:space="preserve">
+    <value>Date Of Preliminary Questionnaire</value>
+  </data>
+  <data name="DatePtorDapar" xml:space="preserve">
+    <value>תאריך פטור דפ"ר</value>
+  </data>
+  <data name="DateRequestForVolunteeringMental" xml:space="preserve">
+    <value>תאריך שינוי בקשת התנדבות - נפשי</value>
+  </data>
+  <data name="DateReturnFromPsicotcni" xml:space="preserve">
+    <value>תאריך חזרה מפסיכוטכני</value>
+  </data>
+  <data name="DateTelam" xml:space="preserve">
+    <value>Date Telam</value>
+  </data>
+  <data name="DateVerified" xml:space="preserve">
+    <value>Date Verified</value>
+  </data>
+  <data name="Date_AR" xml:space="preserve">
+    <value>תאריך א.ר</value>
+  </data>
+  <data name="DaughterHeil" xml:space="preserve">
+    <value>Daughter Heil</value>
+  </data>
+  <data name="ddlChooseItem" xml:space="preserve">
+    <value>-בחר-</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlChooseRole" xml:space="preserve">
+    <value>-בחר תפקיד-</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlExamArraysPromptText" xml:space="preserve">
+    <value>-- יש לבחור מערך אבחון --</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlExamArrayTypePromptText" xml:space="preserve">
+    <value>-- יש לבחור סוג מערך אבחון --</value>
+  </data>
+  <data name="ddlExamLabel" xml:space="preserve">
+    <value>מבחן:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlExamsLabel" xml:space="preserve">
+    <value>מבחנים:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlExamsPromptText" xml:space="preserve">
+    <value>-- יש לבחור מבחן --</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlPermissionsTypeLabel" xml:space="preserve">
+    <value>סוג הרשאה:</value>
+  </data>
+  <data name="ddlSourcePromptText" xml:space="preserve">
+    <value>-- יש לבחור מקור --</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlSourceTypePromptText" xml:space="preserve">
+    <value>-- יש לבחור סוג מקור --</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlStationsPromptText" xml:space="preserve">
+    <value>-- יש לבחור תחנה --</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ddlTabsLabel" xml:space="preserve">
+    <value>לשונית:</value>
+  </data>
+  <data name="ddlTabsPromptText" xml:space="preserve">
+    <value>-- יש לבחור לשונית --</value>
+  </data>
+  <data name="DeclaredAddress" xml:space="preserve">
+    <value>כתובת מוצהרת</value>
+  </data>
+  <data name="DeclaredAddressApartment" xml:space="preserve">
+    <value>כתובת מוצהרת-דירה</value>
+  </data>
+  <data name="DeclaredAddressHome" xml:space="preserve">
+    <value>כתובת מוצהרת-בית</value>
+  </data>
+  <data name="DeclaredAddressSettlement" xml:space="preserve">
+    <value>כתובת מוצהרת-ישוב</value>
+  </data>
+  <data name="DeclaredAddressStreet" xml:space="preserve">
+    <value>כתובת מוצהרת-רחוב</value>
+  </data>
+  <data name="DefaultTwoParameters" xml:space="preserve">
+    <value>ברירת מחדל: שני פרמטרים</value>
+  </data>
+  <data name="DefineRole" xml:space="preserve">
+    <value>הגדרת תפקיד</value>
+  </data>
+  <data name="DefiningOperationalReport" xml:space="preserve">
+    <value>Defining Operational Report</value>
+  </data>
+  <data name="DelayBy" xml:space="preserve">
+    <value>DelayBy</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>מחק</value>
+  </data>
+  <data name="DeleteCandidate" xml:space="preserve">
+    <value>Delete candidate</value>
+  </data>
+  <data name="DeleteChapter" xml:space="preserve">
+    <value>מחק פרק</value>
+  </data>
+  <data name="DeleteComment" xml:space="preserve">
+    <value>Delete Comment</value>
+  </data>
+  <data name="DeletedNotification" xml:space="preserve">
+    <value>Deletion completed successfully!</value>
+  </data>
+  <data name="DeleteExam" xml:space="preserve">
+    <value>Delete Exam</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>מחק פריט</value>
+  </data>
+  <data name="DeleteLinkedConstitution" xml:space="preserve">
+    <value>החוקה שאתה מנסה למחוק מקושרת לאינדקס, האם למחוק בכל זאת?</value>
+  </data>
+  <data name="DeleteLinkedIndex" xml:space="preserve">
+    <value>האינדקס שאתה מנסה למחוק מקושר לחוקה, האם למחוק בכל זאת?</value>
+  </data>
+  <data name="DeleteWasNotSuccessful" xml:space="preserve">
+    <value>Delete was not successful</value>
+  </data>
+  <data name="Deleting" xml:space="preserve">
+    <value>מחיקה</value>
+  </data>
+  <data name="DeletingSortingDayWasNotSuccessful" xml:space="preserve">
+    <value>Deleting a sorting day was not successful</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>תאור</value>
+  </data>
+  <data name="DesignatedProgram" xml:space="preserve">
+    <value>Designated program</value>
+  </data>
+  <data name="DestintionOffice" xml:space="preserve">
+    <value>Destintion Office</value>
+  </data>
+  <data name="DestintionOfficeRequestShashal" xml:space="preserve">
+    <value>Destintion Office Request Shashal</value>
+  </data>
+  <data name="DetailsOfCandidate" xml:space="preserve">
+    <value>פרטי מועמד</value>
+  </data>
+  <data name="DetailsOfPsychotechnicalResidence" xml:space="preserve">
+    <value>Details Of Psychotechnical Residence</value>
+  </data>
+  <data name="DetailsOfPsychotechnicalResidenceText" xml:space="preserve">
+    <value>Details Of Psychotechnical Residence</value>
+  </data>
+  <data name="Different" xml:space="preserve">
+    <value>Different</value>
+  </data>
+  <data name="DifferentReasonEnterToSap" xml:space="preserve">
+    <value>Different Reason Enter To Sap</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>כיוון</value>
+  </data>
+  <data name="DirectorAndOrganization" xml:space="preserve">
+    <value>Director And Organization</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>הפוך ללא פעיל</value>
+  </data>
+  <data name="DisableChapter" xml:space="preserve">
+    <value>Disable Chapter</value>
+  </data>
+  <data name="DisableField" xml:space="preserve">
+    <value>Disable Field</value>
+  </data>
+  <data name="DisableItem" xml:space="preserve">
+    <value>Disable Item</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>הצג</value>
+  </data>
+  <data name="DisplayArrowInstructions" xml:space="preserve">
+    <value>הצג חץ הוראות</value>
+  </data>
+  <data name="DisplayArrowPreviousNext" xml:space="preserve">
+    <value>להציג חץ אחורה וקדימה</value>
+  </data>
+  <data name="DisplayArrowPreviousOnly" xml:space="preserve">
+    <value>להציג רק חץ אחורה</value>
+  </data>
+  <data name="DisplayBoxNavigation" xml:space="preserve">
+    <value>הצג תיבת ניווט</value>
+  </data>
+  <data name="DisplayIndicetsErased" xml:space="preserve">
+    <value>הצג מדדים מחוקים</value>
+  </data>
+  <data name="DisplayNotConnectedIndices" xml:space="preserve">
+    <value>הצג מדדים לא מקושרים</value>
+  </data>
+  <data name="DivertedFromDistressQuestionnaire" xml:space="preserve">
+    <value>Diverted From Distress Questionnaire</value>
+  </data>
+  <data name="DivertedFromDistressQuestionnaireSR" xml:space="preserve">
+    <value>Diverted From Distress Questionnaire SR</value>
+  </data>
+  <data name="DivertedFromSimpsomesInterview" xml:space="preserve">
+    <value>DivertedFromSimpsomesInterview</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="DoNotClaimDisabilities" xml:space="preserve">
+    <value>Do not claim disabilities</value>
+  </data>
+  <data name="DontSave" xml:space="preserve">
+    <value>Dont save</value>
+  </data>
+  <data name="DontSaveMessage" xml:space="preserve">
+    <value>לא בוצעה שמירה, כל השינויים יאבדו, האם להמשיך?</value>
+  </data>
+  <data name="DownBorder" xml:space="preserve">
+    <value>גבול תחתון</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>טיוטא</value>
+  </data>
+  <data name="DrivingLicense" xml:space="preserve">
+    <value>רשיון נהיגה</value>
+  </data>
+  <data name="DruzeProgram" xml:space="preserve">
+    <value>מסלול פ. היל"ה / תכנית לדרוזים</value>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>שכפל</value>
+  </data>
+  <data name="DuplicateChapter" xml:space="preserve">
+    <value>שכפל פרק</value>
+  </data>
+  <data name="DuplicateItem" xml:space="preserve">
+    <value>שכפל פריט</value>
+  </data>
+  <data name="DuplicateTest" xml:space="preserve">
+    <value>שכפל מבחן</value>
+  </data>
+  <data name="DuplicateTestDescription" xml:space="preserve">
+    <value>במסך זה ניתן לשכפל {0} קיים, נא לשנות את שם המבחן.</value>
+  </data>
+  <data name="DuplicateTestScreen" xml:space="preserve">
+    <value>שכפול {0}</value>
+  </data>
+  <data name="DuplicateUserName" xml:space="preserve">
+    <value>שם משתמש זה כבר בשימוש. בחר בבקשה שם שונה</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Dyslexia" xml:space="preserve">
+    <value>Dyslexia</value>
+  </data>
+  <data name="D_Class" xml:space="preserve">
+    <value>ד</value>
+  </data>
+  <data name="EconomicHardship" xml:space="preserve">
+    <value>Economic Hardship</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>ערוך</value>
+  </data>
+  <data name="EditActiveFormMessageTitle" xml:space="preserve">
+    <value>Warning - Edit active form</value>
+  </data>
+  <data name="EditActiveTestMessage" xml:space="preserve">
+    <value>בלחיצה על אישור, אתה משנה מבחן פעיל ושביר להניח שנבחנו בו בעבר.\nהתהליך יכול לשבש סטטיסטיקות של נבחנים קודמים.</value>
+  </data>
+  <data name="EditActiveTestMessageTitle" xml:space="preserve">
+    <value>Warning - Edit active test</value>
+  </data>
+  <data name="EditChapter" xml:space="preserve">
+    <value>ערוך פרק</value>
+  </data>
+  <data name="EditConstitution" xml:space="preserve">
+    <value>Edit constitution</value>
+  </data>
+  <data name="EditedAndApproved" xml:space="preserve">
+    <value>נערך ואושר</value>
+  </data>
+  <data name="EditedAndNotApproved" xml:space="preserve">
+    <value>נערך ולא אושר</value>
+  </data>
+  <data name="EditedAndWaitingStaffForApproval" xml:space="preserve">
+    <value>Edited And Waiting Staff For Approval</value>
+  </data>
+  <data name="EditForm" xml:space="preserve">
+    <value>עריכת טופס</value>
+    <comment>EditForm</comment>
+  </data>
+  <data name="EditIndex" xml:space="preserve">
+    <value>ערוך אינדקס</value>
+  </data>
+  <data name="Editing" xml:space="preserve">
+    <value>עריכה</value>
+  </data>
+  <data name="EditLink" xml:space="preserve">
+    <value>Edit link</value>
+  </data>
+  <data name="EditNorm" xml:space="preserve">
+    <value>הזן נורמה</value>
+  </data>
+  <data name="EditorName" xml:space="preserve">
+    <value>שם עורך</value>
+  </data>
+  <data name="EditTestDescription" xml:space="preserve">
+    <value>במסך זה ניתן לערוך {0} קיים ע"י שינוי הפרטים הבאים.</value>
+  </data>
+  <data name="EditTestScreen" xml:space="preserve">
+    <value>עריכת {0} קיים</value>
+  </data>
+  <data name="EducationAndSkills" xml:space="preserve">
+    <value>Education And Skills</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>דוא''ל</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>כתובת מייל</value>
+  </data>
+  <data name="EmailAddress2" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="EmailRegExValidatorErrorMessage" xml:space="preserve">
+    <value>כתובת הדוא"ל אינה חוקית</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="EmptyItemSaveNotification" xml:space="preserve">
+    <value>Can not save item without objects</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>תאריך סיום</value>
+  </data>
+  <data name="EndDay" xml:space="preserve">
+    <value>End Day</value>
+  </data>
+  <data name="EndOfDortingDaySuccessful" xml:space="preserve">
+    <value>End of sorting day successful</value>
+  </data>
+  <data name="EndOfTreatment" xml:space="preserve">
+    <value>End of treatment</value>
+  </data>
+  <data name="EndSortingDayWasUnsuccessful" xml:space="preserve">
+    <value>End of sorting day was unsuccessful</value>
+  </data>
+  <data name="EngineConstitution" xml:space="preserve">
+    <value>Engine constitution</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Enter Email</value>
+  </data>
+  <data name="EnterFirstName" xml:space="preserve">
+    <value>Enter First Name</value>
+  </data>
+  <data name="EnterIdNumber" xml:space="preserve">
+    <value>הזן מספר ת.ז</value>
+  </data>
+  <data name="EnterInformation" xml:space="preserve">
+    <value>הכנס מידע אודות השאלה</value>
+  </data>
+  <data name="EnterKode" xml:space="preserve">
+    <value>Enter Kode</value>
+  </data>
+  <data name="EnterLastName" xml:space="preserve">
+    <value>Enter Last Name</value>
+  </data>
+  <data name="EnterNameIndices" xml:space="preserve">
+    <value>הכנס שם למדד</value>
+  </data>
+  <data name="EnterPersonaleNumber" xml:space="preserve">
+    <value>Enter Personale Number</value>
+  </data>
+  <data name="EnterPersonleNumber" xml:space="preserve">
+    <value>Enter Personle Number</value>
+  </data>
+  <data name="EnterSortingDayName" xml:space="preserve">
+    <value>Enter Sorting Day Name</value>
+  </data>
+  <data name="EnterText" xml:space="preserve">
+    <value>Enter Text	</value>
+  </data>
+  <data name="Entities" xml:space="preserve">
+    <value>ישויות</value>
+  </data>
+  <data name="Entity" xml:space="preserve">
+    <value>Entity</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>שווה</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>שגיאה</value>
+  </data>
+  <data name="ErrorAddNewRadioNotification" xml:space="preserve">
+    <value>נא להזין ערך להוספה</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ErrorDragObject" xml:space="preserve">
+    <value>קיים אובייקט תשובה שלא מאפשר גרירה של אובייקט זה!</value>
+  </data>
+  <data name="ErrorMinItemNotification" xml:space="preserve">
+    <value>הכמות המינימלית של פריטים היא</value>
+  </data>
+  <data name="ErrorNotification" xml:space="preserve">
+    <value>הפעולה נכשלה</value>
+  </data>
+  <data name="ErrorSelectItemNotification" xml:space="preserve">
+    <value>לא נבחר פריט !</value>
+  </data>
+  <data name="EstimatedAttributesReport" xml:space="preserve">
+    <value>Estimated Attributes Report</value>
+  </data>
+  <data name="EstimatedExamArrayDuration" xml:space="preserve">
+    <value>זמן מערך משוער</value>
+  </data>
+  <data name="EvaluateProspectsAndSuccess" xml:space="preserve">
+    <value>Evaluate prospects and success</value>
+  </data>
+  <data name="EvaluatingTheChancesOfSuccess" xml:space="preserve">
+    <value>Evaluating The Chances Of Success</value>
+  </data>
+  <data name="EventType" xml:space="preserve">
+    <value>EventType</value>
+  </data>
+  <data name="Exam" xml:space="preserve">
+    <value>מבחן</value>
+  </data>
+  <data name="ExamArray" xml:space="preserve">
+    <value>מערך אבחון</value>
+  </data>
+  <data name="ExamArrayController" xml:space="preserve">
+    <value>בנית מערך אבחון</value>
+  </data>
+  <data name="ExamArrayExams" xml:space="preserve">
+    <value>מערך אבחון מבחנים</value>
+  </data>
+  <data name="ExamArrayForms" xml:space="preserve">
+    <value>מערך אבחון טפסים</value>
+  </data>
+  <data name="ExamArrayList" xml:space="preserve">
+    <value>רשימת מערכי האיבחון</value>
+  </data>
+  <data name="ExamArrayName" xml:space="preserve">
+    <value>שם המערך</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ExamArrayPlaceHolder" xml:space="preserve">
+    <value>... הזן שם מערך אבחון</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="ExamArrayType" xml:space="preserve">
+    <value>סוג מערך אבחון</value>
+  </data>
+  <data name="ExamDate" xml:space="preserve">
+    <value>Exam date</value>
+  </data>
+  <data name="Examination" xml:space="preserve">
+    <value>Examination</value>
+  </data>
+  <data name="ExamLanguage" xml:space="preserve">
+    <value>שפת בחינה</value>
+  </data>
+  <data name="ExamName" xml:space="preserve">
+    <value>שם המבחן</value>
+  </data>
+  <data name="Exams" xml:space="preserve">
+    <value>Exams</value>
+  </data>
+  <data name="ExamScore" xml:space="preserve">
+    <value>ציון במבחן</value>
+  </data>
+  <data name="ExamsInArray" xml:space="preserve">
+    <value>מבחנים במערך</value>
+  </data>
+  <data name="ExemptionOfMen" xml:space="preserve">
+    <value>Exemption Of Men</value>
+  </data>
+  <data name="ExemptionOfRamah" xml:space="preserve">
+    <value>Exemption Of Ramah</value>
+  </data>
+  <data name="ExemptionOfWomen" xml:space="preserve">
+    <value>Exemption Of Women</value>
+  </data>
+  <data name="ExemptionOfZadah" xml:space="preserve">
+    <value>Exemption Of Zadah</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ExpectedAnswer" xml:space="preserve">
+    <value>תשובה פתוחה</value>
+  </data>
+  <data name="Experimental" xml:space="preserve">
+    <value>ניסיוני</value>
+  </data>
+  <data name="ExperimentalItem" xml:space="preserve">
+    <value>פריט נסיוני</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>סמן לייצוא</value>
+  </data>
+  <data name="ExportReport" xml:space="preserve">
+    <value>Export Report</value>
+  </data>
+  <data name="ExportSelectedExamArrays" xml:space="preserve">
+    <value>ייצא מערכים מסומנים</value>
+  </data>
+  <data name="ExportTest" xml:space="preserve">
+    <value>יצוא מבחנים</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>הארכה</value>
+  </data>
+  <data name="External" xml:space="preserve">
+    <value>External</value>
+  </data>
+  <data name="ExternalDocument" xml:space="preserve">
+    <value>מסמך חיצוני</value>
+  </data>
+  <data name="ExtraTime" xml:space="preserve">
+    <value>תוספת זמן</value>
+  </data>
+  <data name="ExtraTime_LL" xml:space="preserve">
+    <value>תוספת זמן</value>
+  </data>
+  <data name="E_Class" xml:space="preserve">
+    <value>ה</value>
+  </data>
+  <data name="Family" xml:space="preserve">
+    <value>Family</value>
+  </data>
+  <data name="FamilyStatus" xml:space="preserve">
+    <value>Family Status</value>
+  </data>
+  <data name="Father" xml:space="preserve">
+    <value>Father</value>
+  </data>
+  <data name="FatherAevaDead" xml:space="preserve">
+    <value>הרוג איבה אב</value>
+  </data>
+  <data name="FatherBirthdayDate" xml:space="preserve">
+    <value>תאריך לידה אב </value>
+  </data>
+  <data name="FatherChildrenBeforeInteriorMinistry" xml:space="preserve">
+    <value>Father Children Before InteriorMinistry</value>
+  </data>
+  <data name="FatherChildrenBeforeInteriorMinistry1" xml:space="preserve">
+    <value>ילדים לאב לפני מ.פנים</value>
+  </data>
+  <data name="FatherChildrenMlshab" xml:space="preserve">
+    <value>Father Children Mlshab</value>
+  </data>
+  <data name="FatherCloseProblem" xml:space="preserve">
+    <value>Father Close Problem</value>
+  </data>
+  <data name="FatherCountryOfBirth" xml:space="preserve">
+    <value>Father Country Of Birth</value>
+  </data>
+  <data name="FatherDeathDate" xml:space="preserve">
+    <value>תאריך פטירה אב</value>
+  </data>
+  <data name="FatherFirstName" xml:space="preserve">
+    <value>שם פרטי אב</value>
+  </data>
+  <data name="FatherId" xml:space="preserve">
+    <value>ת"ז אב</value>
+  </data>
+  <data name="FatherLastName" xml:space="preserve">
+    <value>שם משפחה אב</value>
+  </data>
+  <data name="FatherSecurityDead" xml:space="preserve">
+    <value>הרוג ש.בטחוני אב</value>
+  </data>
+  <data name="FatherStatus" xml:space="preserve">
+    <value>סטטוב אב</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>נקבה</value>
+  </data>
+  <data name="FemaleText" xml:space="preserve">
+    <value>טקסט נקבי</value>
+  </data>
+  <data name="Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="FieldDays" xml:space="preserve">
+    <value>Field Days</value>
+  </data>
+  <data name="FiledDiagnostics" xml:space="preserve">
+    <value>Filed Diagnostics</value>
+  </data>
+  <data name="FilterAnswer" xml:space="preserve">
+    <value>Filter Answer</value>
+  </data>
+  <data name="FilterByExamArray" xml:space="preserve">
+    <value>סנן לפי מערך</value>
+    <comment>Filter By Exam Array</comment>
+  </data>
+  <data name="FilterByExamArrayName" xml:space="preserve">
+    <value>סנן לפי שם מערך:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="FilterClear" xml:space="preserve">
+    <value>נקה בחירה</value>
+  </data>
+  <data name="FilterTestText" xml:space="preserve">
+    <value>בחירת מבחן מקור.</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="FinishArray" xml:space="preserve">
+    <value>Finish array</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>שם פרטי</value>
+  </data>
+  <data name="fit" xml:space="preserve">
+    <value>fit</value>
+  </data>
+  <data name="FlexibilityResponseTime" xml:space="preserve">
+    <value>Flexibility Response Time 1</value>
+  </data>
+  <data name="FlexibilityThinking" xml:space="preserve">
+    <value>Flexibility Response Time 2</value>
+  </data>
+  <data name="forced" xml:space="preserve">
+    <value>forced</value>
+  </data>
+  <data name="ForHoraotProperties" xml:space="preserve">
+    <value>עבור למאפייני פתיח</value>
+  </data>
+  <data name="Form" xml:space="preserve">
+    <value>טופס</value>
+  </data>
+  <data name="Formal" xml:space="preserve">
+    <value>Formal</value>
+  </data>
+  <data name="FormArrays" xml:space="preserve">
+    <value>Form arrays</value>
+  </data>
+  <data name="FormatIsInvalid" xml:space="preserve">
+    <value>Format Is Invalid</value>
+  </data>
+  <data name="FormName" xml:space="preserve">
+    <value>שם טופס</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>טפסים</value>
+  </data>
+  <data name="Formula" xml:space="preserve">
+    <value>Formula</value>
+  </data>
+  <data name="FormulaCaptains" xml:space="preserve">
+    <value>Formula Captains</value>
+  </data>
+  <data name="FormulaGadnaCaptains" xml:space="preserve">
+    <value>FormulaGadnaCaptains</value>
+  </data>
+  <data name="FormulaGadnaSubmarines" xml:space="preserve">
+    <value>FormulaGadnaSubmarines</value>
+  </data>
+  <data name="FormulaOfCaptains" xml:space="preserve">
+    <value>The formula of captains</value>
+  </data>
+  <data name="FormulaProperties" xml:space="preserve">
+    <value>מאפייני חוקיות טקסט</value>
+  </data>
+  <data name="Formula_LL" xml:space="preserve">
+    <value>נוסח ל.ל</value>
+  </data>
+  <data name="ForTestProperties" xml:space="preserve">
+    <value>עבור למאפייני מבחן</value>
+  </data>
+  <data name="ForwardArrowOnly" xml:space="preserve">
+    <value>Forward Arrow Only</value>
+  </data>
+  <data name="FrameBehavior" xml:space="preserve">
+    <value>Frame Behavior</value>
+  </data>
+  <data name="FrameName" xml:space="preserve">
+    <value>שם מסגרת</value>
+  </data>
+  <data name="Frames" xml:space="preserve">
+    <value>Frames</value>
+  </data>
+  <data name="FrameworksAndMatriculations" xml:space="preserve">
+    <value>Frameworks And Matriculations</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="Friendly" xml:space="preserve">
+    <value>Friendly</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>From date</value>
+  </data>
+  <data name="Full" xml:space="preserve">
+    <value>Full</value>
+  </data>
+  <data name="FullMaturity" xml:space="preserve">
+    <value>FullMaturity</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>שם מלא</value>
+  </data>
+  <data name="FullNameUserEdit" xml:space="preserve">
+    <value>Full Name User Edit</value>
+    <comment>Full Name User Edit</comment>
+  </data>
+  <data name="FullPersonalDataReport" xml:space="preserve">
+    <value>Full Personal Data Report</value>
+  </data>
+  <data name="F_Class" xml:space="preserve">
+    <value>ן</value>
+  </data>
+  <data name="GadnaBoys" xml:space="preserve">
+    <value>Gadna Boys</value>
+  </data>
+  <data name="GadnaDiving" xml:space="preserve">
+    <value>GadnaDiving</value>
+  </data>
+  <data name="GadnaGirls" xml:space="preserve">
+    <value>GadnaGirls</value>
+  </data>
+  <data name="GadnaSubmarinesFormula" xml:space="preserve">
+    <value>The formula of Gedana submarines</value>
+  </data>
+  <data name="GadnaSubmarinesSorting" xml:space="preserve">
+    <value>Gadna Submarines Sorting</value>
+  </data>
+  <data name="GedanaCaptains" xml:space="preserve">
+    <value>Gedana Captains</value>
+  </data>
+  <data name="Geleman" xml:space="preserve">
+    <value>Geleman</value>
+  </data>
+  <data name="Gelemaz" xml:space="preserve">
+    <value>Gelemaz</value>
+  </data>
+  <data name="Gelemhk" xml:space="preserve">
+    <value>Gelemhk</value>
+  </data>
+  <data name="Gelemhm" xml:space="preserve">
+    <value>Gelemhm</value>
+  </data>
+  <data name="Gelemhz" xml:space="preserve">
+    <value>Gelemhz</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>מגדר</value>
+  </data>
+  <data name="GenderText" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>כללי</value>
+  </data>
+  <data name="GeneralCommandoSorting" xml:space="preserve">
+    <value>General Commando Sorting</value>
+  </data>
+  <data name="GeneralDataNavy" xml:space="preserve">
+    <value>General Data Navy</value>
+  </data>
+  <data name="GeneralDataPsicotacni" xml:space="preserve">
+    <value>General Data Psicotacni</value>
+  </data>
+  <data name="GeneralGadnaCaptains" xml:space="preserve">
+    <value>General Gadna Captains</value>
+  </data>
+  <data name="GeneralInformationSea" xml:space="preserve">
+    <value>General Information Sea</value>
+  </data>
+  <data name="GeneralMitav" xml:space="preserve">
+    <value>General Mitav</value>
+  </data>
+  <data name="GeneralNavy" xml:space="preserve">
+    <value>General data Navy</value>
+  </data>
+  <data name="GeneralOfficerSorting" xml:space="preserve">
+    <value>GeneralOfficerSorting</value>
+  </data>
+  <data name="GeneralPersonalInformation" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="GeneralProperties" xml:space="preserve">
+    <value>מאפיינים כללים</value>
+  </data>
+  <data name="GeneralPsychotics" xml:space="preserve">
+    <value>General Psychotics</value>
+  </data>
+  <data name="GeneratesAReport" xml:space="preserve">
+    <value>מפיק דוח</value>
+  </data>
+  <data name="GenericrReports" xml:space="preserve">
+    <value>Generic Reports</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>ציון רציה חברתית</value>
+  </data>
+  <data name="GoToArray" xml:space="preserve">
+    <value>עבור למערך אבחון</value>
+  </data>
+  <data name="GoToExam" xml:space="preserve">
+    <value>עבור למבחן</value>
+  </data>
+  <data name="GoToForm" xml:space="preserve">
+    <value>Go to form</value>
+  </data>
+  <data name="GoToQuestion" xml:space="preserve">
+    <value>Go To Question</value>
+  </data>
+  <data name="GradeA_r" xml:space="preserve">
+    <value>Grade A.r</value>
+  </data>
+  <data name="GradeRatam" xml:space="preserve">
+    <value>Grade Ratam</value>
+  </data>
+  <data name="GradeRead" xml:space="preserve">
+    <value>Grade Read </value>
+  </data>
+  <data name="GradeReading" xml:space="preserve">
+    <value>ציון קריאה</value>
+  </data>
+  <data name="GradesOfCenturyDay" xml:space="preserve">
+    <value>Grades Of Century Day</value>
+  </data>
+  <data name="GradeSpeek" xml:space="preserve">
+    <value>Grade Speek</value>
+  </data>
+  <data name="GradeSR" xml:space="preserve">
+    <value>Grade SR</value>
+  </data>
+  <data name="GradeWriting" xml:space="preserve">
+    <value>Grade Writing</value>
+  </data>
+  <data name="GreaterThanOrEqual" xml:space="preserve">
+    <value>גדול שווה</value>
+  </data>
+  <data name="G_Class" xml:space="preserve">
+    <value>ז</value>
+  </data>
+  <data name="HashanPsicotchni" xml:space="preserve">
+    <value>Hashan Psicotchni</value>
+  </data>
+  <data name="HashanPsicotcni" xml:space="preserve">
+    <value>Hashan Psicotcni</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>כותרת</value>
+  </data>
+  <data name="HeadOfEvaluationSection" xml:space="preserve">
+    <value>Head of Evaluation Section</value>
+  </data>
+  <data name="HebrewFromDimona" xml:space="preserve">
+    <value>Hebrew From Dimona</value>
+  </data>
+  <data name="HebrewScore" xml:space="preserve">
+    <value>Hebrew Score</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>גובה</value>
+  </data>
+  <data name="HelperConstitution" xml:space="preserve">
+    <value>Helper constitution</value>
+  </data>
+  <data name="HistoryTable" xml:space="preserve">
+    <value>History Table</value>
+  </data>
+  <data name="HofnaLbaharanMpsicotcni" xml:space="preserve">
+    <value>Hofna Lbaharan Mpsicotcni</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeController" xml:space="preserve">
+    <value>דף הבית</value>
+  </data>
+  <data name="HomePhone" xml:space="preserve">
+    <value>Home Phone</value>
+  </data>
+  <data name="Horaot" xml:space="preserve">
+    <value>פתיח</value>
+  </data>
+  <data name="HoraotName" xml:space="preserve">
+    <value>שם פתיח</value>
+  </data>
+  <data name="HoraotProperties" xml:space="preserve">
+    <value>מאפייני פתיח</value>
+  </data>
+  <data name="HoraotPropertiesDescription" xml:space="preserve">
+    <value>במסך זה ניתן לבנות את מאפייני הפתיח הבאים ע"י הזנת הפרטים.</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="HoraotTestLink" xml:space="preserve">
+    <value>קישור מבחן לפתיח</value>
+  </data>
+  <data name="Horizontal" xml:space="preserve">
+    <value>אופקי</value>
+  </data>
+  <data name="HorizontalPosition" xml:space="preserve">
+    <value>מיקום אופקי</value>
+  </data>
+  <data name="H_Class" xml:space="preserve">
+    <value>ח</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>זיהוי</value>
+  </data>
+  <data name="IdCard" xml:space="preserve">
+    <value>תעודת זהות</value>
+  </data>
+  <data name="IDFClassificationGrades" xml:space="preserve">
+    <value>IDF Classification Grades</value>
+  </data>
+  <data name="IdNumber" xml:space="preserve">
+    <value>מספר ת.ז</value>
+  </data>
+  <data name="IdValue" xml:space="preserve">
+    <value>ת.ז</value>
+  </data>
+  <data name="IfExistsIndictionImportent" xml:space="preserve">
+    <value>If Exists Indiction Importent</value>
+  </data>
+  <data name="IfYouWantDeleteExistingBagrut" xml:space="preserve">
+    <value>If you want to delete existing matriculation exams?</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>תמונה</value>
+  </data>
+  <data name="ImproperPlacementCommittee" xml:space="preserve">
+    <value>Improper placement committee</value>
+  </data>
+  <data name="IncludingNorms" xml:space="preserve">
+    <value>כולל נורמות</value>
+  </data>
+  <data name="IncludingScales" xml:space="preserve">
+    <value>Including Scales</value>
+  </data>
+  <data name="IncorrectDiagnosis" xml:space="preserve">
+    <value>Incorrect diagnosis</value>
+  </data>
+  <data name="Independence" xml:space="preserve">
+    <value>Independence</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="IndexCategory" xml:space="preserve">
+    <value>Index Category</value>
+  </data>
+  <data name="IndexName" xml:space="preserve">
+    <value>Index Name</value>
+  </data>
+  <data name="IndicateDiscconectedToTestSuccessfullyNotification" xml:space="preserve">
+    <value>המדד נותק מהמבחן בהצלחה</value>
+  </data>
+  <data name="IndicateLinkToTestSuccessfullyNotification" xml:space="preserve">
+    <value>המדד קושר למבחן בהצלחה</value>
+  </data>
+  <data name="Indication" xml:space="preserve">
+    <value>Indication</value>
+  </data>
+  <data name="Indices" xml:space="preserve">
+    <value>מדדים</value>
+  </data>
+  <data name="IndicesId" xml:space="preserve">
+    <value>מזהה מדד</value>
+  </data>
+  <data name="IndicesLinkedToTest" xml:space="preserve">
+    <value>מדדים מקושרים למבחן</value>
+  </data>
+  <data name="IndicesList" xml:space="preserve">
+    <value>רשימת מדדים</value>
+  </data>
+  <data name="IndicesName" xml:space="preserve">
+    <value>שם מדד</value>
+  </data>
+  <data name="IndicesProperties" xml:space="preserve">
+    <value>מאפייני מדד</value>
+  </data>
+  <data name="IndicesStatus" xml:space="preserve">
+    <value>סטטוס מדד</value>
+  </data>
+  <data name="InfoBtn" xml:space="preserve">
+    <value>Information button</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>מידע</value>
+  </data>
+  <data name="InformationProcessing" xml:space="preserve">
+    <value>Information Processing</value>
+  </data>
+  <data name="InformationTables" xml:space="preserve">
+    <value>טבלאות מערכת</value>
+  </data>
+  <data name="InhibitionsCorrectAnswersStandartScore" xml:space="preserve">
+    <value>Inhibitions Correct Answers Standart Score</value>
+  </data>
+  <data name="InitialBValue" xml:space="preserve">
+    <value>InitialBValue</value>
+  </data>
+  <data name="InlineHierarchy" xml:space="preserve">
+    <value>InlineHierarchy</value>
+  </data>
+  <data name="InquiriesOnAuthentication" xml:space="preserve">
+    <value>Inquiries On Authentication</value>
+  </data>
+  <data name="Inquiry" xml:space="preserve">
+    <value>Inquiry</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>הוספה</value>
+  </data>
+  <data name="Interview" xml:space="preserve">
+    <value>ראיון/טופס חכם</value>
+  </data>
+  <data name="InterviewDescription" xml:space="preserve">
+    <value>תיאור טופס</value>
+  </data>
+  <data name="InterviewForms" xml:space="preserve">
+    <value>Interview Forms</value>
+  </data>
+  <data name="InterviewReturn" xml:space="preserve">
+    <value>ראיון חוזר</value>
+  </data>
+  <data name="Interviews" xml:space="preserve">
+    <value>ראיונות</value>
+  </data>
+  <data name="InterviewStationStatus" xml:space="preserve">
+    <value>Interview Station Status</value>
+  </data>
+  <data name="InterviewType" xml:space="preserve">
+    <value>סוג טופס</value>
+  </data>
+  <data name="InTheAppealProcess" xml:space="preserve">
+    <value>In The Appeal Process</value>
+  </data>
+  <data name="InTheSpecialClass" xml:space="preserve">
+    <value>בביה"ס מיוחד ובוודאות לא טוען לוועדת השמה</value>
+  </data>
+  <data name="InTheTreatmentProcess" xml:space="preserve">
+    <value>In the treatment process</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>פסול</value>
+  </data>
+  <data name="Investigation" xml:space="preserve">
+    <value>בירורים</value>
+  </data>
+  <data name="InvestmentAndPerseverance" xml:space="preserve">
+    <value>Investment And Perseverance</value>
+  </data>
+  <data name="InvitationDate" xml:space="preserve">
+    <value>Invitation Date</value>
+  </data>
+  <data name="InvitationReasonId" xml:space="preserve">
+    <value>Invitation Reason </value>
+  </data>
+  <data name="InvitationStatusId" xml:space="preserve">
+    <value>Invitation Status</value>
+  </data>
+  <data name="IP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="IPExistsInThisOrganization" xml:space="preserve">
+    <value>IP Exists In This Organization</value>
+  </data>
+  <data name="IPSizeCantBeExceeded" xml:space="preserve">
+    <value>IP Size Cant Be Exceeded</value>
+  </data>
+  <data name="IRT" xml:space="preserve">
+    <value>IRT</value>
+  </data>
+  <data name="IsClassified" xml:space="preserve">
+    <value>Is Classified</value>
+  </data>
+  <data name="IsGrade" xml:space="preserve">
+    <value>מצויינן</value>
+  </data>
+  <data name="IsMaleOrFemaleForgotToChoose" xml:space="preserve">
+    <value>Is it male or female? Forgot to choose</value>
+  </data>
+  <data name="IsNotEntitledToAdjustments" xml:space="preserve">
+    <value>Is not entitled to adjustments</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>פריט</value>
+    <comment>Item</comment>
+  </data>
+  <data name="ItemNumber" xml:space="preserve">
+    <value>מספר פריט</value>
+  </data>
+  <data name="ItemProperties" xml:space="preserve">
+    <value>מאפייני פריט</value>
+  </data>
+  <data name="ItemResult" xml:space="preserve">
+    <value>תשובה לפריט</value>
+    <comment>Item Result</comment>
+  </data>
+  <data name="ItemsAnalysisReport" xml:space="preserve">
+    <value>Items Analysis Report</value>
+  </data>
+  <data name="ItemsEditing" xml:space="preserve">
+    <value>עריכת פריטים</value>
+  </data>
+  <data name="ItemsFromExistForm" xml:space="preserve">
+    <value>פריטים טפסים קיימים</value>
+  </data>
+  <data name="ItemsFromExistTest" xml:space="preserve">
+    <value>פריטים ממבחנים קיימים</value>
+  </data>
+  <data name="ItemsList" xml:space="preserve">
+    <value>רשימת פריטים</value>
+  </data>
+  <data name="ItemsProperties" xml:space="preserve">
+    <value>מאפייני פריטים</value>
+  </data>
+  <data name="ItemStructure" xml:space="preserve">
+    <value>מבנה פריט</value>
+  </data>
+  <data name="I_Class" xml:space="preserve">
+    <value>ט</value>
+  </data>
+  <data name="J_Class" xml:space="preserve">
+    <value>י</value>
+  </data>
+  <data name="Kaba" xml:space="preserve">
+    <value>Kaba</value>
+  </data>
+  <data name="KabaGroup" xml:space="preserve">
+    <value>Kaba Group</value>
+  </data>
+  <data name="Kahas" xml:space="preserve">
+    <value>קה"ס</value>
+  </data>
+  <data name="KodeKiosk" xml:space="preserve">
+    <value>קוד קיוסק</value>
+  </data>
+  <data name="KomandoSea" xml:space="preserve">
+    <value>Komando Sea</value>
+  </data>
+  <data name="K_Class" xml:space="preserve">
+    <value>יא</value>
+  </data>
+  <data name="LackOfCooperation" xml:space="preserve">
+    <value>Lack Of Cooperation</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>שפת הבחינה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="LanguageOfPreliminaryQuestionnaire" xml:space="preserve">
+    <value>שפת שאלון מקדים</value>
+  </data>
+  <data name="LastFactorEditingScreen" xml:space="preserve">
+    <value>גורם אחרון לעריכת המסך</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>שם משפחה</value>
+  </data>
+  <data name="LastUpdateDate" xml:space="preserve">
+    <value>תאריך עדכון אחרון</value>
+  </data>
+  <data name="lblActionType" xml:space="preserve">
+    <value>סוג פעולה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblActive" xml:space="preserve">
+    <value>פעיל:</value>
+  </data>
+  <data name="lblAdditionalName" xml:space="preserve">
+    <value>שם נוסף:</value>
+  </data>
+  <data name="lblAdditionalOrganizationsPermission" xml:space="preserve">
+    <value>הרשאת לארגונים נוספים:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblAge" xml:space="preserve">
+    <value>גיל:</value>
+  </data>
+  <data name="lblBirthCountry" xml:space="preserve">
+    <value>ארץ לידה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblCandidateAddress" xml:space="preserve">
+    <value>כתובת הנבדק/ת:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblCandidateDetailsPageTitle" xml:space="preserve">
+    <value>כרטיס מועמד</value>
+  </data>
+  <data name="lblCandidateZip" xml:space="preserve">
+    <value>מיקוד:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblCandTypeId" xml:space="preserve">
+    <value>סוג זיהוי:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblCity" xml:space="preserve">
+    <value>ישוב:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblClassified" xml:space="preserve">
+    <value>מסווג:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblCondition" xml:space="preserve">
+    <value>תנאי:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblConfirmPassword" xml:space="preserve">
+    <value>וידוא סיסמא:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblDateOfBirth" xml:space="preserve">
+    <value>תאריך לידה:</value>
+  </data>
+  <data name="lblDescription" xml:space="preserve">
+    <value>תאור:</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>דוא"ל:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblExamArrayRolesPermission" xml:space="preserve">
+    <value>הרשאות תפקידים למערך:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblFirstName" xml:space="preserve">
+    <value>שם פרטי:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblID" xml:space="preserve">
+    <value>זיהוי:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblLastName" xml:space="preserve">
+    <value>שם משפחה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblLearningDisability" xml:space="preserve">
+    <value>בעל לקות למידה?</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblLearningDisabilityDesc" xml:space="preserve">
+    <value>פרטי לקות למידה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblLinkAccountSettings" xml:space="preserve">
+    <value>לצורך שינוי הגדרות החשבון שלך יש ללחוץ על הקישור הבא:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblLogo" xml:space="preserve">
+    <value>סמל:</value>
+  </data>
+  <data name="lblMainSettingsTitle" xml:space="preserve">
+    <value>הגדרות ניהול מערכת</value>
+  </data>
+  <data name="lblMobile" xml:space="preserve">
+    <value>נייד:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblMotherTongue" xml:space="preserve">
+    <value>שפת אם:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblName" xml:space="preserve">
+    <value>שם:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblOnlyChild" xml:space="preserve">
+    <value>בן יחיד:</value>
+  </data>
+  <data name="lblOrganization" xml:space="preserve">
+    <value>ארגון:</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>סיסמא:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblPersonalNumber" xml:space="preserve">
+    <value>מספר אישי:</value>
+  </data>
+  <data name="lblPhone" xml:space="preserve">
+    <value>טלפון:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblRank" xml:space="preserve">
+    <value>דרגה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblRegion" xml:space="preserve">
+    <value>אזור גאוגרפי:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblResidenceCountry" xml:space="preserve">
+    <value>ארץ מגורים:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblRole" xml:space="preserve">
+    <value>תפקיד:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSearchCaption" xml:space="preserve">
+    <value>סנן לפי שם מערך:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSelectExamArray" xml:space="preserve">
+    <value>בחר מערך אבחון:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSelectRole" xml:space="preserve">
+    <value>בחר תפקיד:</value>
+  </data>
+  <data name="lblSelectSite" xml:space="preserve">
+    <value>בחר אתר:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSelEntity" xml:space="preserve">
+    <value>בחר ישות:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSelExam" xml:space="preserve">
+    <value>בחר מבחן:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSelQNumber" xml:space="preserve">
+    <value>בחר מספר שאלה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSex" xml:space="preserve">
+    <value>מין:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSite" xml:space="preserve">
+    <value>אתר:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblSource" xml:space="preserve">
+    <value> מקור:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblUnit" xml:space="preserve">
+    <value>יחידה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblUserDetailsPageTitle" xml:space="preserve">
+    <value>פרטי משתמש</value>
+  </data>
+  <data name="lblUserName" xml:space="preserve">
+    <value>שם משתמש:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblUserType" xml:space="preserve">
+    <value>סוג משתמש:</value>
+  </data>
+  <data name="lblValue" xml:space="preserve">
+    <value>ערך:</value>
+  </data>
+  <data name="lblWeight" xml:space="preserve">
+    <value>משקל:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblYearOfBirth" xml:space="preserve">
+    <value>שנת לידה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="lblYearOfImmigration" xml:space="preserve">
+    <value>שנת עליה:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Leadership" xml:space="preserve">
+    <value>Leadership</value>
+  </data>
+  <data name="LeadershipBoys" xml:space="preserve">
+    <value>Leadership Boys</value>
+  </data>
+  <data name="LeadershipGirls" xml:space="preserve">
+    <value>Leadership Girls</value>
+  </data>
+  <data name="LeadershipGirls1" xml:space="preserve">
+    <value>קצונה בנות</value>
+  </data>
+  <data name="LearningDisabilitiesAndComputerized" xml:space="preserve">
+    <value>Learning Disabilities And Computerized</value>
+  </data>
+  <data name="LearningDisabilityPercentage" xml:space="preserve">
+    <value>Learning Disability Percentage</value>
+  </data>
+  <data name="LearningDisabilityStatusId" xml:space="preserve">
+    <value>LearningDisabilityStatusId</value>
+  </data>
+  <data name="LeftPoint" xml:space="preserve">
+    <value>נקודה שמאלית ביותר</value>
+  </data>
+  <data name="LessThanOrEqual" xml:space="preserve">
+    <value>קטן שווה</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>רמה</value>
+  </data>
+  <data name="Linked" xml:space="preserve">
+    <value>מקושר</value>
+  </data>
+  <data name="LinkedConstitutionAndIndices" xml:space="preserve">
+    <value>Linked constitution and indices</value>
+  </data>
+  <data name="LinkedReport" xml:space="preserve">
+    <value>דוח מקושר</value>
+  </data>
+  <data name="LinkedReportName" xml:space="preserve">
+    <value>Report Button Name</value>
+  </data>
+  <data name="LinkToIndex" xml:space="preserve">
+    <value>Link To Index</value>
+  </data>
+  <data name="ListsortedLinkedIndices" xml:space="preserve">
+    <value>רשימת כלי מיון מקושרים למדד</value>
+  </data>
+  <data name="Literal" xml:space="preserve">
+    <value>Literal</value>
+  </data>
+  <data name="lnkChangePassword" xml:space="preserve">
+    <value>שינוי סיסמא</value>
+  </data>
+  <data name="LoadingContradictionDateOfDeathOrdered" xml:space="preserve">
+    <value>טוען סתירה תאריך פטירה הורה</value>
+  </data>
+  <data name="LoadingDiagnostics" xml:space="preserve">
+    <value>Loading Diagnostics</value>
+  </data>
+  <data name="LoadingMoreThanOneOption" xml:space="preserve">
+    <value>Loading more than one option</value>
+  </data>
+  <data name="LoadingParentContradiction" xml:space="preserve">
+    <value>טוען סתירה הורים</value>
+  </data>
+  <data name="LoadingPrescriptionAttentionDiagnosis" xml:space="preserve">
+    <value>Loading Prescription / Attention Diagnosis</value>
+  </data>
+  <data name="LoadingToDisconnect" xml:space="preserve">
+    <value>Loading To Disconnect</value>
+  </data>
+  <data name="LoadingTrend" xml:space="preserve">
+    <value>טוען מגמה</value>
+  </data>
+  <data name="LocatorBoys" xml:space="preserve">
+    <value>Locator Boys</value>
+  </data>
+  <data name="LocatorGirls" xml:space="preserve">
+    <value>Locator Girls</value>
+  </data>
+  <data name="LocatorSea" xml:space="preserve">
+    <value>Locator Sea</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>כניסת משתמש</value>
+  </data>
+  <data name="LogInCaption" xml:space="preserve">
+    <value>כניסה למערכת</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>סמל</value>
+  </data>
+  <data name="LowTraining" xml:space="preserve">
+    <value>LowTraining</value>
+  </data>
+  <data name="L_Class" xml:space="preserve">
+    <value>יב</value>
+  </data>
+  <data name="L_L" xml:space="preserve">
+    <value>L_L</value>
+  </data>
+  <data name="Mailbox" xml:space="preserve">
+    <value>Mailbox</value>
+  </data>
+  <data name="MailCell" xml:space="preserve">
+    <value>שדה דואר</value>
+  </data>
+  <data name="MailSettlement" xml:space="preserve">
+    <value>כתובת דואר ישוב</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>זכר</value>
+  </data>
+  <data name="MaleText" xml:space="preserve">
+    <value>טקסט זכרי</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Management and control</value>
+  </data>
+  <data name="ManagementFunctions" xml:space="preserve">
+    <value>Management Functions</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>חבר הנהלה</value>
+  </data>
+  <data name="ManuallyCheckFromCandidateCard" xml:space="preserve">
+    <value>Manually check from candidate card</value>
+  </data>
+  <data name="MatchesInterviewBeforeValidation" xml:space="preserve">
+    <value>Type Required PtorInterview</value>
+  </data>
+  <data name="MatchesTestsBeforeValidation" xml:space="preserve">
+    <value>מתאים מבחנים לפני אימות</value>
+  </data>
+  <data name="matriculation" xml:space="preserve">
+    <value>matriculation</value>
+  </data>
+  <data name="MatriculationDisclaimer" xml:space="preserve">
+    <value>Matriculation Disclaimer</value>
+  </data>
+  <data name="MatriculationInstitution" xml:space="preserve">
+    <value>MatriculationInstitution</value>
+  </data>
+  <data name="Maturity" xml:space="preserve">
+    <value>Maturity</value>
+  </data>
+  <data name="MaturityFeild" xml:space="preserve">
+    <value>MaturityFeild</value>
+  </data>
+  <data name="MaximalBDelta" xml:space="preserve">
+    <value>MaximalBDelta</value>
+  </data>
+  <data name="MaximalItems" xml:space="preserve">
+    <value>מקסימום פריטים</value>
+  </data>
+  <data name="MaximumCharacters" xml:space="preserve">
+    <value>Maximum characters</value>
+  </data>
+  <data name="MaxObjectNotification" xml:space="preserve">
+    <value>לא ניתן להוסיף יותר מ-9 פריטים מהסוג הזה.</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="MaxSE" xml:space="preserve">
+    <value>MaxSE</value>
+  </data>
+  <data name="Mazap" xml:space="preserve">
+    <value>Masap</value>
+  </data>
+  <data name="Mean" xml:space="preserve">
+    <value>ממוצע</value>
+  </data>
+  <data name="MedicalAccommodationForCaptains" xml:space="preserve">
+    <value>Medical Accommodation For Captains</value>
+  </data>
+  <data name="MedicalMatchCommando" xml:space="preserve">
+    <value>Medical Match Commando</value>
+  </data>
+  <data name="MedicalMatchSubmarines" xml:space="preserve">
+    <value>Medical match submarines</value>
+  </data>
+  <data name="MedicalProblemsOfOneMemberFamily" xml:space="preserve">
+    <value>Medical Problems Of One Member Family</value>
+  </data>
+  <data name="MedicalService" xml:space="preserve">
+    <value>Medical service</value>
+  </data>
+  <data name="MedicalVolunteer" xml:space="preserve">
+    <value>Medical-Volunteer</value>
+  </data>
+  <data name="MedicalVolunteerApplicationStatus" xml:space="preserve">
+    <value>סטטוס בקשת התנדבות  - רפואי</value>
+  </data>
+  <data name="MenatevInformationResource" xml:space="preserve">
+    <value>פרטי מנתב</value>
+  </data>
+  <data name="MessageWhenTestIsStopped" xml:space="preserve">
+    <value>הודעה בזמן נטישת מבחן</value>
+  </data>
+  <data name="Military" xml:space="preserve">
+    <value>Military</value>
+  </data>
+  <data name="MinimalItems" xml:space="preserve">
+    <value>מינימום פריטים</value>
+  </data>
+  <data name="MinimumCharacters" xml:space="preserve">
+    <value>Minimum characters</value>
+  </data>
+  <data name="MinistryOfEducationFrameworks" xml:space="preserve">
+    <value>Ministry Of Education Frameworks</value>
+  </data>
+  <data name="MInNotification" xml:space="preserve">
+    <value>אינך יכול להזין ערך מתחת לערך המינימאלי</value>
+  </data>
+  <data name="MobilePhone" xml:space="preserve">
+    <value>Mobile Phone</value>
+  </data>
+  <data name="ModelType" xml:space="preserve">
+    <value>סוג מודל</value>
+  </data>
+  <data name="MomAddress" xml:space="preserve">
+    <value>Mom Address</value>
+  </data>
+  <data name="MomAddressApartment" xml:space="preserve">
+    <value>כתובת דירה-אם</value>
+  </data>
+  <data name="MomAddressHome" xml:space="preserve">
+    <value>כתובת בית-אם</value>
+  </data>
+  <data name="MomAddressSettlement" xml:space="preserve">
+    <value>כתובת ישוב-אם </value>
+  </data>
+  <data name="MomAddressStreet" xml:space="preserve">
+    <value>כתובת רחוב-אם</value>
+  </data>
+  <data name="MomPhoneNumber" xml:space="preserve">
+    <value>נייד אם</value>
+  </data>
+  <data name="Mother" xml:space="preserve">
+    <value>Mother</value>
+  </data>
+  <data name="MotherAevaDead" xml:space="preserve">
+    <value>הרוג איבה אם</value>
+  </data>
+  <data name="MotherBirthdayDate" xml:space="preserve">
+    <value>תאריך לידה אם </value>
+  </data>
+  <data name="MotherChildrenBeforeInteriorMinistry" xml:space="preserve">
+    <value>ילדים לאם לפני מ.פנים</value>
+  </data>
+  <data name="MotherChildrenMlshab" xml:space="preserve">
+    <value>ילדים לאם לפי מלש"ב</value>
+  </data>
+  <data name="MotherCloseProblem" xml:space="preserve">
+    <value>בעיית קרוב אם מוצהרת</value>
+  </data>
+  <data name="MotherCountryOfBirth" xml:space="preserve">
+    <value>ארץ לידה אם</value>
+  </data>
+  <data name="MotherDeathDate" xml:space="preserve">
+    <value>תאריך פטירה אם</value>
+  </data>
+  <data name="MotherFirstName" xml:space="preserve">
+    <value>שם פרטי אם</value>
+  </data>
+  <data name="MotherId" xml:space="preserve">
+    <value>ת"ז אם</value>
+  </data>
+  <data name="MotherLastName" xml:space="preserve">
+    <value>שם משפחה אם</value>
+  </data>
+  <data name="MotherSecurityDead" xml:space="preserve">
+    <value>הרוג ש.בטחוני אם</value>
+  </data>
+  <data name="MotherStatus" xml:space="preserve">
+    <value>סטטוס אם</value>
+  </data>
+  <data name="MotherTongueId" xml:space="preserve">
+    <value>Mother Tongue Id</value>
+  </data>
+  <data name="MotivationAndDiscipline" xml:space="preserve">
+    <value>Motivation and discipline</value>
+  </data>
+  <data name="MoveToChapterMessage" xml:space="preserve">
+    <value>הפרק אינו נשמר, כל השינויים יאבדו, האם להמשיך?</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="MoveToItemMessage" xml:space="preserve">
+    <value>הפריט אינו נשמר, כל השינויים יאבדו, האם להמשיך?</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="MtzamaRedirected" xml:space="preserve">
+    <value>Mtzama Redirected</value>
+  </data>
+  <data name="MultiAnswers" xml:space="preserve">
+    <value>תשובה מרובה</value>
+  </data>
+  <data name="Multimedia" xml:space="preserve">
+    <value>מולטימדיה</value>
+  </data>
+  <data name="MultimediaProperties" xml:space="preserve">
+    <value>מאפייני מולטימדיה</value>
+  </data>
+  <data name="MustChooseASite" xml:space="preserve">
+    <value>Must Choose A Site</value>
+  </data>
+  <data name="MustChooseLanguage" xml:space="preserve">
+    <value>Must Choose Language</value>
+  </data>
+  <data name="MustEnterIp" xml:space="preserve">
+    <value>Must Enter Ip</value>
+  </data>
+  <data name="MustEnterStationName" xml:space="preserve">
+    <value>Must Enter Station Name</value>
+  </data>
+  <data name="MustFeeding" xml:space="preserve">
+    <value>Must Feeding</value>
+  </data>
+  <data name="MustRating" xml:space="preserve">
+    <value>מחייב דירוג</value>
+  </data>
+  <data name="MustSaveNotification" xml:space="preserve">
+    <value>חייב לשמור לפני שממשיכים</value>
+  </data>
+  <data name="MustSelectATemplate" xml:space="preserve">
+    <value>Must Select A Template</value>
+  </data>
+  <data name="MustSelectATemplate1" xml:space="preserve">
+    <value>חייב לבחור תבנית</value>
+  </data>
+  <data name="MustSelectAtLeastOneEntryForm" xml:space="preserve">
+    <value>חייב לבחור מערך טפסים אחד לפחות</value>
+  </data>
+  <data name="MustSelectOrganization" xml:space="preserve">
+    <value>Must Selected Organization</value>
+  </data>
+  <data name="MustSelectSiteBeforeViewing" xml:space="preserve">
+    <value>Must select a site before viewing</value>
+  </data>
+  <data name="MustTextAnswer" xml:space="preserve">
+    <value>מחייב תשובה מילולית</value>
+  </data>
+  <data name="MustWriteStationName" xml:space="preserve">
+    <value>Must Write Station Name</value>
+  </data>
+  <data name="MyAccountSettings" xml:space="preserve">
+    <value>הגדרות החשבון שלי</value>
+  </data>
+  <data name="Mzponiot" xml:space="preserve">
+    <value>Mzponiot</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>שם</value>
+  </data>
+  <data name="NameExist" xml:space="preserve">
+    <value>שם המבחן קיים</value>
+  </data>
+  <data name="NameExternalSystemTemplate" xml:space="preserve">
+    <value>Name of external system template</value>
+  </data>
+  <data name="NeedBa_r" xml:space="preserve">
+    <value>Need Ba.r</value>
+  </data>
+  <data name="NeedSelectedDates" xml:space="preserve">
+    <value>Need Selected Dates</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NewAction" xml:space="preserve">
+    <value>New Action</value>
+  </data>
+  <data name="NewCalculator" xml:space="preserve">
+    <value>New Calculator</value>
+  </data>
+  <data name="NewCandidate" xml:space="preserve">
+    <value>מועמד חדש</value>
+  </data>
+  <data name="NewComment" xml:space="preserve">
+    <value>New Comment</value>
+  </data>
+  <data name="NewConstitution" xml:space="preserve">
+    <value>new Constitution</value>
+  </data>
+  <data name="NewEntity" xml:space="preserve">
+    <value>New Entity</value>
+  </data>
+  <data name="NewExamArray" xml:space="preserve">
+    <value>מערך חדש</value>
+  </data>
+  <data name="NewIndex" xml:space="preserve">
+    <value>New Index</value>
+  </data>
+  <data name="NewIndices" xml:space="preserve">
+    <value>מדד חדש</value>
+  </data>
+  <data name="NewLink" xml:space="preserve">
+    <value>New Link</value>
+  </data>
+  <data name="NewRole" xml:space="preserve">
+    <value>תפקיד חדש</value>
+  </data>
+  <data name="NewSorting" xml:space="preserve">
+    <value>מיון חדש</value>
+  </data>
+  <data name="NewSource" xml:space="preserve">
+    <value>מקור חדש</value>
+  </data>
+  <data name="NewTemplate" xml:space="preserve">
+    <value>תבנית חדשה</value>
+  </data>
+  <data name="NewTest" xml:space="preserve">
+    <value>New Test</value>
+  </data>
+  <data name="NewTest1" xml:space="preserve">
+    <value>בדיקה חדשה</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>משתמש חדש</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NitamR" xml:space="preserve">
+    <value>ניתן ר'1</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoalGloya" xml:space="preserve">
+    <value>Noal Gloya</value>
+  </data>
+  <data name="NoAnswer" xml:space="preserve">
+    <value>NoAnswer</value>
+  </data>
+  <data name="NoApprovalRequired" xml:space="preserve">
+    <value>NoApprovalRequired</value>
+  </data>
+  <data name="NoApprovalWasShown" xml:space="preserve">
+    <value>NoApprovalWasShown</value>
+  </data>
+  <data name="NoDataToDisplay" xml:space="preserve">
+    <value>No data to display</value>
+  </data>
+  <data name="NoGrade" xml:space="preserve">
+    <value>No Grade</value>
+  </data>
+  <data name="NominatingPlacementCommittee" xml:space="preserve">
+    <value>Nominating placement committee</value>
+  </data>
+  <data name="NonDeleteAction" xml:space="preserve">
+    <value>23/5000
+Could not delete action.</value>
+  </data>
+  <data name="NonDeleteConstitutionRouting" xml:space="preserve">
+    <value>You can not delete an entry with a routering and / or a constitution.</value>
+  </data>
+  <data name="NonDeleteEntityCondition" xml:space="preserve">
+    <value>There are conditions that use an entity</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="NonJewishReligious" xml:space="preserve">
+    <value>Non Jewish Religious</value>
+  </data>
+  <data name="NoObjectAnswer" xml:space="preserve">
+    <value>No Object Answer</value>
+  </data>
+  <data name="NoObjectOpenAnswer" xml:space="preserve">
+    <value>No Object Open Answer</value>
+  </data>
+  <data name="NoObjectQeustion" xml:space="preserve">
+    <value>No Object Qeustion</value>
+  </data>
+  <data name="NoRecordsWereFound" xml:space="preserve">
+    <value>לא נמצאו רשומות</value>
+  </data>
+  <data name="NoReference" xml:space="preserve">
+    <value>No Reference</value>
+  </data>
+  <data name="Norms" xml:space="preserve">
+    <value>נורמות</value>
+  </data>
+  <data name="NotAccepted" xml:space="preserve">
+    <value>Not Accepted</value>
+  </data>
+  <data name="NotActive" xml:space="preserve">
+    <value>לא פעיל</value>
+  </data>
+  <data name="NotApprovedInQuestionnaire" xml:space="preserve">
+    <value>לא אישר בשאלון</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>לא מקושר</value>
+  </data>
+  <data name="NotDeletedNotification" xml:space="preserve">
+    <value>Deletion failed.</value>
+  </data>
+  <data name="NotDraftTest" xml:space="preserve">
+    <value>לא ניתן לערוך מבחן שאינו בסטטוס טיוטא!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="NoteDapar" xml:space="preserve">
+    <value>NoteDapar</value>
+  </data>
+  <data name="NoteDeleteCommant" xml:space="preserve">
+    <value>שים לב הינך עומד למחוק הערה למועמד, האם אתה בטוח?</value>
+  </data>
+  <data name="NotEdited" xml:space="preserve">
+    <value>Not edited</value>
+  </data>
+  <data name="NoteForSkippingExamsInSortingDay" xml:space="preserve">
+    <value>This examinee has similar test results from the recent past and does not need to be tested again in the tests he has already done. Here is the list of exams in the sorting day format. Unchecked tests have a check box. If, for any reason, the candidate has to take the test again, check the square next to the test name to activate it anyway.</value>
+  </data>
+  <data name="NoteMatching" xml:space="preserve">
+    <value>NoteMatching</value>
+  </data>
+  <data name="NoteNotDeletedSuccessfully" xml:space="preserve">
+    <value>Note Not Deleted Successfully</value>
+  </data>
+  <data name="NotesForCalculatorTests" xml:space="preserve">
+    <value>הערות למבחנים ממוחשבים</value>
+  </data>
+  <data name="NotesToApplicantSuccessfullySaved" xml:space="preserve">
+    <value>Notes To Applicant Successfully Saved</value>
+  </data>
+  <data name="Notes_LL" xml:space="preserve">
+    <value>הערות ל.ל</value>
+  </data>
+  <data name="NoteThatTheFormulaL_LIsNotMarked" xml:space="preserve">
+    <value>Note ThatT he Formula L_L Is Not Marked</value>
+  </data>
+  <data name="NoteThatYouAreAboutToDeleteDiagnosticSetAreYouSure" xml:space="preserve">
+    <value>Note that you are about to delete a diagnostic set, are you sure</value>
+  </data>
+  <data name="NoteThatYouAreDeleteReportAreYouSure" xml:space="preserve">
+    <value>Note that you are about to delete a report, are you sure</value>
+  </data>
+  <data name="NoteThatYouAreDeleteTitleAreYouSure" xml:space="preserve">
+    <value>Note that you are about to delete a title, are you sure</value>
+  </data>
+  <data name="NoteWhenYouClickConfirmButtonTheDeleteCandidateWillAppearAllAssociatedArraysWillBeDeleted" xml:space="preserve">
+    <value>Note! When you click the Confirm button, the Delete Candidate will appear, all associated arrays will be deleted</value>
+  </data>
+  <data name="NotNull" xml:space="preserve">
+    <value>Exist</value>
+  </data>
+  <data name="NotRequired" xml:space="preserve">
+    <value>Not Required</value>
+  </data>
+  <data name="NotSaveChackNotification" xml:space="preserve">
+    <value>הבדיקה לא נשמרה</value>
+  </data>
+  <data name="NotSaveTestNotification" xml:space="preserve">
+    <value>השמירה נכשלה!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="NotYetDone" xml:space="preserve">
+    <value>Not yet Done</value>
+  </data>
+  <data name="NumberOfChildren" xml:space="preserve">
+    <value>מספר ילדים</value>
+  </data>
+  <data name="NumberOfRecords" xml:space="preserve">
+    <value>מספר רשומות</value>
+  </data>
+  <data name="NumericAnswer" xml:space="preserve">
+    <value>Numeric answer</value>
+  </data>
+  <data name="Object" xml:space="preserve">
+    <value>Object</value>
+  </data>
+  <data name="ObjectName" xml:space="preserve">
+    <value>ObjectName</value>
+  </data>
+  <data name="ObjectProperties" xml:space="preserve">
+    <value>מאפייני אובייקט</value>
+  </data>
+  <data name="Objects" xml:space="preserve">
+    <value>אובייקטים</value>
+  </data>
+  <data name="ObjectsList" xml:space="preserve">
+    <value>רשימת אובייקטים</value>
+  </data>
+  <data name="ObjectType" xml:space="preserve">
+    <value>ObjectType</value>
+  </data>
+  <data name="Occupation" xml:space="preserve">
+    <value>Occupation</value>
+  </data>
+  <data name="OccupationFromSap" xml:space="preserve">
+    <value>Occupation Sap</value>
+  </data>
+  <data name="OfficerAdjuster" xml:space="preserve">
+    <value>Officer Adjuster</value>
+  </data>
+  <data name="OfficerQuestionnaireDone" xml:space="preserve">
+    <value>An officer's questionnaire was drawn up</value>
+  </data>
+  <data name="OfficialAddress" xml:space="preserve">
+    <value>Official Address</value>
+  </data>
+  <data name="OfficialAddressApartment" xml:space="preserve">
+    <value>כתובת רשמית-דירה</value>
+  </data>
+  <data name="OfficialAddressHome" xml:space="preserve">
+    <value>כתובת רשמית-בית</value>
+  </data>
+  <data name="OfficialAddressSettlement" xml:space="preserve">
+    <value>כתובת רשמית-ישוב</value>
+  </data>
+  <data name="OfficialAddressStreet" xml:space="preserve">
+    <value>כתובת רשמית-רחוב</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="OldQualityData" xml:space="preserve">
+    <value>נתוני איכות ישנים</value>
+  </data>
+  <data name="OneParameter" xml:space="preserve">
+    <value>פרמטר אחד</value>
+  </data>
+  <data name="OnlyInterview" xml:space="preserve">
+    <value>Only Interview</value>
+  </data>
+  <data name="OpenAnswer" xml:space="preserve">
+    <value>תשובה פתוחה</value>
+  </data>
+  <data name="Operative" xml:space="preserve">
+    <value>Operative</value>
+  </data>
+  <data name="OptionInformation" xml:space="preserve">
+    <value>פירוט פעולות</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>סדר</value>
+  </data>
+  <data name="OrderId" xml:space="preserve">
+    <value>סימון</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>ארגון</value>
+  </data>
+  <data name="OrganizationalAdmin" xml:space="preserve">
+    <value>מנהל ארגון</value>
+  </data>
+  <data name="OrganizationAllowViewAndUse" xml:space="preserve">
+    <value>Organization to only view and use</value>
+  </data>
+  <data name="OrganizationalStructure" xml:space="preserve">
+    <value>Organizational structure</value>
+  </data>
+  <data name="OrganizationStructure" xml:space="preserve">
+    <value>מבנה ארגוני</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>אחר</value>
+  </data>
+  <data name="OtherInfo" xml:space="preserve">
+    <value>פרטים נוספים</value>
+  </data>
+  <data name="PalmarConst" xml:space="preserve">
+    <value>פלמ"ר קבוע</value>
+    <comment>Palmar Const</comment>
+  </data>
+  <data name="PalmarDynamic" xml:space="preserve">
+    <value>פלמ"ר משתנה</value>
+    <comment>Palmar Dynamic</comment>
+  </data>
+  <data name="PalmarIndex" xml:space="preserve">
+    <value>Palmar index</value>
+  </data>
+  <data name="ParameterName" xml:space="preserve">
+    <value>שם פרמטר</value>
+  </data>
+  <data name="ParentsAbroad" xml:space="preserve">
+    <value>Parents Abroad</value>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>Partial</value>
+  </data>
+  <data name="PartialTextOfMaturity" xml:space="preserve">
+    <value>Partial Text Of Maturity</value>
+  </data>
+  <data name="Passport" xml:space="preserve">
+    <value>דרכון</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>סיסמא</value>
+  </data>
+  <data name="PasswordCompareValidatorErrorMessage" xml:space="preserve">
+    <value>הסיסמאות אינן זהות</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>סיסמא:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>יש להזין סיסמה</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="PayAttention" xml:space="preserve">
+    <value>שים לב!</value>
+  </data>
+  <data name="PercentagesAnswer" xml:space="preserve">
+    <value>Answer percentages</value>
+  </data>
+  <data name="Percentile" xml:space="preserve">
+    <value>אחוזון</value>
+  </data>
+  <data name="Performed" xml:space="preserve">
+    <value>Performed</value>
+  </data>
+  <data name="PermissionDenied" xml:space="preserve">
+    <value>Permission denied</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>הרשאות</value>
+  </data>
+  <data name="PermissionType" xml:space="preserve">
+    <value>סוג הרשאה</value>
+  </data>
+  <data name="PersistentAttention" xml:space="preserve">
+    <value>Persistent Attention</value>
+  </data>
+  <data name="PersistentAttentionStandartScore" xml:space="preserve">
+    <value>Persistent Attention Standart Score</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>פרטים אישיים</value>
+  </data>
+  <data name="PersonalityTests" xml:space="preserve">
+    <value>Personality Tests</value>
+  </data>
+  <data name="PersonalNumber" xml:space="preserve">
+    <value>מספר אישי</value>
+  </data>
+  <data name="PersonalNumberExistsInTheSystem" xml:space="preserve">
+    <value>Personal Number ExistsIn The System</value>
+  </data>
+  <data name="PersonalQuestionnaireCommando" xml:space="preserve">
+    <value>Personal Questionnaire Commando</value>
+  </data>
+  <data name="PersonalQuestionnaireGadnaSubmarines" xml:space="preserve">
+    <value>Personal questionnaire - Gadna submarines</value>
+  </data>
+  <data name="PersonalQuestionnaireWasConductedCaptainsSubmarines" xml:space="preserve">
+    <value>A personal questionnaire was conducted - seafarers / submarines</value>
+  </data>
+  <data name="PersonalQuestionnaireWasConductedGadnaCaptains" xml:space="preserve">
+    <value>A personal questionnaire was conducted - GadnaCaptains</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>טלפון</value>
+  </data>
+  <data name="Phones" xml:space="preserve">
+    <value>Phones</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="PlanningToLearn" xml:space="preserve">
+    <value>Planning To Learn</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>הפעל</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please Wait</value>
+  </data>
+  <data name="PledgeSecurityServiceMobi" xml:space="preserve">
+    <value>נייד מלש"ב</value>
+  </data>
+  <data name="PopulationOfReservoir" xml:space="preserve">
+    <value>אוכלוסיית מאגר</value>
+  </data>
+  <data name="PopUpIndicesLinkToTest" xml:space="preserve">
+    <value>אין אפשרות להפוך מדד ללא פעיל אם הוא מקושר למבחן , האפשרות להפוך מדד ללא פעיל ניתנת רק לאחר ביטול קישור מדד למבחן דרך המבחן עצמו</value>
+  </data>
+  <data name="PostItem" xml:space="preserve">
+    <value>After answer</value>
+  </data>
+  <data name="postMail" xml:space="preserve">
+    <value>post Mail</value>
+  </data>
+  <data name="PreConditions" xml:space="preserve">
+    <value>Pre conditions</value>
+  </data>
+  <data name="PredictorDapar" xml:space="preserve">
+    <value>Predictor Dapar</value>
+  </data>
+  <data name="PredictorInitialPsychotacticRating" xml:space="preserve">
+    <value>Predictor Initial Psychotactic Rating</value>
+  </data>
+  <data name="PreItem" xml:space="preserve">
+    <value>Befor answer</value>
+  </data>
+  <data name="PreliminaryQuestionnaire" xml:space="preserve">
+    <value>שאלון מקדים</value>
+  </data>
+  <data name="PrescriptionDiagnosisOfImproperAttention" xml:space="preserve">
+    <value>Prescription / diagnosis of improper attention</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>תצוגה מקדימה</value>
+  </data>
+  <data name="PreviousGradesReport" xml:space="preserve">
+    <value>Previous Grades Report</value>
+  </data>
+  <data name="ProceedingsReport" xml:space="preserve">
+    <value>Proceedings Report</value>
+  </data>
+  <data name="ProductionDate" xml:space="preserve">
+    <value>Production Date</value>
+  </data>
+  <data name="ProductionDate1" xml:space="preserve">
+    <value>תאריך הפקה</value>
+  </data>
+  <data name="ProfessionalInterview" xml:space="preserve">
+    <value>ProfessionalInterview</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>פרופיל</value>
+  </data>
+  <data name="promptSelectActiveDirectoryUser" xml:space="preserve">
+    <value>AD-בחר משתמש מ</value>
+  </data>
+  <data name="ProperAttentionDiagnosisAndAdjustments" xml:space="preserve">
+    <value>Proper attention diagnosis and adjustments</value>
+  </data>
+  <data name="ProperDiagnosisAndAttribution" xml:space="preserve">
+    <value>אבחון תקין ומזכה בהתאמות</value>
+  </data>
+  <data name="PsychologicalVolunteerism" xml:space="preserve">
+    <value>Psychological-Volunteerism</value>
+  </data>
+  <data name="PsychologistEstimates" xml:space="preserve">
+    <value>Psychologist Estimates</value>
+  </data>
+  <data name="PsychotechnicalConjugation" xml:space="preserve">
+    <value>חווד פסיכוטכני (צד"כ, צמ"א ורמ"ח)</value>
+  </data>
+  <data name="Quantitative" xml:space="preserve">
+    <value>Quantitative</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>שאלה</value>
+  </data>
+  <data name="QuestionFormat" xml:space="preserve">
+    <value>Question Format</value>
+  </data>
+  <data name="Questionnaire" xml:space="preserve">
+    <value>שאלון</value>
+  </data>
+  <data name="QuestionNumber" xml:space="preserve">
+    <value>QuestionNumber</value>
+  </data>
+  <data name="QuestionsNumbers" xml:space="preserve">
+    <value>מספר שאלות</value>
+  </data>
+  <data name="Radio" xml:space="preserve">
+    <value>כפתור בחירה</value>
+  </data>
+  <data name="Ramah" xml:space="preserve">
+    <value>Ramah</value>
+  </data>
+  <data name="RandomSelection" xml:space="preserve">
+    <value>בחירה רנדומאלית</value>
+  </data>
+  <data name="RawGrade" xml:space="preserve">
+    <value>ציון גלם</value>
+  </data>
+  <data name="ReadyToLand" xml:space="preserve">
+    <value>Ready to land</value>
+  </data>
+  <data name="ReasonForStatus" xml:space="preserve">
+    <value>סיבת סטטוס מיטב</value>
+  </data>
+  <data name="ReasonOfRecruitmentThresHoldIndication" xml:space="preserve">
+    <value>סיבת סטטוס אינדיקצית סף גיוס</value>
+  </data>
+  <data name="ReasonStatusBenish" xml:space="preserve">
+    <value>Reason Status Benish</value>
+  </data>
+  <data name="ReasonStatuseRequestReturnExams" xml:space="preserve">
+    <value>Reason Statuse Request Return Exams</value>
+  </data>
+  <data name="ReasonStatusIndictionDaughterHeil" xml:space="preserve">
+    <value>Reason Status Indiction Daughter Heil</value>
+  </data>
+  <data name="ReasonStatusIndictionICosherBaranit" xml:space="preserve">
+    <value>Reason Status IndictionI Cosher Baranit</value>
+  </data>
+  <data name="ReasonStatusRequestInterviewReturn" xml:space="preserve">
+    <value>Reason Status Request Interview Return</value>
+  </data>
+  <data name="Recommendation" xml:space="preserve">
+    <value>Recommendation</value>
+  </data>
+  <data name="Recommendations" xml:space="preserve">
+    <value>Recommendations</value>
+  </data>
+  <data name="RecruitmentThresholds" xml:space="preserve">
+    <value>Recruitment Thresholds</value>
+  </data>
+  <data name="RedirectedToAnAptitudeTestBrhan" xml:space="preserve">
+    <value>Redirected To An Aptitude Test Brhan</value>
+  </data>
+  <data name="RedirectedToAnAptitudeTestBrhan1" xml:space="preserve">
+    <value>הופנה לברהן מפסיכוטכני</value>
+  </data>
+  <data name="Regular" xml:space="preserve">
+    <value>רגיל</value>
+    <comment>Regular</comment>
+  </data>
+  <data name="RegularExpressionValidatorErrorMessage" xml:space="preserve">
+    <value>ערך לא חוקי</value>
+  </data>
+  <data name="RegularUser" xml:space="preserve">
+    <value>משתמש רגיל</value>
+  </data>
+  <data name="RegulatoryGrade" xml:space="preserve">
+    <value>Regulatory Grade</value>
+  </data>
+  <data name="RegulatoryGrade1" xml:space="preserve">
+    <value>ציון תקן</value>
+  </data>
+  <data name="ReligionRecruitment" xml:space="preserve">
+    <value>דת לגיוס</value>
+  </data>
+  <data name="ReligiousRecognition" xml:space="preserve">
+    <value>Religious Recognition</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>זכור אותי במחשב הזה</value>
+  </data>
+  <data name="RepeatedTests" xml:space="preserve">
+    <value>מבחנים חוזרים</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="ReportsSystem" xml:space="preserve">
+    <value>Reports system</value>
+  </data>
+  <data name="RequestForVolunteering_Psychological" xml:space="preserve">
+    <value>Request For Volunteering -Psychological</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="RequiredComputers" xml:space="preserve">
+    <value>Required Computers</value>
+  </data>
+  <data name="RequiredFieldValidatorErrorMessage" xml:space="preserve">
+    <value>ערך חובה</value>
+  </data>
+  <data name="RequiredFromComputers" xml:space="preserve">
+    <value>נדרש ממוחשבים</value>
+  </data>
+  <data name="RequiredInterview" xml:space="preserve">
+    <value>Required Interview</value>
+  </data>
+  <data name="RequiredStations" xml:space="preserve">
+    <value>Required Stations</value>
+  </data>
+  <data name="Required_LL" xml:space="preserve">
+    <value>Required- L.L</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Research</value>
+  </data>
+  <data name="ResearchReport" xml:space="preserve">
+    <value>Research Report</value>
+  </data>
+  <data name="ResearchType" xml:space="preserve">
+    <value>Research Type</value>
+  </data>
+  <data name="ResidenceCountryId" xml:space="preserve">
+    <value>Residence Country Id</value>
+  </data>
+  <data name="ResonStatusIndictionDaughterHeil" xml:space="preserve">
+    <value>Reson Status Indiction Daughter Heil</value>
+  </data>
+  <data name="ResonStatusIndictionRecruitmentAlthoughGluia" xml:space="preserve">
+    <value>Reson StatusIndiction Recruitment AlthoughGluia</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="ResumeTesting" xml:space="preserve">
+    <value>חידוש בדיקה</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>חזור</value>
+  </data>
+  <data name="RhamaRedirected" xml:space="preserve">
+    <value>Rhama Redirected</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>תפקיד</value>
+  </data>
+  <data name="RoleDetails" xml:space="preserve">
+    <value>פרטי תפקיד</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>שם תפקיד</value>
+  </data>
+  <data name="RoleNameLabel" xml:space="preserve">
+    <value>שם תפקיד:</value>
+  </data>
+  <data name="RoleNamePlaceHolder" xml:space="preserve">
+    <value>... הזן שם תפקיד</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>תפקידים</value>
+  </data>
+  <data name="RoomName" xml:space="preserve">
+    <value>room name</value>
+  </data>
+  <data name="Routing" xml:space="preserve">
+    <value>ניתוב</value>
+  </data>
+  <data name="RoutingAlert" xml:space="preserve">
+    <value>There are routes that will be affected by the deletion</value>
+  </data>
+  <data name="RoutingBetweenArrays" xml:space="preserve">
+    <value>Routing between arrays</value>
+  </data>
+  <data name="RoutingBetweenExams" xml:space="preserve">
+    <value>Routing between exams</value>
+  </data>
+  <data name="RowsCountNotification" xml:space="preserve">
+    <value>The table must contain at least one row</value>
+  </data>
+  <data name="Russian" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="Sade" xml:space="preserve">
+    <value>Sade</value>
+  </data>
+  <data name="SamiAdptibi" xml:space="preserve">
+    <value>סמי אדפטיבי</value>
+  </data>
+  <data name="SAP" xml:space="preserve">
+    <value>SAP</value>
+    <comment>SAP</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>שמור</value>
+  </data>
+  <data name="SaveActions" xml:space="preserve">
+    <value>Save Actions</value>
+  </data>
+  <data name="SaveAndContinue" xml:space="preserve">
+    <value>Save and continue</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>שמור וצא</value>
+  </data>
+  <data name="SaveAndPlay" xml:space="preserve">
+    <value>שמור והפעל</value>
+  </data>
+  <data name="SaveChackNotification" xml:space="preserve">
+    <value>הבדיקה נשמרה בהצלחה</value>
+  </data>
+  <data name="SaveEntities" xml:space="preserve">
+    <value>Save Entities</value>
+  </data>
+  <data name="SaveItemNotification" xml:space="preserve">
+    <value>הפריט נשמר בהצלחה!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="SaveItemsNotification" xml:space="preserve">
+    <value>פריטי המבחן נשמרו בהצלחה!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="SaveLoader" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="SaveObjectNotification" xml:space="preserve">
+    <value>האובייקט נשמר בהצלחה!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="SaveTestNotification" xml:space="preserve">
+    <value>המבחן נשמר בהצלחה!</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="SaveTestPropertiesNotification" xml:space="preserve">
+    <value>מאפייני המבחן נשמרו בהצלחה! </value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="ScalesIndices" xml:space="preserve">
+    <value>סקלות למדד</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="SchedulingHierarchy" xml:space="preserve">
+    <value>Scheduling Hierarchy </value>
+  </data>
+  <data name="SchoolAnalysis" xml:space="preserve">
+    <value>אפיון מוסד לימודים</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>ציון</value>
+  </data>
+  <data name="ScoreAn" xml:space="preserve">
+    <value>ציון ה"נ</value>
+  </data>
+  <data name="ScoreRamah" xml:space="preserve">
+    <value>Score Ramah</value>
+  </data>
+  <data name="ScoreShnul" xml:space="preserve">
+    <value>Score Shnul</value>
+  </data>
+  <data name="ScoreTzadah" xml:space="preserve">
+    <value>Score Tzadah</value>
+  </data>
+  <data name="ScoreTzama" xml:space="preserve">
+    <value>Score Tzama</value>
+  </data>
+  <data name="ScoreTzoar" xml:space="preserve">
+    <value>Score Tzoar</value>
+  </data>
+  <data name="ScreenForMH" xml:space="preserve">
+    <value>מסך לצורך מ"ח</value>
+  </data>
+  <data name="SD" xml:space="preserve">
+    <value>ס. תקן</value>
+  </data>
+  <data name="SearchTest" xml:space="preserve">
+    <value>חיפוש מבחן</value>
+  </data>
+  <data name="Secret" xml:space="preserve">
+    <value>Secret</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>בחר הכל</value>
+  </data>
+  <data name="SelectAnIdentificationType" xml:space="preserve">
+    <value>Select an identification type</value>
+  </data>
+  <data name="SelectDisplayed" xml:space="preserve">
+    <value>בחר מערכים מוצגים</value>
+  </data>
+  <data name="SelectedOrganization" xml:space="preserve">
+    <value>Selected Organization</value>
+  </data>
+  <data name="SelectedSite" xml:space="preserve">
+    <value>Selected Site</value>
+  </data>
+  <data name="SelectedTishonitTwiceNotification" xml:space="preserve">
+    <value>Selected Tishonit Twice</value>
+  </data>
+  <data name="SelectEndDate" xml:space="preserve">
+    <value>Select a end date</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>בחר קובץ</value>
+  </data>
+  <data name="SelectInterview" xml:space="preserve">
+    <value>Select interview</value>
+  </data>
+  <data name="SelectiveAttention" xml:space="preserve">
+    <value>Selective Attention</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>בחר ארגון..</value>
+    <comment>Characters Copy1</comment>
+  </data>
+  <data name="SelectStartDate" xml:space="preserve">
+    <value>Select a start date</value>
+  </data>
+  <data name="SelectTest" xml:space="preserve">
+    <value>בחר מבחן</value>
+    <comment> Characters Copy1.1</comment>
+  </data>
+  <data name="Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="settlement" xml:space="preserve">
+    <value>ישוב</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>מין</value>
+  </data>
+  <data name="SexValue" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="ShnolTemporary" xml:space="preserve">
+    <value>Shnol Temporary</value>
+  </data>
+  <data name="ShortcutPersonalNumber" xml:space="preserve">
+    <value>Personal Number</value>
+  </data>
+  <data name="Shortened" xml:space="preserve">
+    <value>Shortened</value>
+  </data>
+  <data name="ShowActiveExamArraysOnly" xml:space="preserve">
+    <value>הצג מערכים פעילים בלבד</value>
+  </data>
+  <data name="ShowAlertMessage" xml:space="preserve">
+    <value>Show Alert Message</value>
+  </data>
+  <data name="ShowBar" xml:space="preserve">
+    <value>הצג מד זמן</value>
+  </data>
+  <data name="ShowDocuments" xml:space="preserve">
+    <value>Show documents</value>
+  </data>
+  <data name="ShowDocumentsYet" xml:space="preserve">
+    <value>Show documents yet</value>
+  </data>
+  <data name="ShowInCandidateCard" xml:space="preserve">
+    <value>Show in candidate card</value>
+  </data>
+  <data name="ShowItemNumber" xml:space="preserve">
+    <value>הצג מספר פריט</value>
+  </data>
+  <data name="ShowNotActiveIndices" xml:space="preserve">
+    <value>הצג מדדים לא פעילים</value>
+  </data>
+  <data name="ShowNotActiveTest" xml:space="preserve">
+    <value>הצג מבחנים לא פעילים</value>
+  </data>
+  <data name="ShowNotActiveTests" xml:space="preserve">
+    <value>הצג מבחנים לא פעילים</value>
+  </data>
+  <data name="ShowTestNotActive" xml:space="preserve">
+    <value>הצד מבחנים לא פעילים</value>
+  </data>
+  <data name="ShowTime" xml:space="preserve">
+    <value>משך הצגת פריט (שניות)</value>
+  </data>
+  <data name="Shshlim" xml:space="preserve">
+    <value>Shshlim</value>
+  </data>
+  <data name="SignatureOfAnOfficerWaiver" xml:space="preserve">
+    <value>Signature Of An Officer Waiver</value>
+  </data>
+  <data name="SignedRejectionProcess" xml:space="preserve">
+    <value>Signed Rejection Process</value>
+  </data>
+  <data name="SignedTheProceedings" xml:space="preserve">
+    <value>Signed The Proceedings</value>
+  </data>
+  <data name="SignedWaiverConcessions" xml:space="preserve">
+    <value>חתם על ויתור הקלות</value>
+  </data>
+  <data name="SingleChildStatus" xml:space="preserve">
+    <value>Single Child Status</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>אתר</value>
+  </data>
+  <data name="SiteAdmin" xml:space="preserve">
+    <value>מנהל אתר</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>Site name</value>
+  </data>
+  <data name="SkippingItem" xml:space="preserve">
+    <value>דילוג על פריט</value>
+  </data>
+  <data name="smallerthan" xml:space="preserve">
+    <value>קטן מ</value>
+  </data>
+  <data name="Smart" xml:space="preserve">
+    <value>חכם</value>
+  </data>
+  <data name="SociabilityEmotionalIntelligence" xml:space="preserve">
+    <value>חברותיות - אינטיליגנציה רגשית</value>
+  </data>
+  <data name="SociabilitySocialAffinity" xml:space="preserve">
+    <value>Sociability Social Affinity</value>
+  </data>
+  <data name="Sociometric" xml:space="preserve">
+    <value>Sociometric</value>
+  </data>
+  <data name="SortClassified" xml:space="preserve">
+    <value>Sort Classified</value>
+  </data>
+  <data name="SortingCommando" xml:space="preserve">
+    <value>Sorting Commando</value>
+  </data>
+  <data name="SortingDayDate" xml:space="preserve">
+    <value>תאריך יום מיון</value>
+  </data>
+  <data name="SortingDayDefinitions" xml:space="preserve">
+    <value>הגדרת ימי מיון</value>
+  </data>
+  <data name="SortingDayList" xml:space="preserve">
+    <value>רשימת ימי מיון</value>
+  </data>
+  <data name="SortingDayName" xml:space="preserve">
+    <value>Sorting day name</value>
+  </data>
+  <data name="SortingDaySaveNotification" xml:space="preserve">
+    <value>השמירה בוצעה בהצלחה</value>
+  </data>
+  <data name="SortingGadnaCaptains" xml:space="preserve">
+    <value>Sorting Gadna Captains</value>
+  </data>
+  <data name="SortingGadnaSubmarines" xml:space="preserve">
+    <value>Sorting Gadna Submarines</value>
+  </data>
+  <data name="SortingMarks" xml:space="preserve">
+    <value>ציוני מיון כלל צה"לי</value>
+  </data>
+  <data name="SortingOfCaptainsAndSubmarines" xml:space="preserve">
+    <value>Sorting Of Captains And Submarines</value>
+  </data>
+  <data name="SortingOfficer" xml:space="preserve">
+    <value>Sorting Officer</value>
+  </data>
+  <data name="SortingSubmarineCaptains" xml:space="preserve">
+    <value>Sorting Submarine Captains</value>
+  </data>
+  <data name="SortingTamplate" xml:space="preserve">
+    <value>Sorting Tamplate</value>
+  </data>
+  <data name="SortingTool" xml:space="preserve">
+    <value>כלי מיון</value>
+  </data>
+  <data name="SortingUBoatCaptains" xml:space="preserve">
+    <value>מיון חובלים צוללות</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="SourceName" xml:space="preserve">
+    <value>מקור</value>
+  </data>
+  <data name="SourceOffice" xml:space="preserve">
+    <value>Source Office</value>
+  </data>
+  <data name="SourceOfficeRequestShashal" xml:space="preserve">
+    <value>Source Office Request Shashal</value>
+  </data>
+  <data name="SourceType" xml:space="preserve">
+    <value>סוג מקור</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Special</value>
+  </data>
+  <data name="SpecialEnquiry" xml:space="preserve">
+    <value>בירור מיוחד</value>
+  </data>
+  <data name="SpecialNotes" xml:space="preserve">
+    <value>הערות מיוחדות</value>
+  </data>
+  <data name="specialSchooleNotClaimCommitte" xml:space="preserve">
+    <value>בביה"ס מיוחד ובוודאות לא טוען לוועדת השמה</value>
+  </data>
+  <data name="SpecialСommentsToBagrut" xml:space="preserve">
+    <value>הערות מיוחדות (בגרויות)</value>
+  </data>
+  <data name="SpecialСommentsToFrames" xml:space="preserve">
+    <value>הערות מיוחדות (מסגרות)</value>
+  </data>
+  <data name="StandardScoreAnswer" xml:space="preserve">
+    <value>Answer standard score</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="StartingLevel" xml:space="preserve">
+    <value>רמה התחלתית</value>
+  </data>
+  <data name="StationName" xml:space="preserve">
+    <value>תחנה</value>
+  </data>
+  <data name="StationsNumber" xml:space="preserve">
+    <value>Stations Number</value>
+  </data>
+  <data name="StationsSortingProcesses" xml:space="preserve">
+    <value>Stations - Sorting Processes</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>סטטוס</value>
+  </data>
+  <data name="StatuseRequestReturnExams" xml:space="preserve">
+    <value>Statuse Request Return Exams</value>
+  </data>
+  <data name="StatusIndictionBenish" xml:space="preserve">
+    <value>Status Indiction Benish</value>
+  </data>
+  <data name="StatusIndictionDaughterHeil" xml:space="preserve">
+    <value>Status Indiction Daughter Heil</value>
+  </data>
+  <data name="StatusIndictionICosherBaranit" xml:space="preserve">
+    <value>Status IndictionI Cosher Baranit</value>
+  </data>
+  <data name="StatusMitav" xml:space="preserve">
+    <value>סטטוס מיטב</value>
+  </data>
+  <data name="StatusOfLearningDisabilities" xml:space="preserve">
+    <value>Status Of Learning Disabilities</value>
+  </data>
+  <data name="StatusOfRecruitmentThresHoldIndication" xml:space="preserve">
+    <value>Status Of Recruitment Hold Indication</value>
+  </data>
+  <data name="StatusReason" xml:space="preserve">
+    <value>סיבת סטטוס</value>
+  </data>
+  <data name="StatusReasonId" xml:space="preserve">
+    <value>Status Reason</value>
+  </data>
+  <data name="StatusReason_LL" xml:space="preserve">
+    <value>סיבת סטטוס ל.ל</value>
+  </data>
+  <data name="StatusRequestInterviewReturn" xml:space="preserve">
+    <value>Status Request Interview Return</value>
+  </data>
+  <data name="StatusRequestShashal" xml:space="preserve">
+    <value>Status Request Shashal</value>
+  </data>
+  <data name="StatusStartDate" xml:space="preserve">
+    <value>Status Start Date</value>
+  </data>
+  <data name="StatusValidationDate" xml:space="preserve">
+    <value>Status Validation Date</value>
+  </data>
+  <data name="Status_LL" xml:space="preserve">
+    <value>Status L.L</value>
+  </data>
+  <data name="StopAfter" xml:space="preserve">
+    <value>עצור אחרי</value>
+  </data>
+  <data name="StopTestPrompt" xml:space="preserve">
+    <value>האם לעצור את המבחן?</value>
+  </data>
+  <data name="StressResistance" xml:space="preserve">
+    <value>Stress Resistance</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value />
+  </data>
+  <data name="strWelcome" xml:space="preserve">
+    <value>ברוך הבא</value>
+  </data>
+  <data name="StudyStatus" xml:space="preserve">
+    <value>סטטוס לימודים</value>
+  </data>
+  <data name="StudyUnits" xml:space="preserve">
+    <value>Study Units</value>
+  </data>
+  <data name="SubstIndicationBenish" xml:space="preserve">
+    <value>Subst Indication Benish</value>
+  </data>
+  <data name="SubstIndictionICosherBaranit" xml:space="preserve">
+    <value>Subst IndictionI Cosher Baranit</value>
+  </data>
+  <data name="SubstIndictionRecruitmentAlthoughGluia" xml:space="preserve">
+    <value>SubstIndiction Recruitment Although Gluia</value>
+  </data>
+  <data name="SubThresholdRecruitmentThreshold" xml:space="preserve">
+    <value>Subst Threshold Recruitment Threshold</value>
+  </data>
+  <data name="SuccessfullyDeletedASortingDay" xml:space="preserve">
+    <value>Successfully deleted a sorting day</value>
+  </data>
+  <data name="SuccessfullyNotSavedPersonalInformationTab" xml:space="preserve">
+    <value>Successfully Not Saved PersonalInformation Tab</value>
+  </data>
+  <data name="SuccessfullySavedPersonalInformationTab" xml:space="preserve">
+    <value>Successfully Saved Personal Information Tab</value>
+  </data>
+  <data name="SuccessNotification" xml:space="preserve">
+    <value>Success Action</value>
+  </data>
+  <data name="SuitableExamsBeforeVerification" xml:space="preserve">
+    <value>Suitable Exams Before Verification</value>
+  </data>
+  <data name="SuitableInterviewBeforeVerification" xml:space="preserve">
+    <value>Suitable Interview Before Verification</value>
+  </data>
+  <data name="SuitableTestsBeforeVerification" xml:space="preserve">
+    <value>Suitable Tests Before Verification</value>
+  </data>
+  <data name="SummonDate" xml:space="preserve">
+    <value>Summon Date</value>
+  </data>
+  <data name="SvaeIndexPalmar" xml:space="preserve">
+    <value>After saving the palmar index, you can not edit, do you want to continue?</value>
+  </data>
+  <data name="Symbol" xml:space="preserve">
+    <value>סימול</value>
+  </data>
+  <data name="SystemAdmin" xml:space="preserve">
+    <value>מנהל מערכת</value>
+  </data>
+  <data name="SystemLanguage" xml:space="preserve">
+    <value>System language</value>
+  </data>
+  <data name="SystemScreen" xml:space="preserve">
+    <value>System Screen</value>
+  </data>
+  <data name="Tab" xml:space="preserve">
+    <value>לשונית</value>
+  </data>
+  <data name="TabL_LNotSavedSuccessfully" xml:space="preserve">
+    <value>TabL_LNotSavedSuccessfully</value>
+  </data>
+  <data name="TabL_LSavedSuccessfully" xml:space="preserve">
+    <value>Tab L_L Saved Successfully</value>
+  </data>
+  <data name="TazachRedirected" xml:space="preserve">
+    <value>Tazach Redirected</value>
+  </data>
+  <data name="TeamWork" xml:space="preserve">
+    <value>Team Work</value>
+  </data>
+  <data name="TechnicalMaintenance" xml:space="preserve">
+    <value>Technical-Maintenance</value>
+  </data>
+  <data name="TechnicalOperating" xml:space="preserve">
+    <value>Technical-Operating</value>
+  </data>
+  <data name="TelephonNumber" xml:space="preserve">
+    <value>Telephon Number</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="TemplateDetails" xml:space="preserve">
+    <value>פרטי תבנית</value>
+  </data>
+  <data name="TemplateName" xml:space="preserve">
+    <value>שם תבנית</value>
+  </data>
+  <data name="TemplatePlaceHolder" xml:space="preserve">
+    <value>... הזן שם תבנית</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>תבניות</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>מבחן</value>
+  </data>
+  <data name="TestAdjustments" xml:space="preserve">
+    <value>Test Adjustments</value>
+  </data>
+  <data name="TestChosen" xml:space="preserve">
+    <value>מבחן נבחר:</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="TestController" xml:space="preserve">
+    <value>מחולל כלי מיון</value>
+  </data>
+  <data name="TestDay" xml:space="preserve">
+    <value>Test day</value>
+  </data>
+  <data name="TestDayController" xml:space="preserve">
+    <value>יום מבחנים</value>
+  </data>
+  <data name="TestDescription" xml:space="preserve">
+    <value>Test Description</value>
+  </data>
+  <data name="Tester" xml:space="preserve">
+    <value>בוחן</value>
+  </data>
+  <data name="TestGenerator" xml:space="preserve">
+    <value>מחולל כלי מיון</value>
+  </data>
+  <data name="TestHoraotLink" xml:space="preserve">
+    <value>קישור פתיח למבחן</value>
+  </data>
+  <data name="TestId" xml:space="preserve">
+    <value>cheack number</value>
+  </data>
+  <data name="TestLanguage" xml:space="preserve">
+    <value>שפת מבחן</value>
+  </data>
+  <data name="TestLink" xml:space="preserve">
+    <value>מבחן מקושר</value>
+  </data>
+  <data name="TestName" xml:space="preserve">
+    <value>שם מבחן</value>
+  </data>
+  <data name="TestNumber" xml:space="preserve">
+    <value>מזהה מבחן</value>
+  </data>
+  <data name="TestPlaceHolder" xml:space="preserve">
+    <value>... הזן שם מבחן</value>
+    <comment>Characters  Copy1</comment>
+  </data>
+  <data name="TestProperties" xml:space="preserve">
+    <value>מאפייני מבחן</value>
+  </data>
+  <data name="TestPropertiesDescription" xml:space="preserve">
+    <value>במסך זה ניתן לבנות את מאפייני המבחן הבאים ע"י הזנת הפרטים.</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="TestRequired" xml:space="preserve">
+    <value>יש להזין שם מבחן.</value>
+    <comment>Characters Copy1.1</comment>
+  </data>
+  <data name="Tests" xml:space="preserve">
+    <value>מבחנים</value>
+  </data>
+  <data name="TestsBeforeValidation" xml:space="preserve">
+    <value>Tests before validation</value>
+  </data>
+  <data name="TestsList" xml:space="preserve">
+    <value>רשימת בדיקות</value>
+  </data>
+  <data name="TestTimer" xml:space="preserve">
+    <value>טיימר מבחן</value>
+  </data>
+  <data name="TestTimeSeconds" xml:space="preserve">
+    <value>זמן מבחן (שניות)</value>
+  </data>
+  <data name="TetaDelta" xml:space="preserve">
+    <value>TetaDelta</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>טקסט</value>
+  </data>
+  <data name="TextAnswer" xml:space="preserve">
+    <value>Text answer</value>
+  </data>
+  <data name="TextCandidateRange" xml:space="preserve">
+    <value>Text Candidate Range</value>
+  </data>
+  <data name="TextProperties" xml:space="preserve">
+    <value>מאפייני טקסט</value>
+  </data>
+  <data name="TextValue" xml:space="preserve">
+    <value>Text Value</value>
+  </data>
+  <data name="TheArrayIsDeletedSuccessfully" xml:space="preserve">
+    <value>The Array Is Deleted Successfully</value>
+  </data>
+  <data name="TheCandidateDoesNotExistInTheSystemWhetherToImportFromSAP" xml:space="preserve">
+    <value>TheCandidateDoesNotExistInTheSystemWhetherToImportFromSAP</value>
+  </data>
+  <data name="TheFormulaOfGedanaCaptains" xml:space="preserve">
+    <value>The formula of Gedana captains</value>
+  </data>
+  <data name="ThereAreNoCommentsToKeep" xml:space="preserve">
+    <value>There Are No Comments To Keep</value>
+  </data>
+  <data name="ThereAreNoCommentsToKeep1" xml:space="preserve">
+    <value>אין הערות לשמור</value>
+  </data>
+  <data name="TheUserNotExisist" xml:space="preserve">
+    <value>The User Not Exisist</value>
+  </data>
+  <data name="ThisSortingdayExistsInTheSystemSoYouWillNotBeAbleToSave" xml:space="preserve">
+    <value>This sorting day exists in the system so you will not be able to save</value>
+  </data>
+  <data name="ThreeParameters" xml:space="preserve">
+    <value>שלושה פרמטרים</value>
+  </data>
+  <data name="Tihoni" xml:space="preserve">
+    <value>Tihoni</value>
+  </data>
+  <data name="TimeInput" xml:space="preserve">
+    <value>הזן שעה</value>
+  </data>
+  <data name="TimeProperties" xml:space="preserve">
+    <value>מאפייני זמן</value>
+  </data>
+  <data name="TimerItem" xml:space="preserve">
+    <value>טיימר פריט</value>
+  </data>
+  <data name="Timing" xml:space="preserve">
+    <value>Timing</value>
+  </data>
+  <data name="Tishhonit" xml:space="preserve">
+    <value>תשעונית</value>
+  </data>
+  <data name="TishonitAnswer" xml:space="preserve">
+    <value>Answer tishonit</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TitlePsyPassSystem" xml:space="preserve">
+    <value>מערכת פסיפס לאיבחון פסיכומטרי ממוחשב</value>
+  </data>
+  <data name="ToDayDate" xml:space="preserve">
+    <value>Date of today</value>
+  </data>
+  <data name="TopPoint" xml:space="preserve">
+    <value>נקודה עליונה ביותר</value>
+  </data>
+  <data name="TopSecret" xml:space="preserve">
+    <value>TopSecret</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="Traits" xml:space="preserve">
+    <value>תכונות</value>
+  </data>
+  <data name="TreatmentofPerson" xml:space="preserve">
+    <value>Treatment of person</value>
+  </data>
+  <data name="Tsoanit" xml:space="preserve">
+    <value>תשעונית</value>
+  </data>
+  <data name="TurnOffForm" xml:space="preserve">
+    <value>השהה טופס</value>
+  </data>
+  <data name="TurnOffIndicesNotification" xml:space="preserve">
+    <value>המדד הפך ללא פעיל בהצלחה!</value>
+  </data>
+  <data name="TurnOffLinkToTest" xml:space="preserve">
+    <value>בטל קישור מדד למבחן</value>
+  </data>
+  <data name="TurnOffTest" xml:space="preserve">
+    <value>השהה מבחן</value>
+  </data>
+  <data name="TurnOffTestNotification" xml:space="preserve">
+    <value>המבחן הועבר לסטטוס לא פעיל בהצלחה!</value>
+  </data>
+  <data name="TurnOnForm" xml:space="preserve">
+    <value>הפעל טופס</value>
+  </data>
+  <data name="TurnOnIndicesNotification" xml:space="preserve">
+    <value>המדד הפך לפעיל בהצלחה!</value>
+  </data>
+  <data name="TurnOnLinkToTest" xml:space="preserve">
+    <value>הפעל קישור מדד למבחן</value>
+  </data>
+  <data name="TurnOnTest" xml:space="preserve">
+    <value>הפעל מבחן</value>
+  </data>
+  <data name="TurnOnTestNotification" xml:space="preserve">
+    <value>המבחן הופעל בהצלחה!</value>
+  </data>
+  <data name="TwoParameters" xml:space="preserve">
+    <value>שני פרמטרים</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>סוג</value>
+    <comment>Type</comment>
+  </data>
+  <data name="TypeForcedSignatureDefermentProceedings" xml:space="preserve">
+    <value>Type Forced Signature Deferment Proceedings</value>
+  </data>
+  <data name="TypeGaugeTime" xml:space="preserve">
+    <value>סוג מד זמן</value>
+  </data>
+  <data name="TypeGradeHebrew" xml:space="preserve">
+    <value>Type Zhar</value>
+  </data>
+  <data name="TypeHashanPsicotcni" xml:space="preserve">
+    <value>Type Hashan Psicotcni</value>
+  </data>
+  <data name="TypeMatchesInterviewBeforeValidation" xml:space="preserve">
+    <value>Type Matches Interview Before Validation</value>
+  </data>
+  <data name="TypeMatchesTestsBeforeValidation" xml:space="preserve">
+    <value>Type Matches Tests Before Validation</value>
+  </data>
+  <data name="TypeOfSpeech" xml:space="preserve">
+    <value>Type Of Speech</value>
+  </data>
+  <data name="TypeRequiredComputers" xml:space="preserve">
+    <value>Type Required Computers</value>
+  </data>
+  <data name="TypeRequiredInterview" xml:space="preserve">
+    <value>Type Required Interview</value>
+  </data>
+  <data name="TypeRequiredPtorInterview" xml:space="preserve">
+    <value>סוג כפיית תאריך פטור ראיון</value>
+  </data>
+  <data name="TypeShnolTemporary" xml:space="preserve">
+    <value>Type Shnol Temporary</value>
+  </data>
+  <data name="TypeSignaturProceedings" xml:space="preserve">
+    <value>Type Signatur Proceedings</value>
+  </data>
+  <data name="TypeTest" xml:space="preserve">
+    <value>סוג מבחן</value>
+  </data>
+  <data name="TypeWriting" xml:space="preserve">
+    <value>Type Writing</value>
+  </data>
+  <data name="TypeZhar" xml:space="preserve">
+    <value>Type Shnol</value>
+  </data>
+  <data name="TzadahExempt" xml:space="preserve">
+    <value>Tzadah Exempt</value>
+  </data>
+  <data name="Tzama" xml:space="preserve">
+    <value>Tzama</value>
+  </data>
+  <data name="TzamaTemporaryExemption" xml:space="preserve">
+    <value>Tzama Temporary Exemption</value>
+  </data>
+  <data name="T_Tind" xml:space="preserve">
+    <value>תת אינד'</value>
+  </data>
+  <data name="Unclassified" xml:space="preserve">
+    <value>Unclassified</value>
+  </data>
+  <data name="UnlimitedTime" xml:space="preserve">
+    <value>מוגבל בזמן</value>
+  </data>
+  <data name="UnselectedRowNotification" xml:space="preserve">
+    <value>Unselected row</value>
+  </data>
+  <data name="Until" xml:space="preserve">
+    <value>Until</value>
+  </data>
+  <data name="UntilDate" xml:space="preserve">
+    <value>Until Date</value>
+  </data>
+  <data name="UpBorder" xml:space="preserve">
+    <value>גבול עליון</value>
+  </data>
+  <data name="UpdateDate" xml:space="preserve">
+    <value>Last Update Date</value>
+    <comment>Last Update Date</comment>
+  </data>
+  <data name="UpdateDateI" xml:space="preserve">
+    <value>Update DateI</value>
+  </data>
+  <data name="UpdateOrganizationalStructure" xml:space="preserve">
+    <value>עדכון מבנה ארגוני</value>
+  </data>
+  <data name="UpdateSource" xml:space="preserve">
+    <value>עדכון של מקור</value>
+  </data>
+  <data name="UploadDiagnosticToSite" xml:space="preserve">
+    <value>Upload Diagnostic To Site</value>
+  </data>
+  <data name="UploadDocumentsToSite" xml:space="preserve">
+    <value>Upload Documents To Site</value>
+  </data>
+  <data name="UploadDocumentsToSiteYet" xml:space="preserve">
+    <value>Upload Documents To Site yet</value>
+  </data>
+  <data name="Usere" xml:space="preserve">
+    <value>Usere</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>שם משתמש</value>
+    <comment>Characters Copy2</comment>
+  </data>
+  <data name="UserNameLabel" xml:space="preserve">
+    <value>שם משתמש:</value>
+    <comment>Characters Copy2.1</comment>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>דרוש שם משתמש.</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="UsersList" xml:space="preserve">
+    <value>רשימת המשתמשים במערכת</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>סוג משתמש</value>
+  </data>
+  <data name="ValidationForEndSortingDay" xml:space="preserve">
+    <value>Confirmation of this operation The sorting day and all its exams will be closed. Do you confirm?</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>ערך</value>
+  </data>
+  <data name="ValueName" xml:space="preserve">
+    <value>שם נתון</value>
+  </data>
+  <data name="VerifyLevelVerification" xml:space="preserve">
+    <value>בירור אימות רמה</value>
+  </data>
+  <data name="Vertical" xml:space="preserve">
+    <value>אנכי</value>
+  </data>
+  <data name="VerticalPosition" xml:space="preserve">
+    <value>מיקום אנכי</value>
+  </data>
+  <data name="VisibaleChapter" xml:space="preserve">
+    <value>Visibale Chapter</value>
+  </data>
+  <data name="VisibaleField" xml:space="preserve">
+    <value>Visibale Field</value>
+  </data>
+  <data name="VisibaleItem" xml:space="preserve">
+    <value>Visibale Item</value>
+  </data>
+  <data name="vldAddExamsToExamArray" xml:space="preserve">
+    <value>לא ניתן לשמור מערך אבחון בלי להגדיר  מבחנים</value>
+  </data>
+  <data name="vldAddExamsToTemplate" xml:space="preserve">
+    <value>לא ניתן לשמור תבנית בלי להגדיר  מבחנים</value>
+  </data>
+  <data name="vldAddPermissionsToRole" xml:space="preserve">
+    <value>לא ניתן לשמור תפקיד בלי להגדיר  הרשאות</value>
+  </data>
+  <data name="vldAddRoleToUser" xml:space="preserve">
+    <value>למשתמש רגיל חובה להוסיף ארגון ותפקיד</value>
+  </data>
+  <data name="vldAlreadyAddedExamToTemplate" xml:space="preserve">
+    <value>כבר הוספת מבחן הזה</value>
+  </data>
+  <data name="vldAlreadyAddedOrganization" xml:space="preserve">
+    <value>כבר הוספת ארגון הזה</value>
+  </data>
+  <data name="vldBirthdate" xml:space="preserve">
+    <value>תאריך לידה לא תקין</value>
+  </data>
+  <data name="vldCandTypeIdRequired" xml:space="preserve">
+    <value>יש לבחור את סוג זיהוי</value>
+  </data>
+  <data name="vldEnterOnlyLetters" xml:space="preserve">
+    <value>להזין אותיות בלבד</value>
+  </data>
+  <data name="vldExamArrayNameExist" xml:space="preserve">
+    <value>שם המערך כבר קיים</value>
+  </data>
+  <data name="vldExamArrayNameRequired" xml:space="preserve">
+    <value>חובה להזין שם מערך אבחון</value>
+  </data>
+  <data name="vldFirstNameRequired" xml:space="preserve">
+    <value>יש להזין שם פרטי</value>
+  </data>
+  <data name="vldIdRequired" xml:space="preserve">
+    <value>חסר ערך מזהה</value>
+  </data>
+  <data name="vldLastNameRequired" xml:space="preserve">
+    <value>יש להזין שם משפחה</value>
+  </data>
+  <data name="vldOrganizationNameExist" xml:space="preserve">
+    <value>שם הארגון כבר קיים</value>
+  </data>
+  <data name="vldOrganizationNameRequired" xml:space="preserve">
+    <value>חובה להזין שם ארגון</value>
+  </data>
+  <data name="vldOrganizationRequired" xml:space="preserve">
+    <value>יש לבחור את ארגון</value>
+  </data>
+  <data name="vldPasswordRequired" xml:space="preserve">
+    <value>יש להזין שם פרטי</value>
+  </data>
+  <data name="vldPermissionToChildTab" xml:space="preserve">
+    <value>יש לבחור הרשאה מתאימה לפי היררכיית הפעולות</value>
+  </data>
+  <data name="vldPersonalNumberRequired" xml:space="preserve">
+    <value>יש להזין מספר אישי</value>
+  </data>
+  <data name="vldRoleNameExist" xml:space="preserve">
+    <value>שם התפקיד כבר קיים</value>
+  </data>
+  <data name="vldRoleNameRequired" xml:space="preserve">
+    <value>חובה להזין שם תפקיד</value>
+  </data>
+  <data name="vldSexRequired" xml:space="preserve">
+    <value>יש לבחור את מין הנבדק</value>
+  </data>
+  <data name="vldTemplateNameExist" xml:space="preserve">
+    <value>שם התבנית כבר קיים</value>
+  </data>
+  <data name="vldTemplateNameRequired" xml:space="preserve">
+    <value>חובה להזין שם תבנית</value>
+  </data>
+  <data name="vldUserTypesRequired" xml:space="preserve">
+    <value>יש לבחור סוג משתמש</value>
+  </data>
+  <data name="vldValueLength" xml:space="preserve">
+    <value>הערך חייב להיות בין {0} ל -{1} תווים</value>
+  </data>
+  <data name="vldValueMustBeGreaterThan" xml:space="preserve">
+    <value>הערך חייב להיות גדול מ {0}</value>
+  </data>
+  <data name="vldWeightNormsRequired" xml:space="preserve">
+    <value>חובה להזין משקל, ממוצע, ס. תקן ונורמות</value>
+  </data>
+  <data name="Volunteer" xml:space="preserve">
+    <value>Volunteer</value>
+  </data>
+  <data name="WaitInvestigation" xml:space="preserve">
+    <value>Wait Investigation</value>
+  </data>
+  <data name="WaiverOfAdjustments" xml:space="preserve">
+    <value>Waiver of adjustments</value>
+  </data>
+  <data name="WasNotChosen" xml:space="preserve">
+    <value>- לא נבחר -</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="Watching" xml:space="preserve">
+    <value>צפייה</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>משקל</value>
+  </data>
+  <data name="WeightRangeError" xml:space="preserve">
+    <value>יש להזין משקל בטווח {0}-{1}</value>
+  </data>
+  <data name="WhenYouClickOKButtonRoomWillBeDeletedAllAssociatedLocationsWillBeDeleted" xml:space="preserve">
+    <value>Note! When you click the OK button, a room will be deleted, all associated locations will be deleted</value>
+  </data>
+  <data name="WhenYouPressOKButtonPositionWillBeDeleted" xml:space="preserve">
+    <value>Note! When you press the OK button, a position will be deleted</value>
+  </data>
+  <data name="WhenYouPressTheOKButtonSortingDayWillBeDeleted" xml:space="preserve">
+    <value>Note: When you press the OK button, a sorting day will be deleted</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>רוחב</value>
+  </data>
+  <data name="WithoutDisplay" xml:space="preserve">
+    <value>ללא תצוגה</value>
+  </data>
+  <data name="WithoutDisplayArrows" xml:space="preserve">
+    <value>לא להציג חצים כלל</value>
+  </data>
+  <data name="WithoutEase" xml:space="preserve">
+    <value>Without Ease</value>
+  </data>
+  <data name="WithoutPermission" xml:space="preserve">
+    <value>ללא הרשאה</value>
+  </data>
+  <data name="WithoutProperExaminationLanguage" xml:space="preserve">
+    <value>Without Proper Examination Language</value>
+  </data>
+  <data name="WomensInterviewScore" xml:space="preserve">
+    <value>A women's interview score</value>
+  </data>
+  <data name="WorkingMemory1" xml:space="preserve">
+    <value>Working Memory1</value>
+  </data>
+  <data name="WorkingMemory2" xml:space="preserve">
+    <value>Working Memory2</value>
+  </data>
+  <data name="WriteRoomName" xml:space="preserve">
+    <value>Write Room Name</value>
+  </data>
+  <data name="WriteStationsName" xml:space="preserve">
+    <value>Write Stations Name</value>
+  </data>
+  <data name="YearOfBirthRangeError" xml:space="preserve">
+    <value>יש להזין שנת לידה בטווח {0}-{1}</value>
+  </data>
+  <data name="YearOfImmigrationRangeError" xml:space="preserve">
+    <value>יש להזין שנת עליה בטווח {0}-{1}</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Yeshiva" xml:space="preserve">
+    <value>Yeshiva</value>
+  </data>
+  <data name="YetToFiledDiagnostics" xml:space="preserve">
+    <value>Yet To Filed Diagnostics</value>
+  </data>
+  <data name="YetToUploadDiagnosticToSite" xml:space="preserve">
+    <value>Yet To Upload Diagnostic To Site</value>
+  </data>
+  <data name="YouCanotAddCandidateSortingDayStart" xml:space="preserve">
+    <value>You Can't Add Candidate Sorting Day Start</value>
+  </data>
+  <data name="YouCanotAddCandidateWithoutEnteringNameOfSortingDay" xml:space="preserve">
+    <value>Enter sorting day</value>
+  </data>
+  <data name="YouCanotDeleteASortingDayThatAlreadyBeenDone" xml:space="preserve">
+    <value>You can not delete a sorting day that has already been done</value>
+  </data>
+  <data name="YouCanotEndASortingDaForFutureDate" xml:space="preserve">
+    <value>You can not end a sorting day for a future date</value>
+  </data>
+  <data name="YouCantSaveSortingDayWithoutCandidatesAddNewCheck" xml:space="preserve">
+    <value>You can not save a class day without candidates, add a new Check</value>
+  </data>
+  <data name="YouMustChooseTestOrForm" xml:space="preserve">
+    <value>You must choose a test or a form</value>
+  </data>
+  <data name="YouMustClickOnTheDisplayToSeeWhoInviteBeforeAddCandidateToSortingDay" xml:space="preserve">
+    <value>You must click on the display to see who was summoned before add new candidate to sorting day</value>
+  </data>
+  <data name="YouMustEnterASevenDigitPersonalNumber" xml:space="preserve">
+    <value>You must enter a 7-digit personal number</value>
+  </data>
+  <data name="YouMustEnterFormNameForTheSortingDayBeforeSaving" xml:space="preserve">
+    <value>You must enter a form name for the sorting day before saving</value>
+  </data>
+  <data name="YouMustEnterId" xml:space="preserve">
+    <value>You Must Enter Id</value>
+  </data>
+  <data name="YouMustEnterNineDigitIdNumber" xml:space="preserve">
+    <value>You must enter a 9-digit ID number</value>
+  </data>
+  <data name="YouMustEnterSevanDigitIdNumber" xml:space="preserve">
+    <value>You must enter a 7-digit personal number</value>
+  </data>
+  <data name="YouMustSelectAtLeastOneOrganization" xml:space="preserve">
+    <value>You must select at least one organization</value>
+  </data>
+  <data name="Yourpersonalinformationtabissavedsuccessfully" xml:space="preserve">
+    <value>Yourpersonalinformationtabissavedsuccessfully</value>
+  </data>
+  <data name="Zadachd" xml:space="preserve">
+    <value>Zadachd</value>
+  </data>
+  <data name="Zadachga" xml:space="preserve">
+    <value>Zadachga</value>
+  </data>
+  <data name="Zadachhb" xml:space="preserve">
+    <value>Zadachhb</value>
+  </data>
+  <data name="Zadachhv" xml:space="preserve">
+    <value>Zadachhv</value>
+  </data>
+  <data name="Zadachiz" xml:space="preserve">
+    <value>Zadachiz</value>
+  </data>
+  <data name="Zadachn" xml:space="preserve">
+    <value>Zadachn</value>
+  </data>
+  <data name="Zadachp" xml:space="preserve">
+    <value>Zadachp</value>
+  </data>
+  <data name="Zadah" xml:space="preserve">
+    <value>Zadah</value>
+  </data>
+  <data name="Zamakh" xml:space="preserve">
+    <value>Zamakh</value>
+  </data>
+  <data name="Zamamm" xml:space="preserve">
+    <value>Zamamm</value>
+  </data>
+  <data name="Zamamt" xml:space="preserve">
+    <value>Zamamt</value>
+  </data>
+  <data name="Zamasimp" xml:space="preserve">
+    <value>Zamasimp</value>
+  </data>
+  <data name="Zamatm" xml:space="preserve">
+    <value>Zamatm</value>
+  </data>
+  <data name="ZharTemporary" xml:space="preserve">
+    <value>Zhar Temporary</value>
+  </data>
+  <data name="ZharUnusual" xml:space="preserve">
+    <value>Zhar Unusual</value>
+  </data>
+  <data name="ZimonDate" xml:space="preserve">
+    <value>Zimon Date</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+</root>

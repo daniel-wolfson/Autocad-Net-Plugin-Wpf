@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MiDbSQLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="MiDbSQLModelStoreContainer">
+          <EntitySet Name="Tikra" EntityType="MiDbSQLModel.Store.Tikra" store:Type="Tables" store:Schema="dbo" store:Name="Tikra">
+            <DefiningQuery>SELECT 
+      [Tikra].[Division] AS [Division], 
+      [Tikra].[Level] AS [Level], 
+      [Tikra].[Eliv] AS [Eliv], 
+      [Tikra].[Namedwg] AS [Namedwg], 
+      [Tikra].[typSlab] AS [typSlab], 
+      [Tikra].[proDatCons] AS [proDatCons], 
+      [Tikra].[proDraw] AS [proDraw], 
+      [Tikra].[proFea] AS [proFea], 
+      [Tikra].[proConBeam] AS [proConBeam], 
+      [Tikra].[proConPlate] AS [proConPlate], 
+      [Tikra].[basePointX] AS [basePointX], 
+      [Tikra].[BasePointY] AS [BasePointY], 
+      [Tikra].[DistancGr] AS [DistancGr], 
+      [Tikra].[flTsec] AS [flTsec], 
+      [Tikra].[kTors] AS [kTors], 
+      [Tikra].[nMeshX] AS [nMeshX], 
+      [Tikra].[nMeshY] AS [nMeshY], 
+      [Tikra].[par1] AS [par1], 
+      [Tikra].[par2] AS [par2], 
+      [Tikra].[nCalc] AS [nCalc], 
+      [Tikra].[flChan] AS [flChan], 
+      [Tikra].[num] AS [num], 
+      [Tikra].[datold] AS [datold], 
+      [Tikra].[inBetonBem] AS [inBetonBem], 
+      [Tikra].[inBetonPlt] AS [inBetonPlt], 
+      [Tikra].[inBetonCol] AS [inBetonCol], 
+      [Tikra].[inBetonWal] AS [inBetonWal], 
+      [Tikra].[inBetonPil] AS [inBetonPil], 
+      [Tikra].[ipar1] AS [ipar1], 
+      [Tikra].[ipar2] AS [ipar2], 
+      [Tikra].[ipar3] AS [ipar3], 
+      [Tikra].[ipar4] AS [ipar4], 
+      [Tikra].[ipar5] AS [ipar5], 
+      [Tikra].[ipar6] AS [ipar6], 
+      [Tikra].[ipar7] AS [ipar7], 
+      [Tikra].[ipar8] AS [ipar8], 
+      [Tikra].[ipar9] AS [ipar9], 
+      [Tikra].[ipar10] AS [ipar10], 
+      [Tikra].[par3] AS [par3], 
+      [Tikra].[par4] AS [par4], 
+      [Tikra].[par5] AS [par5], 
+      [Tikra].[par6] AS [par6], 
+      [Tikra].[par7] AS [par7], 
+      [Tikra].[par8] AS [par8], 
+      [Tikra].[par9] AS [par9], 
+      [Tikra].[par10] AS [par10], 
+      [Tikra].[par11] AS [par11], 
+      [Tikra].[par12] AS [par12], 
+      [Tikra].[par13] AS [par13], 
+      [Tikra].[par14] AS [par14], 
+      [Tikra].[par15] AS [par15], 
+      [Tikra].[par16] AS [par16], 
+      [Tikra].[par17] AS [par17], 
+      [Tikra].[par18] AS [par18], 
+      [Tikra].[par19] AS [par19], 
+      [Tikra].[par20] AS [par20]
+      FROM [dbo].[Tikra] AS [Tikra]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'MiDbSQL.dbo.Tikra' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Tikra">
+          <Key>
+            <PropertyRef Name="Level" />
+          </Key>
+          <Property Name="Division" Type="nvarchar" MaxLength="20" />
+          <Property Name="Level" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Eliv" Type="real" />
+          <Property Name="Namedwg" Type="nvarchar" MaxLength="20" />
+          <Property Name="typSlab" Type="nvarchar" MaxLength="20" />
+          <Property Name="proDatCons" Type="datetime" />
+          <Property Name="proDraw" Type="datetime" />
+          <Property Name="proFea" Type="datetime" />
+          <Property Name="proConBeam" Type="datetime" />
+          <Property Name="proConPlate" Type="datetime" />
+          <Property Name="basePointX" Type="real" />
+          <Property Name="BasePointY" Type="real" />
+          <Property Name="DistancGr" Type="real" />
+          <Property Name="flTsec" Type="smallint" />
+          <Property Name="kTors" Type="real" />
+          <Property Name="nMeshX" Type="smallint" />
+          <Property Name="nMeshY" Type="smallint" />
+          <Property Name="par1" Type="real" />
+          <Property Name="par2" Type="real" />
+          <Property Name="nCalc" Type="smallint" />
+          <Property Name="flChan" Type="smallint" />
+          <Property Name="num" Type="smallint" />
+          <Property Name="datold" Type="datetime" />
+          <Property Name="inBetonBem" Type="smallint" />
+          <Property Name="inBetonPlt" Type="smallint" />
+          <Property Name="inBetonCol" Type="smallint" />
+          <Property Name="inBetonWal" Type="smallint" />
+          <Property Name="inBetonPil" Type="smallint" />
+          <Property Name="ipar1" Type="smallint" />
+          <Property Name="ipar2" Type="smallint" />
+          <Property Name="ipar3" Type="smallint" />
+          <Property Name="ipar4" Type="smallint" />
+          <Property Name="ipar5" Type="smallint" />
+          <Property Name="ipar6" Type="smallint" />
+          <Property Name="ipar7" Type="smallint" />
+          <Property Name="ipar8" Type="smallint" />
+          <Property Name="ipar9" Type="smallint" />
+          <Property Name="ipar10" Type="smallint" />
+          <Property Name="par3" Type="real" />
+          <Property Name="par4" Type="real" />
+          <Property Name="par5" Type="real" />
+          <Property Name="par6" Type="real" />
+          <Property Name="par7" Type="real" />
+          <Property Name="par8" Type="real" />
+          <Property Name="par9" Type="real" />
+          <Property Name="par10" Type="real" />
+          <Property Name="par11" Type="real" />
+          <Property Name="par12" Type="real" />
+          <Property Name="par13" Type="real" />
+          <Property Name="par14" Type="real" />
+          <Property Name="par15" Type="real" />
+          <Property Name="par16" Type="real" />
+          <Property Name="par17" Type="real" />
+          <Property Name="par18" Type="real" />
+          <Property Name="par19" Type="real" />
+          <Property Name="par20" Type="real" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.cons' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="cons">
+        <Property Name="contyp" Type="smallint" />
+        <Property Name="flag1" Type="smallint" />
+        <Property Name="flag2" Type="smallint" />
+        <Property Name="conam" Type="nvarchar" MaxLength="12" />
+        <Property Name="x1" Type="real" />
+        <Property Name="y1" Type="real" />
+        <Property Name="x2" Type="real" />
+        <Property Name="y2" Type="real" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="x3" Type="real" />
+        <Property Name="y3" Type="real" />
+        <Property Name="par6" Type="real" />
+        <Property Name="ipar1" Type="smallint" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+        <Property Name="par10" Type="real" />
+        <Property Name="typMat" Type="smallint" />
+        <Property Name="parMat" Type="smallint" />
+        <Property Name="inBeton" Type="smallint" />
+        <Property Name="tpar1" Type="nvarchar" MaxLength="8" />
+        <Property Name="nFem1" Type="smallint" />
+        <Property Name="nFem2" Type="smallint" />
+        <Property Name="ztop" Type="real" />
+        <Property Name="zbot" Type="real" />
+        <Property Name="err" Type="int" />
+        <Property Name="fFem" Type="smallint" />
+        <Property Name="ipar2" Type="smallint" />
+        <Property Name="par11" Type="real" />
+        <Property Name="par12" Type="real" />
+        <Property Name="par13" Type="real" />
+        <Property Name="par14" Type="real" />
+        <Property Name="par15" Type="real" />
+        <Property Name="par16" Type="real" />
+        <Property Name="par17" Type="real" />
+        <Property Name="par18" Type="real" />
+        <Property Name="par19" Type="real" />
+        <Property Name="par20" Type="real" />
+        <Property Name="par21" Type="real" />
+        <Property Name="ipar3" Type="smallint" />
+        <Property Name="ipar4" Type="smallint" />
+        <Property Name="ipar5" Type="smallint" />
+        <Property Name="ipar6" Type="smallint" />
+        <Property Name="ipar7" Type="smallint" />
+        <Property Name="ipar8" Type="smallint" />
+        <Property Name="ipar9" Type="smallint" />
+        <Property Name="ipar10" Type="smallint" />
+        <Property Name="par22" Type="real" />
+        <Property Name="par23" Type="real" />
+        <Property Name="par24" Type="real" />
+        <Property Name="par25" Type="real" />
+        <Property Name="par26" Type="real" />
+        <Property Name="par27" Type="real" />
+        <Property Name="par28" Type="real" />
+        <Property Name="par29" Type="real" />
+        <Property Name="par30" Type="real" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.consModel' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="consModel">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="contyp" Type="smallint" />
+        <Property Name="num" Type="smallint" />
+        <Property Name="pai1" Type="smallint" />
+        <Property Name="pai2" Type="smallint" />
+        <Property Name="pai3" Type="smallint" />
+        <Property Name="pai4" Type="smallint" />
+        <Property Name="pai5" Type="smallint" />
+        <Property Name="pai6" Type="smallint" />
+        <Property Name="pai7" Type="smallint" />
+        <Property Name="pai8" Type="smallint" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="par6" Type="real" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+        <Property Name="par10" Type="real" />
+        <Property Name="par11" Type="real" />
+        <Property Name="par12" Type="real" />
+        <Property Name="par13" Type="real" />
+        <Property Name="par14" Type="real" />
+        <Property Name="par15" Type="real" />
+        <Property Name="par16" Type="real" />
+        <Property Name="flag" Type="smallint" />
+        <Property Name="pas1" Type="nvarchar" MaxLength="12" />
+        <Property Name="pas2" Type="nvarchar" MaxLength="12" />
+        <Property Name="par17" Type="real" />
+        <Property Name="par18" Type="real" />
+        <Property Name="par19" Type="real" />
+        <Property Name="par20" Type="real" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.contur' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="contur">
+        <Property Name="typ" Type="smallint" />
+        <Property Name="nam" Type="nvarchar" MaxLength="12" />
+        <Property Name="flag1" Type="smallint" />
+        <Property Name="flag2" Type="smallint" />
+        <Property Name="x1" Type="real" />
+        <Property Name="y1" Type="real" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="ipar1" Type="smallint" />
+        <Property Name="ipar2" Type="smallint" />
+        <Property Name="ipar3" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.ConturPrp' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="ConturPrp">
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="Elev" Type="real" />
+        <Property Name="TyPlate" Type="smallint" />
+        <Property Name="Layer" Type="nvarchar" MaxLength="20" />
+        <Property Name="ipar1" Type="smallint" />
+        <Property Name="typSlab" Type="nvarchar" MaxLength="20" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="ipar2" Type="smallint" />
+        <Property Name="ipar3" Type="smallint" />
+        <Property Name="typMat" Type="smallint" />
+        <Property Name="parMat" Type="smallint" />
+        <Property Name="dwg" Type="nvarchar" MaxLength="20" />
+        <Property Name="typContur" Type="smallint" />
+        <Property Name="ipar5" Type="smallint" />
+        <Property Name="caseContur" Type="smallint" />
+        <Property Name="ipar4" Type="smallint" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="spar1" Type="nvarchar" MaxLength="16" />
+        <Property Name="par6" Type="real" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+        <Property Name="par10" Type="real" />
+        <Property Name="ipar6" Type="smallint" />
+        <Property Name="ipar7" Type="smallint" />
+        <Property Name="ipar8" Type="smallint" />
+        <Property Name="ipar9" Type="smallint" />
+        <Property Name="ipar10" Type="smallint" />
+        <Property Name="handle" Type="nvarchar" MaxLength="30" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.designCon' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="designCon">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="contyp" Type="smallint" />
+        <Property Name="ipar1" Type="smallint" />
+        <Property Name="ipar2" Type="smallint" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="par6" Type="real" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+        <Property Name="par10" Type="real" />
+        <Property Name="par11" Type="real" />
+        <Property Name="par12" Type="real" />
+        <Property Name="par13" Type="real" />
+        <Property Name="par14" Type="real" />
+        <Property Name="par15" Type="real" />
+        <Property Name="par16" Type="real" />
+        <Property Name="par17" Type="real" />
+        <Property Name="par18" Type="real" />
+        <Property Name="par19" Type="real" />
+        <Property Name="par20" Type="real" />
+        <Property Name="ipar3" Type="smallint" />
+        <Property Name="ipar4" Type="smallint" />
+        <Property Name="ipar5" Type="smallint" />
+        <Property Name="par21" Type="real" />
+        <Property Name="par22" Type="real" />
+        <Property Name="par23" Type="real" />
+        <Property Name="par24" Type="real" />
+        <Property Name="par25" Type="real" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.Divisions' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Divisions">
+        <Property Name="Name" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.Draft' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Draft">
+        <Property Name="NameDwg" Type="nvarchar" MaxLength="20" />
+        <Property Name="datDraft" Type="datetime" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="xBase" Type="real" />
+        <Property Name="yBase" Type="real" />
+        <Property Name="Elev" Type="real" />
+        <Property Name="ConTyp" Type="smallint" />
+        <Property Name="construct" Type="nvarchar" MaxLength="20" />
+        <Property Name="LayBeam" Type="nvarchar" MaxLength="20" />
+        <Property Name="LayCol" Type="nvarchar" MaxLength="20" />
+        <Property Name="LayWall" Type="nvarchar" MaxLength="20" />
+        <Property Name="LayPlate" Type="nvarchar" MaxLength="20" />
+        <Property Name="LayLoad" Type="nvarchar" MaxLength="20" />
+        <Property Name="layText" Type="nvarchar" MaxLength="20" />
+        <Property Name="xGl" Type="real" />
+        <Property Name="xGr" Type="real" />
+        <Property Name="yGb" Type="real" />
+        <Property Name="yGt" Type="real" />
+        <Property Name="LayBlwall" Type="nvarchar" MaxLength="20" />
+        <Property Name="Lay1" Type="nvarchar" MaxLength="20" />
+        <Property Name="Lay2" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.DrawArch' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DrawArch">
+        <Property Name="NameDwg" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas1" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas2" Type="nvarchar" MaxLength="20" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="pai1" Type="smallint" />
+        <Property Name="pas3" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas4" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas5" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas6" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas7" Type="nvarchar" MaxLength="20" />
+        <Property Name="pas8" Type="nvarchar" MaxLength="20" />
+        <Property Name="xGl" Type="real" />
+        <Property Name="xGr" Type="real" />
+        <Property Name="yGb" Type="real" />
+        <Property Name="yGt" Type="real" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="xBase" Type="real" />
+        <Property Name="yBase" Type="real" />
+        <Property Name="pai2" Type="smallint" />
+        <Property Name="pai3" Type="smallint" />
+        <Property Name="pai4" Type="smallint" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="pai5" Type="smallint" />
+        <Property Name="datDraw" Type="datetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.DrawPrj' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DrawPrj">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="Elev" Type="real" />
+        <Property Name="NameDwg" Type="nvarchar" MaxLength="20" />
+        <Property Name="datDraw" Type="datetime" />
+        <Property Name="DrawTyp" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.DrawTemplate' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DrawTemplate">
+        <Property Name="Template" Type="nvarchar" MaxLength="20" />
+        <Property Name="DrawDate" Type="datetime" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Elev" Type="real" />
+        <Property Name="Fragments" Type="int" />
+        <Property Name="Elm0" Type="int" />
+        <Property Name="Elm1" Type="int" />
+        <Property Name="Elm2" Type="int" />
+        <Property Name="Elm3" Type="int" />
+        <Property Name="Elm4" Type="int" />
+        <Property Name="Elm5" Type="int" />
+        <Property Name="Elm6" Type="int" />
+        <Property Name="Elm7" Type="int" />
+        <Property Name="Elm8" Type="int" />
+        <Property Name="Elm9" Type="int" />
+        <Property Name="Elom10" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.FlrDate' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="FlrDate">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="par6" Type="real" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+        <Property Name="par10" Type="real" />
+        <Property Name="par11" Type="real" />
+        <Property Name="par12" Type="real" />
+        <Property Name="par13" Type="real" />
+        <Property Name="par14" Type="real" />
+        <Property Name="par15" Type="real" />
+        <Property Name="par16" Type="real" />
+        <Property Name="par17" Type="real" />
+        <Property Name="par18" Type="real" />
+        <Property Name="par19" Type="real" />
+        <Property Name="par20" Type="real" />
+        <Property Name="par21" Type="real" />
+        <Property Name="par22" Type="real" />
+        <Property Name="par23" Type="real" />
+        <Property Name="par24" Type="real" />
+        <Property Name="par25" Type="real" />
+        <Property Name="par26" Type="real" />
+        <Property Name="par27" Type="real" />
+        <Property Name="par28" Type="real" />
+        <Property Name="par29" Type="real" />
+        <Property Name="par30" Type="real" />
+        <Property Name="pai1" Type="smallint" />
+        <Property Name="pai2" Type="smallint" />
+        <Property Name="pai3" Type="smallint" />
+        <Property Name="pai4" Type="smallint" />
+        <Property Name="pai5" Type="smallint" />
+        <Property Name="pai6" Type="smallint" />
+        <Property Name="pai7" Type="smallint" />
+        <Property Name="pai8" Type="smallint" />
+        <Property Name="pai9" Type="smallint" />
+        <Property Name="pai10" Type="smallint" />
+        <Property Name="pai11" Type="smallint" />
+        <Property Name="pai12" Type="smallint" />
+        <Property Name="pai13" Type="smallint" />
+        <Property Name="pai14" Type="smallint" />
+        <Property Name="pai15" Type="smallint" />
+        <Property Name="pas1" Type="nvarchar" MaxLength="24" />
+        <Property Name="pas2" Type="nvarchar" MaxLength="24" />
+        <Property Name="pas3" Type="nvarchar" MaxLength="24" />
+        <Property Name="pas4" Type="nvarchar" MaxLength="24" />
+        <Property Name="pas5" Type="nvarchar" MaxLength="24" />
+        <Property Name="num1" Type="smallint" />
+        <Property Name="num2" Type="smallint" />
+        <Property Name="flag" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.Foundation' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Foundation">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Typ" Type="smallint" />
+        <Property Name="Block" Type="smallint" />
+        <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        <Property Name="Elev" Type="real" />
+        <Property Name="Hfun" Type="real" />
+        <Property Name="Xc" Type="real" />
+        <Property Name="Yc" Type="real" />
+        <Property Name="conTyp" Type="smallint" />
+        <Property Name="x2" Type="real" />
+        <Property Name="y2" Type="real" />
+        <Property Name="Diam" Type="real" />
+        <Property Name="hPile" Type="real" />
+        <Property Name="bc" Type="real" />
+        <Property Name="hc" Type="real" />
+        <Property Name="NPile" Type="real" />
+        <Property Name="VPile" Type="real" />
+        <Property Name="cofC" Type="real" />
+        <Property Name="cofV" Type="real" />
+        <Property Name="Nsermax" Type="real" />
+        <Property Name="MxSermax" Type="real" />
+        <Property Name="MySermax" Type="real" />
+        <Property Name="VxSermax" Type="real" />
+        <Property Name="VySermax" Type="real" />
+        <Property Name="NSusmax" Type="real" />
+        <Property Name="MxSusmax" Type="real" />
+        <Property Name="MySusmax" Type="real" />
+        <Property Name="VxSusmax" Type="real" />
+        <Property Name="VySusmax" Type="real" />
+        <Property Name="pai1" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.FoundPlt' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="FoundPlt">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Typ" Type="smallint" />
+        <Property Name="Block" Type="smallint" />
+        <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        <Property Name="Elev" Type="real" />
+        <Property Name="Hfun" Type="real" />
+        <Property Name="Xc" Type="real" />
+        <Property Name="Yc" Type="real" />
+        <Property Name="conTyp" Type="smallint" />
+        <Property Name="x2" Type="real" />
+        <Property Name="y2" Type="real" />
+        <Property Name="bc" Type="real" />
+        <Property Name="hc" Type="real" />
+        <Property Name="NFound" Type="real" />
+        <Property Name="VFound" Type="real" />
+        <Property Name="cofC" Type="real" />
+        <Property Name="xcFound" Type="real" />
+        <Property Name="ycFound" Type="real" />
+        <Property Name="bFound" Type="real" />
+        <Property Name="hFound" Type="real" />
+        <Property Name="dFound" Type="real" />
+        <Property Name="Nsermax" Type="real" />
+        <Property Name="MxSermax" Type="real" />
+        <Property Name="MySermax" Type="real" />
+        <Property Name="VxSermax" Type="real" />
+        <Property Name="VySermax" Type="real" />
+        <Property Name="NSusmax" Type="real" />
+        <Property Name="MxSusmax" Type="real" />
+        <Property Name="MySusmax" Type="real" />
+        <Property Name="VxSusmax" Type="real" />
+        <Property Name="VySusmax" Type="real" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="par6" Type="real" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.Levels' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Levels">
+        <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        <Property Name="Elev" Type="real" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.Load' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Load">
+        <Property Name="ldname" Type="nvarchar" MaxLength="12" />
+        <Property Name="ldType" Type="smallint" />
+        <Property Name="flag1" Type="smallint" />
+        <Property Name="flag2" Type="smallint" />
+        <Property Name="value1" Type="real" />
+        <Property Name="value2" Type="real" />
+        <Property Name="x1" Type="real" />
+        <Property Name="y1" Type="real" />
+        <Property Name="x2" Type="real" />
+        <Property Name="y2" Type="real" />
+        <Property Name="x3" Type="real" />
+        <Property Name="y3" Type="real" />
+        <Property Name="nzgr" Type="smallint" />
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="value3" Type="real" />
+        <Property Name="value4" Type="real" />
+        <Property Name="value5" Type="real" />
+        <Property Name="value6" Type="real" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'MiDbSQL.dbo.Rein' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Rein">
+        <Property Name="Division" Type="nvarchar" MaxLength="20" />
+        <Property Name="Level" Type="nvarchar" MaxLength="20" />
+        <Property Name="conTyp" Type="smallint" />
+        <Property Name="coNam" Type="nvarchar" MaxLength="12" />
+        <Property Name="conElem" Type="smallint" />
+        <Property Name="Diam" Type="real" />
+        <Property Name="Numb" Type="smallint" />
+        <Property Name="pai1" Type="smallint" />
+        <Property Name="pai2" Type="smallint" />
+        <Property Name="pai3" Type="smallint" />
+        <Property Name="pai4" Type="smallint" />
+        <Property Name="par1" Type="real" />
+        <Property Name="par2" Type="real" />
+        <Property Name="par3" Type="real" />
+        <Property Name="par4" Type="real" />
+        <Property Name="par5" Type="real" />
+        <Property Name="par6" Type="real" />
+        <Property Name="par7" Type="real" />
+        <Property Name="par8" Type="real" />
+        <Property Name="par9" Type="real" />
+        <Property Name="par10" Type="real" />
+        <Property Name="par11" Type="real" />
+        <Property Name="par12" Type="real" />
+        <Property Name="par13" Type="real" />
+        <Property Name="par14" Type="real" />
+        <Property Name="par15" Type="real" />
+        <Property Name="par16" Type="real" />
+        <Property Name="par17" Type="real" />
+        <Property Name="par18" Type="real" />
+        <Property Name="par19" Type="real" />
+        <Property Name="par20" Type="real" />
+        <Property Name="par21" Type="real" />
+        <Property Name="par22" Type="real" />
+        <Property Name="par23" Type="real" />
+        <Property Name="par24" Type="real" />
+        <Property Name="pai5" Type="smallint" />
+        <Property Name="pai6" Type="smallint" />
+        <Property Name="pai7" Type="smallint" />
+        <Property Name="pai8" Type="smallint" />
+        <Property Name="par25" Type="real" />
+        <Property Name="par26" Type="real" />
+        <Property Name="par27" Type="real" />
+        <Property Name="par28" Type="real" />
+        <Property Name="par29" Type="real" />
+        <Property Name="par30" Type="real" />
+        <Property Name="par31" Type="real" />
+        <Property Name="par32" Type="real" />
+        <Property Name="par33" Type="real" />
+        <Property Name="par34" Type="real" />
+        <Property Name="par35" Type="real" />
+        <Property Name="par36" Type="real" />
+        <Property Name="par37" Type="real" />
+        <Property Name="par38" Type="real" />
+        <Property Name="par39" Type="real" />
+        <Property Name="par40" Type="real" />
+        <Property Name="par41" Type="real" />
+        <Property Name="par42" Type="real" />
+        <Property Name="par43" Type="real" />
+        <Property Name="par44" Type="real" />
+        <Property Name="par45" Type="real" />
+        <Property Name="par46" Type="real" />
+        <Property Name="par47" Type="real" />
+        <Property Name="par48" Type="real" />
+        <Property Name="par49" Type="real" />
+        <Property Name="par50" Type="real" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MiDbSQLModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="MiDbSQLEntities">
+          <EntitySet Name="Tikras" EntityType="MiDbSQLModel.Tikra" />
+        </EntityContainer>
+        <EntityType Name="Tikra">
+          <Key>
+            <PropertyRef Name="Level" />
+          </Key>
+          <Property Name="Division" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Level" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Eliv" Type="Single" />
+          <Property Name="Namedwg" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="typSlab" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="proDatCons" Type="DateTime" />
+          <Property Name="proDraw" Type="DateTime" />
+          <Property Name="proFea" Type="DateTime" />
+          <Property Name="proConBeam" Type="DateTime" />
+          <Property Name="proConPlate" Type="DateTime" />
+          <Property Name="basePointX" Type="Single" />
+          <Property Name="BasePointY" Type="Single" />
+          <Property Name="DistancGr" Type="Single" />
+          <Property Name="flTsec" Type="Int16" />
+          <Property Name="kTors" Type="Single" />
+          <Property Name="nMeshX" Type="Int16" />
+          <Property Name="nMeshY" Type="Int16" />
+          <Property Name="par1" Type="Single" />
+          <Property Name="par2" Type="Single" />
+          <Property Name="nCalc" Type="Int16" />
+          <Property Name="flChan" Type="Int16" />
+          <Property Name="num" Type="Int16" />
+          <Property Name="datold" Type="DateTime" />
+          <Property Name="inBetonBem" Type="Int16" />
+          <Property Name="inBetonPlt" Type="Int16" />
+          <Property Name="inBetonCol" Type="Int16" />
+          <Property Name="inBetonWal" Type="Int16" />
+          <Property Name="inBetonPil" Type="Int16" />
+          <Property Name="ipar1" Type="Int16" />
+          <Property Name="ipar2" Type="Int16" />
+          <Property Name="ipar3" Type="Int16" />
+          <Property Name="ipar4" Type="Int16" />
+          <Property Name="ipar5" Type="Int16" />
+          <Property Name="ipar6" Type="Int16" />
+          <Property Name="ipar7" Type="Int16" />
+          <Property Name="ipar8" Type="Int16" />
+          <Property Name="ipar9" Type="Int16" />
+          <Property Name="ipar10" Type="Int16" />
+          <Property Name="par3" Type="Single" />
+          <Property Name="par4" Type="Single" />
+          <Property Name="par5" Type="Single" />
+          <Property Name="par6" Type="Single" />
+          <Property Name="par7" Type="Single" />
+          <Property Name="par8" Type="Single" />
+          <Property Name="par9" Type="Single" />
+          <Property Name="par10" Type="Single" />
+          <Property Name="par11" Type="Single" />
+          <Property Name="par12" Type="Single" />
+          <Property Name="par13" Type="Single" />
+          <Property Name="par14" Type="Single" />
+          <Property Name="par15" Type="Single" />
+          <Property Name="par16" Type="Single" />
+          <Property Name="par17" Type="Single" />
+          <Property Name="par18" Type="Single" />
+          <Property Name="par19" Type="Single" />
+          <Property Name="par20" Type="Single" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="MiDbSQLModelStoreContainer" CdmEntityContainer="MiDbSQLEntities">
+          <EntitySetMapping Name="Tikras"><EntityTypeMapping TypeName="MiDbSQLModel.Tikra"><MappingFragment StoreEntitySet="Tikra">
+            <ScalarProperty Name="Division" ColumnName="Division" />
+            <ScalarProperty Name="Level" ColumnName="Level" />
+            <ScalarProperty Name="Eliv" ColumnName="Eliv" />
+            <ScalarProperty Name="Namedwg" ColumnName="Namedwg" />
+            <ScalarProperty Name="typSlab" ColumnName="typSlab" />
+            <ScalarProperty Name="proDatCons" ColumnName="proDatCons" />
+            <ScalarProperty Name="proDraw" ColumnName="proDraw" />
+            <ScalarProperty Name="proFea" ColumnName="proFea" />
+            <ScalarProperty Name="proConBeam" ColumnName="proConBeam" />
+            <ScalarProperty Name="proConPlate" ColumnName="proConPlate" />
+            <ScalarProperty Name="basePointX" ColumnName="basePointX" />
+            <ScalarProperty Name="BasePointY" ColumnName="BasePointY" />
+            <ScalarProperty Name="DistancGr" ColumnName="DistancGr" />
+            <ScalarProperty Name="flTsec" ColumnName="flTsec" />
+            <ScalarProperty Name="kTors" ColumnName="kTors" />
+            <ScalarProperty Name="nMeshX" ColumnName="nMeshX" />
+            <ScalarProperty Name="nMeshY" ColumnName="nMeshY" />
+            <ScalarProperty Name="par1" ColumnName="par1" />
+            <ScalarProperty Name="par2" ColumnName="par2" />
+            <ScalarProperty Name="nCalc" ColumnName="nCalc" />
+            <ScalarProperty Name="flChan" ColumnName="flChan" />
+            <ScalarProperty Name="num" ColumnName="num" />
+            <ScalarProperty Name="datold" ColumnName="datold" />
+            <ScalarProperty Name="inBetonBem" ColumnName="inBetonBem" />
+            <ScalarProperty Name="inBetonPlt" ColumnName="inBetonPlt" />
+            <ScalarProperty Name="inBetonCol" ColumnName="inBetonCol" />
+            <ScalarProperty Name="inBetonWal" ColumnName="inBetonWal" />
+            <ScalarProperty Name="inBetonPil" ColumnName="inBetonPil" />
+            <ScalarProperty Name="ipar1" ColumnName="ipar1" />
+            <ScalarProperty Name="ipar2" ColumnName="ipar2" />
+            <ScalarProperty Name="ipar3" ColumnName="ipar3" />
+            <ScalarProperty Name="ipar4" ColumnName="ipar4" />
+            <ScalarProperty Name="ipar5" ColumnName="ipar5" />
+            <ScalarProperty Name="ipar6" ColumnName="ipar6" />
+            <ScalarProperty Name="ipar7" ColumnName="ipar7" />
+            <ScalarProperty Name="ipar8" ColumnName="ipar8" />
+            <ScalarProperty Name="ipar9" ColumnName="ipar9" />
+            <ScalarProperty Name="ipar10" ColumnName="ipar10" />
+            <ScalarProperty Name="par3" ColumnName="par3" />
+            <ScalarProperty Name="par4" ColumnName="par4" />
+            <ScalarProperty Name="par5" ColumnName="par5" />
+            <ScalarProperty Name="par6" ColumnName="par6" />
+            <ScalarProperty Name="par7" ColumnName="par7" />
+            <ScalarProperty Name="par8" ColumnName="par8" />
+            <ScalarProperty Name="par9" ColumnName="par9" />
+            <ScalarProperty Name="par10" ColumnName="par10" />
+            <ScalarProperty Name="par11" ColumnName="par11" />
+            <ScalarProperty Name="par12" ColumnName="par12" />
+            <ScalarProperty Name="par13" ColumnName="par13" />
+            <ScalarProperty Name="par14" ColumnName="par14" />
+            <ScalarProperty Name="par15" ColumnName="par15" />
+            <ScalarProperty Name="par16" ColumnName="par16" />
+            <ScalarProperty Name="par17" ColumnName="par17" />
+            <ScalarProperty Name="par18" ColumnName="par18" />
+            <ScalarProperty Name="par19" ColumnName="par19" />
+            <ScalarProperty Name="par20" ColumnName="par20" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="MiDbSQLModel.Tikra" Width="1.5" PointX="0.75" PointY="0.75" Height="11.787659505208332" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

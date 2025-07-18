@@ -1,0 +1,99 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Intellidesk.AcadNet.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Intellidesk</Value>
+    </Setting>
+    <Setting Name="UserGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Partner</Value>
+    </Setting>
+    <Setting Name="Load" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERLOAD</Value>
+    </Setting>
+    <Setting Name="Search" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERSEARCH</Value>
+    </Setting>
+    <Setting Name="Explorer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNEREXPLORER</Value>
+    </Setting>
+    <Setting Name="SearchPanelRemove" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERSEARCHPANELREMOVE</Value>
+    </Setting>
+    <Setting Name="ExplorerPanelRemove" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNEREXPLORERPANELREMOVE</Value>
+    </Setting>
+    <Setting Name="Map" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERMAP</Value>
+    </Setting>
+    <Setting Name="Ribbon" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERRIBBON</Value>
+    </Setting>
+    <Setting Name="Regen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERREGEN</Value>
+    </Setting>
+    <Setting Name="Refresh" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERREFRESH</Value>
+    </Setting>
+    <Setting Name="LoadAfter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERLOADAFTER</Value>
+    </Setting>
+    <Setting Name="Purge" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERPURGE</Value>
+    </Setting>
+    <Setting Name="Undo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERUNDO</Value>
+    </Setting>
+    <Setting Name="Cable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERCABLE</Value>
+    </Setting>
+    <Setting Name="AddCable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERADDCABLE</Value>
+    </Setting>
+    <Setting Name="AddTitleCable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERADDTITLECABLE</Value>
+    </Setting>
+    <Setting Name="RemoveCablePanel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERCABLEPANELREMOVE</Value>
+    </Setting>
+    <Setting Name="Closure" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERCLOSURE</Value>
+    </Setting>
+    <Setting Name="AddClosure" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERADDCLOSURE</Value>
+    </Setting>
+    <Setting Name="AddTitleClosure" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERADDTITLECLOSURE</Value>
+    </Setting>
+    <Setting Name="RemoveClosurePanel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERCLOSUREPANELREMOVE</Value>
+    </Setting>
+    <Setting Name="Cabinet" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERCABINET</Value>
+    </Setting>
+    <Setting Name="AddCabinet" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERADDCABINET</Value>
+    </Setting>
+    <Setting Name="AddTitleCabinet" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERADDTITLECABINET</Value>
+    </Setting>
+    <Setting Name="RemoveCabinetPanel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERCABINETPANELREMOVE</Value>
+    </Setting>
+    <Setting Name="EditElement" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNEREDITELEMENT</Value>
+    </Setting>
+    <Setting Name="MapView" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERMAPVIEW</Value>
+    </Setting>
+    <Setting Name="UcsChange" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERUCSCHANGE</Value>
+    </Setting>
+    <Setting Name="FindTextOnMap" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERFINDTEXTONMAP</Value>
+    </Setting>
+    <Setting Name="PointOnMap" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PARTNERPOINTONMAP</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

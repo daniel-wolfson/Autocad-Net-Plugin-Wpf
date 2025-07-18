@@ -1,0 +1,3 @@
+﻿$(markerElement).find('input[id ^= "favoriteChk"]')[0];
+
+//$(".gm-compass").css("background", "black").css("opacity", "0.5");

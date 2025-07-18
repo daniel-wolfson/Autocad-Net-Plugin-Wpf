@@ -1,0 +1,318 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:models="clr-namespace:Intellidesk.Data.Models;assembly=ID.Data"
+                    xmlns:cad="clr-namespace:Intellidesk.Data.Models.Cad;assembly=ID.Data"
+                    mc:Ignorable="d">
+
+    <system:Boolean x:Key="PanelSizeMode">False</system:Boolean>
+
+    <!--xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"/LsdsUI;component xmlns:viewModels="clr-namespace:Lsds.ViewModels"-->
+    <!--Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=ActualWidth}"-->
+
+    <!--Control colors.-->
+    <Color x:Key="WindowColor">#FFE8EDF9</Color>
+    <Color x:Key="ContentAreaColorLight">#FFC5CBF9</Color>
+    <Color x:Key="ContentAreaColorDark">#FF7381F9</Color>
+    <Color x:Key="DisabledControlLightColor">#FFE8EDF9</Color>
+    <Color x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
+    <Color x:Key="DisabledForegroundColor">#FF888888</Color>
+    <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
+    <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+    <Color x:Key="ControlLightColor">White</Color>
+    <Color x:Key="ControlMediumColor">#FF7381F9</Color>
+    <Color x:Key="ControlDarkColor">#FF211AA9</Color>
+    <Color x:Key="ControlMouseOverColor">#FF3843C4</Color>
+    <Color x:Key="ControlPressedColor">#FF211AA9</Color>
+    <Color x:Key="GlyphColor">#FF444444</Color>
+    <Color x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
+
+    <!--Border colors-->
+    <Color x:Key="BorderLightColor">#FFCCCCCC</Color>
+    <Color x:Key="BorderMediumColor">#FF888888</Color>
+    <Color x:Key="BorderDarkColor">#FF444444</Color>
+    <Color x:Key="PressedBorderLightColor">#FF888888</Color>
+    <Color x:Key="PressedBorderDarkColor">#FF444444</Color>
+    <Color x:Key="DisabledBorderLightColor">#FFAAAAAA</Color>
+    <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
+    <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
+
+    <!--Control-specific resources.-->
+    <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
+    <Color x:Key="DatagridCurrentCellBorderColor">Black</Color>
+    <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
+    <Color x:Key="NavButtonFrameColor">#FF3843C4</Color>
+
+    <LinearGradientBrush x:Key="MenuPopupBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="{DynamicResource ControlLightColor}" Offset="0" />
+        <GradientStop Color="{DynamicResource ControlMediumColor}" Offset="0.5" />
+        <GradientStop Color="{DynamicResource ControlLightColor}" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill" StartPoint="0,0" EndPoint="1,0">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#000000FF" Offset="0" />
+                <GradientStop Color="#600000FF" Offset="0.4" />
+                <GradientStop Color="#600000FF" Offset="0.6" />
+                <GradientStop Color="#000000FF" Offset="1" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <Style x:Key="ButtonFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle Margin="2" StrokeThickness="1" Stroke="#60000000" StrokeDashArray="1 2" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--<Style TargetType="{x:Type custom:ProjectExplorerView}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=SwitchSizeMode}" Value="True">
+                <Setter Property="Width" Value="20"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=SwitchSizeMode}" Value="False">
+                <Setter Property="Width" Value="200"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>-->
+
+    <!-- Button -->
+    <Style x:Key="AcadButtonStyleVisual" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}" />
+        <Setter Property="MinHeight" Value="16" />
+        <Setter Property="MinWidth" Value="75" />
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Border" CornerRadius="2" BorderThickness="1"
+                        BorderBrush="{x:Null}"  TextBlock.Foreground="{TemplateBinding Foreground}">
+                        <Border.Background>
+                            <SolidColorBrush Color="#000000FF" x:Name="_back" />
+                        </Border.Background>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <!--<VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.2" To="MouseOver" />
+                                </VisualStateGroup.Transitions>-->
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard >
+                                        <ColorAnimation Storyboard.TargetName="_back"  Storyboard.TargetProperty="Color" To="Gainsboro" Duration="0:0:1" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <ContentPresenter Margin="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            RecognizesAccessKey="True" >
+                        </ContentPresenter>
+
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver"  Value="true">
+                <Setter Property ="BorderBrush"  Value="Blue"/>
+                <Setter Property ="Background"  Value="LightSkyBlue"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- DataGridColumnHeader DataTemplate -->
+    <!--<DataTemplate x:Key="ColumnHeaderDataTemplate">
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="{Binding}" FontSize="10" FontWeight="Bold" TextAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>-->
+
+    <DataTemplate x:Key="LayoutTemplate" DataType="{x:Type cad:ILayout}">
+        <Border Name="border" BorderBrush="Aqua" BorderThickness="1"
+          Padding="5" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Layout Name: "/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=LayoutName}" />
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Layout ID: "/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=LayoutID}"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Layout Type: "/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=LayoutType}"/>
+            </Grid>
+        </Border>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=LayoutType}">
+                <DataTrigger.Value>
+                    <system:String>Official Draft</system:String>
+                </DataTrigger.Value>
+                <Setter TargetName="border" Property="BorderBrush" Value="Yellow"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <!--<Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="Width" Value="8"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="SizeWE"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <Style x:Key="AcadDataGridColumnHeader" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#C2C2C2" Offset="1"/>
+                    <GradientStop Color="#FFE4E4E4" Offset="0"/>
+                    <GradientStop Color="DarkGray" Offset="0.506"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" SpreadMethod="Pad">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF555555" Offset="1"/>
+                    <GradientStop Color="#FFC9C9C9" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderThickness" Value="0.6"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                    <Grid>
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}">
+                            <themes:DataGridHeaderBorder BorderBrush="{TemplateBinding BorderBrush}" 
+                                            BorderThickness="{TemplateBinding BorderThickness}" 
+                                            Background="{TemplateBinding Background}" 
+                                            IsClickable="{TemplateBinding CanUserSort}" 
+                                            IsPressed="{TemplateBinding IsPressed}" 
+                                            IsHovered="{TemplateBinding IsMouseOver}" 
+                                            Padding="{TemplateBinding Padding}" 
+                                            SortDirection="{TemplateBinding SortDirection}" 
+                                            SeparatorBrush="{TemplateBinding SeparatorBrush}" 
+                                            SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ContentPresenter Grid.Column="0" 
+                                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="3" 
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                                    ContentTemplate="{DynamicResource ColumnHeaderDataTemplate}" />
+
+                                    <Path x:Name="SortArrow" Grid.Column="1" HorizontalAlignment="Right" 
+                                                    VerticalAlignment="Center" 
+                                                    Width="8" Height="6" Margin="2,0,5,0"
+                                                    Stretch="Fill" Opacity="0.5" Fill="Black"
+                                                    RenderTransformOrigin="0.5,0.4"
+                                                    Visibility="Collapsed" Data="M0,0 L1,0 0.5,1 z" />
+                                </Grid>
+                                <!--</themes:DataGridHeaderBorder>-->
+                                <!--<Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>-->
+                            </themes:DataGridHeaderBorder>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="SortDirection" Value="Ascending">
+                            <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="SortArrow" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="SortDirection" Value="Descending">
+                            <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="AcadButtonControlTemplate" TargetType="{x:Type Button}">
+        <!--<themes:ButtonChrome x:Name="Chrome" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding Button.IsDefaulted}" SnapsToDevicePixels="True" Margin="0,-2" d:LayoutOverrides="VerticalAlignment">-->
+        <Border x:Name="border" BorderBrush="#FF0065B2" BorderThickness="1" Background="#FFA4DBE9">
+            <StackPanel>
+                <Image Name="Img" Source="{TemplateBinding Tag}" Margin="3" ></Image>
+                <Label Content="{TemplateBinding Content}" Background="Transparent" Margin="2"></Label>
+            </StackPanel>
+            <!--<Image Source="{DynamicResource ResourceKey=Img}" Height="100" Width="100" Margin="5"></Image>-->
+        </Border>
+        <!--</themes:ButtonChrome>-->
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsDefault" Value="True">
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="AliceBlue"/>
+                <Setter Property="BorderBrush" Value="Blue"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="#FFADADAD"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="BlueButtonTemplate" TargetType="{x:Type Button}">
+        <Border BorderBrush="Navy" BorderThickness="1" CornerRadius="5" Background="CornflowerBlue">
+            <Border BorderBrush="White" BorderThickness="3" Padding="10" Margin="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Please welcome:" Grid.Row="0" />
+                    <ContentPresenter Grid.Row="1" />
+                </Grid>
+            </Border>
+        </Border>
+    </ControlTemplate>
+
+    <!-- DataGridColumnHeader style -->
+    <Style TargetType="{x:Type Thumb}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#FFDDDDDD"/>
+                <Setter Property="ToolTip" Value="Click to sort"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

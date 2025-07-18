@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InfoMailClient>
+  <SendEmails>
+    <User>
+      <Username>4castsolutions</Username>
+      <Token>l3nmtz34u4l1cful2a2x93e61</Token>
+    </User>
+    <Message>
+      <CampaignName>Psygate</CampaignName>
+      <FromAddress>Meitav@idf.gov.il</FromAddress>
+      <FromName>AMAN</FromName>
+      <Subject><p dir='rtl'>מבחן למיוני ערבית</p></Subject>
+      <Body>
+        <![CDATA[
+          <div dir='rtl'>
+              <p><strong>[#Text1#] היקר/ה,</strong></p>
+              <p>
+                המייל הבא נשלח אליך כחלק מתהליך המיון שלך למסלולי הערבית בחיל המודיעין. הקישור שלפניך מכיל מבחן ראשוני לבדיקת רמת הידע שלך בערבית ושאלון הבוחן את העדפות השירות שלך במסלול.עליך לענות על המבחן ועל השאלון באופן מיטבי ובמסגרת הזמן המוקצב, שכן הישגיך בשלב זה ישפיעו על המשך תהליך המיון שלך בחיל.הוראות נוספות יופיעו במבחן עצמו. 
+                <strong>עליך לענות על המבחן באופן עצמאי, ללא כל סיוע חיצוני וללא מילון. אמינות הציונים תיבדק בהמשך! </strong>
+                בכל שאלה או בירור יש לפנות למרכז השירות של מיטב -
+                מייל: Meitav@idf.gov.il טלפון: 03-738-8888 או *3529.
+              </p>
+              <p>סיסמה זמנית: </p>
+              <p><strong>[#Text2#]</strong></p>
+              <p><a href='https://home-work.co.il'><strong>קישור למערכת</strong></a></p>
+              <br></br>
+              <p>בהצלחה!</p>
+          </div>
+        ]]>
+      </Body>
+    </Message>
+    <Recipients>
+    </Recipients>
+  </SendEmails>
+</InfoMailClient>

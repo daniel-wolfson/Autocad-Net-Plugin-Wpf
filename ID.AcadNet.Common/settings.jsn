@@ -1,0 +1,19 @@
+{
+  "AutocadMapviewerUrl": "http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc?singleWsdl",
+  "PaletteSetId": "06B75904-219F-4CA5-AC02-E3970A645F19",
+  "IncludeFolders": [ "C:\\Projects" ],
+  "ProjectExplorerFoldersSectionHeight": 180,
+  "ProjectExplorerFilesSectionHeight": 380,
+  "MapinfoUrlFormat": "http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc/SetViewrXY/{0}/{1}",
+  "ToolPanelTop": "SearchText",
+  "ToolPanelWidth": 306,
+  "IntelliDeskHost": "http://localhost:43210/",
+  "IntelliDeskApiUrlSample": "http://intellidesk/api/Draw/Point/?x=120\u0026y=210",
+  "ZoomDisplayFactor": 5,
+  "DbHost": "SQL2008DB",
+  "MapinfoHost": "vmmapinfo",
+  "ResourceImages": "Intellidesk.AcadNet.Resources.Properties.Resources",
+  "GisPointUrl": "http://vmmapinfo/AcadNetGis/PartnerGis?lon={0}\u0026lat={1}",
+  "ResourceClass": "Intellidesk.AcadNet.Services.Properties.Resources",
+  "GisLayerName": "Gis"
+}

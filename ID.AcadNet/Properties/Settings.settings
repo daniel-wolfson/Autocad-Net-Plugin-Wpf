@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Intellidesk.AcadNet.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AutocadMapviewerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc?singleWsdl</Value>
+    </Setting>
+    <Setting Name="PaletteSetId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">06B75904-219F-4CA5-AC02-E3970A645F19</Value>
+    </Setting>
+    <Setting Name="IncludeFolders" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;C:\Projects&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ProjectExplorerFoldersSectionHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="ProjectExplorerFilesSectionHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">380</Value>
+    </Setting>
+    <Setting Name="MapinfoUrlFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://Vmmapinfo/AutocadMapviewerSvc/Acmv.svc/SetViewrXY/{0}/{1}</Value>
+    </Setting>
+    <Setting Name="ResourceImages" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Intellidesk.AcadNet.Resources.Properties.Resources</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,235 @@
+﻿<ResourceDictionary 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mscorlib="clr-namespace:System;assembly=mscorlib"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <mscorlib:String x:Key="IMG_GifIndicator">/Assets/Indicator_small.gif</mscorlib:String>
+
+    <SolidColorBrush x:Key="DefaultListBorder" Color="#88828790"/>
+
+    <LinearGradientBrush x:Key="DefaultHeaderAreaBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFD4D4D4" Offset="0"/>
+        <GradientStop Color="#FF979797" Offset="0.9"/>
+        <GradientStop Color="#FFB6B6B6" Offset="0.5"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="Ux_checkBoxStyle" TargetType="{x:Type CheckBox}" >
+        <Setter Property="ToolTipService.InitialShowDelay" Value="1000" />
+        <Setter Property="ToolTipService.ShowDuration" Value="100000" />
+        <Setter Property="ToolTipService.BetweenShowDelay" Value="2000" />
+        <Setter Property="ToolTipService.HasDropShadow" Value="true" />
+        <Setter Property="ToolTipService.ShowOnDisabled" Value="true" />
+        <Setter Property="ToolTipService.IsEnabled" Value="True" />
+        <!--<Setter Property="FocusVisualStyle" Value="{StaticResource EmptyCheckBoxFocusVisual_Global}" />-->
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+    </Style>
+
+    <!-- Up arrow -->
+    <DataTemplate x:Key="AscSortHeaderTemplate">
+        <DockPanel  Background="Transparent">
+            <TextBlock Text="{Binding Path=.}" />
+            <Path x:Name="arrow" StrokeThickness="1" Fill="#FF4C4A4A"  Data="M 5,10 L 15,10 L 10,5 L 5,10" />
+        </DockPanel>
+    </DataTemplate>
+
+    <!-- Down arrow -->
+    <DataTemplate x:Key="DescSortHeaderTemplate">
+        <DockPanel Background="Transparent">
+            <TextBlock Text="{Binding Path=.}" />
+            <Path x:Name="arrow" StrokeThickness="1" Fill="#FF4C4A4A" Data="M 5,5 L 10,10 L 15,5 L 5,5" />
+        </DockPanel>
+    </DataTemplate>
+
+    <!-- Normal -->
+    <DataTemplate x:Key="NormalSortHeaderTemplate">
+        <DockPanel>
+            <TextBlock Text="{Binding Path=.}" />
+        </DockPanel>
+    </DataTemplate>
+
+    <Style x:Key="ToolTipStyleGlobal" TargetType="{x:Type FrameworkElement}">
+        <Setter Property="Control.Background" Value="{DynamicResource COLOR_FACE}" />
+        <Setter Property="Control.BorderBrush" Value="{DynamicResource COLOR_BORDER}" />
+        <Setter Property="Control.Foreground" Value="{DynamicResource COLOR_TEXT}" />
+        <Setter Property="Control.FontSize" Value="{DynamicResource fontsize_normal}" />
+        <Setter Property="Control.SnapsToDevicePixels" Value="true" />
+        <Setter Property="ToolTipService.InitialShowDelay" Value="1000" />
+        <Setter Property="ToolTipService.ShowDuration" Value="100000" />
+        <Setter Property="ToolTipService.BetweenShowDelay" Value="2000" />
+        <Setter Property="ToolTipService.HasDropShadow" Value="true" />
+        <Setter Property="ToolTipService.ShowOnDisabled" Value="true" />
+        <Setter Property="ToolTipService.IsEnabled" Value="True" />
+    </Style>
+
+    <Style x:Key="SearchTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource ToolTipStyleGlobal}">
+        <Setter Property="Background" Value="#fcfcfc"/>
+        <Setter Property="BorderBrush" Value="#B9B9B9"/>
+        <Setter Property="Foreground" Value="{DynamicResource Brush_global_darkgrey}"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="5,2,22,2"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="Bd" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        Background="{TemplateBinding Background}" CornerRadius="2">
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <!--<Image Source="{DynamicResource IMG_SEARCH}" Width="16" Height="17" Margin="6,0,0,0"/>-->
+                                <TextBlock x:Name="markText" Text="Search" Foreground="#c7c6c6" Margin="3,1,0,0"  Visibility="Collapsed"/>
+                            </StackPanel>
+                            <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="markText" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="Text" Value="" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="markText" Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="Validation.HasError" Value="true">
+                            <Setter Property="ToolTip"
+					            Value="{Binding (Validation.Errors)[0].ErrorContent, RelativeSource={RelativeSource Self}}"/>
+                            <Setter Property="Foreground" Value="Red" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate x:Name="TextErrorTemplate">
+                    <DockPanel LastChildFill="True">
+                        <AdornedElementPlaceholder>
+                            <Border BorderBrush="Red" BorderThickness="2" />
+                        </AdornedElementPlaceholder>
+                        <TextBlock FontSize="20" Foreground="Red">*?*</TextBlock>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SearchTextBox1" TargetType="{x:Type TextBox}">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true" >
+                <Setter Property="Foreground" Value="Red"/>
+                <Setter Property="Background" Value="MistyRose"/>
+                <Setter Property="BorderBrush" Value="Red"/>
+                <Setter Property="BorderThickness" Value="1.0"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource  Self},Path=(Validation.Errors)[0].ErrorContent}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                            <Border 
+                              Name="Border" CornerRadius="5" Padding="2"
+                              BorderBrush="{TemplateBinding BorderBrush}"
+                              Background="{TemplateBinding Background}"
+                              BorderThickness="{TemplateBinding BorderThickness}" > 
+                                <ScrollViewer Margin="0"  x:Name="PART_ContentHost"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="Border" Property="Background" Value="LightGray"/>
+                                    <Setter TargetName="Border" Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="Foreground" Value="Gray"/>
+                                </Trigger>
+                                <Trigger Property="Validation.HasError" Value="true">
+                                    <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ErrorBorderColor}"/>
+                                    <Setter Property="Background" TargetName="Border" Value="{DynamicResource ErrorBackgroundColor}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <ControlTemplate x:Key="ValidationErrorTemplate">
+        <DockPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                <Grid Width="12" Height="12">
+                    <Ellipse Width="12" Height="12" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                    <TextBlock Foreground="White" FontWeight="Heavy" FontSize="8" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"
+                        ToolTip="{Binding ElementName=ErrorAdorner, 
+                        Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">X</TextBlock>
+                </Grid>
+                <TextBlock Foreground="Red" FontSize="12" Margin="2,0,0,0" Text="{Binding ElementName=ErrorAdorner, 
+                   Path=AdornedElement.(Validation.Errors)[0].ErrorContent}"></TextBlock>
+            </StackPanel>
+            <AdornedElementPlaceholder x:Name="ErrorAdorner" ></AdornedElementPlaceholder>
+        </DockPanel>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ValidationErrorTemplate1">
+        <DockPanel>
+            <TextBlock Foreground="Red" DockPanel.Dock="Top">!</TextBlock>
+            <AdornedElementPlaceholder x:Name="ErrorAdorner"></AdornedElementPlaceholder>
+        </DockPanel>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type Button}" x:Key="BrushButtonStyle">
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="BorderBrush" Value="#ababab" />
+        <Setter Property="Background" Value="#f8f8f8"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="back" SnapsToDevicePixels="True"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{TemplateBinding Background}" CornerRadius="2">
+                        <ContentPresenter x:Name="content"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding  Content}" Margin="{TemplateBinding Padding}"
+                                FocusVisualStyle="{x:Null}">
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="ValidationFailed">
+        <StackPanel Orientation="Horizontal">
+            <Border BorderBrush="Violet" BorderThickness="2">
+                <AdornedElementPlaceholder />
+            </Border>
+            <TextBlock Foreground="Red" FontSize="26" FontWeight="Bold">!</TextBlock>
+        </StackPanel>
+    </ControlTemplate>
+
+    <!--Style for demonstrate errors into ToolTip occured in text field-->
+    <Style x:Key="ToolTipStyle" TargetType="{x:Type TextBox}">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true">
+                <Setter Property="ToolTip"
+					Value="{Binding (Validation.Errors)[0].ErrorContent, RelativeSource={RelativeSource Self}}"/>
+                <Setter Property="Foreground" Value="Red" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

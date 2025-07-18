@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA494167-7DF9-4099-A415-39C3364473B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intellidesk.Resources</RootNamespace>
+    <AssemblyName>ID.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PARTNER|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\PARTNER\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MLBS|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\MLBS\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'INTEL|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\INTEL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ResourceManagerExt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageResources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\a.bmp" />
+    <Content Include="Images\AcadNetLogo.png" />
+    <Content Include="Images\Alcatel.png" />
+    <Content Include="Images\attach.png" />
+    <Content Include="Images\Bookmark.png" />
+    <Content Include="Images\Clipart.png" />
+    <Content Include="Images\config.png" />
+    <Content Include="Images\Cross_reference.png" />
+    <Content Include="Images\del.png" />
+    <Content Include="Images\doc.png" />
+    <Content Include="Images\doc_edit.png" />
+    <Content Include="Images\dwg.png" />
+    <Content Include="Images\dwg_.png" />
+    <Content Include="Images\dwg_export.png" />
+    <Content Include="Images\dwg_help.png" />
+    <Content Include="Images\dwg_options.png" />
+    <Content Include="Images\dwg_purge.png" />
+    <Content Include="Images\dwg_refresh.png" />
+    <Content Include="Images\dwg_reset.png" />
+    <Content Include="Images\dwg_run.png" />
+    <Content Include="Images\dwg_upload.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\exclamation_32.png" />
+    <Content Include="Images\filter.png" />
+    <Content Include="Images\find.png" />
+    <Content Include="Images\find_handler.png" />
+    <Content Include="Images\find_handler_up.png" />
+    <Content Include="Images\find_process.png" />
+    <Content Include="Images\find_process_up.png" />
+    <Resource Include="Images\flag.png" />
+    <Content Include="Images\grd.png" />
+    <Content Include="Images\grd_add.png" />
+    <Content Include="Images\grd_del.png" />
+    <Content Include="Images\grd_edit.png" />
+    <Content Include="Images\grd_edit_off.png" />
+    <Content Include="Images\grd_flow.png" />
+    <Content Include="Images\grd_queue.png" />
+    <Content Include="Images\grd_reset.png" />
+    <Content Include="Images\grd_save.png" />
+    <Content Include="Images\grd_view.png" />
+    <Content Include="Images\id16x16\16x16.bmp" />
+    <Content Include="Images\id16x16\32x32.bmp" />
+    <Content Include="Images\id16x16\ActionOff.png" />
+    <Content Include="Images\id16x16\ActionOn.png" />
+    <Content Include="Images\id16x16\Actions.png" />
+    <Content Include="Images\id16x16\Active.png" />
+    <Content Include="Images\id16x16\AppMenu.png" />
+    <Content Include="Images\id16x16\Arrows.png" />
+    <Content Include="Images\id16x16\Back.png" />
+    <Content Include="Images\id16x16\BackSearch.png" />
+    <Content Include="Images\id16x16\Back_a.png" />
+    <Content Include="Images\id16x16\Circle.png" />
+    <Content Include="Images\id16x16\Clear.png" />
+    <Content Include="Images\id16x16\Close.png" />
+    <Content Include="Images\id16x16\Copy.png" />
+    <Content Include="Images\id16x16\Cut.png" />
+    <Content Include="Images\id16x16\Del.png" />
+    <Content Include="Images\id16x16\Del1.png" />
+    <Content Include="Images\id16x16\DownLoadTemplates.png" />
+    <Content Include="Images\id16x16\Edit.png" />
+    <Content Include="Images\id16x16\edit_16.png" />
+    <Content Include="Images\id16x16\Explode.png" />
+    <Content Include="Images\id16x16\ExportPdf.png" />
+    <Content Include="Images\id16x16\Export_32.png" />
+    <Content Include="Images\id16x16\Filter.png" />
+    <Content Include="Images\id16x16\Filter_a.png" />
+    <Content Include="Images\id16x16\Forward.png" />
+    <Content Include="Images\id16x16\Forward_a.png" />
+    <Content Include="Images\id16x16\Help.png" />
+    <Content Include="Images\id16x16\Home.png" />
+    <Content Include="Images\id16x16\Home_a.png" />
+    <Content Include="Images\id16x16\Info.png" />
+    <Content Include="Images\id16x16\InfoDisplay.png" />
+    <Content Include="Images\id16x16\Layout.png" />
+    <Content Include="Images\id16x16\LayoutLock.png" />
+    <Content Include="Images\id16x16\New.png" />
+    <Content Include="Images\id16x16\New_32.png" />
+    <Content Include="Images\id16x16\None.png" />
+    <Content Include="Images\id16x16\Obj.png" />
+    <Content Include="Images\id16x16\Object.png" />
+    <Content Include="Images\id16x16\Open.png" />
+    <Content Include="Images\id16x16\Open_a.png" />
+    <Content Include="Images\id16x16\palette_16x16.bmp" />
+    <Content Include="Images\id16x16\Parse.png" />
+    <Content Include="Images\id16x16\Parse1.png" />
+    <Content Include="Images\id16x16\Parser_detail1_32x32.bmp" />
+    <Content Include="Images\id16x16\Parser_detail_16x16.bmp" />
+    <Content Include="Images\id16x16\Parser_detail_16x16_.bmp" />
+    <Content Include="Images\id16x16\Parser_detail_32x32.bmp" />
+    <Content Include="Images\id16x16\Parser_outline1_32x32.bmp" />
+    <Content Include="Images\id16x16\Parser_outline_16x16.bmp" />
+    <Content Include="Images\id16x16\Parser_outline_32x32.bmp" />
+    <Content Include="Images\id16x16\Parser_simplify1_32x32.bmp" />
+    <Content Include="Images\id16x16\Parser_simplify_16x16.bmp" />
+    <Content Include="Images\id16x16\Parser_simplify_32x32.bmp" />
+    <Content Include="Images\id16x16\Paste.png" />
+    <Content Include="Images\id16x16\Place.png" />
+    <Content Include="Images\id16x16\Purge.png" />
+    <Content Include="Images\id16x16\Refresh.png" />
+    <Content Include="Images\id16x16\Rotate.bmp" />
+    <Content Include="Images\id16x16\Rotate.png" />
+    <Content Include="Images\id16x16\Rotate1.png" />
+    <Content Include="Images\id16x16\Rotate2.png" />
+    <Content Include="Images\id16x16\RotateAction.png" />
+    <Content Include="Images\id16x16\RunFsa_32.png" />
+    <Content Include="Images\id16x16\Save.png" />
+    <Content Include="Images\id16x16\Save_a.png" />
+    <Content Include="Images\id16x16\Search.png" />
+    <Content Include="Images\id16x16\Search_a.png" />
+    <Content Include="Images\id16x16\Select.png" />
+    <Content Include="Images\id16x16\SelectAdd.png" />
+    <Content Include="Images\id16x16\Stop.png" />
+    <Content Include="Images\id16x16\UnDelete.png" />
+    <Content Include="Images\id16x16\Upload_32.png" />
+    <Content Include="Images\id16x16\WebSearch.png" />
+    <Content Include="Images\id16x16\Zoom.png" />
+    <Content Include="Images\id16x16\_sds.bmp" />
+    <Content Include="Images\Indicator_small.gif" />
+    <Content Include="Images\information_32.png" />
+    <Content Include="Images\layers.png" />
+    <Content Include="Images\Link.png" />
+    <Content Include="Images\loader-snake-16.gif" />
+    <Content Include="Images\loader-snake-32.gif" />
+    <Content Include="Images\Loders\loader-snake-16.gif" />
+    <Content Include="Images\Loders\loader-snake-32.gif" />
+    <Content Include="Images\Loders\ProgressIndicator.gif" />
+    <Content Include="Images\Macros.png" />
+    <Content Include="Images\Management.png" />
+    <Content Include="Images\Management_admin.png" />
+    <Content Include="Images\Management_bulk.png" />
+    <Content Include="Images\Management_error.png" />
+    <Content Include="Images\map_fetch.png" />
+    <Content Include="Images\map_view.png" />
+    <Content Include="Images\MetroBlack\action.png" />
+    <Content Include="Images\MetroBlack\ActionOff.png" />
+    <Content Include="Images\MetroBlack\action_off.png" />
+    <Content Include="Images\MetroBlack\add.png" />
+    <Content Include="Images\MetroBlack\admin.png" />
+    <Content Include="Images\MetroBlack\block.png" />
+    <Content Include="Images\MetroBlack\bug.png" />
+    <Content Include="Images\MetroBlack\cancel.png" />
+    <Content Include="Images\MetroBlack\circle.png" />
+    <Content Include="Images\MetroBlack\close.png" />
+    <Content Include="Images\MetroBlack\closelabel.png" />
+    <Content Include="Images\MetroBlack\collapse.png" />
+    <Content Include="Images\MetroBlack\column_option.png" />
+    <Content Include="Images\MetroBlack\completed_with_err.png" />
+    <Content Include="Images\MetroBlack\config.png" />
+    <Content Include="Images\MetroBlack\copy.gif" />
+    <Content Include="Images\MetroBlack\copy.png" />
+    <Content Include="Images\MetroBlack\cut.gif" />
+    <Content Include="Images\MetroBlack\delete.gif" />
+    <Content Include="Images\MetroBlack\delete.png" />
+    <Content Include="Images\MetroBlack\delete_.png" />
+    <Content Include="Images\MetroBlack\edit.png" />
+    <Content Include="Images\MetroBlack\edit0.png" />
+    <Content Include="Images\MetroBlack\edit1.png" />
+    <Content Include="Images\MetroBlack\error.png" />
+    <Content Include="Images\MetroBlack\error_.png" />
+    <Content Include="Images\MetroBlack\error_2.png" />
+    <Content Include="Images\MetroBlack\event.png" />
+    <Content Include="Images\MetroBlack\event_.png" />
+    <Content Include="Images\MetroBlack\event_add.png" />
+    <Content Include="Images\MetroBlack\exit.png" />
+    <Content Include="Images\MetroBlack\expand.png" />
+    <Content Include="Images\MetroBlack\faivorite.png" />
+    <Content Include="Images\MetroBlack\Filter.gif" />
+    <Content Include="Images\MetroBlack\filter.png" />
+    <Content Include="Images\MetroBlack\filter1.png" />
+    <Content Include="Images\MetroBlack\filter_.png" />
+    <Content Include="Images\MetroBlack\filter_cancel.png" />
+    <Content Include="Images\MetroBlack\filter_toogle.png" />
+    <Content Include="Images\MetroBlack\flow_completed.png" />
+    <Content Include="Images\MetroBlack\h.png" />
+    <Content Include="Images\MetroBlack\html_document.png" />
+    <Content Include="Images\MetroBlack\html_form.png" />
+    <Content Include="Images\MetroBlack\html_format.png" />
+    <Content Include="Images\MetroBlack\html_frame.png" />
+    <Content Include="Images\MetroBlack\html_img.png" />
+    <Content Include="Images\MetroBlack\html_inline.png" />
+    <Content Include="Images\MetroBlack\html_link.png" />
+    <Content Include="Images\MetroBlack\html_list.png" />
+    <Content Include="Images\MetroBlack\html_nonstandard.png" />
+    <Content Include="Images\MetroBlack\html_script.png" />
+    <Content Include="Images\MetroBlack\html_table.png" />
+    <Content Include="Images\MetroBlack\html_text.png" />
+    <Content Include="Images\MetroBlack\html_universal.png" />
+    <Content Include="Images\MetroBlack\in-progress.png" />
+    <Content Include="Images\MetroBlack\in-progress_.png" />
+    <Content Include="Images\MetroBlack\in-queue.png" />
+    <Content Include="Images\MetroBlack\Information.png" />
+    <Content Include="Images\MetroBlack\initialized.png" />
+    <Content Include="Images\MetroBlack\layers.png" />
+    <Content Include="Images\MetroBlack\logo.jpg" />
+    <Content Include="Images\MetroBlack\man.png" />
+    <Content Include="Images\MetroBlack\mapping.png" />
+    <Content Include="Images\MetroBlack\maximize.png" />
+    <Content Include="Images\MetroBlack\minimize.png" />
+    <Content Include="Images\MetroBlack\note.png" />
+    <Content Include="Images\MetroBlack\open_new.png" />
+    <Content Include="Images\MetroBlack\options.png" />
+    <Content Include="Images\MetroBlack\page.png" />
+    <Content Include="Images\MetroBlack\page1.png" />
+    <Content Include="Images\MetroBlack\page1_errors.png" />
+    <Content Include="Images\MetroBlack\page_errors.png" />
+    <Content Include="Images\MetroBlack\pane_min.png" />
+    <Content Include="Images\MetroBlack\parser_detail1_32x32.bmp" />
+    <Content Include="Images\MetroBlack\parser_detail_16x16.bmp" />
+    <Content Include="Images\MetroBlack\parser_detail_16x16_.bmp" />
+    <Content Include="Images\MetroBlack\parser_detail_32x32.bmp" />
+    <Content Include="Images\MetroBlack\parser_outline1_32x32.bmp" />
+    <Content Include="Images\MetroBlack\parser_outline_16x16.bmp" />
+    <Content Include="Images\MetroBlack\parser_outline_32x32.bmp" />
+    <Content Include="Images\MetroBlack\parser_simplify1_32x32.bmp" />
+    <Content Include="Images\MetroBlack\parser_simplify_16x16.bmp" />
+    <Content Include="Images\MetroBlack\parser_simplify_32x32.bmp" />
+    <Content Include="Images\MetroBlack\past.png" />
+    <Content Include="Images\MetroBlack\paste.gif" />
+    <Content Include="Images\MetroBlack\patish.png" />
+    <Content Include="Images\MetroBlack\pause.png" />
+    <Content Include="Images\MetroBlack\pencil.png" />
+    <Content Include="Images\MetroBlack\pin_off.png" />
+    <Content Include="Images\MetroBlack\pin_on.png" />
+    <Content Include="Images\MetroBlack\play.png" />
+    <Content Include="Images\MetroBlack\print.gif" />
+    <Content Include="Images\MetroBlack\printpreview.gif" />
+    <Content Include="Images\MetroBlack\processes.png" />
+    <Content Include="Images\MetroBlack\properties.png" />
+    <Content Include="Images\MetroBlack\property.png" />
+    <Content Include="Images\MetroBlack\refresh.png" />
+    <Content Include="Images\MetroBlack\ref_dn.png" />
+    <Content Include="Images\MetroBlack\ref_right.png" />
+    <Content Include="Images\MetroBlack\remap.png" />
+    <Content Include="Images\MetroBlack\resend.png" />
+    <Content Include="Images\MetroBlack\reset.png" />
+    <Content Include="Images\MetroBlack\reset_.png" />
+    <Content Include="Images\MetroBlack\reset_2.png" />
+    <Content Include="Images\MetroBlack\reset_32.png" />
+    <Content Include="Images\MetroBlack\reset_i.png" />
+    <Content Include="Images\MetroBlack\resize.png" />
+    <Content Include="Images\MetroBlack\retry.png" />
+    <Content Include="Images\MetroBlack\RibbonBar\note_warning.png" />
+    <Content Include="Images\MetroBlack\RibbonBar\play_.png" />
+    <Content Include="Images\MetroBlack\RibbonBar\resize.png" />
+    <Content Include="Images\MetroBlack\RibbonBar\Run.png" />
+    <Content Include="Images\MetroBlack\RibbonBar\zoom.png" />
+    <Content Include="Images\MetroBlack\RibbonBar\zoom_.png" />
+    <Content Include="Images\MetroBlack\RotateAction.png" />
+    <Content Include="Images\MetroBlack\Run.png" />
+    <Content Include="Images\MetroBlack\run_.png" />
+    <Content Include="Images\MetroBlack\save.png" />
+    <Content Include="Images\MetroBlack\search.png" />
+    <Content Include="Images\MetroBlack\search1.png" />
+    <Content Include="Images\MetroBlack\skip.png" />
+    <Content Include="Images\MetroBlack\sort_asc.png" />
+    <Content Include="Images\MetroBlack\status_completed2.png" />
+    <Content Include="Images\MetroBlack\status_completed3.png" />
+    <Content Include="Images\MetroBlack\stop.png" />
+    <Content Include="Images\MetroBlack\Success.png" />
+    <Content Include="Images\MetroBlack\suspend.png" />
+    <Content Include="Images\MetroBlack\suspended.png" />
+    <Content Include="Images\MetroBlack\task.png" />
+    <Content Include="Images\MetroBlack\time.png" />
+    <Content Include="Images\MetroBlack\usb-flash-drive-exclamation-icon-2013927.PNG" />
+    <Content Include="Images\MetroBlack\view.png" />
+    <Content Include="Images\MetroBlack\waiting_for_reply.png" />
+    <Content Include="Images\MetroBlack\Warning.png" />
+    <Content Include="Images\MetroBlack\watch_.png" />
+    <Content Include="Images\MetroBlack\zoom.png" />
+    <Content Include="Images\MetroBlack\zoom_32.png" />
+    <Content Include="Images\MetroBlack\zoom_small.png" />
+    <Content Include="Images\MetroBlack\_blank.png" />
+    <Content Include="Images\MetroBlack\_temp.png" />
+    <Content Include="Images\none.png" />
+    <Content Include="Images\note_error.png" />
+    <Content Include="Images\note_error1.png" />
+    <Content Include="Images\note_error2.png" />
+    <Content Include="Images\note_error3.png" />
+    <Content Include="Images\note_ready.png" />
+    <Content Include="Images\note_success.png" />
+    <Content Include="Images\note_success_.png" />
+    <Content Include="Images\Office2010Silver\100.png" />
+    <Content Include="Images\Office2010Silver\add.png" />
+    <Content Include="Images\Office2010Silver\Alarm.png" />
+    <Content Include="Images\Office2010Silver\Alarm1.png" />
+    <Content Include="Images\Office2010Silver\Alcatel.png" />
+    <Content Include="Images\Office2010Silver\arrows-down.png" />
+    <Content Include="Images\Office2010Silver\arrow_buttons.gif" />
+    <Content Include="Images\Office2010Silver\arrow_down.png" />
+    <Content Include="Images\Office2010Silver\arrow_fit.png" />
+    <Content Include="Images\Office2010Silver\arrow_left.png" />
+    <Content Include="Images\Office2010Silver\arrow_left_d.png" />
+    <Content Include="Images\Office2010Silver\arrow_resize.png" />
+    <Content Include="Images\Office2010Silver\arrow_right.png" />
+    <Content Include="Images\Office2010Silver\arrow_right_d.png" />
+    <Content Include="Images\Office2010Silver\arrow_up.png" />
+    <Content Include="Images\Office2010Silver\arrow_wrap.png" />
+    <Content Include="Images\Office2010Silver\attach_16.bmp" />
+    <Content Include="Images\Office2010Silver\attach_32.bmp" />
+    <Content Include="Images\Office2010Silver\back.png" />
+    <Content Include="Images\Office2010Silver\back_a.png" />
+    <Content Include="Images\Office2010Silver\bg_cell.gif" />
+    <Content Include="Images\Office2010Silver\bg_cell_select.gif" />
+    <Content Include="Images\Office2010Silver\bg_dropDown.png" />
+    <Content Include="Images\Office2010Silver\bg_header.png" />
+    <Content Include="Images\Office2010Silver\bg_row.png" />
+    <Content Include="Images\Office2010Silver\bg_row2.png" />
+    <Content Include="Images\Office2010Silver\bg_row32.png" />
+    <Content Include="Images\Office2010Silver\bg_toolbar.png" />
+    <Content Include="Images\Office2010Silver\Bookmark.png" />
+    <Content Include="Images\Office2010Silver\Button.ifbl.css" />
+    <Content Include="Images\Office2010Silver\Chart.png" />
+    <Content Include="Images\Office2010Silver\CheckBoxSprites.png" />
+    <Content Include="Images\Office2010Silver\Clipart.png" />
+    <Content Include="Images\Office2010Silver\Close.png" />
+    <Content Include="Images\Office2010Silver\CollapseToggle.png" />
+    <Content Include="Images\Office2010Silver\Common\loading.gif" />
+    <Content Include="Images\Office2010Silver\Common\radArrowSprite.png" />
+    <Content Include="Images\Office2010Silver\Copy.png" />
+    <Content Include="Images\Office2010Silver\copy_.png" />
+    <Content Include="Images\Office2010Silver\Cross_reference.png" />
+    <Content Include="Images\Office2010Silver\Cut.png" />
+    <Content Include="Images\Office2010Silver\del.png" />
+    <Content Include="Images\Office2010Silver\delete.png" />
+    <Content Include="Images\Office2010Silver\doc.png" />
+    <Content Include="Images\Office2010Silver\doc1.png" />
+    <Content Include="Images\Office2010Silver\doc_addnew.png" />
+    <Content Include="Images\Office2010Silver\doc_del.png" />
+    <Content Include="Images\Office2010Silver\doc_edit.png" />
+    <Content Include="Images\Office2010Silver\error.png" />
+    <Content Include="Images\Office2010Silver\error32.png" />
+    <Content Include="Images\Office2010Silver\event_new.png" />
+    <Content Include="Images\Office2010Silver\event_new1.png" />
+    <Content Include="Images\Office2010Silver\Filter.png" />
+    <Content Include="Images\Office2010Silver\Filter_small.png" />
+    <Content Include="Images\Office2010Silver\Filter_small_a.png" />
+    <Content Include="Images\Office2010Silver\Find_.png" />
+    <Content Include="Images\Office2010Silver\Flag.png" />
+    <Content Include="Images\Office2010Silver\font\Bold.png" />
+    <Content Include="Images\Office2010Silver\font\Change_Case.png" />
+    <Content Include="Images\Office2010Silver\font\Clear_Formatting.png" />
+    <Content Include="Images\Office2010Silver\font\Font_Color.png" />
+    <Content Include="Images\Office2010Silver\font\Grow_Font.png" />
+    <Content Include="Images\Office2010Silver\font\Italic.png" />
+    <Content Include="Images\Office2010Silver\font\Shrink_Font.png" />
+    <Content Include="Images\Office2010Silver\font\Subscript.png" />
+    <Content Include="Images\Office2010Silver\font\Superscript.png" />
+    <Content Include="Images\Office2010Silver\font\Underline.png" />
+    <Content Include="Images\Office2010Silver\forlder.png" />
+    <Content Include="Images\Office2010Silver\forlder1.png" />
+    <Content Include="Images\Office2010Silver\format_clean.png" />
+    <Content Include="Images\Office2010Silver\format_clean_a.png" />
+    <Content Include="Images\Office2010Silver\Format_Painter.png" />
+    <Content Include="Images\Office2010Silver\forward.png" />
+    <Content Include="Images\Office2010Silver\forward_a.png" />
+    <Content Include="Images\Office2010Silver\Go.png" />
+    <Content Include="Images\Office2010Silver\help_32.bmp" />
+    <Content Include="Images\Office2010Silver\ifbl.gif" />
+    <Content Include="Images\Office2010Silver\IntQuote.png" />
+    <Content Include="Images\Office2010Silver\IntReference.png" />
+    <Content Include="Images\Office2010Silver\key.png" />
+    <Content Include="Images\Office2010Silver\key1.png" />
+    <Content Include="Images\Office2010Silver\layout1.png" />
+    <Content Include="Images\Office2010Silver\layout2.png" />
+    <Content Include="Images\Office2010Silver\layout3.png" />
+    <Content Include="Images\Office2010Silver\layout4.png" />
+    <Content Include="Images\Office2010Silver\layout5.png" />
+    <Content Include="Images\Office2010Silver\layout6.png" />
+    <Content Include="Images\Office2010Silver\line_vertical.png" />
+    <Content Include="Images\Office2010Silver\Link.png" />
+    <Content Include="Images\Office2010Silver\Link1.png" />
+    <Content Include="Images\Office2010Silver\lsdsActive.png" />
+    <Content Include="Images\Office2010Silver\lsdsExportPdf.png" />
+    <Content Include="Images\Office2010Silver\lsdsExport_32.png" />
+    <Content Include="Images\Office2010Silver\lsdsFilter.png" />
+    <Content Include="Images\Office2010Silver\lsdsFilter_a.png" />
+    <Content Include="Images\Office2010Silver\lsdsHelp.png" />
+    <Content Include="Images\Office2010Silver\lsdsNew_32.png" />
+    <Content Include="Images\Office2010Silver\lsdsParser_simplify1_32x32.bmp" />
+    <Content Include="Images\Office2010Silver\lsdsRunFsa_32.png" />
+    <Content Include="Images\Office2010Silver\lsdsSave.png" />
+    <Content Include="Images\Office2010Silver\lsdsSave_a.png" />
+    <Content Include="Images\Office2010Silver\lsdsUpload_32.png" />
+    <Content Include="Images\Office2010Silver\Macros.png" />
+    <Content Include="Images\Office2010Silver\Macros_Record.png" />
+    <Content Include="Images\Office2010Silver\Management.png" />
+    <Content Include="Images\Office2010Silver\Management_admin.png" />
+    <Content Include="Images\Office2010Silver\Management_bulk.png" />
+    <Content Include="Images\Office2010Silver\Management_error.png" />
+    <Content Include="Images\Office2010Silver\ModalDialogAlert.gif" />
+    <Content Include="Images\Office2010Silver\One_Page.png" />
+    <Content Include="Images\Office2010Silver\Options.png" />
+    <Content Include="Images\Office2010Silver\options_16.png" />
+    <Content Include="Images\Office2010Silver\options_32.png" />
+    <Content Include="Images\Office2010Silver\Orders.png" />
+    <Content Include="Images\Office2010Silver\Page_Width.png" />
+    <Content Include="Images\Office2010Silver\paragraph\AlignCenter.png" />
+    <Content Include="Images\Office2010Silver\paragraph\AlignLeft.png" />
+    <Content Include="Images\Office2010Silver\paragraph\AlignRight.png" />
+    <Content Include="Images\Office2010Silver\paragraph\DecrIndent.png" />
+    <Content Include="Images\Office2010Silver\paragraph\IncrIndent.png" />
+    <Content Include="Images\Office2010Silver\paragraph\Justify.png" />
+    <Content Include="Images\Office2010Silver\paragraph\OL.png" />
+    <Content Include="Images\Office2010Silver\paragraph\UL.png" />
+    <Content Include="Images\Office2010Silver\Paste.png" />
+    <Content Include="Images\Office2010Silver\Picture.png" />
+    <Content Include="Images\Office2010Silver\picture404.png" />
+    <Content Include="Images\Office2010Silver\process.png" />
+    <Content Include="Images\Office2010Silver\ProgressArea.ifbl.css" />
+    <Content Include="Images\Office2010Silver\qfp-bgr.png" />
+    <Content Include="Images\Office2010Silver\qsf-gradients-sprite.png" />
+    <Content Include="Images\Office2010Silver\qsf-info.png" />
+    <Content Include="Images\Office2010Silver\qsf-left-cont-bgr.png" />
+    <Content Include="Images\Office2010Silver\qsf-overview-gradients.png" />
+    <Content Include="Images\Office2010Silver\qsf-rating-sprite.png" />
+    <Content Include="Images\Office2010Silver\qsf-search-sprite.png" />
+    <Content Include="Images\Office2010Silver\qsf-skins-sprite-IE6.png" />
+    <Content Include="Images\Office2010Silver\qsf-skins-sprite.png" />
+    <Content Include="Images\Office2010Silver\qsf-sprite-1.png" />
+    <Content Include="Images\Office2010Silver\qsf-sprite-IE6.png" />
+    <Content Include="Images\Office2010Silver\qsf-sprite.png" />
+    <Content Include="Images\Office2010Silver\qsf-trans-bgr.png" />
+    <Content Include="Images\Office2010Silver\Quote.png" />
+    <Content Include="Images\Office2010Silver\radActionsSprite-1.png" />
+    <Content Include="Images\Office2010Silver\radActionsSprite.png" />
+    <Content Include="Images\Office2010Silver\radGradientButtonSprite.png" />
+    <Content Include="Images\Office2010Silver\radGradientDarkV50.png" />
+    <Content Include="Images\Office2010Silver\radGradientListSprite.png" />
+    <Content Include="Images\Office2010Silver\RadioButtonSprites.png" />
+    <Content Include="Images\Office2010Silver\radPrimaryGradientButtonSprite.png" />
+    <Content Include="Images\Office2010Silver\rbn_find.png" />
+    <Content Include="Images\Office2010Silver\rbn_find_handler.png" />
+    <Content Include="Images\Office2010Silver\rbn_find_handler_up.png" />
+    <Content Include="Images\Office2010Silver\rbn_find_process.png" />
+    <Content Include="Images\Office2010Silver\rbn_find_process_up.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_add.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_del.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_edit.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_edit_off.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_flow.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_queue.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_reset.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_save.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_view.png" />
+    <Content Include="Images\Office2010Silver\rbn_grd_zoom.png" />
+    <Content Include="Images\Office2010Silver\rbn_help.png" />
+    <Content Include="Images\Office2010Silver\rbn_note.png" />
+    <Content Include="Images\Office2010Silver\rbn_note1.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_a.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_completed_.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_error.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_error1.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_error2.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_error3.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_error4.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_ready.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_ready1.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_success.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_success1.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_success2.png" />
+    <Content Include="Images\Office2010Silver\rbn_note_warning.png" />
+    <Content Include="Images\Office2010Silver\rbn_open.png" />
+    <Content Include="Images\Office2010Silver\rbn_palette_bottom.png" />
+    <Content Include="Images\Office2010Silver\rbn_palette_left.png" />
+    <Content Include="Images\Office2010Silver\rbn_past.png" />
+    <Content Include="Images\Office2010Silver\rbn_reset_24.png" />
+    <Content Include="Images\Office2010Silver\redo.PNG" />
+    <Content Include="Images\Office2010Silver\refresh.png" />
+    <Content Include="Images\Office2010Silver\refresh_x12.png" />
+    <Content Include="Images\Office2010Silver\refresh_x12c.png" />
+    <Content Include="Images\Office2010Silver\refresh_x12_.png" />
+    <Content Include="Images\Office2010Silver\Replace.png" />
+    <Content Include="Images\Office2010Silver\reset.png" />
+    <Content Include="Images\Office2010Silver\reset_32.png" />
+    <Content Include="Images\Office2010Silver\resize.png" />
+    <Content Include="Images\Office2010Silver\results_save_32.bmp" />
+    <Content Include="Images\Office2010Silver\RibbonBar.ifbl.css" />
+    <Content Include="Images\Office2010Silver\rocItemTileLight.png" />
+    <Content Include="Images\Office2010Silver\row_bg_a.png" />
+    <Content Include="Images\Office2010Silver\rrbApplicationTabSprite.png" />
+    <Content Include="Images\Office2010Silver\rrbApplicationTabSprite_IE6.png" />
+    <Content Include="Images\Office2010Silver\rrbArrowSprite.png" />
+    <Content Include="Images\Office2010Silver\rrbContextualTabSmoothTile.png" />
+    <Content Include="Images\Office2010Silver\rrbGradients.png" />
+    <Content Include="Images\Office2010Silver\rrbQatExpandArrow.png" />
+    <Content Include="Images\Office2010Silver\rrbQatMenuCheckboxSelected.png" />
+    <Content Include="Images\Office2010Silver\rrbTabSprite.png" />
+    <Content Include="Images\Office2010Silver\rrbTabSprite_IE6.png" />
+    <Content Include="Images\Office2010Silver\Run.png" />
+    <Content Include="Images\Office2010Silver\Run_a.png" />
+    <Content Include="Images\Office2010Silver\Run_blue.png" />
+    <Content Include="Images\Office2010Silver\Save.png" />
+    <Content Include="Images\Office2010Silver\SaveAs.png" />
+    <Content Include="Images\Office2010Silver\search2.png" />
+    <Content Include="Images\Office2010Silver\search32.png" />
+    <Content Include="Images\Office2010Silver\searchbox.png" />
+    <Content Include="Images\Office2010Silver\search_.png" />
+    <Content Include="Images\Office2010Silver\search_a.png" />
+    <Content Include="Images\Office2010Silver\Select.png" />
+    <Content Include="Images\Office2010Silver\Select_All.png" />
+    <Content Include="Images\Office2010Silver\separator.png" />
+    <Content Include="Images\Office2010Silver\Shapes.png" />
+    <Content Include="Images\Office2010Silver\sitenav-sprite.png" />
+    <Content Include="Images\Office2010Silver\SmartArt.png" />
+    <Content Include="Images\Office2010Silver\Splitter.ifbl.css" />
+    <Content Include="Images\Office2010Silver\Splitter\ExpandCollapseBarsCommands.gif" />
+    <Content Include="Images\Office2010Silver\Splitter\ifbl.gif" />
+    <Content Include="Images\Office2010Silver\Splitter\ifbl_source.gif" />
+    <Content Include="Images\Office2010Silver\Splitter\ResizeBarHorizontalSprites.gif" />
+    <Content Include="Images\Office2010Silver\Splitter\ResizeBarVerticalSprites.gif" />
+    <Content Include="Images\Office2010Silver\Splitter\slideTitleContainerBgr.gif" />
+    <Content Include="Images\Office2010Silver\stop.png" />
+    <Content Include="Images\Office2010Silver\Strike.png" />
+    <Content Include="Images\Office2010Silver\Strong.png" />
+    <Content Include="Images\Office2010Silver\styles\BookTitle.png" />
+    <Content Include="Images\Office2010Silver\styles\Emphasis.png" />
+    <Content Include="Images\Office2010Silver\styles\Heading1.png" />
+    <Content Include="Images\Office2010Silver\styles\Heading2.png" />
+    <Content Include="Images\Office2010Silver\styles\IntEmphasis.png" />
+    <Content Include="Images\Office2010Silver\styles\ListParagraph.png" />
+    <Content Include="Images\Office2010Silver\styles\Normal.png" />
+    <Content Include="Images\Office2010Silver\styles\NoSpacing.png" />
+    <Content Include="Images\Office2010Silver\styles\SubEmphasis.png" />
+    <Content Include="Images\Office2010Silver\styles\SubReference.png" />
+    <Content Include="Images\Office2010Silver\styles\Subtitle.png" />
+    <Content Include="Images\Office2010Silver\styles\Title.png" />
+    <Content Include="Images\Office2010Silver\telerik-logo.png" />
+    <Content Include="Images\Office2010Silver\tool.png" />
+    <Content Include="Images\Office2010Silver\Two_Pages.png" />
+    <Content Include="Images\Office2010Silver\undo.PNG" />
+    <Content Include="Images\Office2010Silver\update-item.png" />
+    <Content Include="Images\Office2010Silver\watch.png" />
+    <Content Include="Images\Office2010Silver\word-bg.png" />
+    <Content Include="Images\Office2010Silver\Zoom.png" />
+    <Content Include="Images\Office2010Silver\zoom_.png" />
+    <Content Include="Images\Office2010Silver\Zoom__.png.jpg" />
+    <Content Include="Images\open.png" />
+    <Content Include="Images\openAll.png" />
+    <Content Include="Images\open_all.png" />
+    <Content Include="Images\open_d.png" />
+    <Content Include="Images\open_new.png" />
+    <Content Include="Images\Orders.png" />
+    <Content Include="Images\parse_32x32.bmp" />
+    <Content Include="Images\paste.png" />
+    <Content Include="Images\picture.png" />
+    <Content Include="Images\place.png" />
+    <Content Include="Images\process.png" />
+    <Content Include="Images\purge.png" />
+    <Content Include="Images\queries.png" />
+    <None Include="Images\query_bays.png" />
+    <None Include="Images\query_layers.png" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\results_load.png" />
+    <Content Include="Images\results_save.png" />
+    <Content Include="Images\run.png" />
+    <Content Include="Images\run_a.png" />
+    <Content Include="Images\run_t.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\save_a.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\Shapes.png" />
+    <Content Include="Images\shield-32.png" />
+    <Content Include="Images\show_all.png" />
+    <Content Include="Images\SmartArt.png" />
+    <Resource Include="Images\treeClean.png" />
+    <Resource Include="Images\treeShowMarkers.png" />
+    <Content Include="Images\unDelete.png" />
+    <Content Include="Images\warning_32.png" />
+    <Content Include="Images\webSearch.png" />
+    <Content Include="Images\zoom.png" />
+    <Content Include="Images\zoom_wb.png" />
+    <None Include="AppSettings.json" />
+    <None Include="Images\dwg.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Assets\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

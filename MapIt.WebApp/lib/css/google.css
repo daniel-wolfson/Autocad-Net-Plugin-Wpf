@@ -1,0 +1,303 @@
+﻿.app-horizontal-widget-holder {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    white-space: nowrap;
+    z-index: 1;
+    max-height: 30px;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+}
+
+.fade-enabled {
+    opacity: 1;
+    transition: opacity 200ms linear;
+}
+
+.app-bottom-content-anchor {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0px;
+    bottom: 100%;
+    margin-bottom: 20px;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+}
+
+.app-viewcard-strip {
+    position: absolute;
+    z-index: 199999999;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: left 200ms cubic-bezier(0.0,0.0,0.2,1);
+}
+
+#content-container {
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 0;
+    white-space: normal;
+}
+
+#app-container {
+    background: #4285F4;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+html, body {
+    font-family: Roboto,Arial,sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -ms-touch-action: none;
+    touch-action: none;
+    overflow: hidden;
+}
+
+.app-horizontal-item {
+    position: relative;
+    float: left;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+}
+
+.widget-expand-button-pegman {
+    cursor: pointer;
+    height: 30px;
+    background-color: white;
+    border-radius: 2px;
+    padding: 0;
+    border: none;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+}
+
+.widget-expand-button-pegman {
+    width: 144px;
+}
+
+a, button, h1, h2, h3, h4, h5, h6, input, ol, p, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    list-style: none;
+    overflow: visible;
+}
+
+button, input, textarea {
+    color: inherit;
+}
+
+.grab-cursor {
+    cursor: url(http://maps.gstatic.com/tactile/cursors/openhand.cur), pointer;
+    cursor: -webkit-grab;
+    cursor: pointer;
+}
+
+.widget-expand-button {
+    position: absolute;
+    right: 0px;
+    height: 30px;
+    width: 113px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.ripple-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.widget-expand-button .ripple-container {
+    width: 100%;
+    height: 100%;
+}
+
+.widget-runway-tooltip-middle {
+    position: absolute;
+    bottom: 100%;
+}
+
+.widget-runway-tooltip-centering {
+    left: 50%;
+    position: relative;
+}
+
+.widget-runway-tooltip {
+    opacity: 0;
+    position: relative;
+    left: -100%;
+    transition: opacity 0.13s ease-out 0.109s;
+    vertical-align: baseline;
+    line-height: normal;
+    z-index: 21;
+}
+
+.widget-runway-tooltip-label-wrapper {
+    background: #262626;
+    box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    color: #fff;
+    min-width: 40px;
+    max-width: 200px;
+}
+
+.widget-runway-tooltip-label {
+    padding: 7px 15px;
+    min-width: 40px;
+    max-width: 200px;
+}
+
+.widget-runway-tooltip-pointer {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    border-top: 5px solid #262626;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.widget-runway-tooltip-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+.widget-runway-tooltip-subtitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 10px;
+    text-align: left;
+    color: #d5d5d5;
+    font-weight: bolder;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+a {
+    color: #4285f4;
+}
+
+.widget-runway-tooltip .widget-runway-tooltip-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.widget-expand-button-label {
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    font-weight: 400;
+    background-position: 8px 8px;
+    color: transparent;
+    background-image: url("../images/imagery-show-1x.png");
+    background-size: 60px 15px;
+}
+
+.widget-expand-button-icon {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.widget-expand-button-icon {
+    background: transparent url(http://maps.gstatic.com/tactile/runway/expander-sprite-1x.png) 0 0 no-repeat;
+    background-size: 90px 30px;
+    cursor: pointer;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+}
+
+.widget-expand-button .widget-expand-button-icon {
+    background-position: 0 -15px;
+}
+
+.widget-expand-button-pegman-icon {
+    background-size: 28px 120px;
+    background-position: 0px -31px;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 31px;
+    margin-left: 2px;
+    border-right: 1px solid #F5F5F5;
+    background-image: url(http://maps.gstatic.com/tactile/pegman_v3/default/runway-2x.png);
+}
+
+#button {
+    position: static;
+    top: 40px;
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    background-color: rgb(51, 56, 60);
+    color: #b2b2b2;
+    padding: .2em .4em;
+    padding-top: 0px;
+    padding-left: 7px;
+    border: 0;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.reveal-marker-glow {
+    top: -8px;
+    right: -8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #aba8a3;
+    -webkit-animation: reveal-glowing 1.6s linear 0s infinite normal;
+    animation: reveal-glowing 1.6s linear 0s infinite normal;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    z-index: 1;
+    position: absolute;
+}
+
+.infomsg {
+    display: none;
+}
+
+.gm-iv-address {
+    height: 58px !important;
+}

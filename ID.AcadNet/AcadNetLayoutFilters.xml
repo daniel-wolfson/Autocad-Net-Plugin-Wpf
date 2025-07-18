@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LayoutFilter xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Active="false">
+  <FilterName>Default</FilterName>
+  <LayoutId>-1</LayoutId>
+  <FSA>false</FSA>
+  <DateCreated xsi:nil="true" />
+  <DateModified xsi:nil="true" />
+  <LayoutState xsi:nil="true" />
+</LayoutFilter>

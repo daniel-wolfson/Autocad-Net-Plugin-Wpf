@@ -1,0 +1,64 @@
+﻿<ResourceDictionary 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Resource dictionary entries should be defined here. -->
+    <SolidColorBrush x:Key="IconColor" Color="Black" />
+
+    <Path x:Shared="False" x:Key="IconUnlock" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 36.002,0.000488281C 52.3457,0.000488281 66,13.6509 66,30.0005L 66,36.0005L 72.002,36.0005L 72.002,96L 0,96L 0,36.0005L 57.334,36.0005L 57.334,30.645C 57.334,19.7466 46.8965,9.31201 36.002,9.31201C 29.9551,9.31201 24.0566,12.5298 19.9951,17.2524L 12.1367,12.0005C 17.6543,4.74951 26.3604,0.000488281 36.002,0.000488281 Z M 44,82.001L 38.5273,65.5859C 41.7061,64.5288 44,61.5352 44,58.001C 44,53.582 40.4199,50.001 36,50.001C 31.5811,50.001 28,53.582 28,58.001C 28,61.5352 30.293,64.5288 33.4717,65.5859L 28,82.001L 44,82.001 Z "/>
+    <Path x:Shared="False" x:Key="IconLock" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 36.002,0.000488281C 52.3457,0.000488281 66,13.6509 66,30.0005L 66,36.0005L 72.002,36.0005L 72.002,96L 0,96L 0,36.0005L 6,36.0005L 6,30.0005C 6,13.6509 19.6543,0.000488281 36.002,0.000488281 Z M 14.666,30.646L 14.666,36.0005L 57.333,36.0005L 57.333,30.646C 57.333,19.7476 46.8955,9.31299 36.001,9.31299C 25.1035,9.31299 14.666,19.7476 14.666,30.646 Z M 44,82.001L 38.5273,65.5859C 41.7061,64.5288 44,61.5352 44,58.001C 44,53.582 40.4199,50.001 36,50.001C 31.5811,50.001 28,53.582 28,58.001C 28,61.5352 30.293,64.5288 33.4717,65.5859L 28,82.001L 44,82.001 Z "/>
+    <Path x:Shared="False" x:Key="IconMaginfyGlass" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 26.751,45.4141C 37.0566,45.4141 45.4189,37.0537 45.418,26.7471C 45.418,16.4414 37.0566,8.08008 26.751,8.08008C 16.4453,8.08008 8.08398,16.4414 8.08398,26.7471C 8.08301,37.0537 16.4453,45.4141 26.751,45.4141 Z M 49.4063,40.9199L 77.085,68.5977L 68.5996,77.084L 40.9219,49.4053C 36.8086,51.9834 31.9609,53.498 26.749,53.498C 11.9766,53.498 0,41.5215 0,26.75C 0,11.9766 11.9756,0 26.749,0C 41.5234,0 53.501,11.9766 53.5,26.748C 53.5,31.96 51.9844,36.8076 49.4063,40.9199 Z M 15.2686,18.8125C 18.4004,14.042 22.7471,11.3623 24.9785,12.8262C 27.21,14.291 26.4805,19.3457 23.3496,24.1182C 20.2178,28.8887 15.8701,31.5674 13.6387,30.1045C 11.4102,28.6426 12.1377,23.5801 15.2686,18.8125 Z "/>
+    <Path x:Shared="False" x:Key="IconImage" Stretch="Uniform" UseLayoutRounding="False" Fill="{DynamicResource IconColor}" Data="F1 M 87.2734,78.5449L 87.2734,8.72754L 8.72852,8.72754L 8.72852,78.5449L 87.2734,78.5449 Z M 0,96L 0,0L 96,0L 96,96L 0,96 Z M 78,48L 78,72L 18,72L 18,60L 30,42L 48,60L 66,30L 78,48 Z "/>
+    <Path x:Shared="False" x:Key="IconTriangle" Stretch="Uniform" Data="M50.25,133.5 L49.75,158.25 76,147.25 z" Fill="{DynamicResource IconColor}" Stroke="Black" />
+    
+    <!--pack://application:,,,/ID.AcadNet.Resources;component/-->
+    <BitmapImage x:Key="DwgPurge" UriSource="/Images/dwg_purge.png" />
+    <BitmapImage x:Key="Open" UriSource ="/Images/open_d.png" />
+    <BitmapImage x:Key="OpenA" UriSource="/Images/open.png"/>
+    <BitmapImage x:Key="OpenAll" UriSource="/Images/open_all.png"/>
+    <BitmapImage x:Key="Copy" UriSource="/Images/open.png" />
+    <BitmapImage x:Key="Cancel" UriSource="/Images/MetroBlack/close.png" />
+    <BitmapImage x:Key="Delete" UriSource="/Images/del.png" />
+    <BitmapImage x:Key="UnDelete" UriSource="/Images/unDelete.png" />
+    <BitmapImage x:Key="Purge" UriSource="/Images/purge.png" />
+    <BitmapImage x:Key="New" UriSource="/Images/open_new.png" />
+    <BitmapImage x:Key="Filter" UriSource="/Images/filter.png" />
+    <BitmapImage x:Key="FilterA" UriSource="/Images/filter.png" />
+    <BitmapImage x:Key="Save" UriSource="/Images/save.png" />
+    <BitmapImage x:Key="SaveA" UriSource="/Images/save_a.png" />
+    <BitmapImage x:Key="ApplyFsaA" UriSource="/Images/dwg_run.png" />
+    <BitmapImage x:Key="UploadFsaA" UriSource="/Images/dwg_upload.png" />
+    <BitmapImage x:Key="Refresh" UriSource="/Images/refresh.png" />
+    <BitmapImage x:Key="Reset" UriSource="/Images/MetroBlack/reset.png" />
+    <BitmapImage x:Key="Set" UriSource="/Images/MetroBlack/property.png" />
+    <BitmapImage x:Key="TreeClean" UriSource="/Images/treeClean.png" />
+    <BitmapImage x:Key="PanelIcon" UriSource="/Images/place.png" />
+    <BitmapImage x:Key="ShowMarkers" UriSource="/Images/treeShowMarkers.png" />
+    <BitmapImage x:Key="Flag" UriSource="/Images/flag.png" />
+    <BitmapImage x:Key="LayoutOpen" UriSource ="/Images/open_d.png" />
+    <BitmapImage x:Key="LayoutOpenA" UriSource="/Images/open.png"/>
+    <BitmapImage x:Key="LayoutCopy" UriSource="/Images/open.png" />
+    <BitmapImage x:Key="LayoutDelete" UriSource="/Images/del.png" />
+    <BitmapImage x:Key="LayoutUnDelete" UriSource="/Images/unDelete.png" />
+    <BitmapImage x:Key="LayoutPurge" UriSource="/Images/purge.png" />
+    <BitmapImage x:Key="LayoutNew" UriSource="/Images/open_new.png" />
+    <BitmapImage x:Key="LayoutNone" UriSource="/Images/none.png" />
+    <BitmapImage x:Key="LayoutFilter" UriSource="/Images/filter.png" />
+    <BitmapImage x:Key="LayoutFilterA" UriSource="/Images/filter.png" />
+    <BitmapImage x:Key="LayoutSave" UriSource="/Images/save.png" />
+    <BitmapImage x:Key="LayoutSaveA" UriSource="/Images/save_a.png" />
+    <BitmapImage x:Key="LayoutApplyFsaA" UriSource="/Images/dwg_run.png" />
+    <BitmapImage x:Key="LayoutUploadFsaA" UriSource="/Images/dwg_upload.png" />
+    <BitmapImage x:Key="LayoutRefresh" UriSource="/Images/refresh.png" />
+    <BitmapImage x:Key="LayoutConfig" UriSource="/Images/config.png" />
+    <BitmapImage x:Key="Queries" UriSource="/Images/queries.png" />
+    <BitmapImage x:Key="Query_layers" UriSource="/Images/query_layers.png" />
+    <BitmapImage x:Key="Query_bays" UriSource="/Images/query_bays.png" />
+    <BitmapImage x:Key="SearchViewIcon" UriSource="/Images/place.png" />
+    <BitmapImage x:Key="SearchViewLayers" UriSource="/Images/layers.png" />
+    <BitmapImage x:Key="SearchViewFind" UriSource="/Images/MetroBlack/search.png" />
+    <BitmapImage x:Key="SearchViewStop" UriSource="/Images/MetroBlack/stop.png" />
+    <BitmapImage x:Key="ShowAll" UriSource="/Images/show_all.png" />
+    <BitmapImage x:Key="MapClearData" UriSource="/Images/del.png" />
+    <BitmapImage x:Key="RibbonRefresh" UriSource="/Images/dwg_refresh.png" />
+    
+</ResourceDictionary>

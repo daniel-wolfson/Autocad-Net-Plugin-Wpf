@@ -1,0 +1,102 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    x:Class="Intellidesk.AcadNet.Data.Common.Editors.LayoutContentsEditor" 
+             mc:Ignorable="d" 
+             d:DesignHeight="22" d:DesignWidth="300" Width="{Binding}"
+             x:Name="Uc">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/IntelliDesk.AcadNet.Data;component/Styles\Icons.xaml"/>
+                <ResourceDictionary Source="/IntelliDesk.AcadNet.Data;component/Styles\Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <!--<editors:LayoutContentsItemsSource x:Key="LayoutContentsItemsSource"/>
+                DataContext="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=LayoutContentsItems}"-->
+            <!--<ObjectDataProvider x:Key="LayoutContentsItemsSource" 
+                  ObjectType="{x:Type editors:LayoutContentsItemsSource}" MethodName="GetItemsSource">
+                <ObjectDataProvider.MethodParameters>
+                    <StaticResource ResourceKey="VegaPnlData"/>
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>-->
+
+            <Style x:Key="textBoxInError" TargetType="{x:Type TextBox}">
+                <Setter Property="Validation.ErrorTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <DockPanel LastChildFill="True">
+                                <TextBlock x:Name="textBox" DockPanel.Dock="Top" Foreground="Red" Margin="5" FontSize="8pt"
+								Text="{Binding ElementName=MyAdorner, 
+                               Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                </TextBlock>
+
+                                <Border BorderBrush="Red" BorderThickness="1">
+                                    <AdornedElementPlaceholder Name="MyAdorner" />
+                                </Border>
+
+                            </DockPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="true">
+                        <Setter Property="ToolTip"
+						Value="{Binding RelativeSource={RelativeSource Self}, 
+                       Path=(Validation.Errors)[0].ErrorContent}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="textBoxInError1" TargetType="TextBox">
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="true">
+                        <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <!--<UserControl.CommandBindings>-->
+    <!--<CommandBinding Command="lsds:Copy"
+                  Executed="OpenCmdExecuted"
+                  CanExecute="OpenCmdCanExecute"/>-->
+    <!--</UserControl.CommandBindings>-->
+
+    <Grid x:Name="EditorGrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="24" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="FieldData" Grid.Column="0" Background="#FFF7F7F7" Style="{StaticResource textBoxInError1}" IsReadOnly="True" FontWeight="Bold">
+            <TextBox.Text>
+                <!-- Setting the ValidatesOnDataErrors to true enables to the Binding to check for errors raised by the IDataErrorInfo implementation.
+                    Alternatively, you can add DataErrorValidationRule to <Binding.ValidationRules/>-->
+                <Binding ElementName="Uc" Path="Value" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <!-- Checks for exceptions during the setting of the source property.Source="{StaticResource data}" ItemsSource="{Binding Source={StaticResource LayoutContentsItemsSource}}"/>
+                            Alternatively, set ValidatesOnExceptions to True on the Binding.-->
+                        <ExceptionValidationRule/>
+                        <!--<editors:CadFileFoundValidationRule ErrorMessage="File not found!" />-->
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+        <ComboBox Name="ComboBox1" Grid.Column="1" Width="Auto" Margin="2,1,1,1" ToolTip="Browse" Cursor="Hand" 
+                  SelectionChanged="ComboBox1_OnSelectionChanged" Tag="{Binding ElementName=FieldData}">
+            <ComboBox.ItemsSource>
+                <Binding ElementName="Uc" Path="LayoutContentsItems"></Binding>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+
+        <!--<editors:MultiSelectComboBox Name="ComboBox2" Grid.Column="2" Width="Auto" Margin="2,1,1,1" ToolTip="Browse" Cursor="Hand" Tag="{Binding ElementName=FieldData}">
+        </editors:MultiSelectComboBox>-->
+        <!--<TextBlock Text="{Binding ElementName=comboBox1, Path=SelectedItem}"/>Source={StaticResource MyVacations}Source="{DynamicResource LsdsEdit}"-->
+    </Grid>
+</UserControl>

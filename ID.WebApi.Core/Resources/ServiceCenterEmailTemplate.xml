@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InfoMailClient>
+  <SendEmails>
+    <User>
+      <Username>4castsolutions</Username>
+      <Token>l3nmtz34u4l1cful2a2x93e61</Token>
+    </User>
+    <Message>
+      <CampaignName>Psygate</CampaignName>
+      <FromAddress>Meitav@idf.gov.il</FromAddress>
+      <FromName>AMAN</FromName>
+      <Subject><p dir='rtl'>תקלה במבחנים מהבית</p></Subject>
+      <Body>
+        <![CDATA[
+          <div dir='rtl'>
+            <p><strong>הי</strong></p>
+            <p>[#Text1#]</p>
+            <p>תודה,</p>
+            <p>[#Text2#]</p>
+          </div>
+        ]]>
+      </Body>
+    </Message>
+    <Recipients>
+    </Recipients>
+  </SendEmails>
+</InfoMailClient>

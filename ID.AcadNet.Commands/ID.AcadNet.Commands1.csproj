@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77B9F8FE-F75B-48C8-8249-6859E8D347E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intellidesk.AcadNet.Commands</RootNamespace>
+    <AssemblyName>ID.AcadNet.Commands</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Utf8Output>true</Utf8Output>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\r19\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;R19</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AutoCADCommands.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\r19\</OutputPath>
+    <DefineConstants>TRACE;R19</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AutoCADCommands.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2019\accoremgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AcCui">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2019\AcCui.dll</HintPath>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2019\acdbmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2019\acmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2019\AdWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands-Rectangle.cs" />
+    <Compile Include="Internal\Algorithms.cs" />
+    <Compile Include="Internal\App.cs" />
+    <Compile Include="Commands-Box.cs" />
+    <Compile Include="Common\Consts.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Draw\Drawing.cs" />
+    <Compile Include="Draw\DrawInMmemory.cs" />
+    <Compile Include="Common\FlexDataStore.cs" />
+    <Compile Include="Internal\CustomDictionary.cs" />
+    <Compile Include="Common\DbHelper.cs" />
+    <Compile Include="GUIs\DictionaryViewer.xaml.cs">
+      <DependentUpon>DictionaryViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Gui.cs" />
+    <Compile Include="GUIs\InputBox.xaml.cs">
+      <DependentUpon>InputBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\TaskProgressWindow.xaml.cs">
+      <DependentUpon>TaskProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Interaction.cs" />
+    <Compile Include="Jig\FlexDrawJig.cs" />
+    <Compile Include="Jig\JigFramework.cs" />
+    <Compile Include="Jig\JigUtils.cs" />
+    <Compile Include="Jig\Phase_.cs" />
+    <Compile Include="Jig\PhaseType.cs" />
+    <Compile Include="Jig\RectangleDrawJig.cs" />
+    <Compile Include="Jig\FlexEntityJig.cs" />
+    <Compile Include="Common\Layouts.cs" />
+    <Compile Include="GUIs\MultiInputs.xaml.cs">
+      <DependentUpon>MultiInputs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Jig\LineJig.cs" />
+    <Compile Include="Jig\PositionJig.cs" />
+    <Compile Include="Modify.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Internal\QuickSelection.cs" />
+    <Compile Include="Jig\ScaleJig.cs" />
+    <Compile Include="Jig\RotationJig.cs" />
+    <Compile Include="Common\SymbolPack.cs" />
+    <Compile Include="Command-Test.cs" />
+    <Compile Include="GUIs\TextReport.xaml.cs">
+      <DependentUpon>TextReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GUIs\DictionaryViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\InputBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\MultiInputs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\TaskProgressWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUIs\TextReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AutoCADCommands.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ID.AcadNet.Common\ID.AcadNet.Common.csproj">
+      <Project>{55C53AB0-7519-42F9-A530-99E34FDF344A}</Project>
+      <Name>ID.AcadNet.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

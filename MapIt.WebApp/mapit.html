@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MapIt</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+    <meta charset="utf-8" />
+    <!--<script>document.write('<base href="' + document.location + '" />');</script>-->
+    <base href="/" />
+
+    <!--css-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" rel="stylesheet" type="text/css" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" rel="stylesheet" type="text/css" />
+
+    <!--fonts-->
+    <!--<link href="Content/font-awesome.min.css" rel="stylesheet"/>-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--<link href="//api.titles.mox.com/mapbox.js/v2.1.9/mapbox.css" rel="stylesheet"/>-->
+    <!--jquery-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--leaflet-->
+    <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>-->
+    <script src="mapit/js/leaflet-src.js"></script>
+    <link href="mapit/js/leaflet.css" rel="stylesheet" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+
+    <!--providers-->
+    <!--plugins-->
+    <!--<script src="https://cdnjs.com/libraries/leaflet-plugins"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+    <script href="//api.titles.mox.com/mapbox.js/v2.1.9/mapbox.js"></script>
+
+    <script src="http://www.autocadws.com/jsapi/v1/Autodesk.AutoCAD.js"></script>-->
+    <!-- angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+
+    <link href="mapit/css/site.min.css" rel="stylesheet" />
+    <script src="mapit/js/signalR-2.1.2.min.js"></script>
+    <script src="http://localhost:8080/signalr/hubs"></script>
+    <script src="mapit/js/utils.min.js"></script>
+    <script src="mapit/js/libs.min.js"></script>
+    <script src="mapit/js/controls.min.js"></script>
+    <script src="mapit/js/controls_ext.min.js"></script>
+    <script src="mapit/js/draw.min.js"></script>
+    <script src="mapit/js/draw.handler.min.js"></script>
+    <script src="mapit/js/edit.handler.min.js"></script>
+    <script src="mapit/js/app.min.js"></script>
+
+    <!--<script type="text/ng-template" id="/marker.html">
+        <div class='mapit-marker-info' id='marker", i, "' value=", i, ">
+            <div class='mapit-marker-bar'>
+                <img class='mapit-icon mapit-marker-logo' />,
+                <button type='button' class='mapit-icon mapit-pegman-icon btn btn-default'></button>,
+                <button ng-if="clientName && clientName === 'acad'" type='button' class='mapit-icon mapit-connect-icon' style='float: right; color: red; font-weight: bold' title='Autocad connected'>A</button>
+            </div>",
+            <div ng-if="data.FolderName">as made: <b class='mapit-foldername'>{{data.FolderName}}</b></div>,
+            <div ng-if="data.ClientName">from: <b class='mapit-foldername'>{{data.ClientName}}</b></div>,
+            <div>lng,lat: <b>{{data.lng.toFixed(5)}},{{data.lat.toFixed(5)}}</b></div>
+            <div ng-if="clientName && clientName === 'acad'" class='mapit-filename'>
+                file: <b>{{data.FileName}}</b>
+            </div>
+            <div ng-if="clientName && clientName !== 'acad'" class='mapit-filename'>
+                file: <b><a id='filelink' href='#'{{i}}>{{data.FileName}}</a></b><br />
+            </div>
+        </div>
+    </script>-->
+
+    <script>
+        var mapit_inner = true;
+        window.onload = function () {
+            mapit_inner = false;
+        };
+    </script>
+
+    <!--maps.googleapis. important! -->
+    <script>function initialize() { }</script>
+</head>
+
+<body>
+    <div ng-app="mapIt" ng-controller="mainCtrl" style="height: 100%; width: 100% !important">
+
+        <!--<mapitnav-component id="mapitNav"></mapitnav-component>-->
+
+        <progress class="progress-markers" id="progressMarkers" max="100" value="0.1" heigth="3px"></progress>
+        <progress class="progress-lines" id="progressLines" max="100" value="0.1" heigth="3px"></progress>
+
+        <div ng-view style="height: 100%">Loading...</div>
+        <!--<a href='#' id='export'>Export Features</a>-->
+    </div>
+</body>
+</html>
+<!--https://outlook.live.com/owa/prem/16.1612.2.2201790/resources/images/0/thinking32_blue.gif-->

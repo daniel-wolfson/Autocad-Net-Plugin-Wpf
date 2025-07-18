@@ -1,0 +1,4 @@
+USE [CNTDB]
+GO
+SELECT * INTO [CNTDB].cons FROM [MiDb2010SQL].cons
+GO
