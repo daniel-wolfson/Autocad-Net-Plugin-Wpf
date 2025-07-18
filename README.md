@@ -1,7 +1,7 @@
 # Solution Overview
 
 The main purpose of this solution is to serve as an **AutoCAD plugin with a modern WPF-based user interface**.  
-It is a multi-project .NET ecosystem targeting `.NET Framework 4.7.2`, `.NET Core`, and `.NET Standard`.  
+It is a multi-project .NET ecosystem targeting `.NET Framework`, `.NET Core`, and `.NET Standard`.  
 The solution includes desktop, web, and library components, integrating a variety of modern technologies.
 
 ## Main Technologies Used
