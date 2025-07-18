@@ -1,6 +1,6 @@
 # Solution Overview
 
-The main purpose of this solution is to serve as an **AutoCAD plugin with a modern WPF-based user interface**.  
+The primary purpose of this solution is to serve as a **Custom AutoCAD plugin with a modern WPF-based user interface**.  
 It is a multi-project .NET ecosystem targeting `.NET Framework`, `.NET Core`, and `.NET Standard`.  
 The solution includes desktop, web, and library components, integrating a variety of modern technologies.
 
