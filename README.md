@@ -10,6 +10,7 @@ The solution includes desktop, web, and library components, integrating a variet
 - **Purpose:** Used for building rich desktop user interfaces.
 - **Usage:** Several projects (e.g., `TaskDialog`, `ID.Data`) use WPF for custom dialogs, controls, and editors.
 - **Libraries:** Includes XAML-based controls, custom editors, and advanced UI features.
+- **Controls paths:** D:\Projects\Wpf\Autocad-Net-Plugin-Wpf\ID.AcadNet\Views\, D:\Projects\Wpf\Autocad-Net-Plugin-Wpf\TaskDialog\ and i.e.
 
 ### 2. **ASP.NET Core & ASP.NET Web API**
 - **Purpose:** For building RESTful web APIs and web applications.
